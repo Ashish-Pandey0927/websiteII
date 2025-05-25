@@ -114,3 +114,63 @@
     gap: 10%;
   }
 } */
+/* Shared dashed line - appears behind circles */
+.process-steps::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  background-repeat: repeat;
+}
+
+/* Mobile: vertical dashed line */
+@media (max-width: 767px) {
+  .process-steps {
+    position: relative;
+  }
+
+  .process-steps::before {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #757B8A,
+      #757B8A 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+
+  .process-step {
+    z-index: 1; /* keep circles above line */
+  }
+}
+
+/* Desktop: horizontal dashed line */
+@media (min-width: 768px) {
+  .process-steps {
+    position: relative;
+  }
+
+  .process-steps::before {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background-image: repeating-linear-gradient(
+      to right,
+      #757B8A,
+      #757B8A 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+
+  .process-step {
+    z-index: 1; /* keep circles above line */
+    background-color: #F0F0FF; /* reassert background */
+  }
+}
