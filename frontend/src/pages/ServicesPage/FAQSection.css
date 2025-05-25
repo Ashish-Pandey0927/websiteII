@@ -4,7 +4,7 @@
   padding: 100px 40px;
   background: #ffffff;
   max-width: 1523px;
-  margin: auto;
+  margin: auto 4%;
   gap: 40px;
 }
 
@@ -32,7 +32,7 @@
 
 .faq-description {
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 22px;
   color: #757b8a;
@@ -105,5 +105,11 @@
     text-align: center;
     align-items: center;
 
+  }
+  .faq-tag {
+    font-size: 1rem;
+  }
+  .faq-description {
+    font-size: 1.2rem;
   }
 }

@@ -21,7 +21,7 @@
 .newsletter-label {
   font-family: 'Urbanist', sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 1rem;
   line-height: 16px;
   letter-spacing: 0.26em;
   color: #707070;
@@ -117,14 +117,14 @@
 }
 
 /* Mobile */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .newsletter-title {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 32px;
   }
 
   .newsletter-description {
-    font-size: 14px;
+    font-size: 1.2rem;
     line-height: 20px;
   }
 
