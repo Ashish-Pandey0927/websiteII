@@ -7,7 +7,7 @@ import DashboardHeader from "../../components/DashboardHeader";
 
 
 const ServicePage = () => {
-  const [activeLink, setActiveLink] = useState('#home');
+  const [activeLink, setActiveLink] = useState('#Services');
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div
