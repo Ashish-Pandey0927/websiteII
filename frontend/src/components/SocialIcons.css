@@ -32,7 +32,7 @@
     .social-icons {
       position: relative;
       top:0px;
-      left: auto;
+      left: -34%;
       right: 210px;
       width: auto;
       transform: none;
@@ -40,8 +40,10 @@
     }
   
     .social-link {
-      font-size: 16px;
-      width: 16px;
-      height: 16px;
+      font-size: 2rem;
+      width: 1rem;
+      height: 1rem;
     }
   }
+
+  

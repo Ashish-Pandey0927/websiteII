@@ -1,4 +1,4 @@
-import React from 'react';
+
 import AboutUs from './AboutUs';
 import Alert from './Alert';
 import Dashboard from './Dashboard';

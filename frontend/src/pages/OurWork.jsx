@@ -63,7 +63,7 @@ const OurWork = () => {
 
       <div className="project project-4">
         <img className="project4_img1" src={munchi} alt="City Maps App" />
-        <div class="rectangle39914">
+        <div className="rectangle39914">
         <img className="project4_img2" src={munich1} alt="City Maps App min" />
         </div>
       

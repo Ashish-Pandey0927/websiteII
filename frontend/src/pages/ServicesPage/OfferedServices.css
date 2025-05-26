@@ -1,0 +1,158 @@
+/* Container Section */
+.services-section {
+  padding: 0px 20px;
+  background-color: #ffffff;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Header */
+.offered-services-header {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-items: center;
+  gap: 15%;
+  margin-bottom: 48px;
+}
+
+/* Title */
+.services-title {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 110%;
+  letter-spacing: 1px;
+  color: #101010;
+  margin-bottom: 16px;
+}
+
+/* Description */
+.services-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 160%;
+  color: #757B8A;
+  margin-bottom: 40px;
+  max-width: 600px;
+  text-align: justify;
+}
+
+
+/* Card */
+.service-card {
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 0px 8.7px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Icon */
+.services-icon {
+  width: 114px;
+  height: 114px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.service-icon img {
+  width: 53px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* Card Title */
+.service-title {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 33px;
+  letter-spacing: 0.2px;
+  color: #183B56;
+  margin: 16px 0 8px;
+}
+
+/* Card Description */
+.service-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 28px;
+  color: #5A7184;
+  text-align: justify;
+}
+
+
+/* Grid Layout - Mobile First (1 column) */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 24px;
+  padding-right: 2rem;
+}
+
+/* Tablet - 2 columns */
+@media (min-width: 768px) {
+  .services-description {
+    font-size: 1rem;
+  }
+  .service-description{
+    font-size: 1rem;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .offered-services-header {
+    flex-direction: row;
+    gap: 15%;
+  }
+  .service-icon img {
+  width: 53px;
+  height: 50px;
+  object-fit: cover;
+}
+}
+
+/* Desktop - 3 columns */
+@media (min-width: 1024px) {
+  .service-icon img {
+  width: 53px;
+  height: 50px;
+  object-fit: cover;
+}
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+.services-rectangle{
+  width: 1600px;
+height: 1071px;
+top: 607px;
+background:#ffffff;
+}
+.services-section{
+  width: 1516px;
+height: 955px;
+top: 665px;
+left: 42px;
+margin-right: 8%;
+
+
+}
+  .offered-services-header {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10%;
+  }
+}

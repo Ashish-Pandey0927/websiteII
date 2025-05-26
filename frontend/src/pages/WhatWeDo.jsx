@@ -27,8 +27,8 @@ const serviceData = [
     title: "Quality Assurance",
     description: "Web apps offer customers a flexible, accessible, and user-friendly platform for accessing services, information, and functionality over the internet. By leveraging the capabilities of web technologies.",
     icon: "QualityAssurance.png",
-    top: "408px",
-    left: "822.9px"
+    // top: "408px",
+    // left: "822.9px"
   },
   {
     title: "SalesForce Solution",
@@ -54,13 +54,13 @@ const WhatWeDo = () => {
       <div className="services-wrapper">
         {serviceData.map((service, index) => (
           <div
-            className="service-card"
+            className="what-we-do-service-card"
             key={index}
           >
             <div className="icon-bg"></div>
             <img src={`/${service.icon}`} alt={service.title} className="icon" />
-            <h3 className="service-title">{service.title}</h3>
-            <p className="service-description">{service.description}</p>
+            <h3 className="what-we-do-service-title">{service.title}</h3>
+            <p className="what-we-do-service-description">{service.description}</p>
           </div>
         ))}
       </div>

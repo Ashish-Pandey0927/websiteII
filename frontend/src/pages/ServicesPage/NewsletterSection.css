@@ -1,0 +1,136 @@
+.newsletter-section {
+  position: relative;
+  width: 100%;
+  background: #fafafa;
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.newsletter-content {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  position: relative;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.newsletter-label {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 16px;
+  letter-spacing: 0.26em;
+  color: #707070;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.newsletter-title {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #101010;
+  margin-bottom: 16px;
+}
+
+.newsletter-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #757b8a;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.newsletter-input {
+  min-width: 0;
+  height: 57px;
+  width:547px;
+  padding: 0 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.newsletter-button {
+  background: #a7f46a;
+  color: #000;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.6px;
+  height: 57px;
+  width:248px;
+  padding: 0 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.newsletter-button:hover {
+  background: #90df56;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .newsletter-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .newsletter-description {
+    font-size: 15px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    /* align-items: stretch; */
+  }
+
+  .newsletter-button {
+    width: 100%;
+  }
+
+  .newsletter-input {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .newsletter-title {
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+
+  .newsletter-description {
+    font-size: 1.2rem;
+    line-height: 20px;
+  }
+
+  .newsletter-input,
+  .newsletter-button {
+    height: 50px;
+    font-size: 15px;
+  }
+}
