@@ -22,28 +22,24 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
 
   return (
     <header className="dashboard-header">
-      <div className="left-section">
-        <div className="logo-container">
-          <img src={Vector} alt="Logo" />
-          <div className="stacked-logos">
-            <img src={shadepro} alt="Logo2" className="logo2" />
-            <img src={thinkinnovative} alt="Logo3" className="logo3" />
+      <div className="header-center">
+        <div className="left-section">
+          <div className="logo-container">
+            <img src={Vector} alt="Logo" />
+            <div className="stacked-logos">
+              <img src={shadepro} alt="Logo2" className="logo2" />
+              <img src={thinkinnovative} alt="Logo3" className="logo3" />
+            </div>
           </div>
         </div>
-        {/* <div className="group-logo-container">
-          <img src={Group} alt="group logo"/>
-        </div> */}
 
-        <div className="menu-toggle mobile-only" onClick={toggleMenu}>
-          <FiMenu size={24} />
-        </div>
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
           {sections.map(({ name, path }) => (
             <Link
               key={path}
               to={path}
-              className={activeLink === path ? "active" : ""}
+              className={`${activeLink === path ? "active" : ""} ${name === "Services" ? "bold" : ""} ${name === "Home" ? "underline" : ""}`}
               onClick={() => {
                 setActiveLink(path);
                 setMenuOpen(false);
@@ -54,7 +50,14 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
           ))}
         </nav>
       </div>
-      <SocialIcons />
+      <div className="right-icons">
+        <div className="social-icons-wrapper">
+          <SocialIcons />
+        </div>
+        <div className="menu-toggle mobile-only" onClick={toggleMenu}>
+          <FiMenu size={24} />
+        </div>
+      </div>
     </header>
   );
 };

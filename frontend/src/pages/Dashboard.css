@@ -118,7 +118,11 @@
     left: 0;
     transform: none;
   }
-
+.dashboard-header.dashboard-page-header {
+     .social-icons {
+      top:-20px;
+     }
+}
   /* Highlight Section */
   .highlight-wrapper {
     position: relative;

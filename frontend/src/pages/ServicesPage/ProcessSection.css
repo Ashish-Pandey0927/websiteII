@@ -86,9 +86,9 @@
   gap: 10%;
   margin-bottom: 48px;
 }
-.process-subheading {
+/* .process-subheading {
   font-size: 1rem;
-}
+} */
 .process-steps {
   display: flex;
   justify-content: center;

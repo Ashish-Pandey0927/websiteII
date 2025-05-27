@@ -104,12 +104,12 @@
 
 /* Tablet - 2 columns */
 @media (min-width: 768px) {
-  .services-description {
+  /* .services-description {
     font-size: 1rem;
   }
   .service-description{
     font-size: 1rem;
-  }
+  } */
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }

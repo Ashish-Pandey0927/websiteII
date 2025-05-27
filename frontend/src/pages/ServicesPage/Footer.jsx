@@ -1,9 +1,10 @@
 import './Footer.css';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+// import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Vector from "../../assets/Vector-logo.png";
 import shadepro from "../../assets/shadepro.png";
 import thinkinnovative from "../../assets/THINK INNOVATIVE.png";
 import { ChevronRight } from "lucide-react";
+import SocialIcons from '../../components/SocialIcons';
 
 export default function Footer() {
   return (
@@ -81,10 +82,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-social">
-          <FaFacebookF />
-          <FaTwitter />
-          <FaInstagram />
-          <FaLinkedin />
+       <SocialIcons/>
         </div>
       </div>
     </footer>
