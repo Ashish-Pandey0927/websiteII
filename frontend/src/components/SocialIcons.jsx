@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {  FaFacebook , FaTwitter, FaInstagram, FaLinkedin  } from 'react-icons/fa';
+import {  FaFacebook , FaTwitter, FaInstagram, FaLinkedin ,FaWhatsapp,FaPhone } from 'react-icons/fa';
 
 const SocialIcons = () => {
   const [iconColor, setIconColor] = useState('black');
@@ -23,10 +23,12 @@ const SocialIcons = () => {
 
   return (
     <div className="social-icons">
-      <a href="#" className="social-link" style={{ color: iconColor }}><FaFacebook /></a>
-      <a href="#" className="social-link" style={{ color: iconColor }}><FaTwitter /></a>
-      <a href="#" className="social-link" style={{ color: iconColor }}><FaInstagram /></a>
-      <a href="#" className="social-link" style={{ color: iconColor }}><FaLinkedin  /></a>
+      <a href="#" className="social-link"  aria-label="Facebook" rel="noopener noreferrer" style={{ color: iconColor }}><FaFacebook /></a>
+      <a href="#" className="social-link"  aria-label="Twitter" rel="noopener noreferrer"style={{ color: iconColor }}><FaTwitter /></a>
+      <a href="#" className="social-link"  aria-label="Instagram" rel="noopener noreferrer"style={{ color: iconColor }}><FaInstagram /></a>
+      <a href="#" className="social-link"  aria-label="Linkedin" rel="noopener noreferrer"style={{ color: iconColor }}><FaLinkedin  /></a>
+      <a href="#" className="social-link"  aria-label="Whatsapp" rel="noopener noreferrer"style={{ color: iconColor }}><FaWhatsapp /></a>
+      <a href="#" className="social-link"  aria-label="Phone" rel="noopener noreferrer"style={{ color: iconColor }}><FaPhone /></a>
     </div>
   );
 };
