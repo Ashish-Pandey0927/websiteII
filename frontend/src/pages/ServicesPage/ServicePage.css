@@ -42,7 +42,7 @@
 
 .service-page-highlight-text {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.3rem;
   line-height: 160%;
   color: #fff;
   white-space: nowrap;
@@ -80,6 +80,16 @@
  
 }
 
+  .service-page-hero-paragraph {
+    margin-top: 30px;
+    padding: 2% 2% 2% 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 150%;
+    color: #fff;
+    text-align: left;
+
+  }
 /* Mobile-Specific Styles */
 @media screen and (max-width: 768px) {
 
@@ -131,7 +141,7 @@
     margin-top: 30px;
     padding: 2% 2% 2% 0;
     font-family: 'DM Sans', sans-serif;
-    font-size: 20px;
+    font-size: 1.3rem;
     line-height: 150%;
     color: #fff;
     text-align: left;

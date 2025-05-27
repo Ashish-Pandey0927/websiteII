@@ -1,10 +1,11 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+// import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./Footer.css";
 // import FooterLogo from "../assets/FooterLogo.png";
 import Vector from "../assets/Vector-logo.png";
 import shadepro from "../assets/shadepro.png";
 import thinkinnovative from "../assets/THINK INNOVATIVE.png";
+import SocialIcons from "../components/SocialIcons";
 
 const Footer = () => {
   return (
@@ -32,10 +33,7 @@ const Footer = () => {
           </div>
 
           <div className="footer__social">
-            <FaFacebookF className="footer__social-icon" />
-            <FaTwitter className="footer__social-icon" />
-            <FaInstagram className="footer__social-icon" />
-            <FaLinkedin className="footer__social-icon" />
+            <SocialIcons/>
 
           </div>
         </div>

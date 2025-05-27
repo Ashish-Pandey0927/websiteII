@@ -21,7 +21,7 @@ const Dashboard = () => {
           backgroundBlendMode: 'multiply',
         }}
       >
-        <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
+        <DashboardHeader className="dashboard-page-header" activeLink={activeLink} setActiveLink={setActiveLink} />
 
         <div
           className="highlight-wrapper"
