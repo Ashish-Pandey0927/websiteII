@@ -1,20 +1,26 @@
 import React from 'react'
-import ContactUsHero from './ContactUsHero'
-
+import ContactUsHero from './ContactUsHero';
+import ContactDetailsSection from './ContactDetailsSection';
+import LocationSection from './LocationSection';
+import { GiPositionMarker } from 'react-icons/gi';
+import ContactFooter from './ContactFooter';
 
 
 const ContactUs = () => {
   return (
     <div>
-      <section id="services-section1">
+    <section id="contact-section1">
         <ContactUsHero />
       </section>
-      {/* <section id="services-section2">
-        <OfferedServices />
+     <section id="contact-section2">
+        <ContactDetailsSection />
+      </section> 
+     <section id="contact-section3">
+        <LocationSection />
       </section>
-     <section id="services-section3">
-        <ProcessSection />
-      </section> */}
+      <section id="contact-section4">
+      <ContactFooter/>
+      </section>
     </div>
   )
 }
