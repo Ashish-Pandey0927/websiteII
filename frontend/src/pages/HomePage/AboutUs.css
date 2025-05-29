@@ -50,7 +50,7 @@
     height: 500px;
     left: 120px;
     top: 358px;
-    background: url('../assets/AboutUsRectangle.png');
+    background: url('../../assets/AboutUsRectangle.png');
     background-size: cover;
     border-radius: 16px;
 }
@@ -261,9 +261,6 @@
         margin-top: 40px;
         left: 20px;
         top: 0;
-        background: url('../assets/AboutUsRectangle.png');
-        background-size: cover;
-        border-radius: 16px;
     }
 
     .image-overlay {

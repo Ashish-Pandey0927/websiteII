@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 import Services from './pages/ServicesPage/Services';
 import ContactUs from './pages/ContactUsPage/ContactUs';
 

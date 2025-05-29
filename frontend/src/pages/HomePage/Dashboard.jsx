@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import './Dashboard.css';
-import BG from '../assets/BG.png';
-import BG2 from '../assets/BG2.png';
-import BG3 from '../assets/BG3.png';
-import BG4 from '../assets/BG4.png';
-import DashboardHeader from "../components/DashboardHeader";
-import BackgroundSelector from "../components/BackgroundSelector";
-
+import BG from '../../assets/BG.png';
+import BG2 from '../../assets/BG2.png';
+import BG3 from '../../assets/BG3.png';
+import BG4 from '../../assets/BG4.png';
+import DashboardHeader from "../../components/DashboardHeader";
+import BackgroundSelector from "../../components/BackgroundSelector";
 
 const Dashboard = () => {
   const [activeLink, setActiveLink] = useState('#home');

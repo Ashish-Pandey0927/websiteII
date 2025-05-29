@@ -1,13 +1,13 @@
 import React from "react";
 import "./OurWork.css";
-import fitness1 from "../assets/fitness1.png";
-import FitnessMinImg from "../assets/fitnessWhatsApp.png";
-import matremony from "../assets/matremony.png";
-import munchi from "../assets/munchi.png";
-import image4 from "../assets/image 4.png";
-import news11 from "../assets/news1 1.png";
-import matremony1 from "../assets/matremonyWhatsApp.png";
-import munich1 from "../assets/munich 1.png";
+import fitness1 from "../../assets/fitness1.png";
+import FitnessMinImg from "../../assets/fitnessWhatsApp.png";
+import matremony from "../../assets/matremony.png";
+import munchi from "../../assets/munchi.png";
+import image4 from "../../assets/image 4.png";
+import news11 from "../../assets/news1 1.png";
+import matremony1 from "../../assets/matremonyWhatsApp.png";
+import munich1 from "../../assets/munich 1.png";
 
 const OurWork = () => {
   return (

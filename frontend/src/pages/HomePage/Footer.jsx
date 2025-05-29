@@ -2,10 +2,10 @@ import React from "react";
 // import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./Footer.css";
 // import FooterLogo from "../assets/FooterLogo.png";
-import Vector from "../assets/Vector-logo.png";
-import shadepro from "../assets/shadepro.png";
-import thinkinnovative from "../assets/THINK INNOVATIVE.png";
-import SocialIcons from "../components/SocialIcons";
+import Vector from "../../assets/Vector-logo.png";
+import shadepro from "../../assets/shadepro.png";
+import thinkinnovative from "../../assets/THINK INNOVATIVE.png";
+import SocialIcons from "../../components/SocialIcons";
 
 const Footer = () => {
   return (
