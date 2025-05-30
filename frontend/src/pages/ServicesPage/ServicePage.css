@@ -2,15 +2,11 @@
   display: flex;
   flex-direction: column;
   width: 1601px;
-  /* Exact width */
   height: 676px;
-  /* Exact height */
   max-width: 1601px;
   position: relative;
   left: 1.14px;
-  /* Fine-tune positioning */
   transform: rotate(-0.1deg);
-  /* Rotate the container slightly */
   background-size: cover;
   background-position: center;
   padding: 2rem;

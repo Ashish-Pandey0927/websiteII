@@ -12,7 +12,7 @@ const HomePage = () => {
       <section id="section1">
     <Dashboard />
       </section>
-      {/* <section id="section2">
+      <section id="section2">
       <Alert />
       </section>
 
@@ -34,7 +34,7 @@ const HomePage = () => {
 
       <section id="section7" >
       <Footer />
-      </section> */}
+      </section>
     
 
     </div>

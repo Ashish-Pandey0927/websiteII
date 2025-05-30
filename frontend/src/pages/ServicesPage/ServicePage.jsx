@@ -9,7 +9,7 @@ import DashboardHeader from "../../components/DashboardHeader";
 const ServicePage = () => {
   const [activeLink, setActiveLink] = useState('#Services');
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    // <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div
         className="service-page-container"
         style={{
@@ -54,7 +54,7 @@ const ServicePage = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

@@ -1,13 +1,12 @@
-/* Dashboard Container */
-.dashboard-container {
+.home-dashboard-container {
   display: flex;
   flex-direction: column;
-  width:1601px; /* Exact width */
-  height: 676px; /* Exact height */
+  width:1601px;
+  height: 676px; 
   max-width: 1601px;
   position: relative;
-  left: 1.14px; /* Fine-tune positioning */
-  transform: rotate(-0.1deg); /* Rotate the container slightly */
+  left: 1.14px;
+  transform: rotate(-0.1deg);
   background-size: cover;
   background-position: center;
   padding: 2rem;
@@ -111,18 +110,13 @@
 /* Mobile-Specific Styles */
 @media screen and (max-width: 768px) {
   /* Dashboard Container */
-  .dashboard-container {
+  .home-dashboard-container {
     width: 100%;
     height: auto;
     padding: 0.5rem;
     left: 0;
     transform: none;
   }
-.dashboard-header.dashboard-page-header {
-     .social-icons {
-      top:-20px;
-     }
-}
   /* Highlight Section */
   .highlight-wrapper {
     position: relative;

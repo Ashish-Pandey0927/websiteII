@@ -12,15 +12,15 @@ const Dashboard = () => {
   const [bgImage, setBgImage] = useState(BG);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    // <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div
-        className="dashboard-container"
+        className="home-dashboard-container"
         style={{
           backgroundImage: `url(${bgImage}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
           backgroundBlendMode: 'multiply',
         }}
       >
-        <DashboardHeader className="dashboard-page-header" activeLink={activeLink} setActiveLink={setActiveLink} />
+        <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
 
         <div
           className="highlight-wrapper"
@@ -67,7 +67,7 @@ const Dashboard = () => {
           onChange={setBgImage}
         />
       </div>
-    </div>
+    // </div>
   );
 };
 

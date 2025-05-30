@@ -6,7 +6,7 @@ import './ContactUsHero.css';
 function ContactUsHero() {
    const [activeLink, setActiveLink] = useState('#contact');
   return (
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      // <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
     <div className="contact-hero">
       <div className="contact-hero-background"   style={{
           backgroundImage: `url(${backgroundImage})`,
@@ -26,7 +26,7 @@ function ContactUsHero() {
         </p>
       </div>
     </div>
-    </div>
+    // </div>
   );
 }
 
