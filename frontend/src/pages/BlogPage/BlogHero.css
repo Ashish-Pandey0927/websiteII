@@ -1,0 +1,152 @@
+.blog-page-container {
+  display: flex;
+  flex-direction: column;
+  width: 1601px;
+  height: 676px;
+  max-width: 1601px;
+  position: relative;
+  left: 1.14px;
+  transform: rotate(-0.1deg);
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+/* Hero Section */
+.blog-page-hero-content {
+  position: absolute;
+  width: 425px;
+  height: 348px;
+  top: 174.41px;
+  left: 244.85px;
+  transform: rotate(-0.1deg);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  color: #fff;
+   position: absolute;
+  left: 3%;
+  margin-top: 4%;
+}
+
+.blog-page-hero-heading {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 3.02rem;
+  line-height: 1.2;
+  letter-spacing: -1%;
+  color: #FFFFFF;
+  transform: rotate(0.1deg);
+  margin: 0;
+  text-align: left;
+ 
+}
+
+  .blog-page-hero-paragraph {
+    margin-top: 30px;
+    padding: 2% 2% 2% 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 150%;
+    color: #fff;
+    text-align: left;
+
+  }
+ /* Tablets and below */
+/* @media screen and (max-width: 991px) {
+  .blog-page-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    left: 0;
+    transform: none;
+  }
+
+  .blog-page-hero-content {
+    left: auto;
+    top: auto;
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .blog-page-hero-heading {
+    font-size: 2.2rem;
+  }
+
+  .blog-page-hero-paragraph {
+    font-size: 1.2rem;
+  }
+} */
+
+
+
+/* Small tablets and large phones */
+@media screen and (max-width: 767px) {
+
+  /* Dashboard Container */
+  .blog-page-container {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    left: 0;
+    transform: none;
+  }
+
+  /* Hero Section */
+  .blog-page-hero-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: auto;
+    left: auto;
+    padding: 1rem;
+    text-align: center;
+    gap:0px;
+  }
+
+  .blog-page-hero-heading {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    text-align: flex-start;
+    transform: none;
+  }
+
+  .blog-page-hero-paragraph {
+    margin-top: 30px;
+    padding: 2% 2% 2% 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 150%;
+    color: #fff;
+    text-align: left;
+
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 575px) {
+  .blog-page-container {
+    padding: 0.5rem;
+  }
+
+  .blog-page-hero-content {
+    padding: 0.5rem;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .blog-page-hero-heading {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .blog-page-hero-paragraph {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}

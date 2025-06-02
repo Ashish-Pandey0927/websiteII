@@ -1,0 +1,138 @@
+/* OurBlogs.css */
+
+.ourblogs-container {
+  width: 100%;
+  padding: 2rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.ourblogs-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ourblogs-icon {
+  font-size: 2rem;
+  color: #5A7184;
+  margin-bottom: 0.5rem;
+}
+
+.ourblogs-heading {
+  font-family: 'HK Grotesk', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #183B56;
+  margin: 0;
+}
+
+.ourblogs-subtext {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #5A7184;
+  margin-top: 0.5rem;
+}
+
+.ourblogs-grid {
+  display: grid;
+   grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.ourblogs-card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.ourblogs-card:hover {
+  transform: translateY(-5px);
+}
+
+.ourblogs-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.ourblogs-content {
+  padding: 1rem;
+}
+
+.ourblogs-card-title {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.5rem;
+  color: #183B56;
+  margin: 0 0 0.5rem;
+}
+
+.ourblogs-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  color: #5A7184;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.ourblogs-button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #36B37E;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ourblogs-button i {
+  font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .ourblogs-image {
+     max-width: 753px;
+  height: 400px !important;
+}
+    .ourblogs-grid {
+   grid-template-columns: 1fr !important;
+}
+.ourblogs-card {
+  max-width: 753px;
+}
+.ourblogs-container {
+  padding: 1rem;
+}
+
+.ourblogs-grid {
+  flex-direction: column;
+  align-items: center;
+}
+}
+@media (max-width: 768px) {
+  .ourblogs-grid {
+   grid-template-columns: repeat(2, 1fr);
+}
+  .ourblogs-image {
+  height: 240px;
+}
+
+  .ourblogs-heading {
+    font-size: 1.75rem;
+  }
+
+  .ourblogs-card-title {
+    font-size: 1.25rem;
+  }
+
+  .ourblogs-description {
+    font-size: 0.875rem;
+  }
+}

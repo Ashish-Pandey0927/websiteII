@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage/HomePage';
 import Services from './pages/ServicesPage/Services';
 import ContactUs from './pages/ContactUsPage/ContactUs';
+import Blogs from './pages/BlogPage/Blog';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<Services/> }/>
+          <Route path="/blogs" element={<Blogs/> }/>
           <Route path="/contact" element={<ContactUs/>}/>
         </Routes>
       </Layout>
