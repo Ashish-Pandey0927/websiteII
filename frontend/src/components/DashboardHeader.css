@@ -14,7 +14,7 @@
   background-color: transparent;
   color: white;
   flex-wrap: wrap;
-  gap: 38rem;
+  gap: 4rem;
 }
 /* Wrapper for logo + nav links to control spacing */
 .header-center {
@@ -123,7 +123,11 @@
 
   .menu-toggle {
     display: block;
-    padding: 1.3rem;
+    position: relative;
+    top: -1.25rem;
+    padding: 1rem;
+    margin-right: 0.5rem;
+    font-size: 2rem;
   }
 
   /* .nav-links {
@@ -155,6 +159,7 @@
     display: flex;
     align-items: center;
     width:21%;
+    right: 24rem;
   }
 
   .nav-links a {

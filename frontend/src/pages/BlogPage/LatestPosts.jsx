@@ -2,7 +2,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import BlogPost1 from '../../assets/BlogPost1.png';
 import BlogPost2 from '../../assets/BlogPost2.png';
-import BlogPost3 from '../../assets/BlogPost4.png';
+import BlogPost3 from '../../assets/BlogPost3.png';
 import BlogPost4 from '../../assets/BlogPost4.png';
 import BlogPost5 from '../../assets/BlogPost5.png';
 import BlogPost6 from '../../assets/BlogPost6.png';
