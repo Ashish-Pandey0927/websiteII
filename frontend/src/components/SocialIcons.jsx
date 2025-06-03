@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {  FaFacebook , FaTwitter, FaInstagram, FaLinkedin ,FaWhatsapp,FaPhone } from 'react-icons/fa';
 
-const SocialIcons = () => {
+const SocialIcons = ({ direction = 'row' }) => {
   const [iconColor, setIconColor] = useState('black');
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const SocialIcons = () => {
   }, []);
 
   return (
-    <div className="social-icons">
+    <div className={`social-icons ${direction === 'column' ? 'social-column' : 'social-row'}`}>
       <a href="#" className="social-link"  aria-label="Facebook" rel="noopener noreferrer" style={{ color: iconColor }}><FaFacebook /></a>
       <a href="#" className="social-link"  aria-label="Twitter" rel="noopener noreferrer"style={{ color: iconColor }}><FaTwitter /></a>
       <a href="#" className="social-link"  aria-label="Instagram" rel="noopener noreferrer"style={{ color: iconColor }}><FaInstagram /></a>

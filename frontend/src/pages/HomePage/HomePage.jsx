@@ -5,6 +5,7 @@ import Dashboard from './Dashboard';
 import WhatWeDo from './WhatWeDo';
 import OurWork from './OurWork';
 import CTAForm from './CTAForm';
+// import HomeFooter from './HomeFooter';
 import Footer from './Footer';
 const HomePage = () => {
   return (
@@ -34,6 +35,7 @@ const HomePage = () => {
 
       <section id="section7" >
       <Footer />
+      {/* <HomeFooter/> */}
       </section>
     
 

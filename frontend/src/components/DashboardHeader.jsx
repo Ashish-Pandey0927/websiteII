@@ -17,6 +17,7 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/aboutus" },
     { name: "Services", path: "/services" },
+    { name: "Blogs", path: "/blogs" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -33,6 +34,14 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
           </div>
         </div>
 
+      </div>
+      <div className="right-icons">
+        <div className="social-icons-wrapper">
+          <SocialIcons direction="column" />
+        </div>
+        <div className="menu-toggle mobile-only" onClick={toggleMenu}>
+          <FiMenu />
+        </div>
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
           {sections.map(({ name, path }) => (
@@ -49,14 +58,6 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
             </Link>
           ))}
         </nav>
-      </div>
-      <div className="right-icons">
-        <div className="social-icons-wrapper">
-          <SocialIcons />
-        </div>
-        <div className="menu-toggle mobile-only" onClick={toggleMenu}>
-          <FiMenu size={24} />
-        </div>
       </div>
     </header>
   );
