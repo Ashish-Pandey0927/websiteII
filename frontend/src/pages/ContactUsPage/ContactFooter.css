@@ -2,7 +2,7 @@
   position: relative;
   max-width: 1601px;
   height: 605px;
-  top: 1500px;
+  top: 860px;
   background-color: #101010;
   margin: 0 auto;
   padding: 86px 46px 0!important;
@@ -149,7 +149,8 @@
   .contact-footer {
     height: auto;
     width: 100%;
-    top: 1345px;
+    top: -50px;
+     padding: 86px 20px 0!important;
   }
   .contact-footer .cta span{
     font-size: 1.2rem;

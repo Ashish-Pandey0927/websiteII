@@ -11,7 +11,7 @@
   background-position: center;
   padding: 2rem;
   overflow: hidden;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 /* CTA Button */
@@ -113,7 +113,7 @@
   .home-dashboard-container {
     width: 100%;
     height: auto;
-    padding: 0.5rem;
+    padding: 1.25rem;
     left: 0;
     transform: none;
   }
