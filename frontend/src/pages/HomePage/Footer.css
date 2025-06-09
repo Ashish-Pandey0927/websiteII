@@ -87,7 +87,7 @@
 @media screen and (max-width: 768px) {
     .footer {
         position: relative;
-        width: 91%;
+        width: 100%;
       height: auto;
       padding: 30px 20px;
       top: -1455px;
