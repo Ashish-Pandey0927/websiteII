@@ -10,16 +10,29 @@ import "../components/SocialIcons.css";
 
 const DashboardHeader = ({ activeLink, setActiveLink }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
-  const sections = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/aboutus" },
-    { name: "Services", path: "/services" },
-    { name: "Blogs", path: "/blogs" },
-    { name: "Contact", path: "/contact" },
-  ];
+const sections = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/aboutus" },
+  {
+    name: "Services", path: "/services",
+    subLinks: [
+      { name: "Web Development", path: "/services/webdevelopment" },
+      { name: "Mobile Development", path: "/services/mobiledevelopment" },
+      { name: "Cloud Services", path: "/services/cloudservices" },
+      { name: "Quality Assurance", path: "/services/qualityassurance" },
+      { name: "Salesforce", path: "/services/salesforce" },
+      { name: "CI/CD DevOps", path: "/services/cicddevops" },
+    ]
+  },
+  { name: "Blogs", path: "/blogs" },
+  { name: "Contact", path: "/contact" },
+];
+
 
   return (
     <header className="dashboard-header">
@@ -44,18 +57,43 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
         </div>
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          {sections.map(({ name, path }) => (
-            <Link
+          {sections.map(({ name, path, subLinks }) => (
+            <div
               key={path}
-              to={path}
-              className={`${activeLink === path ? "active" : ""} ${name === "Services" ? "bold" : ""} ${name === "Home" ? "underline" : ""}`}
-              onClick={() => {
-                setActiveLink(path);
-                setMenuOpen(false);
-              }}
+              className={`nav-item ${name === "Services" ? "has-dropdown" : ""}`}
+              onMouseEnter={() => name === "Services" && setServicesDropdownOpen(true)}
+              onMouseLeave={() => name === "Services" && setServicesDropdownOpen(false)}
             >
-              {name}
-            </Link>
+              <Link
+                to={path}
+                className={`${activeLink === path ? "active" : ""} ${name === "Services" ? "bold" : ""} ${name === "Home" ? "underline" : ""}`}
+                onClick={() => {
+                  setActiveLink(path);
+                  setMenuOpen(false);
+                }}
+              >
+                {name}
+              </Link>
+
+              {subLinks && servicesDropdownOpen && (
+                <div className="dropdown-menu">
+                  {subLinks.map((sub) => (
+                    <Link
+                      key={sub.path}
+                      to={sub.path}
+                      className="dropdown-link"
+                      onClick={() => {
+                        setActiveLink(sub.path);
+                        setMenuOpen(false);
+                        setServicesDropdownOpen(false);
+                      }}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </nav>
       </div>

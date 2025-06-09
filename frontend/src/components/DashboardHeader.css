@@ -173,3 +173,34 @@
     margin-left: auto;
   }
 }
+.nav-item {
+  position: relative;
+}
+
+.has-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background:  #161C2D;
+  border: 1px solid #ccc;
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.has-dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-link {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.dropdown-link:hover {
+  background: #f0f0f0;
+  color: #161C2D;
+}

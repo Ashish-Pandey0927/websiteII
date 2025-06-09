@@ -1,15 +1,15 @@
-.contact-footer {
+.services-footer {
   position: relative;
+  width: 100%;
   max-width: 1601px;
   height: 605px;
-  top: 1500px;
   background-color: #101010;
   margin: 0 auto;
-  padding: 86px 46px 0!important;
-  /* box-sizing: border-box; */
+  padding: 86px 46px 0;
+  box-sizing: border-box;
 }
 
-.contact-footer__logo {
+.service-footer__logo {
   display: flex;
   justify-content: flex-start;
 }
@@ -19,7 +19,7 @@
   height: 29px;
 } */
 
-.contact-footer .cta {
+.services-footer .cta {
   position: absolute;
   top: 86px;
   right: 46px;
@@ -28,14 +28,14 @@
   gap: 4rem;
 }
 
-.contact-footer .cta span {
+.services-footer .cta span {
   color: white;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 26px;
 }
 
-.contact-footer .cta button {
+.services-footer .cta button {
   background-color: #A7F46A;
   color: black;
   font-weight: bold;
@@ -47,7 +47,7 @@
   border-radius: 8px;
 }
 
-.contact-footer .divider {
+.services-footer .divider {
   position: absolute;
   top: 190px;
   left: 46px;
@@ -56,14 +56,14 @@
   background-color: #757B8A;
 }
 
-.contact-footer .newsletter {
+.services-footer .newsletter {
   position: absolute;
   top: 231px;
   left: 201px;
   width: 317px;
 }
 
-.contact-footer .newsletter h3 {
+.services-footer .newsletter h3 {
   color: white;
   font-size: 2.2rem;
   font-weight: bold;
@@ -71,7 +71,7 @@
   margin-top: 0;
 }
 
-.contact-footer .newsletter input {
+.services-footer .newsletter input {
   width: 100%;
   border: 1px solid transparent;
   border-bottom: 1px solid #757B8A;
@@ -82,7 +82,7 @@
   font-size: 1rem;
 }
 
-.contact-footer .newsletter button {
+.services-footer .newsletter button {
   position: absolute;
   top: 0;
   right: 0;
@@ -146,16 +146,15 @@
 
 /* ✅ Responsive layout below 768px */
 @media (max-width: 768px) {
-  .contact-footer {
+  .services-footer {
+    padding: 2rem;
     height: auto;
-    width: 100%;
-    top: 1345px;
   }
-  .contact-footer .cta span{
+  .services-footer .cta span{
     font-size: 1.2rem;
   } 
 
-  .contact-footer .cta {
+  .services-footer .cta {
     position: static;
     flex-direction: row;
     align-items: flex-start;
@@ -163,20 +162,20 @@
     margin-top: 2rem;
   }
 
-  .contact-footer .divider {
+  .services-footer .divider {
     position: static;
     display: flex;
     justify-content: center;
     margin: 2rem 0rem;
   }
 
-  .contact-footer .newsletter {
+  .services-footer .newsletter {
     position: static;
     width: 75%;
     margin-bottom: 2rem;
   }
 
-  .contact-footer .newsletter button {
+  .services-footer .newsletter button {
     position: absolute;
     right: 0;
     top: 0;
