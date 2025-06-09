@@ -129,7 +129,7 @@
 @media screen and (max-width: 768px) {
   .contact-hero {
   width: 100%;
-  padding: 20px;
+  padding: 1.5rem;
 }
 .contact-hero-overlay{
   width: 100%;

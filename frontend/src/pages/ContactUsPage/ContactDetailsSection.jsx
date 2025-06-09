@@ -8,28 +8,28 @@ function ContactDetailsSection() {
         <div className="contact-card">
           <div className="contact-form">
             <div className="form-row">
-              <div className="form-group">
+              <div className="blog-form-group">
                 <label>Name</label>
                 <div className="input">John Carter</div>
               </div>
-              <div className="form-group">
+              <div className="blog-form-group">
                 <label>Email</label>
                 <div className="input">email@23.com</div>
               </div>
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="blog-form-group">
                 <label>Phone number</label>
                 <div className="input">374-9475-783</div>
               </div>
-              <div className="form-group">
+              <div className="blog-form-group">
                 <label>Subject</label>
                 <div className="input">Service.</div>
               </div>
             </div>
 
-            <div className="form-group message-group">
+            <div className="blog-form-group message-group">
               <label>Message</label>
               <div className="input">
                 Please describe what service you are looking for...

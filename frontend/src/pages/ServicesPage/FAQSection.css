@@ -1,10 +1,10 @@
 .faq-section {
   display: flex;
   justify-content: space-between;
-  padding: 100px 40px;
+  padding: 6rem;
   background: #ffffff;
   max-width: 1523px;
-  margin: auto 4%;
+  margin: 0;
   gap: 40px;
 }
 
