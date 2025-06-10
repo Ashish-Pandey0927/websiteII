@@ -11,6 +11,7 @@ import CloudServicesPage from './pages/ServicesSubPages/CloudServices/CloudServi
 import QualityAssurancePage from './pages/ServicesSubPages/QualityAssurance/QualityAssurancePage';
 import SalesforcePage from './pages/ServicesSubPages/Salesforce/SalesforcePage';
 import CI_CD_DevOpsPage from './pages/ServicesSubPages/CI-CD-DevOps/CI_CD_DevOpsPage';
+import Portfolio from './pages/PortfolioPage/Portfolio';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="cicddevops" element={<CI_CD_DevOpsPage />} />
           </Route>
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<ContactUs />} />
 
         </Routes>
