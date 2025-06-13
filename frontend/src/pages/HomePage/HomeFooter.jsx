@@ -1,16 +1,17 @@
 import './HomeFooter.css';
-// import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Vector from "../../assets/Vector-logo.png";
 import shadepro from "../../assets/shadepro.png";
 import thinkinnovative from "../../assets/THINK INNOVATIVE.png";
 import { ChevronRight } from "lucide-react";
 import SocialIcons from '../../components/SocialIcons';
 
+
+
 export default function HomeFooter() {
   return (
-    <footer className="services-footer">
-      <div className='services-footer-header'>
-        <div className="service-footer__logo">
+    <footer className="home-footer">
+      <div className='home-footer-header'>
+        <div className="footer__logo">
           <img src={Vector} alt="Logo" />
           <div className="stacked-logos">
             <img src={shadepro} alt="Logo2" className="logo2" />
@@ -41,8 +42,7 @@ export default function HomeFooter() {
 
         {/* Lists */}
         <div className="list-section">
-          {/* Services */}
-          <div className="footer-section" style={{ left: '629px' }}>
+          <div className="home-footer-section" style={{ left: '629px' }}>
             <h4>Services</h4>
             <ul>
               <li>Email Marketing</li>
@@ -53,7 +53,7 @@ export default function HomeFooter() {
           </div>
 
           {/* About */}
-          <div className="footer-section" style={{ left: '934px' }}>
+          <div className="home-footer-section" style={{ left: '934px' }}>
             <h4>About</h4>
             <ul>
               <li>Our Story</li>
@@ -64,7 +64,7 @@ export default function HomeFooter() {
           </div>
 
           {/* Help */}
-          <div className="footer-section" style={{ left: '1194px' }}>
+          <div className="home-footer-section" style={{ left: '1194px' }}>
             <h4>Help</h4>
             <ul>
               <li>FAQs</li>
@@ -76,14 +76,13 @@ export default function HomeFooter() {
 
       {/* Bottom Row */}
       <div className="bottom-row">
-        <div className="footer-bottom">
+        <div className="home-footer-bottom">
           <span>Terms & Conditions</span>
           <span>Privacy Policy</span>
         </div>
 
-        <div className="footer-social">
-       <SocialIcons direction="row" />
-
+        <div className="home-footer-social">
+       <SocialIcons/>
         </div>
       </div>
     </footer>

@@ -9,7 +9,7 @@
   position: absolute;
   width: 1601px;
   height: 2565px;
-  left: 79px;
+  left: 0;
   top: 2684px;
   background: #fff;
   font-family: 'Inter', sans-serif;
@@ -325,7 +325,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    padding: 1.25rem;
+    padding: 2.25rem;
     top: 0;
     left: 0;
   }

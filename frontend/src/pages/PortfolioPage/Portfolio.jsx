@@ -1,8 +1,8 @@
 import React from 'react';
 import PortfolioHero from './PortfolioHero';
 import LeaveComment from '../BlogPage/LeaveComment';
-import BlogFooter from '../BlogPage/BlogFooter';
 import OurPortfolios from './OurPortfolios';
+import Footer from '../../components/Footer';
 
 const Portfolio = () => {
   return (
@@ -17,7 +17,7 @@ const Portfolio = () => {
        <LeaveComment />
        </section>
        <section id="portfolio-section4">
-       <BlogFooter />
+       <Footer />
        </section>
     </div>
   )

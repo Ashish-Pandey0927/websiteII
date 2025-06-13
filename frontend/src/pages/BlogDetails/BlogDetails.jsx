@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './BlogDetails.css';
-import BlogFooter from '../BlogPage/BlogFooter';
+import Footer from '../../components/Footer';
 
 const BlogDetails = () => {
     const { id } = useParams();
@@ -59,7 +59,7 @@ const BlogDetails = () => {
                 Author: {blog.authorName} | Views: {blog.views} | Comments: {blog.comments}
             </div>
         </div>
-            <BlogFooter />
+            <Footer />
         </>
 
     );

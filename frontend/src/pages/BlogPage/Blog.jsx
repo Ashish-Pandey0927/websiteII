@@ -3,7 +3,7 @@ import BlogHero from './BlogHero';
 import OurBlogs from './OurBlogs';
 import LatestPosts from './LatestPosts';
 import LeaveComment from './LeaveComment';
-import BlogFooter from './BlogFooter';
+import Footer from '../../components/Footer';
 
 const Blogs = () => {
   return (
@@ -22,7 +22,7 @@ const Blogs = () => {
        </section>
       
       <section id="blogs-section5">
-        <BlogFooter />
+        <Footer />
       </section>
     </div>
   )

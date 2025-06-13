@@ -5,37 +5,36 @@ import Dashboard from './Dashboard';
 import WhatWeDo from './WhatWeDo';
 import OurWork from './OurWork';
 import CTAForm from './CTAForm';
-// import HomeFooter from './HomeFooter';
-import Footer from './Footer';
+import HomeFooter from './HomeFooter';
+
 const HomePage = () => {
   return (
     <div>
-      <section id="section1">
+      <section id="home-section1">
     <Dashboard />
       </section>
-      <section id="section2">
+      <section id="home-section2">
       <Alert />
       </section>
 
-      <section id="section3" >
+      <section id="home-section3" >
       <AboutUs />
       </section>
 
-      <section id="section4" >
+      <section id="home-section4" >
       <WhatWeDo />
       </section>
 
-      <section id="section5" >
+      <section id="home-section5" >
       <OurWork />
       </section>
 
-      <section id="section6" >
+      <section id="home-section6" >
       <CTAForm />
       </section>
 
-      <section id="section7" >
-      <Footer />
-      {/* <HomeFooter/> */}
+      <section id="home-section7" >
+      <HomeFooter/>
       </section>
     
 
