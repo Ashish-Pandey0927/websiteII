@@ -1,16 +1,16 @@
 import './Footer.css';
-// import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import Vector from "../../assets/Vector-logo.png";
-import shadepro from "../../assets/shadepro.png";
-import thinkinnovative from "../../assets/THINK INNOVATIVE.png";
+import Vector from "../assets/Vector-logo.png";
+import shadepro from "../assets/shadepro.png";
+import thinkinnovative from "../assets/THINK INNOVATIVE.png";
 import { ChevronRight } from "lucide-react";
-import SocialIcons from '../../components/SocialIcons';
+import SocialIcons from './SocialIcons';
+
 
 export default function Footer() {
   return (
-    <footer className="services-footer">
-      <div className='services-footer-header'>
-        <div className="service-footer__logo">
+    <footer className="footer">
+      <div className='footer-header'>
+        <div className="footer__logo">
           <img src={Vector} alt="Logo" />
           <div className="stacked-logos">
             <img src={shadepro} alt="Logo2" className="logo2" />

@@ -4,8 +4,8 @@ import OfferedServices from './OfferedServices';
 import ProcessSection from './ProcessSection';
 import NewsletterSection from './NewsletterSection';
 import FAQSection from './FAQSection';
-import Footer from './Footer';
 import ServicePage from './ServicePage';
+import Footer from '../../components/Footer';
 
 const Services = () => {
   const location = useLocation();
