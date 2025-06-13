@@ -12,6 +12,7 @@ import QualityAssurancePage from './pages/ServicesSubPages/QualityAssurance/Qual
 import SalesforcePage from './pages/ServicesSubPages/Salesforce/SalesforcePage';
 import CI_CD_DevOpsPage from './pages/ServicesSubPages/CI-CD-DevOps/CI_CD_DevOpsPage';
 import Portfolio from './pages/PortfolioPage/Portfolio';
+import BlogDetails from './pages/BlogDetails/BlogDetails';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="cicddevops" element={<CI_CD_DevOpsPage />} />
           </Route>
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<ContactUs />} />
 
