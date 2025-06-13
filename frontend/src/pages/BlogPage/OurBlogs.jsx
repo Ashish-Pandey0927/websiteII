@@ -1,65 +1,75 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './OurBlogs.css';
-import Blog1 from '../../assets/Blog1.png';
-import Blog2 from '../../assets/Blog2.png';
-import Blog3 from '../../assets/Blog3.png';
 import { FaArrowRight } from "react-icons/fa";
-// import { GiNotebook } from "react-icons/gi";
 
 const OurBlogs = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await fetch("https://admin.estonsoft.com/blogs/", {
+          headers: {
+            Accept: "application/json",
+            Authorization:
+              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndlYnNpdGVAZW1haWwuY29tIn0.0V7rd-KcWrX1_Ax1LetjLIXXXQ-ClNzN9Fgddzc9qGs",
+          },
+        });
+
+        const data = await response.json();
+        setBlogs(data);
+      } catch (error) {
+        console.error("Failed to fetch blogs", error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
   return (
     <section className="ourblogs-container">
       {/* Title Section */}
       <div className="ourblogs-title">
-        {/* <div className="ourblogs-icon"><GiNotebook/></div> */}
         <h2 className="ourblogs-heading">📝 Read our Blog</h2>
-        <p className="ourblogs-subtext">Check our latest article to get inspiring content for shopping</p>
+        <p className="ourblogs-subtext">
+          Check our latest article to get inspiring content for shopping
+        </p>
       </div>
 
       {/* Blog Cards Container */}
       <div className="ourblogs-grid">
-
-        {/* Blog Card */}
-        <div className="ourblogs-card">
-          <img src={Blog1} alt="Blog Cover" className="ourblogs-image" />
-          <div className="ourblogs-content">
-            <h3 className="ourblogs-card-title">Unlock the Power of Cloud with Estonsoft</h3>
-            <p className="ourblogs-description">Looking to elevate your business with secure, scalable, and reliable cloud solution? 
-Estonsoft has you covered!</p>
-            <button className="ourblogs-button">
-              Read More <FaArrowRight/>
-            </button>
-          </div>
-        </div>
-
-        {/* Blog Card */}
-        <div className="ourblogs-card">
-          <img src={Blog2} alt="Blog Cover" className="ourblogs-image" />
-          <div className="ourblogs-content">
-            <h3 className="ourblogs-card-title">Elevate Your Software Quality with Estonsoft</h3>
-            <p className="ourblogs-description">Deliver flawless digital experiences with estonSoft’s expert testing services! In today’s competitive market, your Software quality, re...</p>
-            <button className="ourblogs-button">
-              Read More <FaArrowRight/>
-            </button>
-          </div>
-        </div>
-
-        {/* Blog Card */}
-        <div className="ourblogs-card">
-          <img src={Blog3} alt="Blog Cover" className="ourblogs-image" />
-          <div className="ourblogs-content">
-            <h3 className="ourblogs-card-title">Unlocking Business Growth with Web App Solution</h3>
-            <p className="ourblogs-description">In today’s fast-paced digital landscape, businesses must adapt to thrive. Web app solutions are a game-changer, offering the....</p>
-            <button className="ourblogs-button">
-              Read More <FaArrowRight/>
-            </button>
-          </div>
-        </div>
-
+        {blogs.length > 0 ? (
+          blogs.slice(0, 3).map((blog) => (
+            <div key={blog.id} className="ourblogs-card">
+              <Link to={`/blogs/${blog.id}`}>
+                <img
+                  src={blog.image || "https://via.placeholder.com/400x250"}
+                  alt={blog.title}
+                  className="ourblogs-image"
+                />
+              </Link>
+              <div className="ourblogs-content">
+                <Link to={`/blogs/${blog.id}`}>
+                  <h3 className="ourblogs-card-title">
+                    {blog.title || "Untitled Blog"}
+                  </h3>
+                </Link>
+                <p className="ourblogs-description">
+                  {blog.paragraph?.slice(0, 150) || "No description available..."}
+                </p>
+                <Link to={`/blogs/${blog.id}`} className="ourblogs-button">
+                  Read More <FaArrowRight />
+                </Link>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p>Loading blogs...</p>
+        )}
       </div>
     </section>
   );
 };
 
 export default OurBlogs;
-                                

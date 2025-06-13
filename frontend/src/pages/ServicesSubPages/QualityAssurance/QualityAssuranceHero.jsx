@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Hero.css';
-import qualityassuranceBG from '../../../assets/qualityassuranceBG.png';
+import qualityassuranceBG2 from '../../../assets/qualityassuranceBG2.png';
 import DashboardHeader from '../../../components/DashboardHeader';
 
 function QualityAssuranceHero() {
@@ -9,7 +9,7 @@ function QualityAssuranceHero() {
       <div
         className="web-development-page-container"
         style={{
-          backgroundImage: `url(${qualityassuranceBG}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
+          backgroundImage: `url(${qualityassuranceBG2}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
           backgroundBlendMode: 'multiply',
         }}
       >

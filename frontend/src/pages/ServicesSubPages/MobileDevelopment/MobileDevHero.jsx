@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Hero.css';
-import mobiledevelopmentBG from '../../../assets/mobiledevelopmentBG.png';
+import mobiledevelopmentBG2 from '../../../assets/mobiledevelopmentBG2.png';
 import DashboardHeader from '../../../components/DashboardHeader';
 
 function MobileDevHero() {
@@ -9,7 +9,7 @@ function MobileDevHero() {
       <div
         className="web-development-page-container"
         style={{
-          backgroundImage: `url(${mobiledevelopmentBG}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
+          backgroundImage: `url(${mobiledevelopmentBG2}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
           backgroundBlendMode: 'multiply',
         }}
       >

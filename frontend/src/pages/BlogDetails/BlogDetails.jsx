@@ -1,0 +1,68 @@
+import { useParams, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import './BlogDetails.css';
+import BlogFooter from '../BlogPage/BlogFooter';
+
+const BlogDetails = () => {
+    const { id } = useParams();
+    const [blog, setBlog] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchBlog = async () => {
+            try {
+                const response = await fetch(`https://admin.estonsoft.com/blogs/${id}/`, {
+                    headers: {
+                        Accept: 'application/json',
+                        Authorization:
+                            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndlYnNpdGVAZW1haWwuY29tIn0.0V7rd-KcWrX1_Ax1LetjLIXXXQ-ClNzN9Fgddzc9qGs',
+                    },
+                });
+
+                if (!response.ok) throw new Error('Blog not found');
+                const data = await response.json();
+                setBlog(data);
+            } catch (error) {
+                console.error('Error fetching blog:', error);
+                setBlog(null);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchBlog();
+    }, [id]);
+
+    if (loading) return <p className="text-center py-10">Loading...</p>;
+    if (!blog) return <p className="text-center text-red-500 py-10">Blog not found.</p>;
+
+    return (
+        <>
+          <div className="blog-details-container">
+            <Link to="/blogs" className="back-to-blogs">← Back to Blogs</Link>
+
+            <img
+                src={blog.image || 'https://via.placeholder.com/1200x600'}
+                alt={blog.title}
+                className="blog-details-image"
+            />
+
+            <h1 className="blog-details-title animate-slide-up">{blog.title}</h1>
+            <p className="blog-details-paragraph animate-fade-in">{blog.paragraph}</p>
+
+            <div
+                className="blog-details-content animate-fade-in"
+                dangerouslySetInnerHTML={{ __html: blog.content }}
+            />
+
+            <div className="blog-details-meta sticky-meta">
+                Author: {blog.authorName} | Views: {blog.views} | Comments: {blog.comments}
+            </div>
+        </div>
+            <BlogFooter />
+        </>
+
+    );
+};
+
+export default BlogDetails;
