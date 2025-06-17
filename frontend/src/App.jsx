@@ -13,6 +13,7 @@ import SalesforcePage from './pages/ServicesSubPages/Salesforce/SalesforcePage';
 import CI_CD_DevOpsPage from './pages/ServicesSubPages/CI-CD-DevOps/CI_CD_DevOpsPage';
 import Portfolio from './pages/PortfolioPage/Portfolio';
 import BlogDetails from './pages/BlogDetails/BlogDetails';
+import AboutUS from './pages/AboutUsPage/AboutUs';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/aboutus" element={<AboutUS />} />
           <Route path="/services" element={<Services />}>
             <Route path="webdevelopment" element={<WebDevelopmentPage />} />
             <Route path="mobiledevelopment" element={<MobileDevelopmentPage />} />

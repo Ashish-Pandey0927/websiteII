@@ -1,0 +1,109 @@
+.smarter-container {
+  width: 100%;
+  background: #FAFAFA;
+  padding: 60px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.headline-subtext{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headline {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+  text-align: center;
+  max-width: 800px;
+}
+
+.subtext {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #333333;
+  max-width: 500px;
+  text-align: center;
+}
+
+.background-image {
+  width: 90%;
+  max-width: 1120px;
+  height: 575px;
+  background: url('christian-buehner-DItYlc26zVI-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 17px;
+}
+
+.play-button-group {
+  position: relative;
+  width: 130px;
+  height: 132px;
+}
+
+.ellipse {
+  position: absolute;
+  width: 88.4px;
+  height: 89.76px;
+  top: 21.12px;
+  left: 20.8px;
+  background: #FFFFFF;
+  opacity: 0.53;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.play-bg {
+  position: absolute;
+  width: 130px;
+  height: 132px;
+  top: 0;
+  left: 0;
+  background: #5754FF;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.play-icon {
+  position: absolute;
+  width: 130px;
+  height: 132px;
+  top: 0;
+  left: 0;
+  background: url('play-icon.png'); /* Replace with actual path */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 2;
+}
+
+.start-trial-button {
+  width: 97px;
+  height: 29px;
+  background: linear-gradient(180deg, #6161C5 0%, #A9A6E2 100%);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #FFFFFF;
+}

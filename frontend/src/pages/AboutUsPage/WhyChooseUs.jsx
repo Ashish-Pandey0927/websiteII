@@ -1,0 +1,59 @@
+import React from 'react';
+import './WhyChooseUs.css';
+
+const WhyChooseUs = () => {
+  return (
+    <section className="why-choose-us">
+      <div className="text-content">
+        <h2>Why to Choose Us</h2>
+        <p>
+          Choosing us means partnering with a team committed to quality, innovation, and customer satisfaction. We deliver reliable
+          solutions tailored to your goals, using cutting-edge technology and industry best practices to ensure long-term success.
+        </p>
+      </div>
+
+      <div className="diagram-container">
+        {/* Vertical dashed line */}
+        <div className="dashed-line vertical-line"></div>
+
+        {/* Horizontal dashed lines */}
+        <div className="dashed-line horizontal-line top-line"></div>
+        <div className="dashed-line horizontal-line bottom-line"></div>
+
+        <div className="card qa">
+          <h3>Quality Assurance</h3>
+          <p>
+            We ensure every solution is rigorously tested for performance, security, and reliability. Our expert QA teams guarantee
+            a flawless, bug-free user experience.
+          </p>
+        </div>
+
+        <div className="card innovation-tech">
+          <h3>Innovation & Technology Focus</h3>
+          <p>
+            We stay ahead by embracing the latest technologies like AI, cloud, and IoT. Innovation drives everything we build,
+            ensuring future-ready solution for our clients.
+          </p>
+        </div>
+
+        <div className="card agile">
+          <h3>Agile & Scalable Delivery</h3>
+          <p>
+            We follow an agile approach to ensure fast, flexible, and client-focused delivery. Our scalable solutions grow
+            seamlessly with your business needs.
+          </p>
+        </div>
+
+        <div className="card end-to-end">
+          <h3>End-to-End Services</h3>
+          <p>
+            We offer comprehensive end-to-end services, covering every stage from planning to post-launch support. This ensures
+            seamless integration and consistent quality throughout the project lifecycle.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default WhyChooseUs;
