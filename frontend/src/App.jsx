@@ -17,7 +17,7 @@ import AboutUS from './pages/AboutUsPage/AboutUs';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/new">
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
