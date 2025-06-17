@@ -55,7 +55,7 @@
   background: #f2f5ff;
   padding: 24px;
   border-radius: 17px;
-  min-width: 300px;
+  min-width: 440px !important;
 }
 
 .features ul {
@@ -98,7 +98,7 @@
 
 .info {
   flex: 1;
-  min-width: 300px;
+  min-width: 620px;
 }
 
 .info h3 {
