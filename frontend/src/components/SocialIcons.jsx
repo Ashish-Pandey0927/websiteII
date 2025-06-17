@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {  FaFacebook , FaTwitter, FaInstagram, FaLinkedin ,FaWhatsapp,FaPhone } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp, FaPhone } from 'react-icons/fa';
 
 const SocialIcons = ({ direction = 'row' }) => {
   const [iconColor, setIconColor] = useState('black');
@@ -15,20 +15,75 @@ const SocialIcons = ({ direction = 'row' }) => {
     };
 
     getBackgroundBrightness();
-
-    // Optional: Update if background might change
     window.addEventListener('resize', getBackgroundBrightness);
     return () => window.removeEventListener('resize', getBackgroundBrightness);
   }, []);
 
   return (
     <div className={`social-icons ${direction === 'column' ? 'social-column' : 'social-row'}`}>
-      <a href="#" className="social-link"  aria-label="Facebook" rel="noopener noreferrer" style={{ color: iconColor }}><FaFacebook /></a>
-      <a href="#" className="social-link"  aria-label="Twitter" rel="noopener noreferrer"style={{ color: iconColor }}><FaTwitter /></a>
-      <a href="#" className="social-link"  aria-label="Instagram" rel="noopener noreferrer"style={{ color: iconColor }}><FaInstagram /></a>
-      <a href="#" className="social-link"  aria-label="Linkedin" rel="noopener noreferrer"style={{ color: iconColor }}><FaLinkedin  /></a>
-      <a href="#" className="social-link"  aria-label="Whatsapp" rel="noopener noreferrer"style={{ color: iconColor }}><FaWhatsapp /></a>
-      <a href="#" className="social-link"  aria-label="Phone" rel="noopener noreferrer"style={{ color: iconColor }}><FaPhone /></a>
+      <a
+        href="https://www.facebook.com/profile.php?id=61572364133399"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-link"
+        aria-label="Facebook"
+        style={{ color: iconColor }}
+      >
+        <FaFacebook />
+      </a>
+
+      <a
+        href="https://x.com/Estonsoft"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-link"
+        aria-label="Twitter"
+        style={{ color: iconColor }}
+      >
+        <FaTwitter />
+      </a>
+
+      <a
+        href="https://www.instagram.com/estonsoft/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-link"
+        aria-label="Instagram"
+        style={{ color: iconColor }}
+      >
+        <FaInstagram />
+      </a>
+
+      <a
+        href="https://www.linkedin.com/company/estonsoftpvtltd"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-link"
+        aria-label="Linkedin"
+        style={{ color: iconColor }}
+      >
+        <FaLinkedin />
+      </a>
+
+      <a
+        href="https://wa.me/+919637225752"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-link"
+        aria-label="Whatsapp"
+        style={{ color: iconColor }}
+      >
+        <FaWhatsapp />
+      </a>
+
+      <a
+        href="tel:+919637225752"
+        className="social-link"
+        aria-label="Phone"
+        style={{ color: iconColor }}
+      >
+        <FaPhone />
+      </a>
     </div>
   );
 };

@@ -1,18 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AiOverview.css";
 
 const AiOverview = () => {
+  const [activeTab, setActiveTab] = useState("purpose");
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "purpose":
+        return (
+          <>
+            <h3>Empowering the world through responsible AI</h3>
+            <p>
+              At the core of our vision is a belief that artificial intelligence should be a force for good — a tool that enhances human potential, not replaces it.
+              Our purpose is to create AI systems that are trustworthy, intuitive, and aligned with human values.
+            </p>
+            <p>
+              We focus on building intelligent interfaces that not only understand natural language, but also context, nuance, and emotion. Our technology is designed to bridge gaps between people, languages, and cultures — driving better communication at global scale.
+            </p>
+            <p>
+              By placing empathy and ethics at the forefront of our development, we aim to redefine how people engage with machines and with each other.
+            </p>
+          </>
+        );
+      case "journey":
+        return (
+          <>
+            <h3>From a single idea to global impact</h3>
+            <p>
+              Our journey began with a question: "What if AI could truly understand us?" That curiosity sparked a relentless pursuit of innovation — from early prototypes to today’s large-scale, production-ready systems.
+            </p>
+            <p>
+              Over the years, we’ve collaborated with researchers, partnered with businesses, and listened to millions of users. These experiences shaped our approach, taught us humility, and helped us fine-tune AI that feels not just smart — but genuinely helpful.
+            </p>
+            <p>
+              Today, our solutions power customer support, education, healthcare, finance, and more — transforming how industries operate and how people connect.
+            </p>
+          </>
+        );
+      case "promise":
+        return (
+          <>
+            <h3>Our commitment: innovation with integrity</h3>
+            <p>
+              We are committed to developing AI that earns your trust. That means being transparent about how our systems work, vigilant about privacy, and proactive in addressing bias or misuse.
+            </p>
+            <p>
+              Our promise is to always put users first — designing systems that are accessible, inclusive, and secure by default. Whether you're a startup or a global enterprise, we ensure that our technology adapts to your needs without compromising safety or ethics.
+            </p>
+            <p>
+              Innovation is nothing without responsibility. That’s why we don’t just aim to lead the AI revolution — we aim to lead it responsibly.
+            </p>
+          </>
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
     <section className="ai-overview-container">
       <div className="text-section">
         <h2 className="section-title">What defines us</h2>
         <p className="section-subtitle">
-          Explore our beginning, what we stand for, and where we’re headed in the world of AI
+          Explore our origin, our guiding principles, and the future we're building in the world of AI.
         </p>
         <div className="tabs">
-          <button className="tab active">Our purpose</button>
-          <button className="tab">Our journey</button>
-          <button className="tab">Our promise</button>
+          <button
+            className={`tab ${activeTab === "purpose" ? "active" : ""}`}
+            onClick={() => setActiveTab("purpose")}
+          >
+            Our purpose
+          </button>
+          <button
+            className={`tab ${activeTab === "journey" ? "active" : ""}`}
+            onClick={() => setActiveTab("journey")}
+          >
+            Our journey
+          </button>
+          <button
+            className={`tab ${activeTab === "promise" ? "active" : ""}`}
+            onClick={() => setActiveTab("promise")}
+          >
+            Our promise
+          </button>
         </div>
       </div>
 
@@ -21,26 +91,14 @@ const AiOverview = () => {
           <ul>
             <li>Human-like Conversations</li>
             <li>Seamless Interaction</li>
-            <li>Real-Time Interaction</li>
+            <li>Real-Time Response</li>
             <li>Multilingual Fluency</li>
             <li>Robust Security & Privacy</li>
           </ul>
           <button className="trial-button">Start free trial</button>
         </div>
         <div className="info">
-          <h3>Revolutionizing conversations, empowering connections</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-          </p>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident.
-          </p>
+          {renderContent()}
         </div>
       </div>
     </section>

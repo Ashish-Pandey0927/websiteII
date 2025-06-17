@@ -4,24 +4,24 @@ import { CiSquarePlus, CiSquareMinus } from "react-icons/ci";
 
 const faqs = [
   {
-    question: "Is the AI available 24/7 ?",
+    question: "Is the AI available 24/7?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Yes, our AI platform is accessible 24/7, ensuring consistent support, guidance, and interaction at any time—no matter where you are in the world.",
   },
   {
     question: "How does the AI chatbot work?",
     answer:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "The chatbot leverages advanced natural language processing and machine learning models to understand your queries, interpret context, and generate relevant responses in real time.",
   },
   {
     question: "How accurate is the AI’s understanding of my questions?",
     answer:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Our AI is trained on a vast dataset and fine-tuned for accuracy, context awareness, and intent recognition. While not perfect, it consistently delivers over 90% accuracy in general queries and continues to improve through feedback and updates.",
   },
   {
     question: "Can the AI integrate with other platforms or tools?",
     answer:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Yes, the AI can be integrated with various platforms such as Slack, Microsoft Teams, CRMs, help desks, and custom APIs to seamlessly fit into your existing workflows.",
   },
 ];
 
@@ -36,10 +36,9 @@ const FAQSection = () => {
     <section className="faq-section">
       <div className="faq-left">
         <span className="faq-tag">FAQ</span>
-        <h2 className="faq-title">Frequently Asked Question</h2>
+        <h2 className="faq-title">Frequently Asked Questions</h2>
         <p className="faq-description">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injec.
+          Have a question about our AI? Explore answers to the most common topics below, or reach out to our team directly for anything more specific.
         </p>
         <button className="faq-button">Contact Us</button>
       </div>
@@ -61,7 +60,7 @@ const FAQSection = () => {
               {item.answer}
             </div>
             <hr className="faq-divider" />
-          </div>   
+          </div>
         ))}
       </div>
     </section>
