@@ -4,7 +4,8 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [react(),svgr()],
+  base: '/new/', // 👈 Important for subdirectory deployment
+  plugins: [react(), svgr()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
