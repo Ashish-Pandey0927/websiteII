@@ -1,0 +1,173 @@
+.aboutusfaq-wrapper {
+  display: flex;
+  padding: 60px 80px;
+  background: #ffffff;
+  gap: 16rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.faq-left {
+  flex: 1;
+  max-width: 500px;
+}
+
+.faq-heading {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.faq-subtext {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.faq-card {
+  background: #fafafa;
+  border-radius: 17px;
+  padding: 20px;
+}
+
+.faq-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.faq-card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.faq-contact-button {
+  background-color: #a7f46a;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #000;
+}
+
+.faq-right {
+  flex: 1;
+  max-width: 600px;
+  margin-top: 4rem;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+}
+
+.faq-icon {
+  margin-left: 10px;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000;
+  padding: 8px 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.faq-divider {
+  margin-top: 15px;
+  border: none;
+  height: 1px;
+  background: #dddddd;
+}
+
+/* ===== Responsive: Tablet (≤820px) ===== */
+@media (max-width: 820px) {
+  .aboutusfaq-wrapper {
+    flex-direction: column;
+    padding: 40px 40px;
+    gap: 50px;
+  }
+
+  .faq-left,
+  .faq-right {
+    max-width: 100%;
+  }
+
+  .faq-heading {
+    font-size: 32px;
+  }
+
+  .faq-subtext {
+    font-size: 15px;
+  }
+
+  .faq-card h3 {
+    font-size: 20px;
+  }
+
+  .faq-card p {
+    font-size: 13px;
+  }
+}
+
+/* ===== Responsive: Mobile (≤480px) ===== */
+@media (max-width: 480px) {
+  .aboutusfaq-wrapper {
+    padding: 30px 20px;
+  }
+
+  .faq-heading {
+    font-size: 26px;
+  }
+
+  .faq-subtext {
+    font-size: 14px;
+  }
+
+  .faq-card {
+    padding: 16px;
+  }
+
+  .faq-card h3 {
+    font-size: 18px;
+  }
+
+  .faq-card p {
+    font-size: 12px;
+  }
+
+  .faq-contact-button {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    font-size: 13px;
+  }
+}
