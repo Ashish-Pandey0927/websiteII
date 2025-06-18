@@ -140,13 +140,14 @@ textarea:-webkit-autofill {
   }
 
   .contact-section {
-    top: 0;
+    top: -25px;
        flex-direction: column;
   }
 
   .contact-card {
     padding: 20px;
       width: 100%;
+          border-radius: 0;
   }
 
   .contact-form-row {
