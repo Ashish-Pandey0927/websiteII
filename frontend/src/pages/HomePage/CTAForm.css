@@ -4,7 +4,7 @@
   height: 745px;
   left: 0;
   top: 5249px;
-  background: #161C2D  url('/ctaBackground.png') no-repeat center center / cover;
+  background: #161C2D  url('../../assets/ctaBackground.png') no-repeat center center / cover;
   font-family: 'DM Sans', sans-serif;
   z-index: 10;
   
@@ -16,7 +16,7 @@
   height: 745px;
   left: 0;
   top: 0;
-  background: url('/Image.png') no-repeat center/cover;
+  background: no-repeat center/cover;
   background-blend-mode: multiply;
   mix-blend-mode: normal;
   opacity: 0.14;

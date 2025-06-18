@@ -1,13 +1,16 @@
 import React from 'react';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { GiRotaryPhone } from "react-icons/gi";
+import locationImage from '../../assets/location.png'
 import './LocationSection.css';
 
 const LocationSection = () => {
   return (
     <div className="location-section">
       <div className="main-rectangle">
-        <div className="location-image"></div>
+        <div className="location-image">
+          <img src={locationImage} alt="Location" />
+        </div>
         <div className="info-card">
           <h2 className="info-title">Get in Touch</h2>
 
@@ -18,7 +21,7 @@ const LocationSection = () => {
             </div>
             <p className="location-description ">
               7674 Gartner Avenue Corona,<br />
-               Manchester 11368
+              Manchester 11368
             </p>
           </div>
 
