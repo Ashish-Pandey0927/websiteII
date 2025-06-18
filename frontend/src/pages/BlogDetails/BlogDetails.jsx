@@ -56,7 +56,7 @@ const BlogDetails = () => {
             />
 
             <div className="blog-details-meta sticky-meta">
-                Author: {blog.authorName} | Views: {blog.views} | Comments: {blog.comments}
+                Author: {blog.authorName}
             </div>
         </div>
             <Footer />
