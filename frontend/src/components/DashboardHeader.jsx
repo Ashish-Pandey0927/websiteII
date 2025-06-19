@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './DashboardHeader.css';
 import estonsoft from "../assets/estonsoftlogo.svg";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu } from "react-icons/fi";
+import { AiOutlineClose } from "react-icons/ai";
 import SocialIcons from "../components/SocialIcons";
 import "../components/SocialIcons.css";
 
@@ -55,13 +56,13 @@ const sections = [
           {sections.map(({ name, path, subLinks }) => (
             <div
               key={path}
-              className={`nav-item ${name === "Services" ? "has-dropdown" : ""}`}
-              onMouseEnter={() => name === "Services" && setServicesDropdownOpen(true)}
-              onMouseLeave={() => name === "Services" && setServicesDropdownOpen(false)}
+              className={`nav-item ${subLinks ? "has-dropdown" : ""}`}
+              onMouseEnter={() => subLinks && setServicesDropdownOpen(true)}
+              onMouseLeave={() => subLinks && setServicesDropdownOpen(false)}
             >
               <Link
                 to={path}
-                className={`${activeLink === path ? "active" : ""} ${name === "Services" ? "bold" : ""} ${name === "Home" ? "underline" : ""}`}
+                className={`nav-link ${activeLink === path ? "active" : ""} ${name === "Services" ? "bold" : ""}`}
                 onClick={() => {
                   setActiveLink(path);
                   setMenuOpen(false);
@@ -76,7 +77,7 @@ const sections = [
                     <Link
                       key={sub.path}
                       to={sub.path}
-                      className="dropdown-link"
+                      className={`dropdown-link ${activeLink === sub.path ? "active" : ""}`}
                       onClick={() => {
                         setActiveLink(sub.path);
                         setMenuOpen(false);

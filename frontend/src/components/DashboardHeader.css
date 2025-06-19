@@ -68,9 +68,11 @@
 }
 
 .nav-links a:hover {
-  color: #ffffff;
+  color: #A7F46A;
 }
-
+.nav-links .dropdown-link{
+  color: #000;
+}
 /* Menu Toggle */
 
 /* Right - Social icons and hamburger */
@@ -87,7 +89,6 @@
 }
 .menu-toggle {
   display: none;
-
   cursor: pointer;
 }
 
@@ -172,8 +173,10 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background:  #161C2D;
+  color:#000;
+  background:  #fff;
   border: 1px solid #ccc;
+  border-radius: 8px;
   min-width: 180px;
   display: none;
   flex-direction: column;
@@ -182,16 +185,20 @@
 
 .has-dropdown:hover .dropdown-menu {
   display: flex;
+  color: #000;
 }
 
 .dropdown-link {
+  width: 450px;
+  border-radius: 8px;
   padding: 10px 15px;
+  text-align:start;
   text-decoration: none;
-  color: #333;
+  color: #000;
   transition: background 0.3s;
 }
 
 .dropdown-link:hover {
-  background: #f0f0f0;
-  color: #161C2D;
+  background: #fff;
+  color: #A7F46A;
 }
