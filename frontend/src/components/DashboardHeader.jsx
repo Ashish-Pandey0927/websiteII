@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './DashboardHeader.css';
-import Vector from "../assets/Vector-logo.png";
-import shadepro from "../assets/shadepro.png";
-import thinkinnovative from "../assets/THINK INNOVATIVE.png";
+import estonsoft from "../assets/estonsoftlogo.svg";
 import { FiMenu, FiX } from "react-icons/fi";
 import SocialIcons from "../components/SocialIcons";
 import "../components/SocialIcons.css";
@@ -40,11 +38,7 @@ const sections = [
       <div className="header-center">
         <div className="left-section">
           <div className="logo-container">
-            <img src={Vector} alt="Logo" />
-            <div className="stacked-logos">
-              <img src={shadepro} alt="Logo2" className="logo2" />
-              <img src={thinkinnovative} alt="Logo3" className="logo3" />
-            </div>
+            <img src={estonsoft} alt="Logo" className="logo" />
           </div>
         </div>
 

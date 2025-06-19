@@ -1,7 +1,5 @@
 import './HomeFooter.css';
-import Vector from "../../assets/Vector-logo.png";
-import shadepro from "../../assets/shadepro.png";
-import thinkinnovative from "../../assets/THINK INNOVATIVE.png";
+import estonsoft from "../../assets/estonsoftlogo.svg";
 import { ChevronRight } from "lucide-react";
 import SocialIcons from '../../components/SocialIcons';
 
@@ -12,11 +10,7 @@ export default function HomeFooter() {
     <footer className="home-footer">
       <div className='home-footer-header'>
         <div className="footer__logo">
-          <img src={Vector} alt="Logo" />
-          <div className="stacked-logos">
-            <img src={shadepro} alt="Logo2" className="logo2" />
-            <img src={thinkinnovative} alt="Logo3" className="logo3" />
-          </div>
+          <img src={estonsoft} alt="Logo" className="logo" />
         </div>
 
         {/* CTA Section */}
