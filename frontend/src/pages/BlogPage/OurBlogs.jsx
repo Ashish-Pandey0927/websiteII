@@ -40,7 +40,7 @@ const OurBlogs = () => {
       {/* Blog Cards Container */}
       <div className="ourblogs-grid">
         {blogs.length > 0 ? (
-          blogs.slice(0, 3).map((blog) => (
+          blogs.map((blog) => (
             <div key={blog.id} className="ourblogs-card">
               <Link to={`/blogs/${blog.id}`}>
                 <img
