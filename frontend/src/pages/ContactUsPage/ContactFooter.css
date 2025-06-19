@@ -9,7 +9,7 @@
   /* box-sizing: border-box; */
 }
 
-.contact-footer__logo {
+.footer__logo {
   display: flex;
   justify-content: flex-start;
 }

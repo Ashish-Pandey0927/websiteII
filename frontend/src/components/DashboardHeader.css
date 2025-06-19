@@ -31,20 +31,10 @@
   display: flex;
   align-items: center;
 }
-
-.stacked-logos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  margin-left: 2px;
+.footer__logo  .logo {
+  height: 60px; /* Increase from the default*/
+  width: auto; /* Keeps aspect ratio */
 }
-
-.logo2 {
-  position: relative;
-  top: 2px;
-}
-
 /* Nav Links */
 .nav-links {
   display: flex;
