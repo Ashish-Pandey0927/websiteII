@@ -14,24 +14,24 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
-const sections = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/aboutus" },
-  {
-    name: "Services", path: "/services",
-    subLinks: [
-      { name: "Web Development", path: "/services/webdevelopment" },
-      { name: "Mobile Development", path: "/services/mobiledevelopment" },
-      { name: "Cloud Services", path: "/services/cloudservices" },
-      { name: "Quality Assurance", path: "/services/qualityassurance" },
-      { name: "Salesforce", path: "/services/salesforce" },
-      { name: "CI/CD DevOps", path: "/services/cicddevops" },
-    ]
-  },
-  { name: "Blogs", path: "/blogs" },
-  { name: "Portfolio", path: "/portfolio" },
-  { name: "Contact", path: "/contact" },
-];
+  const sections = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/aboutus" },
+    {
+      name: "Services", path: "/services",
+      subLinks: [
+        { name: "Web Development", path: "/services/webdevelopment" },
+        { name: "Mobile Development", path: "/services/mobiledevelopment" },
+        { name: "Cloud Services", path: "/services/cloudservices" },
+        { name: "Quality Assurance", path: "/services/qualityassurance" },
+        { name: "Salesforce", path: "/services/salesforce" },
+        { name: "CI/CD DevOps", path: "/services/cicddevops" },
+      ]
+    },
+    { name: "Blogs", path: "/blogs" },
+    { name: "Portfolio", path: "/portfolio" },
+    { name: "Contact", path: "/contact" },
+  ];
 
 
   return (
@@ -44,55 +44,59 @@ const sections = [
         </div>
 
       </div>
-      <div className="right-icons">
-        <div className="social-icons-wrapper">
-          <SocialIcons direction="column" />
-        </div>
-        <div className="menu-toggle mobile-only" onClick={toggleMenu}>
-          <FiMenu />
-        </div>
+     <div className="right-icons">
+  <div className="social-icons-wrapper">
+    <SocialIcons direction="column" />
+  </div>
 
-        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          {sections.map(({ name, path, subLinks }) => (
-            <div
-              key={path}
-              className={`nav-item ${subLinks ? "has-dropdown" : ""}`}
-              onMouseEnter={() => subLinks && setServicesDropdownOpen(true)}
-              onMouseLeave={() => subLinks && setServicesDropdownOpen(false)}
-            >
-              <Link
-                to={path}
-                className={`nav-link ${activeLink === path ? "active" : ""} ${name === "Services" ? "bold" : ""}`}
-                onClick={() => {
-                  setActiveLink(path);
-                  setMenuOpen(false);
-                }}
-              >
-                {name}
-              </Link>
+  <div className="mobile-menu-wrapper">
+    <div className="menu-toggle mobile-only" onClick={toggleMenu}>
+      {menuOpen ? <AiOutlineClose /> : <FiMenu />}
+    </div>
 
-              {subLinks && servicesDropdownOpen && (
-                <div className="dropdown-menu">
-                  {subLinks.map((sub) => (
-                    <Link
-                      key={sub.path}
-                      to={sub.path}
-                      className={`dropdown-link ${activeLink === sub.path ? "active" : ""}`}
-                      onClick={() => {
-                        setActiveLink(sub.path);
-                        setMenuOpen(false);
-                        setServicesDropdownOpen(false);
-                      }}
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+    <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+      {sections.map(({ name, path, subLinks }) => (
+        <div
+          key={path}
+          className={`nav-item ${subLinks ? "has-dropdown" : ""}`}
+          onMouseEnter={() => subLinks && setServicesDropdownOpen(true)}
+          onMouseLeave={() => subLinks && setServicesDropdownOpen(false)}
+        >
+          <Link
+            to={path}
+            className={`nav-link ${activeLink === path ? "active" : ""} ${name === "Services" ? "bold" : ""}`}
+            onClick={() => {
+              setActiveLink(path);
+              setMenuOpen(false);
+            }}
+          >
+            {name}
+          </Link>
+
+          {subLinks && servicesDropdownOpen && (
+            <div className="dropdown-menu">
+              {subLinks.map((sub) => (
+                <Link
+                  key={sub.path}
+                  to={sub.path}
+                  className={`dropdown-link ${activeLink === sub.path ? "active" : ""}`}
+                  onClick={() => {
+                    setActiveLink(sub.path);
+                    setMenuOpen(false);
+                    setServicesDropdownOpen(false);
+                  }}
+                >
+                  {sub.name}
+                </Link>
+              ))}
             </div>
-          ))}
-        </nav>
-      </div>
+          )}
+        </div>
+      ))}
+    </nav>
+  </div>
+</div>
+
     </header>
   );
 };
