@@ -92,6 +92,9 @@
   margin-top: 3rem;
   font-size: 3rem;
 }
+.portfolio-page-hero-paragraph {
+    padding: 2% 8% 2% 0;
+  }
 
   /* Dashboard Container */
   .portfolio-page-container {

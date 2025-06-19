@@ -81,11 +81,6 @@
   text-decoration: underline;
 }
 
-.social-icons {
-  display: flex;
-  gap: 24px;
-}
-
 .social-icon {
   width: 20px;
   height: 20px;
@@ -130,6 +125,7 @@
   .contact-hero {
   width: 100%;
   padding: 1.5rem;
+  height: 450px;
 }
 .contact-hero-overlay{
   width: 100%;

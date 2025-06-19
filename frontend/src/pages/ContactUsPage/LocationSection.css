@@ -188,7 +188,7 @@
 }
 @media (max-width: 480px) {
    .location-section {
-    top: -50px;
+    top: 0px;
     
   }
 }

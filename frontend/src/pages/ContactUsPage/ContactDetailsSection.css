@@ -135,7 +135,7 @@ textarea:-webkit-autofill {
   .contact-wrapper {
     width: 100%;
     height: auto !important;
-    top: -50px;
+    top: 0px;
     padding: 1.25rem;
   }
 
@@ -152,7 +152,7 @@ textarea:-webkit-autofill {
 
   .contact-form-row {
     flex-direction: column;
-    gap: 24px;
+    gap: 4px;
   }
 
   .contact-form-group {

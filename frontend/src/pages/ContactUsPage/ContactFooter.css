@@ -149,7 +149,7 @@
   .contact-footer {
     height: auto;
     width: 100%;
-    top: -50px;
+    top: 0px;
      padding: 86px 20px 0!important;
   }
   .contact-footer .cta span{

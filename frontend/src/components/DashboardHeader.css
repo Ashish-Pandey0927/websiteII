@@ -125,9 +125,10 @@
     display: block;
     position: relative;
     top: -1.25rem;
+    left: -15px;
     padding: 1rem;
     margin-right: 0.5rem;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   /* .nav-links {
