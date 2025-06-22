@@ -110,7 +110,6 @@ function OurPortfolios() {
 
         const data = await response.json();
         setPortfolioData(data);
-        console.log("**portfolio data**", data);
       } catch (error) {
         console.error("Error fetching portfolio data:", error);
       }

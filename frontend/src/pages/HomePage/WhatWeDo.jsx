@@ -1,5 +1,6 @@
 import React from 'react';
 import './WhatWeDo.css';
+
 import MobileDevelopment from '../../assets/MobileDevelopment.svg';
 import WebDevelopment from '../../assets/WebDevelopment.svg';
 import CloudServices from '../../assets/CloudServices.svg';
@@ -57,26 +58,31 @@ const serviceData = [
   }
 ];
 
-const WhatWeDo = () => {
+
+function WhatWeDo() {
   return (
     <section className="what-we-do">
-      <h1 className="what-we-do-title">What We Do</h1>
-      <p className="what-we-do-subtitle">We work together with our client to execute impactful product.</p>
-      <div className="services-wrapper">
-        {serviceData.map((service, index) => (
-          <div
-            className="what-we-do-service-card"
-            key={index}
-          >
-            <div className="icon-bg"></div>
-            <img src={service.icon} alt={service.title} className="icon" />
-            <h3 className="what-we-do-service-title">{service.title}</h3>
-            <p className="what-we-do-service-description">{service.description}</p>
+      <div className="header">
+        <h2>What We Do</h2>
+        <p>We work together with our clients to build the future.</p>
+      </div>
+
+      <div className="features-grid">
+        {serviceData.map((item, index) => (
+          <div className="feature-card" key={index}>
+            <div className="icon-wrapper">
+              <div className="icon-bg" />
+              <img src={item.icon} alt={item.title} className="icon" />
+            </div>
+            <div className="text-content">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
           </div>
         ))}
       </div>
     </section>
   );
-};
+}
 
 export default WhatWeDo;

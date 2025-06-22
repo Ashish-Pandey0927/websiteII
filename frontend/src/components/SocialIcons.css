@@ -6,6 +6,7 @@
     position: absolute;
     top: 17.3px;
     left: 1200px;
+    align-items:center;
     width: 151.99999084451744px;
     height: 19.99999879533124px;  
     transform: rotate(-0.1deg);
@@ -23,7 +24,7 @@
 
   .social-link {
     color: #101010;
-    font-size: 2rem;
+    font-size: 1.24rem;
     width: 40PX;
     height: 40px;
     display: flex;

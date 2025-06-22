@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Dashboard.css';
+import useBackgroundImageBrightness from "../../components/useBackgroundImageBrightness";
 import BG from '../../assets/BG.png';
 import BG2 from '../../assets/BG2.png';
 import BG3 from '../../assets/BG3.png';
@@ -10,9 +11,8 @@ import BackgroundSelector from "../../components/BackgroundSelector";
 const Dashboard = () => {
   const [activeLink, setActiveLink] = useState('#home');
   const [bgImage, setBgImage] = useState(BG);
-
+  const iconColor = useBackgroundImageBrightness(bgImage);
   return (
-    // <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div
         className="home-dashboard-container"
         style={{
@@ -20,7 +20,7 @@ const Dashboard = () => {
           backgroundBlendMode: 'multiply',
         }}
       >
-        <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
+        <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} iconColor={iconColor} />
 
         <div
           className="highlight-wrapper"
@@ -67,7 +67,6 @@ const Dashboard = () => {
           onChange={setBgImage}
         />
       </div>
-    // </div>
   );
 };
 

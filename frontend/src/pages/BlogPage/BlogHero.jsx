@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './BlogHero.css';
-import blogBG2 from '../../assets/blogBG2.png';
+import blogBG from '../../assets/BlogBG.png';
 import DashboardHeader from "../../components/DashboardHeader";
 
 const BlogHero = () => {
@@ -10,7 +10,7 @@ const BlogHero = () => {
       <div
         className="blog-page-container"
         style={{
-          backgroundImage: `url(${blogBG2}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
+          backgroundImage: `url(${blogBG}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
           backgroundBlendMode: 'multiply',
         }}
       >

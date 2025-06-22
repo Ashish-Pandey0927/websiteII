@@ -1,23 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp, FaPhone } from 'react-icons/fa';
+import React from 'react';
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+  FaPhone,
+} from 'react-icons/fa';
+import useIconColorByBackground from '../components/useIconColorByBackground';
 
-const SocialIcons = ({ direction = 'row' }) => {
-  const [iconColor, setIconColor] = useState('black');
+const SocialIcons = ({ direction = 'row', iconColor }) => {
 
-  useEffect(() => {
-    const getBackgroundBrightness = () => {
-      const bg = getComputedStyle(document.body).backgroundColor;
-      const rgb = bg.match(/\d+/g)?.map(Number);
-      if (!rgb || rgb.length < 3) return;
-
-      const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
-      setIconColor(brightness > 125 ? 'black' : 'white');
-    };
-
-    getBackgroundBrightness();
-    window.addEventListener('resize', getBackgroundBrightness);
-    return () => window.removeEventListener('resize', getBackgroundBrightness);
-  }, []);
+   const fallbackColor = useIconColorByBackground();
+  const finalColor = iconColor || fallbackColor;
 
   return (
     <div className={`social-icons ${direction === 'column' ? 'social-column' : 'social-row'}`}>
@@ -27,7 +22,7 @@ const SocialIcons = ({ direction = 'row' }) => {
         rel="noopener noreferrer"
         className="social-link"
         aria-label="Facebook"
-        style={{ color: iconColor }}
+        style={{ color: finalColor }}
       >
         <FaFacebook />
       </a>
@@ -38,7 +33,7 @@ const SocialIcons = ({ direction = 'row' }) => {
         rel="noopener noreferrer"
         className="social-link"
         aria-label="Twitter"
-        style={{ color: iconColor }}
+        style={{ color: finalColor }}
       >
         <FaTwitter />
       </a>
@@ -49,7 +44,7 @@ const SocialIcons = ({ direction = 'row' }) => {
         rel="noopener noreferrer"
         className="social-link"
         aria-label="Instagram"
-        style={{ color: iconColor }}
+        style={{ color: finalColor }}
       >
         <FaInstagram />
       </a>
@@ -60,7 +55,7 @@ const SocialIcons = ({ direction = 'row' }) => {
         rel="noopener noreferrer"
         className="social-link"
         aria-label="Linkedin"
-        style={{ color: iconColor }}
+        style={{ color: finalColor }}
       >
         <FaLinkedin />
       </a>
@@ -71,7 +66,7 @@ const SocialIcons = ({ direction = 'row' }) => {
         rel="noopener noreferrer"
         className="social-link"
         aria-label="Whatsapp"
-        style={{ color: iconColor }}
+        style={{ color: finalColor }}
       >
         <FaWhatsapp />
       </a>
@@ -80,7 +75,7 @@ const SocialIcons = ({ direction = 'row' }) => {
         href="tel:+919637225752"
         className="social-link"
         aria-label="Phone"
-        style={{ color: iconColor }}
+        style={{ color: finalColor }}
       >
         <FaPhone />
       </a>

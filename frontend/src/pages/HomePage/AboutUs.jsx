@@ -40,7 +40,7 @@ const AboutUs = () => {
             It’s a must to that we would like to share our workflow to believe you
           </p>
           <div className="card-button">
-            See our workflow <ArrowUpRight className="ArrowUpRight" size={24} />
+            See our workflow <ArrowUpRight size={24} />
           </div>
         </div>
 

@@ -1,17 +1,16 @@
 .home-dashboard-container {
   display: flex;
   flex-direction: column;
-  width:1601px;
-  height: 676px; 
+  width: 1601px;
+  height: 676px;
   max-width: 1601px;
   position: relative;
   left: 1.14px;
-  transform: rotate(-0.1deg);
   background-size: cover;
   background-position: center;
-  padding: 2rem;
+  padding: 2.5rem;
   overflow: hidden;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 /* CTA Button */
@@ -109,14 +108,16 @@
 
 /* Mobile-Specific Styles */
 @media screen and (max-width: 768px) {
+
   /* Dashboard Container */
   .home-dashboard-container {
     width: 100%;
     height: auto;
-    padding: 2.25rem;
+    padding: 0.5rem;
     left: 0;
     transform: none;
   }
+
   /* Highlight Section */
   .highlight-wrapper {
     position: relative;
