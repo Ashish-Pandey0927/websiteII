@@ -54,17 +54,26 @@
   transition: all 0.3s ease;
 }
 
-.nav-links a.underline {
+/* .nav-links a.underline {
   text-decoration: underline;
-}
+} */
 
-.nav-links a.bold {
+/* .nav-links a.bold {
   font-weight: 700;
-}
+} */
 
-.nav-links a.active {
+/* .nav-links a.active {
   transform: rotate(0.1deg);
   border-bottom: 2px solid #A9F66C;
+} */
+.nav-link.active{
+   color: #A9F66C;
+  font-weight: bold;
+  border-bottom: 2px solid #A9F66C;
+}
+.dropdown-link.active {
+  color: #A9F66C !important;
+  font-weight: bold;
 }
 
 .nav-links a:hover {

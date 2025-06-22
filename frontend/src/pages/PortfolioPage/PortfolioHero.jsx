@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './PortfolioHero.css';
-import BlogBG from '../../assets/BlogBG.png';
+import portfolioBG from '../../assets/portfolioBG.png';
 import DashboardHeader from "../../components/DashboardHeader";
 
 const PortfolioHero = () => {
@@ -10,7 +10,7 @@ const PortfolioHero = () => {
       <div
         className="portfolio-page-container"
         style={{
-          backgroundImage: `url(${BlogBG}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
+          backgroundImage: `url(${portfolioBG}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
           backgroundBlendMode: 'multiply',
         }}
       >

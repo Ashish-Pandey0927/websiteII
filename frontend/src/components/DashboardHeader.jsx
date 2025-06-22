@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import './DashboardHeader.css';
 import estonsoft from "../assets/estonsoftlogo.svg";
 import { FiMenu } from "react-icons/fi";
@@ -25,16 +25,17 @@ const sections = [
   { name: "Contact", path: "/contact" },
 ];
 
-const DashboardHeader = ({ activeLink, setActiveLink }) => {
+const DashboardHeader = ( { backgroundImage, iconColor }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const toggleMenu = useCallback(() => {
     setMenuOpen(prev => !prev);
   }, []);
 
   const handleNavClick = useCallback((path, hasSubLinks) => {
-    setActiveLink(path);
     setMenuOpen(false);
     if (window.innerWidth <= 768 && hasSubLinks) {
       setServicesDropdownOpen(prev => !prev);
@@ -43,7 +44,7 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
     } else {
       setServicesDropdownOpen(false);
     }
-  }, [setActiveLink]);
+  }, []);
 
   const handleDropdownToggle = useCallback((e) => {
     e.preventDefault();
@@ -63,7 +64,7 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
 
       <div className="right-icons">
         <div className="social-icons-wrapper">
-          <SocialIcons direction="column" />
+          <SocialIcons direction="column" iconColor={iconColor}/>
         </div>
 
         <div className="mobile-menu-wrapper">
@@ -84,7 +85,7 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
                   <div className="nav-link-wrapper">
                     <Link
                       to={path}
-                      className={`nav-link ${activeLink === path ? "active" : ""} ${isServices ? "bold" : ""}`}
+                      className={`nav-link ${currentPath === path ? "active" : ""} ${isServices ? "bold" : ""}`}
                       onClick={() => handleNavClick(path, hasSubLinks)}
                     >
                       {name}
@@ -101,7 +102,7 @@ const DashboardHeader = ({ activeLink, setActiveLink }) => {
                         <Link
                           key={subPath}
                           to={subPath}
-                          className={`dropdown-link ${activeLink === subPath ? "active" : ""}`}
+                          className={`dropdown-link ${currentPath === subPath ? "active" : ""}`}
                           onClick={() => handleNavClick(subPath)}
                         >
                           {subName}
