@@ -6,6 +6,7 @@ import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import SocialIcons from "../components/SocialIcons";
 import "../components/SocialIcons.css";
+import useIconColorByBackground from "./useIconColorByBackground";
 
 const sections = [
   { name: "Home", path: "/" },
@@ -26,6 +27,8 @@ const sections = [
 ];
 
 const DashboardHeader = ( { backgroundImage, iconColor }) => {
+   const fallbackColor = useIconColorByBackground();
+  const finalColor = iconColor || fallbackColor;
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const location = useLocation();
@@ -67,7 +70,7 @@ const DashboardHeader = ( { backgroundImage, iconColor }) => {
           <SocialIcons direction="column" iconColor={iconColor}/>
         </div>
 
-        <div className="mobile-menu-wrapper">
+        <div className="mobile-menu-wrapper" style={{ color: finalColor }}>
           <div className="menu-toggle mobile-only" onClick={toggleMenu}>
             {menuOpen ? <AiOutlineClose /> : <FiMenu />}
           </div>
