@@ -15,11 +15,13 @@
   height: 594px;
   left: -2px;
   top: -1px;
-  background: url('Premium Photo _ Technology Network Background_.jpg');
+  background-image: url('../../assets/ContactUsBG.png');
   background-size: cover;
   background-position: center;
+  background-blend-mode: multiply;
   z-index: 1;
 }
+
 
 .contact-hero-overlay {
   position: absolute;

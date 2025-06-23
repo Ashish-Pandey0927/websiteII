@@ -1,19 +1,12 @@
 import React, { useState } from "react";
 import './AboutUsHero.css';
-import AboutUsHeroBG from '../../assets/AboutUsHero.png';
 import DashboardHeader from "../../components/DashboardHeader";
 
 const AboutUsHero = () => {
   const [activeLink, setActiveLink] = useState('#Services');
   return (
-
       <div
-        className="aboutus-page-container"
-        style={{
-          backgroundImage: `url(${AboutUsHeroBG}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
-          backgroundBlendMode: 'multiply',
-        }}
-      >
+        className="aboutus-page-container">
         <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
         <div className="Group-1171274896">
           <div

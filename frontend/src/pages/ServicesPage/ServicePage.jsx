@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import './ServicePage.css';
-import ServicePageBG from '../../assets/ServicePageBG.png';
-
 import DashboardHeader from "../../components/DashboardHeader";
 
 
@@ -9,14 +7,8 @@ import DashboardHeader from "../../components/DashboardHeader";
 const ServicePage = () => {
   const [activeLink, setActiveLink] = useState('#Services');
   return (
-    // <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div
-        className="service-page-container"
-        style={{
-          backgroundImage: `url(${ServicePageBG}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
-          backgroundBlendMode: 'multiply',
-        }}
-      >
+        className="service-page-container">
         <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
         <div className="Group-1171274896">
           <div
@@ -54,7 +46,6 @@ const ServicePage = () => {
           </div>
         </div>
       </div>
-    // </div>
   );
 };
 

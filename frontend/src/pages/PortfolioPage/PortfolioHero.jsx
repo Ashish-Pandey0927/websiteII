@@ -1,19 +1,12 @@
 import React, { useState } from "react";
 import './PortfolioHero.css';
-import portfolioBG from '../../assets/portfolioBG.png';
 import DashboardHeader from "../../components/DashboardHeader";
 
 const PortfolioHero = () => {
   const [activeLink, setActiveLink] = useState('#Blogs');
   return (
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div
-        className="portfolio-page-container"
-        style={{
-          backgroundImage: `url(${portfolioBG}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
-          backgroundBlendMode: 'multiply',
-        }}
-      >
+        className="portfolio-page-container">
         <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
           <div
             className="portfolio-page-hero-content">
@@ -22,7 +15,6 @@ const PortfolioHero = () => {
             </h1>
             <p className="portfolio-page-hero-paragraph"> See how we turn complex challenges into scalable, smart, and secure digital complex</p>
           </div>
-        </div>
         </div>
   );
 };

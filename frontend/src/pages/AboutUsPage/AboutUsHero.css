@@ -5,10 +5,11 @@
   height: 676px;
   max-width: 1601px;
   position: relative;
-  left: 1.14px;
-  transform: rotate(-0.1deg);
-  background-size: cover;
-  background-position: center;
+
+  background: 
+    linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%),
+    url('../../assets/AboutUsHero.png') no-repeat center center / cover;
+
   padding: 2rem;
   overflow: hidden;
   box-sizing: border-box;
