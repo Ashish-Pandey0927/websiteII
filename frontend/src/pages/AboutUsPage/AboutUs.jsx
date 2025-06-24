@@ -28,10 +28,10 @@ const AboutUS = () => {
         <OurCoreValues />
       </section>
       <section id="About-section6">
-        <AiOverview />
+        <AboutUsFAQ />
       </section>
       <section id="About-section7">
-        <AboutUsFAQ />
+        <AiOverview />
       </section>
       <section id="About-section8">
         <TestimonialCarousel />
