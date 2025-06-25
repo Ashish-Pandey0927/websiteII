@@ -109,7 +109,7 @@
 
   /* Dashboard Container */
   .home-dashboard-container {
-    width: 100%;
+    width:99%;
     height: auto;
     padding: 0.5rem;
     left: 0;
@@ -128,7 +128,7 @@
   /* Hero Section */
   .hero-content {
     position: relative;
-    width: 100%;
+    width: 96%;
     height: auto;
     top: auto;
     left: auto;
