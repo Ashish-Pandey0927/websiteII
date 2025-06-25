@@ -44,6 +44,7 @@ title: "Unlock the Power of Cloud with Estonsoft",
 function LatestPosts() {
   return (
     <section className="latest-posts-section">
+      <div className="latest-posts-container">
       <h2 className="section-title">Latest Post</h2>
       <div className="posts-grid">
         {posts.map((post, index) => (
@@ -58,6 +59,7 @@ function LatestPosts() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );
