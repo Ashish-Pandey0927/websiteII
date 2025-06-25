@@ -43,11 +43,11 @@
 
 /* Hero Section */
 .services-sub-pages-hero-content {
-  position: absolute;
+  position: relative;
   width: 460px;
   height: 337px;
-  top: 156px;
-  left: 43px;
+  top: 60px;
+  padding: 2.5rem 0;
   transform: rotate(-0.1deg);
   border-radius: 8px;
   display: flex;
@@ -55,9 +55,6 @@
   justify-content: flex-start;
   gap: 16px;
   color: #fff;
-   position: absolute;
-  left: 3%;
-  margin-top: 4%;
 }
 
 .services-sub-pages-hero-heading {

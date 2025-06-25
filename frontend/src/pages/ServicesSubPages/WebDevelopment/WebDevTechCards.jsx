@@ -14,7 +14,7 @@ import nextlogo from '../../../assets/logo/nextjslogo.png';
 const techIcons = [
     {
         title: 'React',
-        description: 'We use React.js to build fast, scalable, and interactive web apps. Its reusable components speed up development. Users enjoy a smooth and modern experience.',
+        description: `We use React.js to build fast, scalable, and interactive web apps. Its reusable components speed up development. Users enjoy a smooth and modern experience.`,
         image: reactlogo,
     },
     {

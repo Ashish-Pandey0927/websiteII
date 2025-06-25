@@ -11,7 +11,7 @@ function CloudServicesHero() {
           <div
             className="services-sub-pages-hero-content">
             <h1 className="services-sub-pages-hero-heading" >
-              Cloud Services
+              Cloud <br/>Services
             </h1>
             <p className="services-sub-pages-hero-paragraph">We provide reliable cloud services that help businesses scale efficiently, improve data security, and reduce infrastructure costs. Our solutions are designed for flexibility, performance, and seamless integration.</p>
           </div>
