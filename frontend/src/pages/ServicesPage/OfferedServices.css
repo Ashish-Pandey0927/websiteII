@@ -145,6 +145,7 @@
 }
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
+    padding-right: 8rem;
   }
 .services-rectangle{
   width: 1600px;
