@@ -1,12 +1,9 @@
-/* Container Section */
 .services-section {
-  padding: 0px 20px;
   background-color: #ffffff;
-  max-width: 1600px;
+ width: 100%;
   margin: 0 auto;
 }
 
-/* Header */
 .offered-services-header {
   display: flex;
   flex-direction: column;
@@ -14,13 +11,13 @@
   justify-items: center;
   gap: 15%;
   margin-bottom: 48px;
+  padding: 16px;
 }
 
-/* Title */
 .services-title {
   font-family: 'Urbanist', sans-serif;
   font-weight: 700;
-  font-size: 60px;
+  font-size: 3.75rem;
   line-height: 110%;
   letter-spacing: 1px;
   color: #101010;
@@ -31,7 +28,7 @@
 .services-description {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 160%;
   color: #757B8A;
   margin-bottom: 40px;
@@ -48,8 +45,8 @@
   border-radius: 16px;
   padding: 24px;
   text-align: center;
-  justify-content: center;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   height: auto;
   box-sizing: border-box;
 }
@@ -58,7 +55,7 @@
 .services-icon {
   width: 114px;
   height: 114px;
-  margin: 0 auto 20px;
+  margin: 0 auto ;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +76,7 @@
   line-height: 33px;
   letter-spacing: 0.2px;
   color: #183B56;
-  margin: 16px 0 8px;
+  margin: 16px 0;
 }
 
 /* Card Description */
@@ -90,6 +87,8 @@
   line-height: 28px;
   color: #5A7184;
   text-align: justify;
+  width:100%;
+  margin: 0 auto;
 }
 
 
@@ -127,6 +126,18 @@
 
 /* Desktop - 3 columns */
 @media (min-width: 1024px) {
+  .services-section {
+      padding: 0 20px;
+  width: 1600px;
+}
+  .service-card {
+    width: 100%;
+  max-width: 491px ! important;
+  margin: auto 0;
+}
+.service-description {
+  max-width:363px;
+}
   .service-icon img {
   width: 53px;
   height: 50px;
