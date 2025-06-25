@@ -11,7 +11,7 @@ function WebDevHero() {
           <div
             className="services-sub-pages-hero-content">
             <h1 className="services-sub-pages-hero-heading" >
-              Web Development
+              Web <br/>Development
             </h1>
             <p className="services-sub-pages-hero-paragraph">We offer professional web development services that deliver fast, responsive, and secure websites tailored to your business needs. Our team ensures each site is optimized for performance, user experience, and growth.</p>
           </div>
