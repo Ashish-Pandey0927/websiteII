@@ -11,7 +11,7 @@ const PortfolioHero = () => {
           <div
             className="portfolio-page-hero-content">
             <h1 className="portfolio-page-hero-heading" >
-              Solving big problems with bigger Ideas
+              Solving big problems <br/>with bigger Ideas
             </h1>
             <p className="portfolio-page-hero-paragraph"> See how we turn complex challenges into scalable, smart, and secure digital complex</p>
           </div>

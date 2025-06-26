@@ -2,7 +2,7 @@ import React from 'react';
 import BlogHero from './BlogHero';
 import OurBlogs from './OurBlogs';
 import LatestPosts from './LatestPosts';
-import LeaveComment from './LeaveComment';
+import LeaveComment from '../../components/LeaveComment';
 import Footer from '../../components/Footer';
 
 const Blogs = () => {
