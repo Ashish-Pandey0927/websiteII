@@ -23,8 +23,8 @@
   position: absolute;
   width: 425px;
   height: 348px;
-  top: 174.41px;
-  left: 244.85px;
+  top: 85px;
+  padding: 2.5rem 0;
   transform: rotate(-0.1deg);
   border-radius: 8px;
   display: flex;

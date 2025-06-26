@@ -2,7 +2,7 @@
 
 .ourblogs-container {
   width: 100%;
-  padding: 2rem;
+  padding: 2.5rem;
   background-color: #fff;
   box-sizing: border-box;
 }
@@ -37,11 +37,11 @@
   display: grid;
    grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding-right: 4rem;
+  padding-right: 8.5rem;
 }
 
 .ourblogs-card {
-  width: 100%;
+  width: 435px;
   background-color: #fff;
   border-radius: 1rem;
   overflow: hidden;
@@ -135,7 +135,6 @@
 @media (max-width: 820px) {
   .ourblogs-grid {
    grid-template-columns: repeat(2, 1fr);
-    padding-right: 0px;
 }
   .ourblogs-image {
   height: 240px;

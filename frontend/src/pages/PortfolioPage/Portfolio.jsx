@@ -1,6 +1,6 @@
 import React from 'react';
 import PortfolioHero from './PortfolioHero';
-import LeaveComment from '../BlogPage/LeaveComment';
+import LeaveComment from '../../components/LeaveComment';
 import OurPortfolios from './OurPortfolios';
 import Footer from '../../components/Footer';
 

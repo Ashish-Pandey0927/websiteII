@@ -1,7 +1,14 @@
 .latest-posts-section {
   background-color: #fff;
-  padding:0 2rem;
+  padding: 2.5rem;
   font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+}
+.latest-posts-container{
+   border-radius: 16px;
+  border: 1px solid #CACACA;
+  width: 1330px;
+  padding: 2rem;
 }
 
 .section-title {
@@ -15,7 +22,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-   padding-right: 4rem;
 }
 
 .post-card {
@@ -23,7 +29,7 @@
   background: #fff;
   border-radius: 1rem;
   overflow: hidden;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   transition: box-shadow 0.3s ease;
 }
 
@@ -82,6 +88,12 @@
 }
 
 @media (max-width: 480px) {
+  .latest-posts-container{
+      border-radius: 16px;
+  border: 1px solid #CACACA;
+  width: 100%;
+  padding: 2rem 0;
+  }
   .post-title{
     font-size: 1.5rem;
   }
