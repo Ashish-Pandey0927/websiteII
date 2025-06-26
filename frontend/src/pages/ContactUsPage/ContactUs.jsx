@@ -2,8 +2,7 @@ import React from 'react'
 import ContactUsHero from './ContactUsHero';
 import ContactDetailsSection from './ContactDetailsSection';
 import LocationSection from './LocationSection';
-import { GiPositionMarker } from 'react-icons/gi';
-import ContactFooter from './ContactFooter';
+import Footer from '../../components/Footer';
 
 
 const ContactUs = () => {
@@ -14,12 +13,12 @@ const ContactUs = () => {
       </section>
      <section id="contact-section2">
         <ContactDetailsSection />
-      </section> 
+      </section>
      <section id="contact-section3">
         <LocationSection />
       </section>
       <section id="contact-section4">
-      <ContactFooter/>
+      <Footer/>
       </section>
     </div>
   )
