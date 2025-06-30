@@ -2,7 +2,7 @@ import React from 'react';
 import "../TechCards.css";
 import kotlinlogo from '../../../assets/logo/kotlinlogo.png';
 import dartlogo from '../../../assets/logo/dartlogo.png';
-import swiftlogo from '../../../assets/logo/swiftlogo.png';
+import swiftlogo from '../../../assets/logo/Swiftlogo.png';
 import netlogo from '../../../assets/logo/.netlogo.png';
 import objectiveClogo from '../../../assets/logo/objectiveClogo.png';
 import exlogo from '../../../assets/logo/exlogo.png';

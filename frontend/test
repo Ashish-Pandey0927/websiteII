@@ -1,0 +1,299 @@
+/* Location */
+
+position: absolute;
+width: 1603px;
+height: 866px;
+left: 0px;
+top: 1229px;
+
+
+
+/* Rectangle 40007 */
+
+position: absolute;
+width: 1603px;
+height: 866px;
+left: 0px;
+top: 1229px;
+
+background: #FFFFFF;
+
+
+/* Location */
+
+position: absolute;
+width: 1027px;
+height: 675px;
+left: 286px;
+top: 1291px;
+
+
+
+/* e054bdcf455dbee8fef16b7a8d72b2e4 1 */
+
+position: absolute;
+width: 899px;
+height: 675px;
+left: 414px;
+top: 1291px;
+
+background: url(e054bdcf455dbee8fef16b7a8d72b2e4.jpg);
+border-radius: 16px;
+
+
+/* Group 1171274918 */
+
+position: absolute;
+width: 418px;
+height: 522px;
+left: 286px;
+top: 1368px;
+
+
+
+/* Rectangle 39971 */
+
+position: absolute;
+width: 418px;
+height: 522px;
+left: 286px;
+top: 1368px;
+
+background: #011E30;
+border-radius: 16px;
+
+
+/* Group 1171274917 */
+
+position: absolute;
+width: 281px;
+height: 380px;
+left: 331px;
+top: 1427px;
+
+
+
+/* Get in Touch */
+
+position: absolute;
+width: 235px;
+height: 32px;
+left: 377px;
+top: 1427px;
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 40px;
+line-height: 32px;
+/* identical to box height, or 80% */
+text-align: center;
+letter-spacing: -0.6px;
+
+color: #FFFFFF;
+
+
+
+/* Group 1171274915 */
+
+position: absolute;
+width: 236px;
+height: 121px;
+left: 331px;
+top: 1501px;
+
+
+
+/* Group 1171274913 */
+
+position: absolute;
+width: 148px;
+height: 51px;
+left: 331px;
+top: 1501px;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 51px;
+height: 51px;
+left: 331px;
+top: 1501px;
+
+
+
+/* Location */
+
+position: absolute;
+width: 51px;
+height: 51px;
+left: 331px;
+top: 1501px;
+
+background: url();
+
+
+/* Rectangle 39972 */
+
+position: absolute;
+width: 51px;
+height: 51px;
+left: 331px;
+top: 1501px;
+
+background: #A7F46A;
+
+
+/* Address */
+
+position: absolute;
+width: 88px;
+height: 32px;
+left: 391px;
+top: 1509px;
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+text-align: center;
+letter-spacing: -0.6px;
+
+color: #FFFFFF;
+
+
+
+/* 7674 Gartner Avenue Corona, Manchester 11368 */
+
+position: absolute;
+width: 210px;
+height: 64px;
+left: 357px;
+top: 1558px;
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+letter-spacing: -0.6px;
+
+color: #FFFFFF;
+
+
+
+/* Group 1171274916 */
+
+position: absolute;
+width: 197px;
+height: 126px;
+left: 331px;
+top: 1681px;
+
+
+
+/* Group 1171274914 */
+
+position: absolute;
+width: 148px;
+height: 51px;
+left: 331px;
+top: 1681px;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 51px;
+height: 51px;
+left: 331px;
+top: 1681px;
+
+
+
+/* Telephone */
+
+position: absolute;
+width: 51px;
+height: 51px;
+left: 331px;
+top: 1681px;
+
+background: url();
+
+
+/* Rectangle 39973 */
+
+position: absolute;
+width: 59.67px;
+height: 58.14px;
+left: 331px;
+top: 1681px;
+
+background: #A7F46A;
+
+
+/* Contact */
+
+position: absolute;
+width: 87px;
+height: 32px;
+left: 392px;
+top: 1691px;
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+text-align: center;
+letter-spacing: -0.6px;
+
+color: #FFFFFF;
+
+
+
+/* 374-9475-783 */
+
+position: absolute;
+width: 107px;
+height: 26px;
+left: 357px;
+top: 1749px;
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+/* identical to box height, or 162% */
+letter-spacing: -0.1px;
+
+color: #FFFFFF;
+
+
+
+/* contact@example.com */
+
+position: absolute;
+width: 171px;
+height: 26px;
+left: 357px;
+top: 1781px;
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+/* identical to box height, or 162% */
+letter-spacing: -0.1px;
+
+color: #FFFFFF;

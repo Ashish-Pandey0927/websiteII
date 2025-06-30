@@ -1,6 +1,6 @@
 import React from "react";
 import "../ServicesSubPagesServices.css";
-import cloudServices from '../../../assets/cloudServices.svg';
+import cloudServices from '../../../assets/CloudServices.svg';
 import awsServices from '../../../assets/awsServices.svg';
 import GCPServices from '../../../assets/GCPServices.svg';
 import AzureServices from '../../../assets/AzureServices.svg';

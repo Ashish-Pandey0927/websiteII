@@ -1,4 +1,3 @@
-import React from 'react';
 import './WhatWeDo.css';
 
 import MobileDevelopment from '../../assets/MobileDevelopment.svg';

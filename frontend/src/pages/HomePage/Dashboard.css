@@ -109,31 +109,37 @@
 
   /* Dashboard Container */
   .home-dashboard-container {
-    width:99%;
-    height: auto;
+    width:100%;
+    height: 100vh;
+    min-height: 100vh;
     padding: 0.5rem;
     left: 0;
     transform: none;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
   }
 
   /* Highlight Section */
   .highlight-wrapper {
-    position: relative;
-    top: auto;
+    position: absolute;
+    top: 6rem;
     left: 1rem;
-    margin: 1rem 0;
+    margin: 0;
     justify-content: flex-start;
+    z-index: 2;
   }
 
   /* Hero Section */
   .hero-content {
-    position: relative;
-    width: 96%;
+    position: absolute;
+    width: 60%;
     height: auto;
-    top: auto;
-    left: auto;
-    padding: 1rem;
-    text-align: center;
+    top: 8rem;
+    left: 1rem;
+    padding: 0;
+    text-align: left;
+    margin-top: 0;
   }
 
   .hero-heading {
@@ -141,10 +147,14 @@
     line-height: 1.3;
     text-align: flex-start;
     transform: none;
+    margin-bottom: 1.5rem;
   }
 
   /* CTA Button */
   .cta-button {
+    position: absolute;
+    top: 12rem;
+    left: 0rem;
     margin: 0;
     padding: 0.5rem 1.5rem;
     transform: none;
@@ -156,5 +166,38 @@
 
   .cta-button .arrow-icon {
     font-size: 16px;
+  }
+
+  /* Background Selector Mobile Positioning */
+  .background-selector {
+    position: absolute;
+    top: 4.5rem;
+    left: 0rem;
+    margin: 0;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    padding: 0;
+    z-index: 10;
+    border-radius: 20px;
+    padding: 8px;
+  }
+
+  .background-selector .bg-button {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    transform: none;
+    width: 20px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s, opacity 0.2s;
+  }
+
+  .background-selector .bg-button.active {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
   }
 }

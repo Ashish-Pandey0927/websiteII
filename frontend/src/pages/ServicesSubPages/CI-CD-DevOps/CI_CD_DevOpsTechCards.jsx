@@ -1,6 +1,7 @@
 import React from 'react';
 import "../TechCards.css";
-import jenkinslogo from '../../../assets/logo/jenkinslogo.png';
+import jenkinslogo from "../../../assets/logo/Jenkinslogo.png";
+
 import gitlablogo from '../../../assets/logo/gitlablogo.png';
 import circlecilogo from '../../../assets/logo/circlecilogo.png';
 import TravisCILogo from '../../../assets/logo/TravisCILogo.png';

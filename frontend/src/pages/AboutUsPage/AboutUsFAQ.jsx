@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./aboutusfaq.css";
+import "./AboutUsFAQ.css";
 import { CiSquarePlus, CiSquareMinus } from "react-icons/ci";
 
 const faqs = [

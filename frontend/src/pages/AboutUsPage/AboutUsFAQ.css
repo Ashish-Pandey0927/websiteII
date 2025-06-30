@@ -1,11 +1,12 @@
 .aboutusfaq-wrapper {
   width: 100%;
-  max-width: 1600px;
+  max-width: 100vw;
   display: flex;
-  padding: 60px 0;
+  padding: 60px 20px;
   background: #ffffff;
   gap: 16rem;
   font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 
 .aboutusfaq-wrapper .faq-left {
@@ -124,7 +125,7 @@
 
   .aboutusfaq-wrapper .faq-subtext {
     font-size: 1rem;
-   
+
   }
   .aboutusfaq-wrapper .faq-card{
     padding: 2rem 0;

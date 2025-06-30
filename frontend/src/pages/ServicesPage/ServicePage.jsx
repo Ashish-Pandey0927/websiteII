@@ -10,7 +10,7 @@ const ServicePage = () => {
       <div
         className="service-page-container">
         <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
-        <div className="Group-1171274896">
+        <div className="Group-Service-page-hero">
           <div
             className="service-page-highlight-wrapper"
           >

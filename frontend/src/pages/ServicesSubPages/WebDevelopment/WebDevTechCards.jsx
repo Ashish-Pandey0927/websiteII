@@ -7,7 +7,7 @@ import nodelogo from '../../../assets/logo/NodeJslogo.png';
 import pythonlogo from '../../../assets/logo/pythonlogo.png';
 import exlogo from '../../../assets/logo/exlogo.png';
 import javalogo from '../../../assets/logo/javalogo.png';
-import phplogo from '../../../assets/logo/phplogo.png';
+import phplogo from '../../../assets/logo/PHPlogo.png';
 import cSharplogo from '../../../assets/logo/cSharplogo.png';
 import nextlogo from '../../../assets/logo/nextjslogo.png';
 

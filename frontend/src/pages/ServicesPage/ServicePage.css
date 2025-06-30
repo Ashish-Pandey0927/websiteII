@@ -95,11 +95,21 @@
 
   /* Dashboard Container */
   .service-page-container {
-    width: 100%;
-    height: auto;
+    width: 100vw; /* Use viewport width for better fit on mobile */
+    max-width: 100vw;
+    min-width: 0;
+    height: 100vh; /* Set to full viewport height on mobile */
     padding: 0.5rem;
     left: 0;
     transform: none;
+  }
+  .Group-Service-page-hero{
+    position: absolute;
+    top: 6rem;
+    left: 1rem;
+    margin: 0;
+    justify-content: flex-start;
+    z-index: 2;
   }
 
   .service-page-vector-highlight svg {
@@ -114,6 +124,9 @@
 
   /* Highlight Section */
   .service-page-highlight-wrapper {
+    width: 90vw; /* Reduce width for highlight wrapper on mobile */
+    max-width: 95vw;
+    min-width: 0;
     position: relative;
     top: auto;
     left: 1rem;
@@ -124,13 +137,15 @@
   /* Hero Section */
   .service-page-hero-content {
     position: relative;
-    width: 100%;
+    width: 90vw; /* Reduce width for hero content on mobile */
+    max-width: 95vw;
     height: auto;
     top: auto;
     left: auto;
     padding: 1rem;
     text-align: center;
     gap: 0px;
+    margin: 0 auto;
   }
 
   .service-page-hero-heading {
@@ -155,5 +170,8 @@
 @media screen and (max-width: 480px) {
   .service-page-hero-paragraph {
     padding: 2% 12% 2% 0;
+  }
+  .service-page-highlight-text {
+    text-wrap: auto;
   }
 }

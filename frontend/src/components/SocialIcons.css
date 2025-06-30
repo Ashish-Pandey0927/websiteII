@@ -8,7 +8,7 @@
     left: 1200px;
     align-items:center;
     width: 151.99999084451744px;
-    height: 19.99999879533124px;  
+    height: 19.99999879533124px;
     transform: rotate(-0.1deg);
     margin-right: 60px;
   }
@@ -39,31 +39,60 @@
   }
 
   /* Mobile-Specific Styles */
-  @media screen and (max-width:820px) {
+  @media screen and (max-width: 820px) {
     .social-icons {
-      position: relative;
-      flex-direction: column;
-      /* position: absolute; */
-      top: 1rem;
-      left: 3.5rem;
-      width: 100%;
-      height: 30px;
-      gap:10px;
-      transform: none;
-      margin: 1rem;
+      position: static !important;
+      display: flex !important;
+      flex-direction: column !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      width: auto !important;
+      height: auto !important;
+      gap: 6px !important;
+      transform: none !important;
+      margin: 0 !important;
+      background: none !important;
     }
 
     .social-row {
-      top: 0rem ! important;
-      left: 1.5rem ! important;
+      position: static !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      flex-direction: column !important;
+      display: flex !important;
+    }
+
+    .social-column {
+      flex-direction: column !important;
+      display: flex !important;
     }
 
     .social-link {
-      flex-direction: column;
-      font-size: 3rem;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 32px !important;
+      height: 32px !important;
+      font-size: 1.2rem !important;
+      color: #000 !important;
+      background: none !important;
+      border: none !important;
+      margin: 0 !important;
+      padding: 4px !important;
     }
 
     .social-link svg {
-      font-size: 3rem;
+      font-size: 1.2rem !important;
+      color: #fff;
+    }
+
+    .social-link:hover {
+      color: #A7F46A !important;
+    }
+
+    .social-link:hover svg {
+      color: #A7F46A !important;
     }
   }

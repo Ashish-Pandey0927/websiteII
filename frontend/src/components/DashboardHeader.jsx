@@ -79,6 +79,11 @@ const DashboardHeader = ( { backgroundImage, iconColor }) => {
             {sections.map(({ name, path, subLinks }) => {
               const isServices = name === "Services";
               const hasSubLinks = !!subLinks;
+              const isMobile = window.innerWidth <= 820;
+              const showMobileDropdown =
+                isServices && isMobile && servicesDropdownOpen && menuOpen;
+              const showDesktopDropdown =
+                hasSubLinks && !isMobile && (servicesDropdownOpen || menuOpen);
 
               return (
                 <div
@@ -89,18 +94,36 @@ const DashboardHeader = ( { backgroundImage, iconColor }) => {
                     <Link
                       to={path}
                       className={`nav-link ${currentPath === path ? "active" : ""} ${isServices ? "bold" : ""}`}
-                      onClick={() => handleNavClick(path, hasSubLinks)}
+                      onClick={() => !isMobile && handleNavClick(path, hasSubLinks)}
                     >
                       {name}
                     </Link>
-
                     {isServices && (
-                      <span className="services-arrow-icon" onClick={handleDropdownToggle}>▼</span>
+                      <span className="services-arrow-icon" onClick={handleDropdownToggle}>
+                        ▼
+                      </span>
                     )}
                   </div>
 
-                  {hasSubLinks && (servicesDropdownOpen || window.innerWidth > 768) && (
-                    <div className={`dropdown-menu ${window.innerWidth <= 768 ? "mobile-dropdown" : ""}`}>
+                  {/* Mobile dropdown: only show when arrow is clicked, right below Services */}
+                  {showMobileDropdown && (
+                    <div className="dropdown-menu mobile-dropdown">
+                      {subLinks.map(({ name: subName, path: subPath }) => (
+                        <Link
+                          key={subPath}
+                          to={subPath}
+                          className={`dropdown-link ${currentPath === subPath ? "active" : ""}`}
+                          onClick={() => handleNavClick(subPath)}
+                        >
+                          {subName}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Desktop dropdown: keep as before */}
+                  {showDesktopDropdown && !isMobile && (
+                    <div className="dropdown-menu">
                       {subLinks.map(({ name: subName, path: subPath }) => (
                         <Link
                           key={subPath}
