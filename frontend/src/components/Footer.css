@@ -153,14 +153,26 @@
   }
   .footer .cta span{
     font-size: 1.2rem;
-  } 
+  }
 
   .footer .cta {
     position: static;
     flex-direction: row;
-    align-items: flex-start;
-    gap: 6rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     margin-top: 2rem;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .footer .cta button {
+    width: auto !important;
+    max-width: 180px !important;
+    height: 48px !important;
+    font-size: 1.1rem !important;
+    margin-right: 0 !important;
+    padding: 0 1rem !important;
   }
 
   .footer .divider {
@@ -185,7 +197,7 @@
   .list-section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     position: static;
     width: 100%;
   }
@@ -203,19 +215,88 @@
 
   .bottom-row {
     position: static;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-top: 3rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
   }
 
   .footer-bottom {
     width: 100%;
+    display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 3rem;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .footer-social {
     justify-content: flex-start;
+  }
+
+  .footer-social .social-icons {
+    flex-direction: row !important;
+    position: static !important;
+    gap: 0.8rem !important;
+  }
+
+  .footer-social .social-row {
+    flex-direction: row !important;
+  }
+
+  .footer-social .social-link {
+    color: white !important;
+  }
+
+  .footer-social .social-link svg {
+    color: white !important;
+  }
+}
+
+/* Mobile phones: max-width 480px */
+@media (max-width: 480px) {
+  .footer .cta {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+
+  .footer .cta span {
+    font-size: 0.9rem !important;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .footer .cta button {
+    width: auto !important;
+    max-width: 140px !important;
+    height: 42px !important;
+    font-size: 0.9rem !important;
+    margin-right: 0 !important;
+    padding: 0 1rem !important;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .footer-social .social-icons {
+    flex-direction: row !important;
+    position: static !important;
+    gap: 0.6rem !important;
+  }
+
+  .footer-social .social-row {
+    flex-direction: row !important;
+  }
+
+  .footer-social .social-link {
+    color: white !important;
+  }
+
+  .footer-social .social-link svg {
+    color: white !important;
+    font-size: 1.2rem;
   }
 }

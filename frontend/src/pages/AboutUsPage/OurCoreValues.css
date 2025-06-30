@@ -1,13 +1,16 @@
 .core-values-section {
-  width: 100%;
-  max-width: 1600px;
+  width: 100vw;
   background-color: #ffffff;
   padding: 40px;
   box-sizing: border-box;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
 }
 
 .core-values-container {
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -81,48 +84,73 @@
 
   .core-values-title {
     text-align: left;
-    padding: 2rem;
+    font-size: 48px;
+    margin-bottom: 40px;
   }
 
   .core-values-cards {
     justify-content: center;
     flex-direction: column;
+    gap: 30px;
+    align-items: center;
   }
-  .value-description {
-    text-align: justify;
-    padding-left: 6rem;
-  }
+
   .value-card {
     max-width: 90%;
-    margin-left: 2rem;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+
+  .value-title {
+    font-size: 32px;
+    text-align: center;
+    top: 0;
+  }
+
+  .value-description {
+    text-align: left;
+    width: 100%;
+    font-size: 15px;
+    line-height: 26px;
   }
 }
 
 /* === Mobile (max-width: 480px) === */
 @media screen and (max-width: 480px) {
   .core-values-section {
-    padding: 40px 16px;
+    padding: 30px 16px;
   }
 
   .core-values-title {
-    font-size: 3.75rem;
+    font-size: 36px;
     line-height: 120%;
     margin-bottom: 30px;
     text-align: left;
-    padding: 2rem;
+    padding: 0;
   }
 
-  .value-title {
-    font-size: 28px;
-  }
-
-  .value-description {
-    text-align: justify;
-    padding-left: 4rem;
+  .core-values-cards {
+    gap: 20px;
   }
 
   .value-card {
-    padding: 24px 24px 0 24px;
-    margin-left: 2rem;
+    max-width: 100%;
+    padding: 24px 20px;
+    margin: 0;
+    min-height: auto;
+  }
+
+  .value-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+    top: 0;
+  }
+
+  .value-description {
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+    width: 100%;
   }
 }

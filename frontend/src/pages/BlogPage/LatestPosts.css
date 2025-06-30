@@ -88,38 +88,45 @@
 }
 
 @media (max-width: 480px) {
-  .latest-posts-container{
-      border-radius: 16px;
-  border: 1px solid #CACACA;
-  width: 100%;
-  padding: 2rem 0;
+  .latest-posts-section {
+    padding: 0.5rem;
   }
-  .post-title{
+  .latest-posts-container {
+    padding: 0.5rem 0.25rem;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .section-title {
     font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
-  .post-description {
-    font-size: 1.25rem;
-  }
-  .post-button{
-    font-size: 1.25rem;
-  }
-  .post-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
-
   .posts-grid {
     grid-template-columns: 1fr !important;
-    place-items: center;
-    padding-right: 0px;
+    gap: 1rem;
+    padding-right: 0;
   }
-
   .post-card {
-    width: auto;
+    width: 100%;
     max-width: 100%;
-      padding: 1.5rem 3rem 0rem 3rem; 
+    padding: 0.5rem 0.25rem 0 0.25rem;
+    box-sizing: border-box;
+  }
+  .post-image {
+    height: 160px;
+    border-radius: 0.75rem;
+  }
+  .post-content {
+    padding: 0.75rem;
+    height: auto;
+  }
+  .post-title {
+    font-size: 1.1rem;
+  }
+  .post-description {
+    font-size: 1rem;
+  }
+  .post-button {
+    font-size: 1rem;
   }
 }
 

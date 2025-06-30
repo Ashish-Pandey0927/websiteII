@@ -1,4 +1,3 @@
-import React from 'react';
 import AboutUsHero from './AboutUsHero';
 import Footer from '../../components/Footer';
 import AiOverview from './AiOverview';

@@ -3,18 +3,28 @@
 .why-choose-us {
   position: relative;
   background-color: #ffffff;
-  max-width: 1600px;
-  width: 100%;
-  height: 700px;
-  margin: auto;
+  width: 100vw;
+  min-height: 700px;
+  height: auto;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 18rem;
+  gap: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .why-choose-us .text-content {
-  max-width: 600px;
+  flex: 1;
+  max-width: 320px;
   margin-bottom: 40px;
-   padding: 0 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
 }
 
 .why-choose-us .text-content h2 {
@@ -22,35 +32,40 @@
   font-size: 3.75rem;
   font-weight: 700;
   color: #101010;
-  margin: 0;
+  margin: 0 0 5rem 0;
+  line-height: 1.1;
 }
 
 .why-choose-us .text-content p {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.5rem;
   color: #5A7184;
-  line-height: 31px;
-  margin-top: 8rem;
-  width: 520px;
+  line-height: 1.8;
+  margin: 0;
+  width: 500px;
+  max-width: 300px;
+  text-align: left;
 }
 
 .why-choose-us .diagram-container {
+  flex: 1;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   max-width: 100%;
   gap: 40px;
+  min-width: 700px;
 }
 
 .why-choose-us .diagram-box {
-  position: absolute;
+  position: relative;
   top: 72px;
-  left: -145px;
-  width: 675px;
+  left: 0;
+  width: 100%;
+  max-width: 675px;
   height: 593px;
   border-width: 1px;
-
 }
 
 .why-choose-us .card {
@@ -115,6 +130,47 @@
   top: -835px;
 }
 
+/* Desktop and larger screens */
+@media (min-width: 1200px) {
+  .why-choose-us {
+    gap: 4rem;
+  }
+
+  .why-choose-us .text-content {
+    max-width: 600px;
+  }
+
+  .why-choose-us .text-content p {
+    margin-top: 4rem;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1024px) and (min-width: 821px) {
+  .why-choose-us {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .why-choose-us .text-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .why-choose-us .text-content p {
+    margin-top: 1rem;
+  }
+
+  .why-choose-us .diagram-container {
+    min-width: auto;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* Tablet (max-width: 820px) */
 @media (max-width: 820px) {
   .why-choose-us {
@@ -129,15 +185,22 @@
     padding: 0;
     width: 100%;
   }
+
+  .why-choose-us .text-content h2 {
+    margin: 0  1rem;
+  }
+
 .why-choose-us .text-content p {
   margin-top: 2rem;
+  padding: 1rem;
+  text-align: left;
 }
 .why-choose-us .card h3 {
   width: 100%;
   text-align: left;
 }
 .why-choose-us .card p {
-  text-align: justify;
+  text-align: left;
 }
   .why-choose-us .diagram-container {
     position: static;
@@ -150,7 +213,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: .5rem;
     width: 100%;
     height: auto;
     border: none;
@@ -168,7 +231,7 @@
   .why-choose-us .agile,
   .why-choose-us .end-to-end {
     position: static;
-    padding: 0;
+    padding: 0 1rem;
   }
 
   /* Hide dashed lines on small screens */
@@ -176,5 +239,6 @@
   .why-choose-us .horizontal-dashed-line1,
   .why-choose-us .horizontal-dashed-line2 {
     display: none;
+    padding: 1rem;
   }
 }

@@ -127,41 +127,44 @@
 /* Desktop - 3 columns */
 @media (min-width: 1024px) {
   .services-section {
-      padding: 0 20px;
-  width: 1600px;
-}
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
   .service-card {
     width: 100%;
-  max-width: 491px ! important;
-  margin: auto 0;
-}
-.service-description {
-  max-width:363px;
-}
+    max-width: 491px !important;
+    margin: auto 0;
+  }
+  .service-description {
+    max-width: 363px;
+  }
   .service-icon img {
-  width: 53px;
-  height: 50px;
-  object-fit: cover;
-}
+    width: 53px;
+    height: 50px;
+    object-fit: cover;
+  }
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
     padding-right: 8rem;
   }
-.services-rectangle{
-  width: 1600px;
-height: 1071px;
-top: 607px;
-background:#ffffff;
-}
-.services-section{
-  width: 1516px;
-height: 955px;
-top: 665px;
-left: 42px;
-margin-right: 8%;
-
-
-}
+  .services-rectangle {
+    width: 100%;
+    max-width: 1600px;
+    height: 1071px;
+    top: 607px;
+    background: #ffffff;
+    margin: 0 auto;
+  }
+  .services-section {
+    width: 100%;
+    max-width: 1516px;
+    height: 955px;
+    top: 665px;
+    left: 42px;
+    margin: 0 auto;
+  }
   .offered-services-header {
     flex-direction: row;
     align-items: baseline;

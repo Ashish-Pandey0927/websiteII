@@ -25,118 +25,139 @@
 .ourportfolios-title {
     text-align: center;
     margin-bottom: 4rem;
-}
 
-.ourportfolios-heading {
+    max-width: 700px;
+    color: #000000;
+    font-size: 2.25rem;
     font-family: 'HK Grotesk', sans-serif;
     font-size: 2.25rem;
-    font-weight: 700;
-    color: #000000;
     margin: 0;
 }
 
 .ourportfolios-subtext {
     Width: 579px;
-    margin-left: 28rem;
+    margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     color: #5A7184;
-    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    margin-top: 0;
     text-align: center;
 }
 
 .ourportfolios-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding-right: 8rem;
+    gap: 2.5rem;
+    padding: 0 2rem;
 }
 
 .ourportfolios-card {
-    width: 100%;
     background-color: #fff;
-    border-radius: 1rem;
+    border-radius: 1.25rem;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44), box-shadow 0.3s;
+    border: 1px solid #f0f0f0;
 }
 
 .ourportfolios-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 
 .ourportfolios-image {
     width: 100%;
-    height: 390px;
+    height: 320px;
+    aspect-ratio: 16/10;
     object-fit: cover;
-    border-radius: 1rem;
+    border-radius: 1.25rem 1.25rem 0 0;
+    display: block;
+    background: #f5f5f5;
 }
 
 .ourportfolios-content {
-    padding: 1rem;
+    padding: 1.5rem 1.25rem 1.25rem 1.25rem;
 }
 
 .ourportfolios-card-title {
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 1.5rem;
-    color: #000000;
-    margin: 0 0 0.5rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #183B56;
 }
 
 .ourportfolios-button {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
-    color: #101010;
-    ;
+    color: #2282A1;
     background: none;
     border: none;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    transition: color 0.2s;
 }
 
-.ourportfolios-button i {
-    font-size: 0.875rem;
+.ourportfolios-button:hover {
+    color: #183B56;
+    text-decoration: underline;
 }
 
 @media (max-width: 480px) {
-    .ourportfolios-grid {
-        grid-template-columns: 1fr !important;
-        place-items: center;
-        padding-right: 0px;
+    .ourportfolios-container {
+        padding: 0.5rem;
     }
 
-    .ourportfolios-card-title {
-        font-size: 1.5rem !important;
+    .ourportfolios-title {
+        margin-bottom: 2rem;
+    }
+
+    .ourportfolio {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .ourportfolios-heading {
+        font-size: 1.2rem;
     }
 
     .ourportfolios-subtext {
-        font-size: 1.25rem;
-        margin-left: 5rem;
+        font-size: 1rem;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
     }
 
-    .ourportfolios-button {
-        font-size: 1.25rem;
+    .ourportfolios-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        padding-right: 0;
     }
 
     .ourportfolios-card {
-        width: auto;
+        width: 100%;
         max-width: 100%;
-        padding: 0 3rem;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
     }
 
     .ourportfolios-image {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        height: auto;
-        margin: 0 auto;
+        height: 160px;
+        border-radius: 0.75rem;
     }
 
-    .ourportfolios-container {
-        padding: 1rem;
+    .ourportfolios-content {
+        padding: 0.75rem;
+    }
+
+    .ourportfolios-card-title {
+        font-size: 1rem !important;
+    }
+
+    .ourportfolios-button {
+        font-size: 1rem;
     }
 }
 
@@ -148,7 +169,7 @@
 
     .ourportfolios-subtext {
         font-size: 1.25rem;
-        margin-left: 5rem;
+        /* margin-left: 5rem; */
     }
 
     .ourportfolios-image {
