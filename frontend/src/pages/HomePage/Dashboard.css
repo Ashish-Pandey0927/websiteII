@@ -123,8 +123,8 @@
   /* Dashboard Container */
   .home-dashboard-container {
     width:100%;
-    height: 100vh;
-    min-height: 100vh;
+    height: 70vh;
+    min-height: 70vh;
     padding: 0.5rem;
     left: 0;
     transform: none;

@@ -178,6 +178,8 @@
 @media screen and (max-width: 480px) {
   .contact-hero {
     width: 100vw;
+    height: 70vh;
+    min-height: 70vh;
     left: 0;
     padding: 0;
     margin: 0;
@@ -185,6 +187,7 @@
   .contact-hero-background,
   .contact-hero-overlay {
     width: 100vw;
+    height: 70vh;
     left: 0;
   }
   .contact-hero-content {
