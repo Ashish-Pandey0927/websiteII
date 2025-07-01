@@ -9,22 +9,32 @@ import DashboardHeader from "../../components/DashboardHeader";
 import BackgroundSelector from "../../components/BackgroundSelector";
 
 const Dashboard = () => {
+  const backgrounds = [BG, BG2, BG3, BG4];
   const [activeLink, setActiveLink] = useState('#home');
   const [bgImage, setBgImage] = useState(BG);
   const iconColor = useBackgroundImageBrightness(bgImage);
 
+  // Automatically change background every 10 seconds
+  useEffect(() => {
+    let idx = backgrounds.indexOf(bgImage);
+    const interval = setInterval(() => {
+      idx = (idx + 1) % backgrounds.length;
+      setBgImage(backgrounds[idx]);
+    }, 5000);
+    return () => clearInterval(interval);
+    // eslint-disable-next-line
+  }, [bgImage]);
+
   // Preload all background images once
   useEffect(() => {
-    const images = [BG, BG2, BG3, BG4];
-    images.forEach(src => {
-      const img = new Image();
+    backgrounds.forEach(src => {
+      const img = new window.Image();
       img.src = src;
     });
   }, []);
 
   return (
-    <div
-      className="home-dashboard-container"
+    <div className="home-dashboard-container attractive-bg"
       style={{
         backgroundImage: `url(${bgImage}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
         backgroundBlendMode: 'multiply'
@@ -67,7 +77,7 @@ const Dashboard = () => {
         </button>
       </div>
       <BackgroundSelector
-        backgrounds={[BG, BG2, BG3, BG4]}
+        backgrounds={backgrounds}
         currentBg={bgImage}
         onChange={setBgImage}
       />

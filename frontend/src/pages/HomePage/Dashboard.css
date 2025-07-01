@@ -104,6 +104,19 @@
   text-align: left;
 }
 
+/* Gradient and Highlight Styles */
+.cta-attractive {
+  background: linear-gradient(90deg, #A7F46A 0%, #8edc56 100%);
+  color: #161C2D;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(167,244,106,0.18);
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.cta-attractive:hover {
+  background: linear-gradient(90deg, #8edc56 0%, #A7F46A 100%);
+  box-shadow: 0 4px 24px rgba(167,244,106,0.28);
+}
+
 /* Mobile-Specific Styles */
 @media screen and (max-width: 768px) {
 
