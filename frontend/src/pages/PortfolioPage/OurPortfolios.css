@@ -1,6 +1,8 @@
 .ourportfolios-container {
     width: 100%;
     padding: 2.5rem;
+    padding-left: 4vw;
+    padding-right: 4vw;
     background-color: #fff;
     box-sizing: border-box;
 }
@@ -50,6 +52,8 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
     padding: 0 2rem;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .ourportfolios-card {
@@ -105,9 +109,36 @@
     text-decoration: underline;
 }
 
+@media (max-width: 820px) {
+    .ourportfolios-container {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .ourportfolios-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .ourportfolios-subtext {
+        font-size: 1.25rem;
+        /* margin-left: 5rem; */
+    }
+
+    .ourportfolios-image {
+        height: auto;
+    }
+
+    .ourportfolios-card-title {
+        font-size: 1.25rem;
+    }
+}
+
 @media (max-width: 480px) {
     .ourportfolios-container {
-        padding: 0.5rem;
+        padding-left: 1vw;
+        padding-right: 1vw;
     }
 
     .ourportfolios-title {
@@ -134,6 +165,7 @@
         grid-template-columns: 1fr !important;
         gap: 1rem;
         padding-right: 0;
+        padding-left: 0;
     }
 
     .ourportfolios-card {
@@ -158,25 +190,5 @@
 
     .ourportfolios-button {
         font-size: 1rem;
-    }
-}
-
-@media (max-width: 820px) {
-    .ourportfolios-grid {
-        grid-template-columns: repeat(2, 1fr);
-        padding-right: 0px;
-    }
-
-    .ourportfolios-subtext {
-        font-size: 1.25rem;
-        /* margin-left: 5rem; */
-    }
-
-    .ourportfolios-image {
-        height: auto;
-    }
-
-    .ourportfolios-card-title {
-        font-size: 1.25rem;
     }
 }
