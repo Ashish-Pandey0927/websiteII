@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 1601px;
   height: 745px;
-  background: #161C2D  url('../../assets/ctaBackground.png') no-repeat center center / cover;
+  background: #161C2D url('../../assets/ctaBackground.png') no-repeat center center / cover;
   font-family: 'DM Sans', sans-serif;
   z-index: 10;
 
@@ -20,11 +20,12 @@
   mix-blend-mode: normal;
   opacity: 0.14;
 }
+
 .cta-card {
-  position: absolute;
+  position: relative;
   width: 350px;
   height: 499px;
-  top: 120px;  /* adjust this value to move it down */
+  top: -315px;  /* adjust this value to move it down */
   left: 1000px;
   background: #ffffff;
   border: 1px solid #e7e9ed;
@@ -119,7 +120,7 @@
 
 
 .cta-text-heading {
-  position: absolute;
+  position: relative;
   width: 348px;
   height: 120px;
   left: 245px;
@@ -133,11 +134,11 @@
 }
 
 .cta-subtext {
-  position: absolute;
+  position: relative;
   width: 487px;
   height: 126px;
   left: 245px;
-  top: 276px;
+  top: 160px;
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   line-height: 31px;
@@ -145,21 +146,17 @@
 }
 
 .cta-dashed-line {
-  position: absolute;
-  width: 250px;
-  height: 1px;
-  top: 420px;
-  left: 23.5%;
-  transform: translateX(-50%);
-  border-top: 1px dashed #FFFFFF;
+  position: relative;
+  left: 0;
+  top: 125px;
 }
 
 .cta-secondary-heading {
-  position: absolute;
-  width: 332px;
+  position: relative;
+  width: 333px;
   height: 48px;
   left: 245px;
-  top: 460px;
+  top: 125px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -169,17 +166,31 @@
 }
 
 .cta-small-text {
-  position: absolute;
+  position: relative;
   width: 150px;
   height: 55px;
   left: 245px;
-  top: 510px;
+  top: 150px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 27px;
   color: #B3BAC5;
 }
 
+.cta-dashed-line {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.cta-dashed-line svg {
+  width: 100%;
+  max-width: 300px;
+  height: 24px;
+}
 
 @media screen and (max-width: 768px) {
   .cta-form-wrapper {
@@ -192,13 +203,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    top:0;
+    top: 0;
     /* top: -50px; */
     left: 0;
   }
 
   .cta-bg-overlay {
-    display: none; /* or adjust opacity if needed */
+    display: none;
+    /* or adjust opacity if needed */
   }
 
   .cta-text-heading,
@@ -211,7 +223,6 @@
     left: 0;
     top: 0;
     text-align: center;
-    margin-bottom: 20px;
   }
 
   .cta-text-heading {
@@ -230,12 +241,6 @@
 
   .cta-small-text {
     font-size: 15px;
-  }
-
-  .cta-dashed-line {
-    width: 80%;
-    margin: 0 auto 20px;
-    transform: none;
   }
 
   .cta-card {
@@ -286,6 +291,14 @@
   .input-group {
     width: 100% !important;
     max-width: 300px !important;
+  }
+
+  .cta-dashed-line svg {
+    width: 100% !important;
+    max-width: 100vw !important;
+    height: 24px !important;
+    display: block;
+    margin: 0 auto!important;
   }
 }
 

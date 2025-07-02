@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./CTAForm.css";
 
 const CTAForm = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="cta-form-wrapper">
       {/* Background overlay */}
@@ -17,10 +28,14 @@ const CTAForm = () => {
       </div>
 
       {/* Dashed Line Divider */}
-      <div className="cta-dashed-line"></div>
+      <div className="cta-dashed-line">
+        <svg width="600" height="50">
+          <line x1={isMobile ? 0 : 250} y1="25" x2="600" y2="25" stroke=" #B3BAC5" strokeWidth="4" strokeDasharray="10,5" />
+        </svg>
+      </div>
 
       <div className="cta-secondary-heading">
-        Any problem about your booking? You can contact us on:
+        Any problem about your booking? <br/>You can contact us on:
       </div>
 
       <div className="cta-small-text">
