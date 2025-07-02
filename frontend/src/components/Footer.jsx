@@ -2,6 +2,7 @@ import './Footer.css';
 import estonsoft from "../assets/estonsoftlogo.svg";
 import { ChevronRight } from "lucide-react";
 import SocialIcons from './SocialIcons';
+import { Link  } from "react-router-dom";
 
 
 export default function Footer() {
@@ -9,7 +10,9 @@ export default function Footer() {
     <footer className="footer">
       <div className='footer-header'>
         <div className="footer__logo">
+          <Link to="/">
           <img src={estonsoft} alt="Logo" className="logo" />
+          </Link>
         </div>
 
         {/* CTA Section */}
