@@ -20,8 +20,8 @@ const LocationSection = () => {
               <div className="label">Address</div>
             </div>
             <p className="location-description ">
-              7674 Gartner Avenue Corona,<br />
-              Manchester 11368
+             Super Corridor, Indore,<br />
+              Indore
             </p>
           </div>
 
@@ -31,8 +31,8 @@ const LocationSection = () => {
               <div className="label">Contact</div>
             </div>
             <p className="location-description ">
-              374-9475-783<br />
-              contact@example.com
+              Tel: 0731-4105104<br />
+              hr@estonsoft.com
             </p>
           </div>
         </div>

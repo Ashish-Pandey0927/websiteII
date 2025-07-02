@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="footer">
       <div className='footer-header'>
         <div className="footer__logo">
-          <Link to="/">
+          <Link to="/#home">
           <img src={estonsoft} alt="Logo" className="logo" />
           </Link>
         </div>
@@ -18,7 +18,9 @@ export default function Footer() {
         {/* CTA Section */}
         <div className="cta">
           <span>Ready to get started? </span>
+          <Link to="/contact#form">
           <button>Get started</button>
+          </Link>
         </div>
       </div>
 

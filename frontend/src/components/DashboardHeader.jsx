@@ -23,7 +23,7 @@ const sections = [
   },
   { name: "Blogs", path: "/blogs" },
   { name: "Portfolio", path: "/portfolio" },
-  { name: "Contact", path: "/contact" },
+  { name: "Contact Us", path: "/contact" },
 ];
 
 const DashboardHeader = ( { backgroundImage, iconColor }) => {

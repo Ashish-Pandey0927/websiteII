@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./AiOverview.css";
+import { Link } from "react-router-dom";
 
 const AiOverview = () => {
   const [activeTab, setActiveTab] = useState("purpose");
@@ -95,7 +96,9 @@ const AiOverview = () => {
             <li>Multilingual Fluency</li>
             <li>Robust Security & Privacy</li>
           </ul>
+          <Link to="/contact#form">
           <button className="trial-button">Start free trial</button>
+          </Link>
         </div>
         <div className="info">
           {renderContent()}

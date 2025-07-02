@@ -1,5 +1,6 @@
 import React from "react";
 import "./NewsletterSection.css";
+import { Link } from "react-router-dom";
 
 const NewsletterSection = () => {
   return (
@@ -19,7 +20,9 @@ const NewsletterSection = () => {
             placeholder="i.e. John Doe"
             className="newsletter-input"
           />
-          <button className="newsletter-button">Post Now</button>
+          <Link to="/contact#form">
+          <button className="newsletter-button">Join</button>
+          </Link>
         </div>
       </div>
     </section>

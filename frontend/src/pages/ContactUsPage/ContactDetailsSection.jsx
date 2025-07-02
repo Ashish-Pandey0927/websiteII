@@ -48,7 +48,7 @@ function ContactDetailsSection() {
   };
 
   return (
-    <section className="contact-wrapper">
+    <section className="contact-wrapper" id="form">
       <div className="contact-section">
         <div className="contact-card">
           <div className="contact-form">
