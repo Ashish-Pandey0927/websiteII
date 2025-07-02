@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./FAQSection.css";
 import { CiSquarePlus, CiSquareMinus } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -40,7 +41,9 @@ const FAQSection = () => {
         <p className="faq-description">
           Have a question about our AI? Explore answers to the most common topics below, or reach out to our team directly for anything more specific.
         </p>
+        <Link to="/contact#form">
         <button className="faq-button">Contact Us</button>
+        </Link>
       </div>
 
       <div className="faq-right">

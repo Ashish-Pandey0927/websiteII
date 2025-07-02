@@ -2,6 +2,8 @@
   background-color: #ffffff;
   padding: 20px;
   max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; /* Center the section with even left/right space */
 }
 
 .header {
@@ -32,7 +34,9 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  margin: 0 1rem;
+  margin: 0 auto; /* Center grid, remove side margin */
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Mobile styles (default) */
@@ -55,6 +59,7 @@
   width: 53px;
   height: 50px;
   flex-shrink: 0;
+  top: -1rem; /* Adjusted to align with text */;
 }
 
 .icon-bg {
@@ -115,7 +120,9 @@
     display: flex;
     flex-direction: row;
     gap: 8rem;
-    margin: 0 8rem 2rem;
+    margin: 0 auto 2rem auto; /* Center header */
+    max-width: 1200px;
+    width: 100%;
   }
 
   .header h2 {
@@ -126,15 +133,35 @@
     font-size: 1rem;
     margin-top: 5rem;
   }
+  .text-content h3 {
+    margin-bottom: 0.5rem;
+  }
+  .text-content p {
+  margin-left: 0; 
+  }
 
   .features-grid {
     grid-template-columns: 1fr 1fr;
-    margin: auto 6rem;
+    margin: 0 auto; /* Center grid on desktop */
     gap: 40px;
+    max-width: 1200px;
+    width: 100%;
   }
 
   .feature-card {
-    width: 650px;
-    padding: 40px;
+    width: 608px;
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .what-we-do {
+    margin-left: 120px;
+    margin-right: 120px;
+    max-width: unset;
+    width: auto;
+  }
+  .header {
+    padding-left: 0;
   }
 }

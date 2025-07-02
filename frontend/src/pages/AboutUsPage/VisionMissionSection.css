@@ -31,16 +31,16 @@
   width: 100%;
   background: #FAFAFA;
   max-width: 100vw;
-  height: 527px;
+  height: 500px;
   position: relative;
-  top: 215px;
+  top: 205px;
   z-index: 1;
 }
 
 .info-box {
   background: #ffffff;
   width: 368px;
-  height: 300px;
+  height: 355px!important;
   padding: 40px 0;
   margin: 0 1rem;
   position: relative;
@@ -103,6 +103,7 @@
   position: relative;
   top: -33px;
   width: 364px;
+  padding: 0 1rem;
 }
 
 .vision-mission-container .custom-box {
@@ -130,7 +131,7 @@
 .vision-mission-container .image-container {
   flex: 1;
   max-width: 591px;
-  height: 656px;
+  height: 585px;
   align-items: center;
   width: 100%;
   display: flex;
@@ -143,11 +144,13 @@
 
 .vision-mission-container .main-image {
   width: 100%;
-  max-width: 572px;
+  /* max-width: 572px!important; */
+  max-width: 545px !important;
   height: auto;
   display: block;
   position: relative;
   left: 10px;
+  top: -50px;
 }
 
 /* Tablet */
@@ -246,6 +249,8 @@
     max-width: 100%;
     height: auto;
     left: 0;
+    top:0;
+    padding: 20px;
   }
 
   .vision-mission-container .icon-container {

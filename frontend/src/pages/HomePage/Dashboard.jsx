@@ -34,7 +34,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="home-dashboard-container attractive-bg"
+    <div className="home-dashboard-container attractive-bg" id="home"
       style={{
         backgroundImage: `url(${bgImage}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
         backgroundBlendMode: 'multiply'

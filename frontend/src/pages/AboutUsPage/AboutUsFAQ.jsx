@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./AboutUsFAQ.css";
 import { CiSquarePlus, CiSquareMinus } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const faqs = [
     {
@@ -51,7 +52,9 @@ const AboutUsFAQ = () => {
                         We’re here to help! Find answers or reach out to our team for
                         assistance.
                     </p>
+                    <Link to="/contact#form">
                     <button className="faq-contact-button">Contact us</button>
+                    </Link>
                 </div>
             </div>
 

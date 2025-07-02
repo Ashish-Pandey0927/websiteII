@@ -14,11 +14,13 @@ import CI_CD_DevOpsPage from './pages/ServicesSubPages/CI-CD-DevOps/CI_CD_DevOps
 import Portfolio from './pages/PortfolioPage/Portfolio';
 import BlogDetails from './pages/BlogDetails/BlogDetails';
 import AboutUS from './pages/AboutUsPage/AboutUs';
+import ScrollToAnchor from './components/ScrollToAnchor';
 
 const App = () => {
   return (
     <Router basename="/new">
       <Layout>
+        <ScrollToAnchor />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/aboutus" element={<AboutUS />} />

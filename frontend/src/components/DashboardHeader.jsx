@@ -23,7 +23,7 @@ const sections = [
   },
   { name: "Blogs", path: "/blogs" },
   { name: "Portfolio", path: "/portfolio" },
-  { name: "Contact", path: "/contact" },
+  { name: "Contact Us", path: "/contact" },
 ];
 
 const DashboardHeader = ( { backgroundImage, iconColor }) => {
@@ -60,7 +60,9 @@ const DashboardHeader = ( { backgroundImage, iconColor }) => {
       <div className="header-center">
         <div className="left-section">
           <div className="logo-container">
-            <img src={estonsoft} alt="Logo" className="logo" />
+            <Link to="/">
+              <img src={estonsoft} alt="Logo" className="logo" />
+            </Link>
           </div>
         </div>
       </div>
