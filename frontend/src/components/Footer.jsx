@@ -34,7 +34,9 @@ export default function Footer() {
           <h3>Subscribe to our newsletter</h3>
           <div style={{ position: 'relative' }}>
             <input type="email" placeholder="Email address" />
+            <Link to="/contact#form">
             <button><ChevronRight /></button>
+            </Link>
           </div>
         </div>
 
@@ -44,30 +46,34 @@ export default function Footer() {
           <div className="footer-section" style={{ left: '629px' }}>
             <h4>Services</h4>
             <ul>
-              <li>Email Marketing</li>
-              <li>Campaigns</li>
-              <li>Branding</li>
-              <li>Offline</li>
+              <li>Web Development</li>
+              <li>Mobile Development</li>
+              <li>Cloud Services</li>
+              <li>Quality Assurance</li>
+              <li>Salesforce</li>
+              <li>CI/CD DevOps</li>
             </ul>
           </div>
 
           {/* About */}
           <div className="footer-section" style={{ left: '934px' }}>
-            <h4>About</h4>
+            <h4>Others</h4>
             <ul>
-              <li>Our Story</li>
-              <li>Benefits</li>
-              <li>Team</li>
-              <li>Careers</li>
+              <li>Contact Us</li>
+              <li>About Us</li>
+              <li>Privacy Policy</li>
+              <li>FAQs</li>
             </ul>
           </div>
 
           {/* Help */}
           <div className="footer-section" style={{ left: '1194px' }}>
-            <h4>Help</h4>
+            <h4>Contact Us</h4>
             <ul>
-              <li>FAQs</li>
-              <li>Contact Us</li>
+              <li>Tel: 0731-4105104</li>
+              <li>Mobile: +91 9637225752</li>
+              <li>Email:  hr@estonsoft.com</li>
+              <li>Address: Super Corridor, Indore</li>
             </ul>
           </div>
         </div>
