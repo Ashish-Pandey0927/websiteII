@@ -60,11 +60,13 @@ const AiOverview = () => {
 
   return (
     <section className="ai-overview-container">
-      <div className="text-section">
+      <div className="ai-overview-header">
         <h2 className="section-title">What defines us</h2>
         <p className="section-subtitle">
           Explore our origin, our guiding principles, and the future we're building in the world of AI.
         </p>
+        </div>
+      <div className="text-section">
         <div className="tabs">
           <button
             className={`tab ${activeTab === "purpose" ? "active" : ""}`}
