@@ -11,7 +11,7 @@ const NewsletterSection = () => {
         <span className="newsletter-label">NEWSLETTER</span>
         <h2 className="newsletter-title">Join Our Newsletters</h2>
         <p className="newsletter-description">
-          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
+          Stay up to date with the latest news, insights, and updates from our team. Subscribe to our newsletter and never miss out on important announcements, tech trends, and exclusive offers!
         </p>
 
         <div className="newsletter-form">
