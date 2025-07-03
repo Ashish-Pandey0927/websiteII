@@ -1,4 +1,4 @@
-.services-section {
+.offered-services-section {
   background-color: #ffffff;
  width: 100%;
   margin: 0 auto;
@@ -11,7 +11,7 @@
   justify-items: center;
   gap: 15%;
   margin-bottom: 48px;
-  padding: 16px;
+  padding:0;
 }
 
 .services-title {
@@ -47,7 +47,12 @@
   text-align: center;
   width: 80%;
   margin: 0 auto;
-  height: auto;
+  height: 100%;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   box-sizing: border-box;
 }
 
@@ -83,7 +88,7 @@
 .service-description {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 28px;
   color: #5A7184;
   text-align: justify;
@@ -98,10 +103,18 @@
   grid-template-columns: 1fr;
   justify-content: center;
   gap: 24px;
+  padding-left: 2rem;
   padding-right: 2rem;
 }
 
-/* Tablet - 2 columns */
+/* Align services grid with services title */
+.services-grid {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
 @media (min-width: 768px) {
   /* .services-description {
     font-size: 1rem;
@@ -126,8 +139,8 @@
 
 /* Desktop - 3 columns */
 @media (min-width: 1024px) {
-  .services-section {
-    padding: 0 20px;
+  .offered-services-section{
+    padding: 0;
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
@@ -136,6 +149,9 @@
     width: 100%;
     max-width: 491px !important;
     margin: auto 0;
+    height: 404px;
+    min-height: 404px;
+    max-height: 404px;
   }
   .service-description {
     max-width: 363px;
@@ -147,7 +163,13 @@
   }
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
-    padding-right: 8rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    max-width: 1516px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
   .services-rectangle {
     width: 100%;
@@ -157,7 +179,7 @@
     background: #ffffff;
     margin: 0 auto;
   }
-  .services-section {
+  .offered-services-section{
     width: 100%;
     max-width: 1516px;
     height: 955px;
@@ -167,7 +189,15 @@
   }
   .offered-services-header {
     flex-direction: row;
-    align-items: baseline;
+    align-items: end;
     gap: 10%;
   }
+  .services-rectangle {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
+
+/* Add even horizontal padding for all screen sizes */
+
+
