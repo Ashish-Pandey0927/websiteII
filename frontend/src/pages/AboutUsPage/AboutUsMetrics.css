@@ -18,6 +18,7 @@
   flex: 1;
   min-width: 0;
   text-align: center;
+  justify-content: space-between;
 }
 
 .metric-label {
@@ -56,14 +57,12 @@
     flex: 1 1 0;
     min-width: 0;
     max-width: none;
-    background: #f8f9fa;
-    border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     padding: 16px 8px;
     word-break: break-word;
@@ -72,7 +71,8 @@
   .metric-label {
     font-size: 11px;
     line-height: 14px;
-    margin-bottom: 8px;
+    margin-bottom: 0;
+    margin-right: 8px;
     font-weight: 400;
     color: #666;
     word-break: break-word;
@@ -85,28 +85,48 @@
     line-height: 24px;
     font-weight: 700;
     color: #000;
+    margin-left: 8px;
   }
 }
 
 @media (max-width: 480px) {
   .aboutus-metrics {
-    gap: 6px;
-    padding: 15px 10px;
+    gap: 4px;
+    padding: 10px 2px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .metric-item {
-    padding: 12px 6px;
-    border-radius: 10px;
+    flex-direction: row;
+    width: 250px;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 4px;
+    margin-bottom: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .metric-label {
-    font-size: 10px;
-    line-height: 12px;
-    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 0;
+    margin-right: 6px;
+    color: #444;
+    text-align: left;
+    flex: 1;
+    white-space: normal;
   }
 
   .metric-value {
     font-size: 18px;
     line-height: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-left: 6px;
+    text-align: center;
+    flex-shrink: 0;
   }
 }

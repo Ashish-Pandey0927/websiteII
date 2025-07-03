@@ -45,7 +45,7 @@
   line-height: 24px;
   color: #757b8a;
   margin-bottom: 40px;
-  max-width: 800px;
+  max-width: 800px !important;
   margin-left: auto;
   margin-right: auto;
 }
