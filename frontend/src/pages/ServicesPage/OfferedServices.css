@@ -2,6 +2,7 @@
   background-color: #ffffff;
  width: 100%;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .offered-services-header {
@@ -10,7 +11,6 @@
   align-items: baseline;
   justify-items: center;
   gap: 15%;
-  margin-bottom: 48px;
   padding:0;
 }
 
@@ -91,7 +91,7 @@
   font-size: 1rem;
   line-height: 28px;
   color: #5A7184;
-  text-align: justify;
+  text-align: left;
   width:100%;
   margin: 0 auto;
 }
@@ -103,8 +103,8 @@
   grid-template-columns: 1fr;
   justify-content: center;
   gap: 24px;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Align services grid with services title */
@@ -129,6 +129,7 @@
   .offered-services-header {
     flex-direction: row;
     gap: 15%;
+     margin-bottom: 48px;
   }
   .service-icon img {
   width: 53px;
@@ -191,6 +192,7 @@
     flex-direction: row;
     align-items: end;
     gap: 10%;
+    margin-bottom: 48px;
   }
   .services-rectangle {
     padding-left: 2.5rem;
