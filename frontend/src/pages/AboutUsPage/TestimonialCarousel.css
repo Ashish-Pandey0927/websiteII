@@ -1,7 +1,7 @@
 .testimonial-wrapper {
   width: 100vw;
   margin: 0;
-  padding: 2.5rem 4rem;
+  padding: 4rem 2.5rem ;
   left: 50%;
   transform: translateX(-50%);
   position: relative;
@@ -36,6 +36,8 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   transition: all 0.3s ease;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .testimonial-card {
@@ -132,6 +134,11 @@
     padding: 2rem;
     background-color: #fff;
   }
+    .testimonial-dots .dot .arrow .right-arrow .left-arrow {
+    width: 16px !important;
+    height: 16px !important;
+    }
+    
 
   .testimonial-header {
     flex-direction: column;
@@ -152,6 +159,8 @@
   .testimonial-grid {
     grid-template-columns: 1fr;
     justify-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .testimonial-card {
@@ -186,6 +195,8 @@
 
   .testimonial-grid {
     gap: 1rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .testimonial-card {
@@ -236,6 +247,10 @@
     max-width: 12px !important;
     max-height: 12px !important;
   }
+    .testimonial-dots .arrow .right-arrow .left-arrow {
+    width: 16px !important;
+    height: 16px !important;
+    }
 
   .testimonial-dots .dot.active {
     background-color: #A7F46A !important;
@@ -276,5 +291,12 @@
 
   .arrow:active:not(:disabled) {
     transform: scale(0.95);
+  }
+}
+
+@media (min-width: 821px) {
+  .testimonial-grid {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
