@@ -1,14 +1,16 @@
 .latest-posts-section {
   background-color: #fff;
-  padding: 2.5rem;
+  padding: 2.5rem 2rem;
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
 }
 .latest-posts-container{
-   border-radius: 16px;
+  border-radius: 16px;
   border: 1px solid #CACACA;
-  width: 1330px;
+  width: 100%;
+  max-width: 1330px;
   padding: 2rem;
+  margin: 0 auto;
 }
 
 .section-title {
@@ -20,8 +22,10 @@
 
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .post-card {
