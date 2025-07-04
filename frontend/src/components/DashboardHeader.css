@@ -129,13 +129,19 @@
   color: #000;
   border: 1px solid #ccc;
   border-radius: 8px;
-  min-width: 215px;
+  min-width: 100vw;
+  min-height: 100vh;
   display: none;
   flex-direction: column;
   z-index: 999;
 }
 .has-dropdown:hover .dropdown-menu {
   display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 2rem;
+  left: -2.5rem;
+  padding: 2.5rem;
 }
 .dropdown-link {
   width: 450px;
