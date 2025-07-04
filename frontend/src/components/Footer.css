@@ -66,14 +66,17 @@
 
 .footer .newsletter h3 {
   color: white;
-  font-size: 2.2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   margin-top: 0;
+   width: 100%;
+  max-width: 214px !important;
 }
 
 .footer .newsletter input {
   width: 100%;
+  max-width: 318px;
   border: 1px solid transparent;
   border-bottom: 1px solid #757B8A;
   background: transparent;
@@ -105,7 +108,7 @@
 
 .footer-section h4 {
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.13rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
   margin-top: 0;
@@ -114,7 +117,7 @@
 .footer-section ul {
   list-style: none;
   padding: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 3rem;
 }
 
