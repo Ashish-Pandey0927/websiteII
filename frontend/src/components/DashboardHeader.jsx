@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import './DashboardHeader.css';
 import estonsoft from "../assets/estonsoftlogo.svg";
 import { FiMenu } from "react-icons/fi";
@@ -19,8 +19,21 @@ const sections = [
   { name: "Contact Us", path: "/contact" },
 ];
 
+const getTechnologyPath = (title) => {
+  // Convert title to URL-friendly format and map to service paths
+  const titleToPath = {
+    "Web Development": "/services/webdevelopment",
+    "Mobile Development": "/services/mobiledevelopment",
+    "Cloud Services": "/services/cloudservices",
+    "Quality Assurance": "/services/qualityassurance",
+    "Salesforce": "/services/salesforce",
+    "DevOps": "/services/cicddevops"
+  };
+  return titleToPath[title] || "/services";
+};
+
 const DashboardHeader = ( {iconColor }) => {
-   const fallbackColor = useIconColorByBackground();
+  const fallbackColor = useIconColorByBackground();
   const finalColor = iconColor || fallbackColor;
   const [menuOpen, setMenuOpen] = useState(false);
   const [technologyDropdownOpen, setTechnologyDropdownOpen] = useState(false);
@@ -29,6 +42,7 @@ const DashboardHeader = ( {iconColor }) => {
   const [mobileOpenTechSub, setMobileOpenTechSub] = useState(null);
   const location = useLocation();
   const currentPath = location.pathname;
+  const navigate = useNavigate();
 
   const toggleMenu = useCallback(() => {
     setMenuOpen(prev => !prev);
@@ -123,6 +137,8 @@ const DashboardHeader = ( {iconColor }) => {
                             key={service.title}
                             className={`newheader-submenu-title${openTechSub === sIdx ? " active" : ""}`}
                             onMouseEnter={() => setOpenTechSub(sIdx)}
+                            onClick={() => navigate(getTechnologyPath(service.title))}
+                            style={{ cursor: 'pointer' }}
                             tabIndex={0}
                           >
                             {service.offeredServices && service.offeredServices[0] && service.offeredServices[0].isSvg && typeof service.offeredServices[0].icon === "string" ? (
