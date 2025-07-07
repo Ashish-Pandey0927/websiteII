@@ -25,6 +25,8 @@ const DashboardHeader = ( {iconColor }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [technologyDropdownOpen, setTechnologyDropdownOpen] = useState(false);
   const [openTechSub, setOpenTechSub] = useState(null);
+  const [mobileTechMenuOpen, setMobileTechMenuOpen] = useState(false);
+  const [mobileOpenTechSub, setMobileOpenTechSub] = useState(null);
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -48,23 +50,28 @@ const DashboardHeader = ( {iconColor }) => {
         <div className="social-icons-wrapper">
           <SocialIcons direction="column" iconColor={iconColor}/>
         </div>
-
         <div className="mobile-menu-wrapper" style={{ color: finalColor }}>
-          <div className="menu-toggle mobile-only" onClick={toggleMenu}>
+          <div className="menu-toggle mobile-only" onClick={() => {
+            if (menuOpen) {
+              setMenuOpen(false);
+              setMobileTechMenuOpen(false);
+              setMobileOpenTechSub(null);
+            } else {
+              setMenuOpen(true);
+            }
+          }}>
             {menuOpen ? <AiOutlineClose /> : <FiMenu />}
           </div>
-
           <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
             {sections.map(({ name, path }) => {
               const isTechnology = name === "Technology";
               const isMobile = window.innerWidth <= 820;
-
               return (
                 <div
                   key={path}
                   className={`nav-item${isTechnology ? " has-dropdown" : ""}`}
                   onMouseLeave={() => {
-                    if (isTechnology) {
+                    if (isTechnology && !isMobile) {
                       setTechnologyDropdownOpen(false);
                       setOpenTechSub(null);
                     }
@@ -73,23 +80,28 @@ const DashboardHeader = ( {iconColor }) => {
                   <div
                     className="nav-link-wrapper"
                     onMouseEnter={() => {
-                      if (isTechnology) {
+                      if (isTechnology && !isMobile) {
                         setTechnologyDropdownOpen(true);
                         setOpenTechSub(null);
                       }
                     }}
                     onClick={e => {
                       if (isTechnology) {
-                        e.preventDefault(); // Prevent navigation
-                        setTechnologyDropdownOpen(true);
-                        setOpenTechSub(null);
+                        e.preventDefault();
+                        if (isMobile) {
+                          setMobileTechMenuOpen(true);
+                          setMobileOpenTechSub(null);
+                        } else {
+                          setTechnologyDropdownOpen(true);
+                          setOpenTechSub(null);
+                        }
                       }
                     }}
                     style={{ cursor: isTechnology ? "pointer" : undefined }}
                   >
                     {isTechnology ? (
                       <span
-                        className={`nav-link ${technologyDropdownOpen && !isMobile ? "active" : ""} bold`}
+                        className={`nav-link ${(technologyDropdownOpen && !isMobile) || (isMobile && mobileTechMenuOpen) ? "active" : ""} bold`}
                       >
                         {name}
                       </span>
@@ -102,7 +114,7 @@ const DashboardHeader = ( {iconColor }) => {
                       </Link>
                     )}
                   </div>
-                  {/* Technology Tab Dropdown */}
+                  {/* Technology Tab Dropdown - Desktop */}
                   {isTechnology && technologyDropdownOpen && !isMobile && (
                     <div className="dropdown-menu technology-dropdown-menu">
                       <div className="newheader-submenu-list">
@@ -150,6 +162,90 @@ const DashboardHeader = ( {iconColor }) => {
                           </div>
                         </div>
                       )}
+                    </div>
+                  )}
+                  {/* Technology Tab Dropdown - Mobile */}
+                  {isTechnology && isMobile && mobileTechMenuOpen && (
+                    <div className="mobile-tech-dropdown-overlay">
+                      <div className="mobile-tech-dropdown">
+                        <div className="mobile-tech-header">
+                          <div className="mobile-tech-header-left">
+                            <Link to="/">
+                              <img src={estonsoft} alt="Logo" className="mobile-tech-logo" />
+                            </Link>
+                          </div>
+                          <div className="mobile-tech-header-center">
+                            {mobileOpenTechSub === 
+                              <button className="mobile-tech-back" onClick={() => setMobileOpenTechSub(null)}>
+                                <span>&larr;</span> Back
+                              </button>
+                            }
+                          </div>
+                          <div className="mobile-tech-header-right">
+                            <button 
+                              className="mobile-tech-close" 
+                              onClick={() => {
+                                setMobileTechMenuOpen(false);
+                                setMenuOpen(false);
+                                setMobileOpenTechSub(null);
+                              }}
+                            >
+                              <AiOutlineClose />
+                            </button>
+                          </div>
+                        </div>
+                        <div className="mobile-tech-list">
+                          {mobileOpenTechSub === null ? (
+                            technologyMenuData[0].dropdown.map((service, sIdx) => (
+                              <div key={service.title} className="mobile-tech-item">
+                                <div
+                                  className="mobile-tech-main"
+                                  onClick={() => setMobileOpenTechSub(sIdx)}
+                                >
+                                  {service.offeredServices && service.offeredServices[0] && service.offeredServices[0].isSvg && typeof service.offeredServices[0].icon === "string" && (
+                                    <span className="mobile-tech-icon">
+                                      <img src={service.offeredServices[0].icon} alt={service.title} />
+                                    </span>
+                                  )}
+                                  <span>{service.title}</span>
+                                  <span className="mobile-tech-arrow">&gt;</span>
+                                </div>
+                              </div>
+                            ))
+                          ) : (
+                            <div className="mobile-tech-submenu">
+                              <div className="mobile-tech-col">
+                                <div className="mobile-tech-col-title">Offered Services</div>
+                                <ul className="mobile-tech-list">
+                                  {technologyMenuData[0].dropdown[mobileOpenTechSub].offeredServices.map((srv) => (
+                                    <li key={srv.label} className="mobile-tech-list-item">
+                                      <span className="mobile-tech-icon">
+                                        {srv.isSvg && typeof srv.icon === "string" ? (
+                                          <img src={srv.icon} alt={srv.label} />
+                                        ) : (
+                                          srv.icon
+                                        )}
+                                      </span>
+                                      <span>{srv.label}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div className="mobile-tech-col">
+                                <div className="mobile-tech-col-title">Tech Stack</div>
+                                <ul className="mobile-tech-list">
+                                  {technologyMenuData[0].dropdown[mobileOpenTechSub].techStack.map((tech) => (
+                                    <li key={tech.label} className="mobile-tech-list-item">
+                                      <span className="mobile-tech-icon">{tech.icon}</span>
+                                      <span>{tech.label}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   )}
                 </div>

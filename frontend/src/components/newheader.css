@@ -1,6 +1,7 @@
 .dropdown-menu .technology-dropdown-menu{
   display: flex;
   flex-direction: row;
+  /* background-color: #011E30; */
 }
 
 .newheader-nav {
@@ -38,7 +39,7 @@
 
 .newheader-menu-btn:hover,
 .newheader-menu-btn:focus {
-  color: #006aff;
+  color: #A9F66C;
 }
 
 .newheader-dropdown {
@@ -48,7 +49,7 @@
   right: 0;
   width: 100vw;
   min-width: unset;
-  background: rgba(255,255,255,0.7);
+  background: rgba(1, 30, 48, 0.7)!important;
   box-shadow: none;
   padding: 0;
   display: flex;
@@ -63,7 +64,8 @@
 }
 
 .newheader-dropdown-content {
-  background: #fff;
+  background:#011E30;
+;
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
   margin: 0 auto;
   width: 100%;
@@ -87,7 +89,8 @@
   max-width: 260px;
   border-right: 1px solid #f0f0f0;
   margin-right: 40px;
-  background: #fff;
+  background: #011E30;
+;
   height: 100%;
 }
 
@@ -98,13 +101,13 @@
   max-width: 260px;
   border-right: 1px solid #f0f0f0;
   margin-right: 40px;
-  background: #fff;
+  background: #011E30;
   height: 100%;
 }
 
 .newheader-submenu-title {
   font-weight: 500;
-  color: #222;
+  color: #fff;
   padding: 8px 0 8px 8px;
   cursor: pointer;
   border-radius: 6px 0 0 6px;
@@ -114,8 +117,8 @@
 
 .newheader-submenu-title.active,
 .newheader-submenu-title:hover {
-  background: #f3f7ff;
-  color: #006aff;
+  background: #011E30;
+  color: #A9F66C;
 }
 
 .newheader-subcategory {
@@ -124,7 +127,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: #fff;
+  background: #011E30;
 }
 
 .newheader-links {
@@ -138,7 +141,7 @@
 }
 
 .newheader-links a {
-  color: #222;
+  color: #fff;
   text-decoration: none;
   font-size: 1.01rem;
   transition: color 0.18s;
@@ -148,8 +151,8 @@
 }
 
 .newheader-links a:hover {
-  color: #006aff;
-  background: #f3f7ff;
+  color: #A9F66C;
+  background: #011E30;
 }
 
 .newheader-tech-multicol {
@@ -167,7 +170,7 @@
 
 .newheader-tech-col-title {
   font-weight: 600;
-  color: #006aff;
+  color: #A9F66C;
   margin-bottom: 0.7rem;
   font-size: 1.05rem;
 }
@@ -183,7 +186,7 @@
   align-items: center;
   margin-bottom: 0.4rem;
   font-size: 1.01rem;
-  color: #222;
+  color: #fff;
 }
 
 .newheader-tech-icon {
@@ -192,7 +195,7 @@
   display: inline-block;
 }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .newheader-header {
     flex-direction: column;
     height: auto;
@@ -220,4 +223,4 @@
     border-radius: 0;
     padding: 16px 0;
   }
-}
+} */
