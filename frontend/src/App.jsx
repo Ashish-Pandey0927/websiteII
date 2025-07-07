@@ -15,11 +15,13 @@ import Portfolio from './pages/PortfolioPage/Portfolio';
 import BlogDetails from './pages/BlogDetails/BlogDetails';
 import AboutUS from './pages/AboutUsPage/AboutUs';
 import ScrollToAnchor from './components/ScrollToAnchor';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
     <Router basename="/new">
       <Layout>
+        <ScrollToTop />
         <ScrollToAnchor />
         <Routes>
           <Route path="/" element={<HomePage />} />
