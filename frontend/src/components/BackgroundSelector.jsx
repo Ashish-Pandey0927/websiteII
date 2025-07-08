@@ -9,7 +9,7 @@ const BackgroundSelector = ({ backgrounds, currentBg, onChange }) => {
           key={index}
           className={`bg-button ${currentBg === bg ? 'active' : ''}`}
           style={{
-            top: ['532.42px', '532.48px', '532.55px', '532.61px'][index],
+            top: ['432.42px', '432.48px', '432.55px', '432.61px'][index],
             left: ['206.16px', '246.16px', '286.16px', '326.16px'][index]
           }}
           onClick={() => onChange(bg)}
