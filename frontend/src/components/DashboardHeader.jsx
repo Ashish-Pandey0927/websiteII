@@ -27,7 +27,7 @@ const getTechnologyPath = (title) => {
     "Cloud Services": "/services/cloudservices",
     "Quality Assurance": "/services/qualityassurance",
     "Salesforce": "/services/salesforce",
-    "DevOps": "/services/cicddevops"
+    "CI/CD DevOps": "/services/cicddevops"
   };
   return titleToPath[title] || "/services";
 };
