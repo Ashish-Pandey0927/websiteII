@@ -190,7 +190,7 @@
   border-radius: 8px;
   min-width: 100vw;
   min-height: auto;
-  max-height: 90vh;
+  max-height: 100vh;
   overflow-y: auto;
   /* overflow-x: hidden; */
   display: none;
@@ -202,7 +202,7 @@
   display: flex;
   flex-direction: row;
   position: fixed;
-  padding:0  2.5rem;
+  padding:0 1.5rem 2.5rem;
   animation: showDropdown 1s ease forwards;
   z-index: 1001;
 }
@@ -309,6 +309,9 @@
 }
 
 /* ...existing code... */
+.newheader-submenu-list{
+  padding-top: 1.5rem;
+}
 .newheader-submenu-list:hover .newheader-submenu-title {
   opacity: 0.5;
   transition: all 0.3s ease;
@@ -317,12 +320,12 @@
 .newheader-submenu-title {
   font-weight: 500;
   font-size: 1.5rem;
-  line-height: 0.8;
+  line-height: 1;
   color: #000;
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
   cursor: pointer;
   border-radius: 6px 0 0 6px;
-  margin-bottom: 2px;
+  margin-bottom: 0;
   transition: all 0.3s ease;
   animation: submenuTitle 0.3s ease both;
   opacity: 1;
