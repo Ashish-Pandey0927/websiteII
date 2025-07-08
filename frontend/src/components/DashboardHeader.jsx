@@ -37,7 +37,7 @@ const DashboardHeader = ( {iconColor }) => {
   const finalColor = iconColor || fallbackColor;
   const [menuOpen, setMenuOpen] = useState(false);
   const [technologyDropdownOpen, setTechnologyDropdownOpen] = useState(false);
-  const [openTechSub, setOpenTechSub] = useState(null);
+  const [openTechSub, setOpenTechSub] = useState(0); // Set to 0 for first submenu
   const [mobileTechMenuOpen, setMobileTechMenuOpen] = useState(false);
   const [mobileOpenTechSub, setMobileOpenTechSub] = useState(null);
   const location = useLocation();
@@ -96,7 +96,7 @@ const DashboardHeader = ( {iconColor }) => {
                     onMouseEnter={() => {
                       if (isTechnology && !isMobile) {
                         setTechnologyDropdownOpen(true);
-                        setOpenTechSub(null);
+                        setOpenTechSub(0); // Keep first submenu open
                       }
                     }}
                     onClick={e => {
