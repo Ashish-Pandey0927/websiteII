@@ -90,7 +90,7 @@
     width: 75%;
     height: auto;
     top: 6rem;
-    left: 1.5rem;
+    left: 1.5rem !important;
     padding: 0;
     text-align: left;
     gap: 20px;

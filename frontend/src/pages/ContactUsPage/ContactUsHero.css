@@ -148,7 +148,7 @@
     width: 75%;
     height: auto;
     top: 6rem;
-    left: 1rem;
+    left: 1rem !important;
     padding: 0;
     text-align: left;
     gap: 20px;

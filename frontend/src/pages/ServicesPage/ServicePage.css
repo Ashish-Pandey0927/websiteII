@@ -128,7 +128,7 @@
     min-width: 0;
     position: relative;
     top: auto;
-    left: 0rem;
+    left: 0rem !important;
     margin: 1rem 0;
     justify-content: flex-start;
   }
@@ -140,7 +140,7 @@
     max-width: 95vw;
     height: auto;
     top: auto;
-    left: auto;
+    left: auto !important;
     padding: 0;
     text-align: center;
     gap: 0px;
