@@ -275,7 +275,7 @@
   .vision-mission-inner {
     flex-direction: column;
     height: auto;
-    top: 50px;
+    top: 0;
     padding: 20px;
   }
 
