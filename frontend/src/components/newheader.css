@@ -1,0 +1,226 @@
+.dropdown-menu .technology-dropdown-menu{
+  display: flex;
+  flex-direction: row;
+  /* background-color: #011E30; */
+}
+
+.newheader-nav {
+  flex: 1;
+}
+
+.newheader-menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.newheader-menu-item {
+  position: relative;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.newheader-menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.08rem;
+  color: #222;
+  cursor: pointer;
+  padding: 0 12px;
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.newheader-menu-btn:hover,
+.newheader-menu-btn:focus {
+  color: #A9F66C;
+}
+
+.newheader-dropdown {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  min-width: unset;
+  background: rgba(1, 30, 48, 0.7)!important;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+  border-radius: 0;
+  animation: fadeIn 0.18s;
+  z-index: 1001;
+  backdrop-filter: blur(12px);
+  height: calc(100vh - 64px);
+  align-items: flex-start;
+}
+
+.newheader-dropdown-content {
+  background:#011E30;
+;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  min-width: 900px;
+  display: flex;
+  padding: 32px 0 32px 0;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.newheader-dropdown > .newheader-submenu-list {
+  display: flex;
+  min-width: 220px;
+  max-width: 260px;
+  border-right: 1px solid #f0f0f0;
+  margin-right: 40px;
+  background: #011E30;
+;
+  height: 100%;
+}
+
+.newheader-submenu-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  max-width: 260px;
+  border-right: 1px solid #f0f0f0;
+  margin-right: 40px;
+  background: #011E30;
+  height: 100%;
+}
+
+.newheader-submenu-title {
+  font-weight: 500;
+  color: #fff;
+  padding: 8px 0 8px 8px;
+  cursor: pointer;
+  border-radius: 6px 0 0 6px;
+  margin-bottom: 2px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.newheader-submenu-title.active,
+.newheader-submenu-title:hover {
+  background: #011E30;
+  color: #A9F66C;
+}
+
+.newheader-subcategory {
+  min-width: 320px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #011E30;
+}
+
+.newheader-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.newheader-links li {
+  margin-bottom: 0.4rem;
+}
+
+.newheader-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.01rem;
+  transition: color 0.18s;
+  border-radius: 4px;
+  padding: 2px 4px;
+  display: block;
+}
+
+.newheader-links a:hover {
+  color: #A9F66C;
+  background: #011E30;
+}
+
+.newheader-tech-multicol {
+  display: flex;
+  gap: 48px;
+  min-width: 480px;
+  padding-left: 32px;
+}
+
+.newheader-tech-col {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.newheader-tech-col-title {
+  font-weight: 600;
+  color: #A9F66C;
+  margin-bottom: 0.7rem;
+  font-size: 1.05rem;
+}
+
+.newheader-tech-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.newheader-tech-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-size: 1.01rem;
+  color: #fff;
+}
+
+.newheader-tech-icon {
+  margin-right: 8px;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+/* @media (max-width: 900px) {
+  .newheader-header {
+    flex-direction: column;
+    height: auto;
+    padding: 0 12px;
+  }
+  .newheader-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+  .newheader-dropdown {
+    position: static;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    min-width: unset;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    gap: 0;
+    backdrop-filter: none;
+  }
+  .newheader-dropdown-content {
+    max-width: 100vw;
+    min-width: unset;
+    border-radius: 0;
+    padding: 16px 0;
+  }
+} */

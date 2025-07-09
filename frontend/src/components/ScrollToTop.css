@@ -1,0 +1,42 @@
+.scroll-to-top-container {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 99;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.schedule-btn {
+  background-color: #A7F46A;
+  color: black;
+  font-weight: bold;
+  font-size: 1.3rem;
+  height: 50px;
+  padding: 0 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.schedule-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(167, 244, 106, 0.2);
+}
+
+.scroll-btn {
+  height: 50px;
+  width: 50px;
+  background-color: #A7F46A;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}

@@ -7,6 +7,7 @@ import BG3 from '../../assets/BG3.png';
 import BG4 from '../../assets/BG4.png';
 import DashboardHeader from "../../components/DashboardHeader";
 import BackgroundSelector from "../../components/BackgroundSelector";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const backgrounds = [BG, BG2, BG3, BG4];
@@ -71,10 +72,12 @@ const Dashboard = () => {
           transformative <br />
           solutions.
         </h1>
+        <Link to="/contact#form">
         <button className="cta-button">
           <span>Get in Touch</span>
           <span className="arrow-icon">↗</span>
         </button>
+        </Link>
       </div>
       <BackgroundSelector
         backgrounds={backgrounds}
