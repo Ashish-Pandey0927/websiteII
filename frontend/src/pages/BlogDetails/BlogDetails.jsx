@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './BlogDetails.css';
 import Footer from '../../components/Footer';
+import blogData from '../../data/blogPosts.json';
 
 const BlogDetails = () => {
     const { id } = useParams();
@@ -9,6 +10,16 @@ const BlogDetails = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        // Using local JSON data instead of API
+        const findBlog = () => {
+            const foundBlog = blogData.find(blog => blog.id === id);
+            setBlog(foundBlog || null);
+            setLoading(false);
+        };
+
+        findBlog();
+
+        /* Commented out API integration for future reference
         const fetchBlog = async () => {
             try {
                 const response = await fetch(`https://admin.estonsoft.com/blogs/${id}/`, {
@@ -31,6 +42,7 @@ const BlogDetails = () => {
         };
 
         fetchBlog();
+        */
     }, [id]);
 
     if (loading) return <p className="text-center py-10">Loading...</p>;
