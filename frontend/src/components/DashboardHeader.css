@@ -187,7 +187,7 @@
   left: -3rem;
   background-color:#fff;
   color:  rgba(1, 30, 48);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   min-width: 100vw;
   min-height: auto;
   max-height: 100vh;
