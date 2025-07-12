@@ -6,12 +6,12 @@ export const menuData = [
       {
         title: "Web Development",
         offeredServices: [
-          { label: "Frontend Development", icon: "🎨" }, // UI/design
-          { label: "Backend Development", icon: "🛠️" }, // server-side
-          { label: "Salesforce Web Component", icon: "⚡" }, // LWC
-          { label: "Integration of Third-Party Services", icon: "🔌" }, // APIs
-          { label: "Deployment and Hosting", icon: "🚀" }, // deployment
-          { label: "Maintenance and Updates", icon: "🧰" }, // support
+          { label: "Frontend Development", icon: "🎨" },
+          { label: "Backend Development", icon: "🛠️" }, 
+          { label: "Salesforce Web Component", icon: "⚡" }, 
+          { label: "Integration of Third-Party Services", icon: "🔌" },
+          { label: "Deployment and Hosting", icon: "🚀" }, 
+          { label: "Maintenance and Updates", icon: "🧰" }, 
         ],
         techStack: [
           { label: "React", icon: "⚛️" },
