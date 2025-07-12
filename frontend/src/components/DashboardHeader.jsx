@@ -214,17 +214,22 @@ const DashboardHeader = ( {iconColor }) => {
                           {mobileOpenTechSub === null ? (
                             technologyMenuData[0].dropdown.map((service, sIdx) => (
                               <div key={service.title} className="mobile-tech-item">
-                                <div
-                                  className="mobile-tech-main"
-                                  onClick={() => setMobileOpenTechSub(sIdx)}
-                                >
+                                <div className="mobile-tech-main">
                                   {service.offeredServices && service.offeredServices[0] && service.offeredServices[0].isSvg && typeof service.offeredServices[0].icon === "string" && (
                                     <span className="mobile-tech-icon">
                                       <img src={service.offeredServices[0].icon} alt={service.title} />
                                     </span>
                                   )}
-                                  <span>{service.title}</span>
-                                  <span className="mobile-tech-arrow">&gt;</span>
+                                  <span onClick={() => navigate(getTechnologyPath(service.title))}>{service.title}</span>
+                                  <span 
+                                    className="mobile-tech-arrow" 
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setMobileOpenTechSub(sIdx);
+                                    }}
+                                  >
+                                    &gt;
+                                  </span>
                                 </div>
                               </div>
                             ))
