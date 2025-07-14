@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 
-.cta-button {
+.home-dashboard-container .cta-button {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -25,15 +25,15 @@
   transform: rotate(0.1deg);
   transition: background 0.3s ease;
   position: absolute;
-  top: 260px;
+  top: 200px;
   left: 5px;
 }
 
-.cta-button:hover {
+.home-dashboard-container .cta-button:hover {
   background: #8edc56;
 }
 
-.cta-button span {
+.home-dashboard-container .cta-button span {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -41,15 +41,15 @@
   color: #101010;
 }
 
-.cta-button .arrow-icon {
+.home-dashboard-container .cta-button .arrow-icon {
   font-size: 20px;
   color: #000000;
 }
 
 /* Highlight Section */
-.highlight-wrapper {
+.home-dashboard-container .highlight-wrapper {
   position: absolute;
-  top: 70px;
+  top: 100px;
   left: 250px;
   display: flex;
   gap: 8px;
@@ -58,17 +58,17 @@
   flex-wrap: nowrap;
 }
 
-.vector-highlight {
+.home-dashboard-container .vector-highlight {
   width: 23px;
   height: 29px;
 }
 
-.vector-highlight svg {
+.home-dashboard-container .vector-highlight svg {
   width: 23px;
   height: 29px;
 }
 
-.highlight-text {
+.home-dashboard-container .highlight-text {
   font-weight: 600;
   font-size: 16px;
   line-height: 160%;
@@ -77,11 +77,11 @@
 }
 
 /* Hero Section */
-.hero-content {
+.home-dashboard-container .hero-content {
   position: absolute;
   width: 602px;
   height: 348px;
-  top: 100px;
+  top: 70px;
   left: 244.85px;
   transform: rotate(-0.1deg);
   border-radius: 8px;
@@ -92,7 +92,7 @@
   color: #fff;
 }
 
-.hero-heading {
+.home-dashboard-container .hero-heading {
   font-family: 'Urbanist', sans-serif;
   font-weight: 700;
   font-size: 3.02rem;
@@ -105,7 +105,7 @@
 }
 
 /* Gradient and Highlight Styles */
-.cta-attractive {
+.home-dashboard-container .cta-attractive {
   background: linear-gradient(90deg, #A7F46A 0%, #8edc56 100%);
   color: #161C2D;
   font-weight: 700;
@@ -150,26 +150,27 @@
   /* Highlight Section */
   .highlight-wrapper {
     position: absolute;
-    top: 6rem;
-    left: 1.5rem;
+    top: 6rem !important;
+    left: 1.5rem !important;
     margin: 0;
     justify-content: flex-start;
     z-index: 2;
+    text-wrap: auto;
   }
 
   /* Hero Section */
-  .hero-content {
+  .home-dashboard-container .hero-content {
     position: absolute;
     width: 60%;
     height: auto;
     top: 8rem;
-    left: 1.5rem;
+    left: 1.5rem  !important;
     padding: 0;
     text-align: left;
     margin-top: 0;
   }
 
-  .hero-heading {
+ .home-dashboard-container  .hero-heading {
     font-size: 1.5rem;
     line-height: 1.3;
     text-align: flex-start;
@@ -178,9 +179,9 @@
   }
 
   /* CTA Button */
-  .cta-button {
+  .home-dashboard-container .cta-button {
     position: absolute;
-    top: 12rem;
+    top: 10rem;
     left: 0rem;
     margin: 0;
     padding: 0.5rem 1.5rem;

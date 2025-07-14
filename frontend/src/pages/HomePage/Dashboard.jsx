@@ -69,8 +69,7 @@ const Dashboard = () => {
         <h1 className="hero-heading">
           Unlock your ideas with <br />
           Estonsoft's <br />
-          transformative <br />
-          solutions.
+          transformative solutions.
         </h1>
         <Link to="/contact#form">
         <button className="cta-button">

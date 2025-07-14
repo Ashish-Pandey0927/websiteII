@@ -71,7 +71,7 @@ export default function Footer() {
             <h4>Contact Us</h4>
             <ul>
               <li>Tel: 0731-4105104</li>
-              <li>Mobile: +91 9637225752</li>
+              <li>Mobile: +91 9201480055</li>
               <li>Email:  hr@estonsoft.com</li>
               <li>Address: Super Corridor, Indore</li>
             </ul>
@@ -81,10 +81,10 @@ export default function Footer() {
 
       {/* Bottom Row */}
       <div className="bottom-row">
-        <div className="footer-bottom">
+        {/* <div className="footer-bottom">
           <span>Terms & Conditions</span>
           <span>Privacy Policy</span>
-        </div>
+        </div> */}
 
         <div className="footer-social">
        <SocialIcons/>

@@ -32,6 +32,7 @@ const LocationSection = () => {
             </div>
             <p className="location-description ">
               Tel: 0731-4105104<br />
+              Mobile: +91-9201480055
               hr@estonsoft.com
             </p>
           </div>
