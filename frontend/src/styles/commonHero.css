@@ -134,13 +134,14 @@
   }
 
   .hero-vector-highlight svg {
-    width: 15px;
-    height: 26px;
+    width: 19px;
+    height: 30px;
   }
 
   .hero-highlight-text {
     font-size: 1rem;
     line-height: 160%;
+    text-wrap: auto;
   }
 
   .hero-highlight-wrapper {
@@ -149,6 +150,7 @@
     min-width: 0;
     position: relative;
     top: auto;
+    gap: 0;
     left: 0rem !important;
     margin: 1rem 0;
     justify-content: flex-start;
@@ -197,10 +199,7 @@
 
   .hero-paragraph {
     padding: 0;
-  }
-
-  .hero-highlight-text {
-    text-wrap: auto;
+    width: 315px;
   }
 
   .Group-Service-page-hero {
