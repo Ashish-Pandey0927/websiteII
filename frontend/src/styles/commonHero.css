@@ -139,9 +139,10 @@
   }
 
   .hero-highlight-text {
-    font-size: 1rem;
+    font-size: 18px;
     line-height: 160%;
     text-wrap: auto;
+   
   }
 
   .hero-highlight-wrapper {
@@ -150,7 +151,6 @@
     min-width: 0;
     position: relative;
     top: auto;
-    gap: 0;
     left: 0rem !important;
     margin: 1rem 0;
     justify-content: flex-start;
