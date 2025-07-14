@@ -81,10 +81,10 @@ export default function Footer() {
 
       {/* Bottom Row */}
       <div className="bottom-row">
-        <div className="footer-bottom">
+        {/* <div className="footer-bottom">
           <span>Terms & Conditions</span>
           <span>Privacy Policy</span>
-        </div>
+        </div> */}
 
         <div className="footer-social">
        <SocialIcons/>
