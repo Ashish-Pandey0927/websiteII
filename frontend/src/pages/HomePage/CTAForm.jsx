@@ -40,6 +40,7 @@ const CTAForm = () => {
 
       <div className="cta-small-text">
         0731-4105104<br />
+        +91-9201480055<br />
         info@estonsoft.com
       </div>
 

@@ -105,7 +105,7 @@
   .Group-Service-page-hero{
     position: absolute;
     top: 6rem;
-    left: 1.5rem;
+    left: 1.5rem !important;
     margin: 0;
     justify-content: flex-start;
     z-index: 2;
