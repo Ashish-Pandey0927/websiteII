@@ -7,8 +7,46 @@ import { AiOutlineClose } from "react-icons/ai";
 import SocialIcons from "../components/SocialIcons";
 import "../components/SocialIcons.css";
 import useIconColorByBackground from "./useIconColorByBackground";
-// import { menuData as technologyMenuData } from "./newheader.menu";
 
+// Web Development Service Icons
+import FrontendDevelopment from '../assets/breadcrumb_12098294.svg';
+import BackendDevelopment from '../assets/black-box_13092109.svg';
+import SalesforceWeb from '../assets/technology_10644653.svg';
+import ThirdPartyServices from '../assets/teamwork_9161754.svg';
+import DeploymentAndHosting from '../assets/cloud-computing_5993762.svg';
+import MaintenanceAndUpdates from '../assets/reboot_11494716.svg';
+// mobile Development Service Icons
+import androiedDevelopment from '../assets/androiedDevelopment.svg';
+import iosDevelopment from '../assets/iosDevelopment.svg';
+import FlutterDevelopment from '../assets/FlutterDevelopment.svg';
+import ReactNativeDevelopment from '../assets/ReactNativeDevelopment.svg';
+import XamarinMAUIDevelopment from '../assets/XamarinMAUIDevelopment.svg';
+import mobileAppMigration from '../assets/mobileAppMigration.svg';
+// Cloud Services  Service Icons
+import cloudServices from '../assets/CloudServices.svg';
+import awsServices from '../assets/awsServices.svg';
+import GCPServices from '../assets/GCPServices.svg';
+import AzureServices from '../assets/AzureServices.svg';
+// Quality Assurance   Service Icons
+import SalesforceTesting from '../assets/SalesforceTesting.svg';
+import CloudServicesQA from '../assets/CloudServicesQA.svg';
+import MobileAppsQA from '../assets/MobileAppsQA.svg';
+import WebDevelopmentQA from '../assets/WebDevelopmentQA.svg';
+import CICDandDevOpsTesting from '../assets/CI-CDandDevOpsTesting.svg';
+import PerformanceandSecurityTesting from '../assets/PerformanceandSecurityTesting.svg';
+// Salesforce Service Icons
+import SalesforceDevelopment from '../assets/SalesforceDevelopment.svg';
+import ApexProgramming from '../assets/ApexProgramming.svg';
+import SalesforceLWC from '../assets/Salesforce(LWC).svg';
+import SalesforceIntegration from '../assets/SalesforceIntegration.svg';
+import SalesforceCustomObjectsFields from '../assets/SalesforceCustomObjects&Fields.svg';
+import SalesforceDataMigration from '../assets/SalesforceDataMigration.svg';
+// CI/CD DevOps Service Icons
+import CloudDevOpsServices from '../assets/CloudDevOpsServices.svg';
+import AWSDevopsServices from '../assets/AWSDevopsServices.svg';
+import GCPDevopsServices from '../assets/GCPDevopsServices.svg';
+import AzureDevopsServices from '../assets/AzureDevopsServices.svg';
+// import { menuData as technologyMenuData } from "./newheader.menu";
 const sections = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/aboutus" },
@@ -72,12 +110,12 @@ const technologyMenuData = [
       {
         title: "Web Development",
         offeredServices: [
-          { label: "Frontend Development", icon: "🎨" },
-          { label: "Backend Development", icon: "🛠️" }, 
-          { label: "Salesforce Web Component", icon: "⚡" }, 
-          { label: "Integration of Third-Party Services", icon: "🔌" },
-          { label: "Deployment and Hosting", icon: "🚀" }, 
-          { label: "Maintenance and Updates", icon: "🧰" }, 
+          { label: "Frontend Development", icon: FrontendDevelopment, isSvg: true },
+          { label: "Backend Development", icon: BackendDevelopment, isSvg: true }, 
+          { label: "Salesforce Web Component", icon: SalesforceWeb, isSvg: true }, 
+          { label: "Integration of Third-Party Services", icon: ThirdPartyServices, isSvg: true },
+          { label: "Deployment and Hosting", icon: DeploymentAndHosting, isSvg: true }, 
+          { label: "Maintenance and Updates", icon: MaintenanceAndUpdates, isSvg: true }, 
         ],
         techStack: [
           { label: "React", icon: "⚛️" },
@@ -95,12 +133,12 @@ const technologyMenuData = [
       {
         title: "Mobile Development",
         offeredServices: [
-          { label: "Android Development", icon: "🤖" },
-          { label: "iOS Development", icon: "📱" },
-          { label: "Flutter Development", icon: "💙" },
-          { label: "React Native Development", icon: "⚛️" },
-          { label: "Xamarin/MAUI Development", icon: "📦" },
-          { label: "Mobile Apps Migration", icon: "🔄" }
+          { label: "Android Development", icon: androiedDevelopment, isSvg: true },
+          { label: "iOS Development", icon: iosDevelopment, isSvg: true },
+          { label: "Flutter Development", icon:FlutterDevelopment, isSvg: true },
+          { label: "React Native Development", icon: ReactNativeDevelopment, isSvg: true },
+          { label: "Xamarin/MAUI Development", icon: XamarinMAUIDevelopment, isSvg: true },
+          { label: "Mobile Apps Migration", icon: mobileAppMigration, isSvg: true}
         ],
         techStack: [
           { label: "Kotlin", icon: "🅺" },
@@ -114,10 +152,10 @@ const technologyMenuData = [
       {
         title: "Cloud Services",
         offeredServices: [
-          { label: "AWS Solutions", icon: "☁️" },
-          { label: "Azure Integration", icon: "🔷" },
-          { label: "GCP Services", icon: "🟦" },
-          { label: "Azure Services", icon: "🔷" },
+          { label: "AWS Solutions", icon: cloudServices, isSvg: true },
+          { label: "Azure Integration", icon: awsServices, isSvg: true },
+          { label: "GCP Services", icon: GCPServices, isSvg: true },
+          { label: "Azure Services", icon: AzureServices, isSvg: true },
         ],
         techStack: [
           { label: "AWS (Amazon Web Services)", icon: "☁️" },
@@ -135,12 +173,12 @@ const technologyMenuData = [
       {
         title: "Quality Assurance",
         offeredServices: [
-          { label: "Salesforce Testing", icon: "🧪" },
-          { label: "Cloud Services QA", icon: "☁️" },
-          { label: "Mobile Apps QA", icon: "📲" },
-          { label: "Web Development QA", icon: "🌐" },
-          { label: "CI/CD and DevOps Testing", icon: "🧬" },
-          { label: "Performance and Security Testing", icon: "🔒" }
+          { label: "Salesforce Testing", icon: SalesforceTesting, isSvg: true },
+          { label: "Cloud Services QA", icon: CloudServicesQA, isSvg: true },
+          { label: "Mobile Apps QA", icon: MobileAppsQA, isSvg: true },
+          { label: "Web Development QA", icon: WebDevelopmentQA, isSvg: true },
+          { label: "CI/CD and DevOps Testing", icon: CICDandDevOpsTesting, isSvg: true },
+          { label: "Performance and Security Testing", icon: PerformanceandSecurityTesting, isSvg: true }
         ],
         techStack: [
           { label: "Selenium", icon: "🧩" },
@@ -158,12 +196,12 @@ const technologyMenuData = [
       {
         title: "Salesforce",
         offeredServices: [
-          { label: "Salesforce Development", icon: "🔧" },
-          { label: "Apex Programming", icon: "📟" },
-          { label: "Salesforce Lightning Web Components (LWC)", icon: "⚡" },
-          { label: "Salesforce Integration", icon: "🔗" },
-          { label: "Salesforce Custom Objects & Fields", icon: "🧩" },
-          { label: "Salesforce Data Migration", icon: "📤" },
+          { label: "Salesforce Development", icon: SalesforceDevelopment, isSvg: true },
+          { label: "Apex Programming", icon: ApexProgramming, isSvg: true },
+          { label: "Salesforce Lightning Web Components (LWC)", icon: SalesforceLWC, isSvg: true },
+          { label: "Salesforce Integration", icon: SalesforceIntegration, isSvg: true },
+          { label: "Salesforce Custom Objects & Fields", icon: SalesforceCustomObjectsFields, isSvg: true },
+          { label: "Salesforce Data Migration", icon: SalesforceDataMigration, isSvg: true },
         ],
         techStack: [
           { label: "LWC", icon: "💡" },
@@ -181,10 +219,10 @@ const technologyMenuData = [
       {
         title: "CI/CD DevOps",
         offeredServices: [
-          { label: "Cloud DevOps Services", icon: "☁️" },
-          { label: "AWS Devops Services", icon: "📈" },
-          { label: "GCP Devops Services", icon: "🛠️" },
-          { label: "Azure Devops Services", icon: "🔷" }
+          { label: "Cloud DevOps Services", icon: CloudDevOpsServices, isSvg: true },
+          { label: "AWS Devops Services", icon: AWSDevopsServices, isSvg: true },
+          { label: "GCP Devops Services", icon: GCPDevopsServices, isSvg: true },
+          { label: "Azure Devops Services", icon: AzureDevopsServices, isSvg: true }
         ],
         techStack: [
           { label: "Jenkins", icon: "☕" },
