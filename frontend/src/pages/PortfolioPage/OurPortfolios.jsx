@@ -131,7 +131,7 @@ function OurPortfolios() {
   */
 
   return (
-    <section className="ourportfolios-container">
+    <section id="ourportfolios" className="ourportfolios-container">
       <div className="ourportfolios-title">
         <div className="ourportfolio">Our Portfolio</div>
         <h2 className="ourportfolios-heading">Explore our work</h2>

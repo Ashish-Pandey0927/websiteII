@@ -192,6 +192,24 @@
   height: 24px;
 }
 
+.response-message {
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .response-message {
+    font-size: 0.8rem;
+    margin-top: 0.75rem;
+    padding: 0.5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .cta-form-wrapper {
     position: relative;

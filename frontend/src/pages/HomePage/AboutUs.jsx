@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutUs.css";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -21,9 +22,11 @@ const AboutUs = () => {
         <div className="image-overlay" />
         <span className="badge">Ready for future</span>
         <h3 className="overlay-title">Leveraging tech to drive a better IT experience</h3>
+        <Link to="/portfolio#ourportfolios">
         <button className="cta-button-about-us">
           See Incredible Work <ArrowUpRight size={24} />
         </button>
+        </Link>
       </div>
 
       {/* Cards */}
