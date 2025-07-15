@@ -14,25 +14,29 @@ const projects = [
     id: 1,
     title: "App for Training for real people with real goal",
     image: fitness1,
-    miniImage:FitnessMinImg
+    miniImage: FitnessMinImg,
+    url: "https://fittheorem.com/"
   },
   {
     id: 2,
     title: "Official app of Prothom Alo English to provide readers with news on the go",
     image: image4,
-    miniImage:newsMinImg
+    miniImage: newsMinImg,
+    url: "https://en.prothomalo.com/"
   },
   {
     id: 3,
     title: "The official Srilankan Matrimony app Mangal Yojna",
     image: matremony,
-    miniImage:matremonyMinImg
+    miniImage: matremonyMinImg,
+    url: "https://www.srilankanmatrimony.com/"
   },
   {
     id: 4,
     title: "CityMaps2Go Offline Maps",
     image: munchi,
-    miniImage:munichMinImg
+    miniImage: munichMinImg,
+    url: "https://play.google.com/store/apps/details?id=com.ulmon.android.playmunich&hl=en_IN&pli=1"
   },
 ];
 
@@ -98,9 +102,14 @@ export default function OurWork() {
                       : ""
                   }>
               <h3 className="project-title">{project.title}</h3>
-                <button className="view-details-btn">
+                <a 
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="view-details-btn"
+                >
                   View Details <span className="arrow-icon">↗</span>
-                </button>
+                </a>
                 <div className="underline"></div>
               </div>
             </div>

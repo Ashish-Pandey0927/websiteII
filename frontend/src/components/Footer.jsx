@@ -3,9 +3,49 @@ import estonsoft from "../assets/estonsoftlogo.svg";
 import { ChevronRight } from "lucide-react";
 import SocialIcons from './SocialIcons';
 import { Link  } from "react-router-dom";
+import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 
 export default function Footer() {
+  const [email, setEmail] = useState('');
+  const [responseMessage, setResponseMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const result = await emailjs.send(
+        'service_ur805bv',
+        'template_n3ietlx',
+        {
+          email: email,
+          message: 'Subscribe request to our newsletter',
+          name: 'Newsletter Subscriber',
+        },
+        'k9DON1QOURsc2jBsy'
+      );
+
+      if (result.status === 200) {
+        setResponseMessage('Thanks for subscribing to our newsletter!');
+        setEmail('');
+      } else {
+        setResponseMessage('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setResponseMessage('Failed to subscribe. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+      
+      // Hide the response message after 5 seconds
+      setTimeout(() => {
+        setResponseMessage('');
+      }, 5000);
+    }
+  };
   return (
     <footer className="footer">
       <div className='footer-header'>
@@ -32,12 +72,23 @@ export default function Footer() {
         {/* Newsletter */}
         <div className="newsletter">
           <h3>Subscribe to our newsletter</h3>
-          <div style={{ position: 'relative' }}>
-            <input type="email" placeholder="Email address" />
-            <Link to="/contact#form">
-            <button><ChevronRight /></button>
-            </Link>
-          </div>
+          <form onSubmit={handleNewsletterSubmit} style={{ position: 'relative' }}>
+            <input
+              type="email"
+              placeholder="Email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <button type="submit" disabled={isSubmitting}>
+              <ChevronRight />
+            </button>
+            {responseMessage && (
+              <div className="newsletter-response">
+                {responseMessage}
+              </div>
+            )}
+          </form>
         </div>
 
         {/* Lists */}
