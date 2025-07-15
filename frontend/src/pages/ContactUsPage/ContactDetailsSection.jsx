@@ -97,16 +97,22 @@ function ContactDetailsSection() {
                 </div>
                 <div className="contact-form-group">
                   <label htmlFor="subject">Subject</label>
-                  <input
+                  <select
                     id="subject"
                     className="contact-input"
-                    type="text"
                     name="subject"
-                    placeholder="Service."
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                  />
+                  >
+                    <option value="">Select a service</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Mobile Development">Mobile Development</option>
+                    <option value="Cloud Services">Cloud Services</option>
+                    <option value="Quality Assurance">Quality Assurance</option>
+                    <option value="Salesforce">Salesforce</option>
+                    <option value="CI/CD DevOps">CI/CD DevOps</option>
+                  </select>
                 </div>
               </div>
 
