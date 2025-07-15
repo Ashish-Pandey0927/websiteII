@@ -1,0 +1,44 @@
+.privacy-container {
+  background-color: #111; /* dark background */
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
+}
+
+.privacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #25baf2;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #25baf2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  color: #d1d5db; /* light gray */
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.contact-link {
+  color: #25baf2;
+  text-decoration: underline;
+}

@@ -34,7 +34,7 @@ const services = [
 
 export default function CloudServicesServices() {
   return (
-    <section className="webservices-section">
+    <section id="cloudservices" className="webservices-section">
       <div className="webservices-header">
         <h2>Cloud Services We Offer</h2>
         <p>Scalable and secure cloud services to power your business with flexibility and efficiency.</p>

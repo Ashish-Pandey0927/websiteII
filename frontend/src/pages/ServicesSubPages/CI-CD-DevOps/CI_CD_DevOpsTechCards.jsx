@@ -68,7 +68,7 @@ const techIcons = [
 // Main TechCards component
 export default function CI_CD_DevOpsTechCards() {
     return (
-        <section className="tech-cards-section">
+        <section id='cicdtechcards' className="tech-cards-section">
             <div className="tech-cards-header">
                 <h2>Build Mobile Apps with EstonSoft</h2>
                 <p>A powerful language for building mordern application.</p>

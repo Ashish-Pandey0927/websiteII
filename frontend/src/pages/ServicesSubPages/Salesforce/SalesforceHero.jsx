@@ -6,6 +6,7 @@ function SalesforceHero() {
       const [activeLink, setActiveLink] = useState('#salesforce');
   return (
       <div
+      id='salesforce-hero'
         className="services-sub-pages-container salesforce-hero">
         <DashboardHeader  activeLink={activeLink} setActiveLink={setActiveLink} />
           <div

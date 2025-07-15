@@ -6,6 +6,7 @@ function QualityAssuranceHero() {
       const [activeLink, setActiveLink] = useState('#qualityassurance');
   return (
       <div
+        id="qa-hero"
         className="services-sub-pages-container quality-assurance-hero">
         <DashboardHeader  activeLink={activeLink} setActiveLink={setActiveLink} />
           <div

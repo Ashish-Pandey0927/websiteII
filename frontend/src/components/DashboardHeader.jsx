@@ -7,7 +7,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import SocialIcons from "../components/SocialIcons";
 import "../components/SocialIcons.css";
 import useIconColorByBackground from "./useIconColorByBackground";
-import { menuData as technologyMenuData } from "./newheader.menu";
+// import { menuData as technologyMenuData } from "./newheader.menu";
 
 const sections = [
   { name: "Home", path: "/" },
@@ -19,8 +19,8 @@ const sections = [
   { name: "Contact Us", path: "/contact" },
 ];
 
-const getTechnologyPath = (title) => {
-  // Convert title to URL-friendly format and map to service paths
+const getTechnologyPath = (title, section) => {
+  // Base paths for each technology
   const titleToPath = {
     "Web Development": "/services/webdevelopment",
     "Mobile Development": "/services/mobiledevelopment",
@@ -29,8 +29,180 @@ const getTechnologyPath = (title) => {
     "Salesforce": "/services/salesforce",
     "CI/CD DevOps": "/services/cicddevops"
   };
-  return titleToPath[title] || "/services";
+
+  // Section IDs for services and tech stack
+  const sectionIds = {
+    "Web Development": {
+      services: "#webdevservices",
+      techStack: "#webtechcards"
+    },
+    "Mobile Development": {
+      services: "#mobileservices",
+      techStack: "#mobiletechcards"
+    },
+    "Cloud Services": {
+      services: "#cloudservices",
+      techStack: "#cloudservicestechcards"
+    },
+    "Quality Assurance": {
+      services: "#qaservices",
+      techStack: "#qatechcards"
+    },
+    "Salesforce": {
+      services: "#salesforceservices",
+      techStack: "#salesforcetechcard"
+    },
+    "CI/CD DevOps": {
+      services: "#cicdservices",
+      techStack: "#cicdtechcards"
+    }
+  };
+
+  const basePath = titleToPath[title] || "/services";
+  if (section && sectionIds[title]) {
+    return `${basePath}${sectionIds[title][section]}`;
+  }
+  return basePath;
 };
+
+const technologyMenuData = [
+  {
+    label: "Technology",
+    dropdown: [
+      {
+        title: "Web Development",
+        offeredServices: [
+          { label: "Frontend Development", icon: "🎨" },
+          { label: "Backend Development", icon: "🛠️" }, 
+          { label: "Salesforce Web Component", icon: "⚡" }, 
+          { label: "Integration of Third-Party Services", icon: "🔌" },
+          { label: "Deployment and Hosting", icon: "🚀" }, 
+          { label: "Maintenance and Updates", icon: "🧰" }, 
+        ],
+        techStack: [
+          { label: "React", icon: "⚛️" },
+          { label: "Vue", icon: "🖖" },
+          { label: "Angular", icon: "📐" },
+          { label: "Node.js", icon: "🟩" },
+          { label: "Python", icon: "🐍" },
+          { label: "Express.js", icon: "🚂" },
+          { label: "Java", icon: "☕" },
+          { label: "PHP", icon: "🐘" },
+          { label: "C#", icon: "🎯" },
+          { label: "Next.js", icon: "⏭️" }
+        ]
+      },
+      {
+        title: "Mobile Development",
+        offeredServices: [
+          { label: "Android Development", icon: "🤖" },
+          { label: "iOS Development", icon: "📱" },
+          { label: "Flutter Development", icon: "💙" },
+          { label: "React Native Development", icon: "⚛️" },
+          { label: "Xamarin/MAUI Development", icon: "📦" },
+          { label: "Mobile Apps Migration", icon: "🔄" }
+        ],
+        techStack: [
+          { label: "Kotlin", icon: "🅺" },
+          { label: "Dart", icon: "🎯" },
+          { label: "Swift", icon: "🦅" },
+          { label: "MAUI/.NET Standard", icon: "🌐" },
+          { label: "Java", icon: "☕" },
+          { label: "Objective-C", icon: "📘" }
+        ]
+      },
+      {
+        title: "Cloud Services",
+        offeredServices: [
+          { label: "AWS Solutions", icon: "☁️" },
+          { label: "Azure Integration", icon: "🔷" },
+          { label: "GCP Services", icon: "🟦" },
+          { label: "Azure Services", icon: "🔷" },
+        ],
+        techStack: [
+          { label: "AWS (Amazon Web Services)", icon: "☁️" },
+          { label: "Microsoft Azure", icon: "🔷" },
+          { label: "GCP ", icon: "🟦" },
+          { label: "IBM Cloud ", icon: "🌩️" },
+          { label: "Oracle Cloud", icon: "🟥" },
+          { label: "Serverless Computing", icon: "🛰️" },
+          { label: "Virtual Machines", icon: "💻" },
+          { label: "Cloud Databases", icon: "🗄️" },
+          { label: "Cloud Storage (S3, Blob)", icon: "🧺" },
+          { label: "Cloud Monitoring and Analytics", icon: "📈" },
+        ]
+      },
+      {
+        title: "Quality Assurance",
+        offeredServices: [
+          { label: "Salesforce Testing", icon: "🧪" },
+          { label: "Cloud Services QA", icon: "☁️" },
+          { label: "Mobile Apps QA", icon: "📲" },
+          { label: "Web Development QA", icon: "🌐" },
+          { label: "CI/CD and DevOps Testing", icon: "🧬" },
+          { label: "Performance and Security Testing", icon: "🔒" }
+        ],
+        techStack: [
+          { label: "Selenium", icon: "🧩" },
+          { label: "JUnit", icon: "📊" },
+          { label: "TestNG", icon: "📬" },
+          { label: "Postman", icon: "📬" },
+          { label: "Jenkins", icon: "🧩" },
+          { label: "Appium", icon: "📲" },
+          { label: "Cypress", icon: "🌲" },
+          { label: "QTest", icon: "🧪" },
+          { label: "Bugzilla", icon: "🐞" },
+          { label: "JIRA", icon: "📋" },
+        ]
+      },
+      {
+        title: "Salesforce",
+        offeredServices: [
+          { label: "Salesforce Development", icon: "🔧" },
+          { label: "Apex Programming", icon: "📟" },
+          { label: "Salesforce Lightning Web Components (LWC)", icon: "⚡" },
+          { label: "Salesforce Integration", icon: "🔗" },
+          { label: "Salesforce Custom Objects & Fields", icon: "🧩" },
+          { label: "Salesforce Data Migration", icon: "📤" },
+        ],
+        techStack: [
+          { label: "LWC", icon: "💡" },
+          { label: "Apex", icon: "🅰️" },
+          { label: "Salesforce APIs", icon: "🔌" },
+          { label: "Salesforce Lightning Experience", icon: "⚡" },
+          { label: "Visualforce", icon: "👁️" },
+          { label: "Salesforce Integration", icon: "🔗" },
+          { label: "Salesforce Customization", icon: "⚙️" },
+          { label: "Salesforce Mobile SDK", icon: "📱" },
+          { label: "Salesforce Data Loader", icon: "📦" },
+          { label: "Salesforce App Exchange Apps", icon: "🏪" },
+        ]
+      },
+      {
+        title: "CI/CD DevOps",
+        offeredServices: [
+          { label: "Cloud DevOps Services", icon: "☁️" },
+          { label: "AWS Devops Services", icon: "📈" },
+          { label: "GCP Devops Services", icon: "🛠️" },
+          { label: "Azure Devops Services", icon: "🔷" }
+        ],
+        techStack: [
+          { label: "Jenkins", icon: "☕" },
+          { label: "GitLab CI/CD", icon: "🦊" },
+          { label: "CircleCI", icon: "⭕" },
+          { label: "Travis CI", icon: "🛠️" },
+          { label: "Azure DevOps", icon: "🔷" },
+          { label: "GitHub Actions", icon: "🐙" },
+          { label: "AWS CodePipeline", icon: "🛤️" },
+          { label: "Docker & Kubernetes", icon: "🐳" },
+          { label: "Terraform", icon: "🌍" },
+          { label: "Helm Charts", icon: "📈" }
+        ]
+      }
+    ]
+  }
+];
+
 
 const DashboardHeader = ( {iconColor }) => {
   const fallbackColor = useIconColorByBackground();
@@ -154,7 +326,12 @@ const DashboardHeader = ( {iconColor }) => {
                             <div className="newheader-tech-col-title">Offered Services</div>
                             <ul className="newheader-tech-list">
                               {technologyMenuData[0].dropdown[openTechSub].offeredServices.map((srv, i) => (
-                                <li key={srv.label} className="newheader-tech-list-item">
+                                <li 
+                                  key={srv.label} 
+                                  className="newheader-tech-list-item"
+                                  onClick={() => navigate(getTechnologyPath(technologyMenuData[0].dropdown[openTechSub].title, 'services'))}
+                                  style={{ cursor: 'pointer' }}
+                                >
                                   <span className="newheader-tech-icon">
                                     {srv.isSvg && typeof srv.icon === "string" ? (
                                       <img src={srv.icon} alt={srv.label} style={{ width: 20, height: 20, verticalAlign: 'middle', display: 'inline-block' }} />
@@ -170,7 +347,12 @@ const DashboardHeader = ( {iconColor }) => {
                             <div className="newheader-tech-col-title">Tech Stack</div>
                             <ul className="newheader-tech-list">
                               {technologyMenuData[0].dropdown[openTechSub].techStack.map((tech, i) => (
-                                <li key={tech.label} className="newheader-tech-list-item">
+                                <li 
+                                  key={tech.label} 
+                                  className="newheader-tech-list-item"
+                                  onClick={() => navigate(getTechnologyPath(technologyMenuData[0].dropdown[openTechSub].title, 'techStack'))}
+                                  style={{ cursor: 'pointer' }}
+                                >
                                   <span className="newheader-tech-icon">{tech.icon}</span> {tech.label}
                                 </li>
                               ))}
@@ -191,11 +373,11 @@ const DashboardHeader = ( {iconColor }) => {
                             </Link>
                           </div>
                           <div className="mobile-tech-header-center">
-                            {mobileOpenTechSub === 
+                            {mobileOpenTechSub !== null && (
                               <button className="mobile-tech-back" onClick={() => setMobileOpenTechSub(null)}>
                                 <span>&larr;</span> Back
                               </button>
-                            }
+                            )}
                           </div>
                           <div className="mobile-tech-header-right">
                             <button 
@@ -233,13 +415,23 @@ const DashboardHeader = ( {iconColor }) => {
                                 </div>
                               </div>
                             ))
-                          ) : (
+                          ): (
                             <div className="mobile-tech-submenu">
                               <div className="mobile-tech-col">
                                 <div className="mobile-tech-col-title">Offered Services</div>
                                 <ul className="mobile-tech-list">
                                   {technologyMenuData[0].dropdown[mobileOpenTechSub].offeredServices.map((srv) => (
-                                    <li key={srv.label} className="mobile-tech-list-item">
+                                    <li 
+                                      key={srv.label} 
+                                      className="mobile-tech-list-item"
+                                      onClick={() => {
+                                        navigate(getTechnologyPath(technologyMenuData[0].dropdown[mobileOpenTechSub].title, 'services'));
+                                        setMobileTechMenuOpen(false);
+                                        setMenuOpen(false);
+                                        setMobileOpenTechSub(null);
+                                      }}
+                                      style={{ cursor: 'pointer' }}
+                                    >
                                       <span className="mobile-tech-icon">
                                         {srv.isSvg && typeof srv.icon === "string" ? (
                                           <img src={srv.icon} alt={srv.label} />
@@ -256,7 +448,17 @@ const DashboardHeader = ( {iconColor }) => {
                                 <div className="mobile-tech-col-title">Tech Stack</div>
                                 <ul className="mobile-tech-list">
                                   {technologyMenuData[0].dropdown[mobileOpenTechSub].techStack.map((tech) => (
-                                    <li key={tech.label} className="mobile-tech-list-item">
+                                    <li 
+                                      key={tech.label} 
+                                      className="mobile-tech-list-item"
+                                      onClick={() => {
+                                        navigate(getTechnologyPath(technologyMenuData[0].dropdown[mobileOpenTechSub].title, 'techStack'));
+                                        setMobileTechMenuOpen(false);
+                                        setMenuOpen(false);
+                                        setMobileOpenTechSub(null);
+                                      }}
+                                      style={{ cursor: 'pointer' }}
+                                    >
                                       <span className="mobile-tech-icon">{tech.icon}</span>
                                       <span>{tech.label}</span>
                                     </li>

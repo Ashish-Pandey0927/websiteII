@@ -6,6 +6,7 @@ function MobileDevHero() {
       const [activeLink, setActiveLink] = useState('#mobiledevelopment');
   return (
       <div
+        id="mobile-dev-hero"
         className="services-sub-pages-container mobile-dev-hero">
         <DashboardHeader  activeLink={activeLink} setActiveLink={setActiveLink} />
           <div

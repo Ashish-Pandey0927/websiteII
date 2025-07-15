@@ -6,6 +6,7 @@ function CI_CD_DevOpsHero() {
       const [activeLink, setActiveLink] = useState('#cicddevops');
   return (
       <div
+      id="cicd-hero"
         className="services-sub-pages-container ci-cd-devops-hero">
         <DashboardHeader  activeLink={activeLink} setActiveLink={setActiveLink} />
           <div

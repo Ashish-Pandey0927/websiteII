@@ -67,7 +67,7 @@ const techIcons = [
 // Main TechCards component
 export default function SalesforceTechCards() {
     return (
-        <section className="tech-cards-section">
+        <section id="salesforcetechcard" className="tech-cards-section">
             <div className="tech-cards-header">
                 <h2>Build Mobile Apps with EstonSoft</h2>
                 <p>A powerful language for building modern applications.</p>

@@ -47,7 +47,7 @@ const services = [
 
 export default function WebDevServices() {
   return (
-    <section className="webservices-section">
+    <section  id="webdevservices" className="webservices-section">
       <div className="webservices-header">
         <h2>Web Services We Offer</h2>
         <p>We build fast, responsive, and scalable websites that drive results.</p>

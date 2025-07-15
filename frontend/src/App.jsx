@@ -16,6 +16,7 @@ import BlogDetails from './pages/BlogDetails/BlogDetails';
 import AboutUS from './pages/AboutUsPage/AboutUs';
 import ScrollToAnchor from './components/ScrollToAnchor';
 import ScrollToTop from './components/ScrollToTop';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
 
         </Routes>
       </Layout>

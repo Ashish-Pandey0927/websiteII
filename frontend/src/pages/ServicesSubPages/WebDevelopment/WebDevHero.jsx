@@ -6,6 +6,7 @@ function WebDevHero() {
       const [activeLink, setActiveLink] = useState('#webdevelopment');
   return (
       <div
+        id="web-dev-hero"
         className="services-sub-pages-container web-dev-hero">
         <DashboardHeader  activeLink={activeLink} setActiveLink={setActiveLink} />
           <div

@@ -47,7 +47,7 @@ const services = [
 
 export default function MobileDevServices() {
   return (
-    <section className="webservices-section">
+    <section id="mobileservices" className="webservices-section">
       <div className="webservices-header">
         <h2>Mobile Services We Offer</h2>
         <p>Custom mobile app development for Android and iOS.</p>

@@ -46,12 +46,12 @@ export default function Footer() {
           <div className="footer-section" style={{ left: '629px' }}>
             <h4>Services</h4>
             <ul>
-              <li>Web Development</li>
-              <li>Mobile Development</li>
-              <li>Cloud Services</li>
-              <li>Quality Assurance</li>
-              <li>Salesforce</li>
-              <li>CI/CD DevOps</li>
+              <li><Link to="/services/webdevelopment#web-dev-hero">Web Development</Link></li>
+              <li><Link to="/services/mobiledevelopment#mobile-dev-hero">Mobile Development</Link></li>
+              <li><Link to="/services/cloudservices#cloud-services-hero">Cloud Services</Link></li>
+              <li><Link to="/services/qualityassurance#qa-hero">Quality Assurance</Link></li>
+              <li><Link to="/services/salesforce#salesforce-hero">Salesforce</Link></li>
+              <li><Link to="/services/cicddevops#cicd-hero">CI/CD DevOps</Link></li>
             </ul>
           </div>
 
@@ -59,10 +59,10 @@ export default function Footer() {
           <div className="footer-section" style={{ left: '934px' }}>
             <h4>Others</h4>
             <ul>
-              <li>Contact Us</li>
-              <li>About Us</li>
-              <li>Privacy Policy</li>
-              <li>FAQs</li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/aboutus">About Us</Link></li>
+              <li><Link to="/privacypolicy">Privacy Policy</Link></li>
+              <li><Link to="/services#faq">FAQs</Link></li>
             </ul>
           </div>
 

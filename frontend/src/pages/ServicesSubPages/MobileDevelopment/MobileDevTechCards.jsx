@@ -56,7 +56,7 @@ const techIcons = [
 // Main TechCards component
 export default function MobileDevTechCards() {
     return (
-        <section className="tech-cards-section">
+        <section id="mobiletechcards" className="tech-cards-section">
             <div className="tech-cards-header">
                 <h2>Build Mobile Apps with EstonSoft</h2>
                 <p>A powerful language for building modern applications.</p>

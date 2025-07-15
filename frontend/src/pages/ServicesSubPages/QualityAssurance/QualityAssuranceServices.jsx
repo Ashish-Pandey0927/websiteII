@@ -47,7 +47,7 @@ const services = [
 
 export default function QualityAssuranceServices() {
   return (
-    <section className="webservices-section">
+    <section id="qaservices" className="webservices-section">
       <div className="webservices-header">
         <h2>Quality Assurance Services We Offer</h2>
         <p>We ensure top-quality results through rigorous checks and continuous improvement.</p>

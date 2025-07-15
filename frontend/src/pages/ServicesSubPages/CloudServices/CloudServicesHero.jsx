@@ -6,6 +6,7 @@ function CloudServicesHero() {
       const [activeLink, setActiveLink] = useState('#cloudservices');
   return (
       <div
+      id='cloud-services-hero'
         className="services-sub-pages-container cloud-services-hero">
         <DashboardHeader  activeLink={activeLink} setActiveLink={setActiveLink} />
           <div
