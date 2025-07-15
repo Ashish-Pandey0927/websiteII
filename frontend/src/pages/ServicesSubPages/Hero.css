@@ -40,13 +40,42 @@
     url('../../assets/cicdBG.png') no-repeat center center / cover;
 }
 
+/* Highlight Section */
+.service-sub-page-highlight-wrapper {
+  position: absolute;
+  top: 100px;
+  left:272.85px !important;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 2;
+  flex-wrap: nowrap;
+}
+
+.service-sub-page-vector-highlight {
+  width: 23px;
+  height: 29px;
+}
+
+.service-sub-page-vector-highlight svg {
+  width: 23px;
+  height: 29px;
+}
+
+.service-sub-page-highlight-text {
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 160%;
+  color: #fff;
+  white-space: nowrap;
+}
 
 /* Hero Section */
 .services-sub-pages-hero-content {
   position: relative;
   width: 460px;
   height: 337px;
-   top: 0px;
+   top: 70px;
   left: 244.85px !important;
   padding: 2.5rem 0;
   transform: rotate(-0.1deg);
@@ -96,12 +125,36 @@
     flex-direction: column;
     overflow: visible;
   }
+
+   .service-sub-page-vector-highlight svg {
+    width: 19px;
+    height: 30px;
+  }
+
+  .service-sub-page-highlight-text {
+    font-size: 1rem;
+    line-height: 160%;
+  }
+
+  /* Highlight Section */
+  .service-sub-page-highlight-wrapper {
+    width: 90vw; /* Reduce width for highlight wrapper on mobile */
+    max-width: 95vw;
+    min-width: 0;
+    position: relative;
+    top: -240px;
+    left: 0rem !important;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    justify-content: flex-start;
+  }
+
   /* Hero Section */
   .services-sub-pages-hero-content {
     position: absolute;
     width: 90%;
     height: auto;
-    top: 6rem;
+    top: 9rem;
     left: 1rem!important;
     padding: 0;
     text-align: left;
@@ -115,7 +168,7 @@
     line-height: 1.2;
     text-align: left;
     transform: none;
-    margin-bottom: 1rem;
+    margin: 0.5rem 0;
   }
 
   .services-sub-pages-hero-paragraph {
@@ -124,7 +177,7 @@
     margin-top: 0;
     padding: 0;
     padding-right: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     color: #fff;
     text-align: left;
@@ -133,8 +186,12 @@
 }
 
 @media screen and (max-width: 480px) {
+    .service-sub-page-highlight-text {
+    text-wrap: auto;
+  }
     .services-sub-pages-hero-content {
     padding: 1rem;
+    top: 7rem;
   } 
 
   .services-sub-pages-hero-heading {
