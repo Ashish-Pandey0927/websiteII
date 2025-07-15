@@ -87,8 +87,13 @@ export default function Footer() {
         </div> */}
 
         <div className="footer-social">
-       <SocialIcons/>
+          <SocialIcons/>
         </div>
+      </div>
+
+      <hr className="footer-divider" />
+      <div className="footer-copyright">
+        &copy; EstonSoft 2013-2025 | All rights reserved.
       </div>
     </footer>
   );
