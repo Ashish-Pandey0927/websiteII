@@ -31,7 +31,7 @@ function SalesforceHero() {
             <div
               className="service-sub-page-highlight-text"
             >
-          Power Your Customer Journey with Tailored Salesforce Solutions
+         Custom Salesforce Solutions That Work
             </div>
           </div>
           <div

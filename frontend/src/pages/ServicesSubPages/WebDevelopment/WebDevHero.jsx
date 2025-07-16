@@ -31,7 +31,7 @@ function WebDevHero() {
             <div
               className="service-sub-page-highlight-text"
             >
-            Modern, Scalable Websites Built to Perform and Convert
+            Scalable, High-Performance Websites
             </div>
           </div>
           <div

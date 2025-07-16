@@ -31,7 +31,7 @@ function CI_CD_DevOpsHero() {
             <div
               className="service-sub-page-highlight-text"
             >
-              Accelerate Delivery with Seamless Automation and DevOps Excellence
+            Faster Releases with DevOps Automation
             </div>
           </div>
           <div

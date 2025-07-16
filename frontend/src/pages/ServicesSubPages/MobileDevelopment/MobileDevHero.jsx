@@ -31,7 +31,7 @@ function MobileDevHero() {
             <div
               className="service-sub-page-highlight-text"
             >
-             Smart, Intuitive Apps That Drive Engagement on the Go
+            Engaging Apps, Built for Mobility
             </div>
           </div>
           <div

@@ -31,7 +31,7 @@ function CloudServicesHero() {
             <div
               className="service-sub-page-highlight-text"
             >
-              Flexible, Secure Cloud Solutions for Growing Startups
+            Smart, Secure Cloud Solutions
             </div>
           </div>
           <div

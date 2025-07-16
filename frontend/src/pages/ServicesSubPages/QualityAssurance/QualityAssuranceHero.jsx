@@ -31,7 +31,7 @@ function QualityAssuranceHero() {
             <div
               className="service-sub-page-highlight-text"
             >
-              Modern, Scalable Websites Built to Perform and Convert
+            Built to Perform, Tested to Last
             </div>
           </div>
           <div
