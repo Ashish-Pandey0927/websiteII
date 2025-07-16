@@ -24,7 +24,6 @@ const portfolioImages = {
   'NewsPaperWebsite.png': Portfolio7,
   'SrilankanMatrimonyWebsite.png': Portfolio8,
   'SrilankanMatrimonyWebsiteAndroidApp.png': Portfolio9,
-  'SrilankanMatrimonyWebsiteAndroidApp.png': Portfolio9,
 
 };
 
