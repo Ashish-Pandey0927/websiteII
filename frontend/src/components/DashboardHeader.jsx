@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import './DashboardHeader.css';
 import estonsoft from "../assets/estonsoftlogo.svg";
@@ -15,6 +15,18 @@ import SalesforceWeb from '../assets/technology_10644653.svg';
 import ThirdPartyServices from '../assets/teamwork_9161754.svg';
 import DeploymentAndHosting from '../assets/cloud-computing_5993762.svg';
 import MaintenanceAndUpdates from '../assets/reboot_11494716.svg';
+// Web Development tech stack images
+import reactlogo from '../assets/logo/Reactlogo.png';
+import vuelogo from '../assets/logo/vuelogo.png';
+import angularlogo from '../assets/logo/angularlogo.png';
+import nodelogo from '../assets/logo/NodeJslogo.png';
+import pythonlogo from '../assets/logo/pythonlogo.png';
+import exlogo from '../assets/logo/exlogo.png';
+import javalogo from '../assets/logo/javalogo.png';
+import phplogo from '../assets/logo/PHPlogo.png';
+import cSharplogo from '../assets/logo/cSharplogo.png';
+import nextlogo from '../assets/logo/nextjslogo.png';
+
 // mobile Development Service Icons
 import androiedDevelopment from '../assets/androiedDevelopment.svg';
 import iosDevelopment from '../assets/iosDevelopment.svg';
@@ -22,11 +34,30 @@ import FlutterDevelopment from '../assets/FlutterDevelopment.svg';
 import ReactNativeDevelopment from '../assets/ReactNativeDevelopment.svg';
 import XamarinMAUIDevelopment from '../assets/XamarinMAUIDevelopment.svg';
 import mobileAppMigration from '../assets/mobileAppMigration.svg';
+// mobile Development tech stack images
+import kotlinlogo from '../assets/logo/kotlinlogo.png';
+import dartlogo from '../assets/logo/dartlogo.png';
+import swiftlogo from '../assets/logo/Swiftlogo.png';
+import netlogo from '../assets/logo/.netlogo.png';
+import objectiveClogo from '../assets/logo/objectiveClogo.png';
+import firebaselogo from '../assets/logo/firebaselogo.png';
+
 // Cloud Services  Service Icons
 import cloudServices from '../assets/CloudServices.svg';
 import awsServices from '../assets/awsServices.svg';
 import GCPServices from '../assets/GCPServices.svg';
 import AzureServices from '../assets/AzureServices.svg';
+// Cloud Services tech stack images
+import awslogo from '../assets/logo/awslogo.png';
+import microsoftazurelogo from '../assets/logo/microsoftazurelogo.png';
+import gcplogo from '../assets/logo/gcplogo.png';
+import ibmcloudlogo from '../assets/logo/ibmcloudlogo.png';
+import oraclecloudlogo from '../assets/logo/oraclecloudlogo.png';
+import virtualmachinelogo from '../assets/logo/virtualmachinelogo.png';
+import clouddatabaselogo from '../assets/logo/clouddatabaselogo.png';
+import cloudstoragelogo from '../assets/logo/cloudstoragelogo.png';
+import cloudmonitoringanalyticslogo from '../assets/logo/cloudmonitoringanalyticslogo.png';
+
 // Quality Assurance   Service Icons
 import SalesforceTesting from '../assets/SalesforceTesting.svg';
 import CloudServicesQA from '../assets/CloudServicesQA.svg';
@@ -34,6 +65,18 @@ import MobileAppsQA from '../assets/MobileAppsQA.svg';
 import WebDevelopmentQA from '../assets/WebDevelopmentQA.svg';
 import CICDandDevOpsTesting from '../assets/CI-CDandDevOpsTesting.svg';
 import PerformanceandSecurityTesting from '../assets/PerformanceandSecurityTesting.svg';
+// Quality Assurance   tech stack images
+import seleniumlogo from '../assets/logo/seleniumlogo.png';
+import junitlogo from '../assets/logo/junitlogo.png';
+import testnglogo from '../assets/logo/testnglogo.png';
+import postmanlogo from '../assets/logo/postmanlogo.png';
+import Jenkinslogo from '../assets/logo/Jenkinslogo.png';
+import appiumlogo from '../assets/logo/appiumlogo.png';
+import cypresslogo from '../assets/logo/cypresslogo.png';
+import qtestlogo from '../assets/logo/qtestlogo.png';
+import bugzillalogo from '../assets/logo/bugzillalogo.png';
+import jiralogo from '../assets/logo/jiralogo.png';
+
 // Salesforce Service Icons
 import SalesforceDevelopment from '../assets/SalesforceDevelopment.svg';
 import ApexProgramming from '../assets/ApexProgramming.svg';
@@ -41,20 +84,45 @@ import SalesforceLWC from '../assets/Salesforce(LWC).svg';
 import SalesforceIntegration from '../assets/SalesforceIntegration.svg';
 import SalesforceCustomObjectsFields from '../assets/SalesforceCustomObjects&Fields.svg';
 import SalesforceDataMigration from '../assets/SalesforceDataMigration.svg';
+// Salesforce  tech stack images
+import lwclogo from '../assets/logo/lwclogo.png';
+import apexlogo from '../assets/logo/apexlogo.png';
+import salesforceAPIlogo from '../assets/logo/salesforceAPIlogo.png';
+import SalesforceLightingExperience from '../assets/logo/SalesforceLightingExperience.png';
+import visualforcelogo from '../assets/logo/visualforcelogo.png';
+import salesforceintegrationlogo from '../assets/logo/salesforceintegrationlogo.png';
+import Salesforcecustomizationlogo from '../assets/logo/Salesforcecustomizationlogo.png';
+import salesforceSDKlogo from '../assets/logo/salesforceSDKlogo.png';
+import salesforcesDataloaderlogo from '../assets/logo/salesforcesDataloaderlogo.png';
+import salesforceappexchangelogo from '../assets/logo/salesforceappexchangelogo.png';
+
+
 // CI/CD DevOps Service Icons
 import CloudDevOpsServices from '../assets/CloudDevOpsServices.svg';
 import AWSDevopsServices from '../assets/AWSDevopsServices.svg';
 import GCPDevopsServices from '../assets/GCPDevopsServices.svg';
 import AzureDevopsServices from '../assets/AzureDevopsServices.svg';
+// CI/CD DevOps tech stack images
+import jenkinslogo from "../assets/logo/Jenkinslogo.png";
+import gitlablogo from '../assets/logo/gitlablogo.png';
+import circlecilogo from '../assets/logo/circlecilogo.png';
+import TravisCILogo from '../assets/logo/TravisCILogo.png';
+import awsCodePipelinelogo from '../assets/logo/awsCodePipelinelogo.png';
+import githubActionslogo from '../assets/logo/githubActionslogo.png';
+import azuredevopslogo from '../assets/logo/azuredevopslogo.png';
+import dockerkuberneteslogo from '../assets/logo/dockerkuberneteslogo.png';
+import terraformlogo from '../assets/logo/terraformlogo.png';
+import helmChartslogo from '../assets/logo/helmChartslogo.png';
+
 // import { menuData as technologyMenuData } from "./newheader.menu";
 const sections = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/aboutus" },
-  { name: "Services", path: "/services" },
-  { name: "Technology" ,path:"/technology" },
-  { name: "Blogs", path: "/blogs" },
-  { name: "Portfolio", path: "/portfolio" },
-  { name: "Contact Us", path: "/contact" },
+  { name: "Home", path: "/"},
+  { name: "About Us", path: "/aboutus"},
+  { name: "Services", path: "/services"},
+  { name: "Technology" ,path:"/technology"},
+  { name: "Blogs", path: "/blogs"},
+  { name: "Portfolio", path: "/portfolio"},
+  { name: "Contact Us", path: "/contact"},
 ];
 
 const getTechnologyPath = (title, section) => {
@@ -118,16 +186,16 @@ const technologyMenuData = [
           { label: "Maintenance and Updates", icon: MaintenanceAndUpdates, isSvg: true }, 
         ],
         techStack: [
-          { label: "React", icon: "⚛️" },
-          { label: "Vue", icon: "🖖" },
-          { label: "Angular", icon: "📐" },
-          { label: "Node.js", icon: "🟩" },
-          { label: "Python", icon: "🐍" },
-          { label: "Express.js", icon: "🚂" },
-          { label: "Java", icon: "☕" },
-          { label: "PHP", icon: "🐘" },
-          { label: "C#", icon: "🎯" },
-          { label: "Next.js", icon: "⏭️" }
+          { label: "React", image: reactlogo, },
+          { label: "Vue", image:vuelogo,},
+          { label: "Angular", image:angularlogo,},
+          { label: "Node.js", image:nodelogo,},
+          { label: "Python", image:pythonlogo,},
+          { label: "Express.js", image:exlogo,},
+          { label: "Java", image:javalogo,},
+          { label: "PHP", image:phplogo,},
+          { label: "C#", image:cSharplogo,},
+          { label: "Next.js", image:nextlogo,}
         ]
       },
       {
@@ -141,12 +209,15 @@ const technologyMenuData = [
           { label: "Mobile Apps Migration", icon: mobileAppMigration, isSvg: true}
         ],
         techStack: [
-          { label: "Kotlin", icon: "🅺" },
-          { label: "Dart", icon: "🎯" },
-          { label: "Swift", icon: "🦅" },
-          { label: "MAUI/.NET Standard", icon: "🌐" },
-          { label: "Java", icon: "☕" },
-          { label: "Objective-C", icon: "📘" }
+          { label: "Kotlin", image:kotlinlogo,},
+          { label: "Dart", image:dartlogo,},
+          { label: "Swift", image:swiftlogo,},
+          { label: "MAUI/.NET Standard", image:netlogo,},
+          { label: "Objective-C", image:objectiveClogo,},
+          { label: "Express js", image:exlogo,},
+          { label: "Java", image:javalogo,},
+          { label: "C#", image:cSharplogo,},
+          { label: "FireBase#", image:firebaselogo,},
         ]
       },
       {
@@ -158,16 +229,16 @@ const technologyMenuData = [
           { label: "Azure Services", icon: AzureServices, isSvg: true },
         ],
         techStack: [
-          { label: "AWS (Amazon Web Services)", icon: "☁️" },
-          { label: "Microsoft Azure", icon: "🔷" },
-          { label: "GCP ", icon: "🟦" },
-          { label: "IBM Cloud ", icon: "🌩️" },
-          { label: "Oracle Cloud", icon: "🟥" },
-          { label: "Serverless Computing", icon: "🛰️" },
-          { label: "Virtual Machines", icon: "💻" },
-          { label: "Cloud Databases", icon: "🗄️" },
-          { label: "Cloud Storage (S3, Blob)", icon: "🧺" },
-          { label: "Cloud Monitoring and Analytics", icon: "📈" },
+          { label: "AWS (Amazon Web Services)", image:awslogo,},
+          { label: "Microsoft Azure", image:microsoftazurelogo,},
+          { label: "GCP ", image:gcplogo,},
+          { label: "IBM Cloud ", image:ibmcloudlogo,},
+          { label: "Oracle Cloud", image:oraclecloudlogo,},
+          { label: "Serverless Computing", image:exlogo,},
+          { label: "Virtual Machines", image:virtualmachinelogo,},
+          { label: "Cloud Databases", image:clouddatabaselogo,},
+          { label: "Cloud Storage (S3, Blob)", image:cloudstoragelogo,},
+          { label: "Cloud Monitoring and Analytics", image:cloudmonitoringanalyticslogo,},
         ]
       },
       {
@@ -181,16 +252,16 @@ const technologyMenuData = [
           { label: "Performance and Security Testing", icon: PerformanceandSecurityTesting, isSvg: true }
         ],
         techStack: [
-          { label: "Selenium", icon: "🧩" },
-          { label: "JUnit", icon: "📊" },
-          { label: "TestNG", icon: "📬" },
-          { label: "Postman", icon: "📬" },
-          { label: "Jenkins", icon: "🧩" },
-          { label: "Appium", icon: "📲" },
-          { label: "Cypress", icon: "🌲" },
-          { label: "QTest", icon: "🧪" },
-          { label: "Bugzilla", icon: "🐞" },
-          { label: "JIRA", icon: "📋" },
+          { label: "Selenium", image:seleniumlogo,},
+          { label: "JUnit", image:junitlogo,},
+          { label: "TestNG", image:testnglogo,},
+          { label: "Postman", image:postmanlogo,},
+          { label: "Jenkins", image:Jenkinslogo,},
+          { label: "Appium", image:appiumlogo,},
+          { label: "Cypress", image:cypresslogo,},
+          { label: "QTest", image:qtestlogo,},
+          { label: "Bugzilla", image:bugzillalogo,},
+          { label: "JIRA", image:jiralogo,},
         ]
       },
       {
@@ -204,16 +275,16 @@ const technologyMenuData = [
           { label: "Salesforce Data Migration", icon: SalesforceDataMigration, isSvg: true },
         ],
         techStack: [
-          { label: "LWC", icon: "💡" },
-          { label: "Apex", icon: "🅰️" },
-          { label: "Salesforce APIs", icon: "🔌" },
-          { label: "Salesforce Lightning Experience", icon: "⚡" },
-          { label: "Visualforce", icon: "👁️" },
-          { label: "Salesforce Integration", icon: "🔗" },
-          { label: "Salesforce Customization", icon: "⚙️" },
-          { label: "Salesforce Mobile SDK", icon: "📱" },
-          { label: "Salesforce Data Loader", icon: "📦" },
-          { label: "Salesforce App Exchange Apps", icon: "🏪" },
+          { label: "LWC", image:lwclogo,},
+          { label: "Apex", image:apexlogo,},
+          { label: "Salesforce APIs", image:salesforceAPIlogo,},
+          { label: "Salesforce Lightning Experience", image:SalesforceLightingExperience,},
+          { label: "Visualforce", image:visualforcelogo,},
+          { label: "Salesforce Integration", image:salesforceintegrationlogo,},
+          { label: "Salesforce Customization", image:Salesforcecustomizationlogo,},
+          { label: "Salesforce Mobile SDK", image:salesforceSDKlogo,},
+          { label: "Salesforce Data Loader", image:salesforcesDataloaderlogo,},
+          { label: "Salesforce App Exchange Apps", image:salesforceappexchangelogo,},
         ]
       },
       {
@@ -225,16 +296,16 @@ const technologyMenuData = [
           { label: "Azure Devops Services", icon: AzureDevopsServices, isSvg: true }
         ],
         techStack: [
-          { label: "Jenkins", icon: "☕" },
-          { label: "GitLab CI/CD", icon: "🦊" },
-          { label: "CircleCI", icon: "⭕" },
-          { label: "Travis CI", icon: "🛠️" },
-          { label: "Azure DevOps", icon: "🔷" },
-          { label: "GitHub Actions", icon: "🐙" },
-          { label: "AWS CodePipeline", icon: "🛤️" },
-          { label: "Docker & Kubernetes", icon: "🐳" },
-          { label: "Terraform", icon: "🌍" },
-          { label: "Helm Charts", icon: "📈" }
+          { label: "Jenkins", image:jenkinslogo,},
+          { label: "GitLab CI/CD", image:gitlablogo,},
+          { label: "CircleCI", image:circlecilogo,},
+          { label: "Travis CI", image:TravisCILogo,},
+          { label: "Azure DevOps", image:awsCodePipelinelogo,},
+          { label: "GitHub Actions", image:githubActionslogo,},
+          { label: "AWS CodePipeline", image:azuredevopslogo,},
+          { label: "Docker & Kubernetes", image:dockerkuberneteslogo,},
+          { label: "Terraform", image:terraformlogo,},
+          { label: "Helm Charts", image:helmChartslogo,}
         ]
       }
     ]
@@ -254,9 +325,6 @@ const DashboardHeader = ( {iconColor }) => {
   const currentPath = location.pathname;
   const navigate = useNavigate();
 
-  const toggleMenu = useCallback(() => {
-    setMenuOpen(prev => !prev);
-  }, []);
 
   return (
     <header className="dashboard-header">
@@ -351,9 +419,9 @@ const DashboardHeader = ( {iconColor }) => {
                             style={{ cursor: 'pointer' }}
                             tabIndex={0}
                           >
-                            {service.offeredServices && service.offeredServices[0] && service.offeredServices[0].isSvg && typeof service.offeredServices[0].icon === "string" ? (
+                            {/* {service.offeredServices && service.offeredServices[0] && service.offeredServices[0].isSvg && typeof service.offeredServices[0].icon === "string" ? (
                               <img src={service.offeredServices[0].icon} alt={service.title} style={{ width: 20, height: 20, verticalAlign: 'middle', marginRight: 8, display: 'inline-block' }} />
-                            ) : null}
+                            ) : null} */}
                             {service.title}
                           </div>
                         ))}
@@ -363,7 +431,7 @@ const DashboardHeader = ( {iconColor }) => {
                           <div className="newheader-tech-col">
                             <div className="newheader-tech-col-title">Offered Services</div>
                             <ul className="newheader-tech-list">
-                              {technologyMenuData[0].dropdown[openTechSub].offeredServices.map((srv, i) => (
+                              {technologyMenuData[0].dropdown[openTechSub].offeredServices.map((srv) => (
                                 <li 
                                   key={srv.label} 
                                   className="newheader-tech-list-item"
@@ -384,14 +452,16 @@ const DashboardHeader = ( {iconColor }) => {
                           <div className="newheader-tech-col">
                             <div className="newheader-tech-col-title">Tech Stack</div>
                             <ul className="newheader-tech-list">
-                              {technologyMenuData[0].dropdown[openTechSub].techStack.map((tech, i) => (
+                              {technologyMenuData[0].dropdown[openTechSub].techStack.map((tech) => (
                                 <li 
                                   key={tech.label} 
                                   className="newheader-tech-list-item"
                                   onClick={() => navigate(getTechnologyPath(technologyMenuData[0].dropdown[openTechSub].title, 'techStack'))}
                                   style={{ cursor: 'pointer' }}
                                 >
-                                  <span className="newheader-tech-icon">{tech.icon}</span> {tech.label}
+                                  <span className="newheader-tech-icon">
+                                    <img src={tech.image} alt={tech.label} style={{ width: 20, height: 20, verticalAlign: 'middle', display: 'inline-block' }} />
+                                  </span> {tech.label}
                                 </li>
                               ))}
                             </ul>
@@ -435,11 +505,11 @@ const DashboardHeader = ( {iconColor }) => {
                             technologyMenuData[0].dropdown.map((service, sIdx) => (
                               <div key={service.title} className="mobile-tech-item">
                                 <div className="mobile-tech-main">
-                                  {service.offeredServices && service.offeredServices[0] && service.offeredServices[0].isSvg && typeof service.offeredServices[0].icon === "string" && (
+                                  {/* {service.offeredServices && service.offeredServices[0] && service.offeredServices[0].isSvg && typeof service.offeredServices[0].icon === "string" && (
                                     <span className="mobile-tech-icon">
                                       <img src={service.offeredServices[0].icon} alt={service.title} />
                                     </span>
-                                  )}
+                                  )} */}
                                   <span onClick={() => navigate(getTechnologyPath(service.title))}>{service.title}</span>
                                   <span 
                                     className="mobile-tech-arrow" 
@@ -497,7 +567,9 @@ const DashboardHeader = ( {iconColor }) => {
                                       }}
                                       style={{ cursor: 'pointer' }}
                                     >
-                                      <span className="mobile-tech-icon">{tech.icon}</span>
+                                      <span className="mobile-tech-icon">
+                                        <img src={tech.image} alt={tech.label} style={{ width: 20, height: 20, verticalAlign: 'middle', display: 'inline-block' }} />
+                                      </span>
                                       <span>{tech.label}</span>
                                     </li>
                                   ))}
