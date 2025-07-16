@@ -522,6 +522,10 @@
     width: auto;
     margin-left: 0;
   }
+  .mobile-tech-submenu{
+    color:#011E30;
+
+  }
 
   .menu-toggle {
     display: flex;
@@ -561,7 +565,7 @@
     left: -200px;
     width: max-content;
     min-width: 200px;
-    background-color: #011E30;
+    background-color: #fff;
     border-radius: 8px;
     padding: 1rem;
     z-index: 998;
@@ -569,8 +573,9 @@
   }
 
   .nav-links a {
-    font-size: 14px;
-    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #011E30;
     padding: 8px 1rem;
   }
 
@@ -595,6 +600,9 @@
   .nav-link.bold {
     display: flex;
     align-items: center;
+    color: #011E30;
+    padding: 0 1rem;
+    font-weight: 500;
   }
 
   .mobile-dropdown {
@@ -681,7 +689,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #011E30;
+  background-color: #ffffff; 
   z-index: 1000;
   overflow-y: auto;
 }
@@ -742,6 +750,7 @@
 .mobile-tech-list {
   padding: 0 1rem;
   overflow-y: auto;
+  list-style: none;
 }
 
 .mobile-tech-item {
@@ -752,8 +761,8 @@
   display: flex;
   align-items: center;
     padding: 1rem;
-    color: #fff;
-    background-color: #ffffff0d;
+    color: #011E30;
+    background-color: #011E300d;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color .2s;
@@ -777,8 +786,7 @@
 }
 
 .mobile-tech-arrow:hover {
-  background-color: #f5f5f5;
-  border-radius: 4px;
+ color: #A7F46A;
 }
 
 .mobile-tech-icon {
