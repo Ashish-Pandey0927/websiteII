@@ -56,11 +56,6 @@
   flex-wrap: nowrap;
 }
 
-.hero-vector-highlight {
-  width: 23px;
-  height: 29px;
-}
-
 .hero-vector-highlight svg {
   width: 23px;
   height: 29px;
@@ -68,7 +63,7 @@
 
 .hero-highlight-text {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 160%;
   color: #fff;
   white-space: nowrap;
@@ -134,13 +129,13 @@
     z-index: 2;
   }
 
-  .hero-vector-highlight svg {
-    width: 19px;
-    height: 30px;
+  .hero-vector-highlight svg{
+    width: 15px;
+    height: 35px;
   }
 
   .hero-highlight-text {
-    font-size: 18px;
+    font-size: 0.9rem;
     line-height: 160%;
     text-wrap: auto;
    
