@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage/HomePage';
@@ -19,6 +19,36 @@ import ScrollToTop from './components/ScrollToTop';
 import PrivacyPolicy from './components/PrivacyPolicy';
 
 const App = () => {
+  useEffect(() => {
+    // if (process.env.NODE_ENV !== "production") return;
+
+    // Google Analytics (GA4)
+    const gaScript = document.createElement("script");
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-PFLNEBNYBE";
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    const gaInitScript = document.createElement("script");
+    gaInitScript.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PFLNEBNYBE', { page_path: window.location.pathname });
+    `;
+    document.head.appendChild(gaInitScript);
+
+    // Microsoft Clarity
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "qfuwyxc1ns"); // Replace with your Clarity ID
+
+  }, []);
+
   return (
     <Router basename="/new">
       <Layout>
