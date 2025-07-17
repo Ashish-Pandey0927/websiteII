@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import './ContactDetailsSection.css';
 
@@ -11,15 +11,74 @@ function ContactDetailsSection() {
     message: ''
   });
 
+  const [errors, setErrors] = useState({});
   const [responseMessage, setResponseMessage] = useState('');
+  const [messageTimeout, setMessageTimeout] = useState(null);
+
+  // Cleanup timeout when component unmounts
+  useEffect(() => {
+    return () => {
+      if (messageTimeout) {
+        clearTimeout(messageTimeout);
+      }
+    };
+  }, [messageTimeout]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error for the field being edited
+    setErrors(prev => ({ ...prev, [name]: '' }));
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters long';
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    // Phone validation
+    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number';
+    }
+
+    // Subject validation
+    if (!formData.subject.trim()) {
+      newErrors.subject = 'Please select a service';
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters long';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
 
     try {
       const result = await emailjs.send(
@@ -45,6 +104,16 @@ function ContactDetailsSection() {
       console.error('EmailJS Error:', error);
       setResponseMessage('Failed to send message. Please try again.');
     }
+    
+    // Clear any existing timeout
+    if (messageTimeout) {
+      clearTimeout(messageTimeout);
+    }
+    // Set new timeout and save its ID
+    const timeoutId = setTimeout(() => {
+      setResponseMessage('');
+    }, 5000);
+    setMessageTimeout(timeoutId);
   };
 
   return (
@@ -58,27 +127,27 @@ function ContactDetailsSection() {
                   <label htmlFor="name">Name</label>
                   <input
                     id="name"
-                    className="contact-input"
                     type="text"
                     name="name"
                     placeholder="John Carter"
                     value={formData.name}
                     onChange={handleChange}
-                    required
+                    className={`contact-input ${errors.name ? 'error' : ''}`}
                   />
+                  {errors.name && <div className="error-message">{errors.name}</div>}
                 </div>
                 <div className="contact-form-group">
                   <label htmlFor="email">Email</label>
                   <input
                     id="email"
-                    className="contact-input"
+                    className={`contact-input ${errors.email ? 'error' : ''}`}
                     type="email"
                     name="email"
                     placeholder="email@domain.com"
                     value={formData.email}
                     onChange={handleChange}
-                    required
                   />
+                  {errors.email && <div className="error-message">{errors.email}</div>}
                 </div>
               </div>
 
@@ -87,23 +156,23 @@ function ContactDetailsSection() {
                   <label htmlFor="phone">Phone number</label>
                   <input
                     id="phone"
-                    className="contact-input"
+                    className={`contact-input ${errors.phone ? 'error' : ''}`}
                     type="tel"
                     name="phone"
                     placeholder="374-9475-783"
                     value={formData.phone}
                     onChange={handleChange}
                   />
+                  {errors.phone && <div className="error-message">{errors.phone}</div>}
                 </div>
                 <div className="contact-form-group">
                   <label htmlFor="subject">Subject</label>
                   <select
                     id="subject"
-                    className="contact-input"
+                    className={`contact-input ${errors.subject ? 'error' : ''}`}
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    required
                   >
                     <option value="">Select a service</option>
                     <option value="Web Development">Web Development</option>
@@ -113,6 +182,7 @@ function ContactDetailsSection() {
                     <option value="Salesforce">Salesforce</option>
                     <option value="CI/CD DevOps">CI/CD DevOps</option>
                   </select>
+                  {errors.subject && <div className="error-message">{errors.subject}</div>}
                 </div>
               </div>
 
@@ -120,13 +190,13 @@ function ContactDetailsSection() {
                 <label htmlFor="message">Message</label>
                 <textarea
                   id="message"
-                  className="contact-input"
+                  className={`contact-input ${errors.message ? 'error' : ''}`}
                   name="message"
                   placeholder="Please describe what service you are looking for..."
                   value={formData.message}
                   onChange={handleChange}
-                  required
                 />
+                {errors.message && <div className="error-message">{errors.message}</div>}
               </div>
 
               <button className="contact-submit-button" type="submit">Submit</button>
