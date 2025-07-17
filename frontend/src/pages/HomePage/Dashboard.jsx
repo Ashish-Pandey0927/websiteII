@@ -61,7 +61,7 @@ const Dashboard = () => {
         </div>
 
         <div className="highlight-text">
-          World Best Digital Venture
+          World best consulting firm
         </div>
       </div>
 
