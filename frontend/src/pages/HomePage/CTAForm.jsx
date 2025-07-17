@@ -11,7 +11,9 @@ const CTAForm = () => {
     service: '',
     message: 'Email through CTA form' // Hidden message
   });
+  const [errors, setErrors] = useState({});
   const [responseMessage, setResponseMessage] = useState('');
+  const [messageTimeout, setMessageTimeout] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,13 +24,63 @@ const CTAForm = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Cleanup timeout when component unmounts or when timeout changes
+  useEffect(() => {
+    return () => {
+      if (messageTimeout) {
+        clearTimeout(messageTimeout);
+      }
+    };
+  }, [messageTimeout]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error for the field being edited
+    setErrors(prev => ({ ...prev, [name]: '' }));
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters long';
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    // Phone validation
+    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number';
+    }
+
+    // Service validation
+    if (!formData.service) {
+      newErrors.service = 'Please select a service';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
 
     try {
       const result = await emailjs.send(
@@ -54,6 +106,16 @@ const CTAForm = () => {
       console.error('EmailJS Error:', error);
       setResponseMessage('Failed to send message. Please try again.');
     }
+
+    // Clear any existing timeout
+    if (messageTimeout) {
+      clearTimeout(messageTimeout);
+    }
+    // Set new timeout and save its ID
+    const timeoutId = setTimeout(() => {
+      setResponseMessage('');
+    }, 5000);
+    setMessageTimeout(timeoutId);
   };
 
   return (
@@ -98,8 +160,9 @@ const CTAForm = () => {
             placeholder="i.e. John Doe"
             value={formData.name}
             onChange={handleChange}
-            required
+            className={errors.name ? 'error' : ''}
           />
+          {errors.name && <div className="error-message">{errors.name}</div>}
         </div>
 
         <div className="input-group">
@@ -110,8 +173,9 @@ const CTAForm = () => {
             placeholder="i.e. john@mail.com"
             value={formData.email}
             onChange={handleChange}
-            required
+            className={errors.email ? 'error' : ''}
           />
+          {errors.email && <div className="error-message">{errors.email}</div>}
         </div>
 
         <div className="input-group">
@@ -122,7 +186,9 @@ const CTAForm = () => {
             placeholder="i.e. 123-456-7890"
             value={formData.phone}
             onChange={handleChange}
+            className={errors.phone ? 'error' : ''}
           />
+          {errors.phone && <div className="error-message">{errors.phone}</div>}
         </div>
 
         <div className="input-group select-wrapper">
@@ -131,7 +197,7 @@ const CTAForm = () => {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            required
+            className={errors.service ? 'error' : ''}
           >
             <option value="">Select a service</option>
             <option value="Web Development">Web Development</option>
@@ -141,6 +207,7 @@ const CTAForm = () => {
             <option value="Salesforce">Salesforce</option>
             <option value="CI/CD DevOps">CI/CD DevOps</option>
           </select>
+          {errors.service && <div className="error-message">{errors.service}</div>}
         </div>
 
         <button type="submit">Book a Schedule</button>

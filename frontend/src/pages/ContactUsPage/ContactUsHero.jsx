@@ -5,7 +5,7 @@ import DashboardHeader from '../../components/DashboardHeader';
 function ContactUsHero() {
   const [activeLink, setActiveLink] = useState('#contact');
   return (
-    <div className="hero-container contact-hero-container">
+    <div id="contact-hero" className="hero-container contact-hero-container">
       <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
       <div className="Group-Service-page-hero">
         <div className="hero-highlight-wrapper">

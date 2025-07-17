@@ -187,3 +187,24 @@ textarea:-webkit-autofill {
     border-radius: 6px;
   }
 }
+
+/* Form validation styles */
+.contact-input.error {
+  border: 1px solid #ff4444 !important;
+  background-color: #fff8f8;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+/* Clear errors on focus */
+.contact-input:focus {
+  border-color: #2196f3 !important;
+  outline: none;
+  background-color: #fff;
+}
