@@ -110,8 +110,8 @@ export default function Footer() {
           <div className="footer-section" style={{ left: '934px' }}>
             <h4>Others</h4>
             <ul>
-              <li><Link to="/contact">Contact Us</Link></li>
-              <li><Link to="/aboutus">About Us</Link></li>
+              <li><Link to="/contact#contact-hero">Contact Us</Link></li>
+              <li><Link to="/aboutus#aboutus-hero">About Us</Link></li>
               <li><Link to="/privacypolicy">Privacy Policy</Link></li>
               <li><Link to="/services#faq">FAQs</Link></li>
             </ul>
