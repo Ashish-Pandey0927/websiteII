@@ -203,7 +203,7 @@
   flex-direction: row;
   position: fixed;
   padding:0 1.5rem 2.5rem;
-  animation: showDropdown 1s ease forwards;
+  animation: showDropdown 3s ease forwards;
   z-index: 1001;
 }
 
