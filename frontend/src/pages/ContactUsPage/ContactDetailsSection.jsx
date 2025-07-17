@@ -49,8 +49,8 @@ function ContactDetailsSection() {
       newErrors.email = 'Please enter a valid email address';
     }
 
-    // Phone validation
-    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+    // Phone validation - exactly 10 digits
+    const phoneRegex = /^\d{10}$/;
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
     } else if (!phoneRegex.test(formData.phone)) {

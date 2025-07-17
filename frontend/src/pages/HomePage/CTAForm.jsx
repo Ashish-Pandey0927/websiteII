@@ -59,7 +59,7 @@ const CTAForm = () => {
     }
 
     // Phone validation
-    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+    const phoneRegex = /^\d{10}$/;
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
     } else if (!phoneRegex.test(formData.phone)) {
