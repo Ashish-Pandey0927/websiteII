@@ -8,10 +8,10 @@ import Portfolio2 from '../../assets/FitTheoremAndroidApp.png';
 import Portfolio3 from '../../assets/FitTheoremiOSApp.jpg';
 import Portfolio4 from '../../assets/MunichTravelAndroidApp.png';
 import Portfolio5 from '../../assets/MunichTraveliOSApp.png';
-import Portfolio6 from '../../assets/NewsPaperAndroidApp.png';
+import Portfolio6 from '../../assets/news1 1.png';
 import Portfolio7 from '../../assets/NewsPaperWebsite.png';
 import Portfolio8 from '../../assets/SrilankanMatrimonyWebsite.png';
-import Portfolio9 from '../../assets/SrilankanMatrimonyWebsiteAndroidApp.png';
+import Portfolio9 from '../../assets/matremonyWhatsApp.png';
 
 // Create an image map
 const portfolioImages = {
@@ -20,10 +20,10 @@ const portfolioImages = {
   'FitTheoremiOSApp.png': Portfolio3,
   'MunichTravelAndroidApp.png': Portfolio4,
   'MunichTraveliOSApp.png': Portfolio5,
-  'NewsPaperAndroidApp.png': Portfolio6,
+  'news1 1.png': Portfolio6,
   'NewsPaperWebsite.png': Portfolio7,
   'SrilankanMatrimonyWebsite.png': Portfolio8,
-  'SrilankanMatrimonyWebsiteAndroidApp.png': Portfolio9,
+  'matremonyWhatsApp.png': Portfolio9,
 
 };
 
@@ -61,14 +61,14 @@ function OurPortfolios() {
   {
     "title": "News Paper Android App",
     "description": "A sleek and user-friendly Android application.",
-    "image": "NewsPaperAndroidApp.png",
+    "image": "news1 1.png",
     "link": "https://play.google.com/store/apps/details?id=com.prothomalo.english&hl=en_IN",
     "id": "684a8ac8d141691af3541c38"
   },
   {
     "title": "SrilankanMatrimony Website Android App",
     "description": "A sleek and user-friendly iOS application.",
-    "image": "SrilankanMatrimonyWebsiteAndroidApp.png",
+    "image": "matremonyWhatsApp.png",
     "link": "https://play.google.com/store/apps/details?id=com.srilankanmatrimony",
     "id": "684a982230989323369f64a6"
   },
