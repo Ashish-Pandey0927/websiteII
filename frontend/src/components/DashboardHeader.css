@@ -185,8 +185,8 @@
   position: absolute;
   top: 3rem;
   left: -3rem;
-  background-color:#fff;
-  color:  rgba(1, 30, 48);
+  background-color: #fff;
+  color: rgba(1, 30, 48);
   /* border-radius: 8px; */
   min-width: 100vw;
   min-height: auto;
@@ -202,7 +202,7 @@
   display: flex;
   flex-direction: row;
   position: fixed;
-  padding:0 1.5rem 2.5rem;
+  padding: 0 1.5rem 2.5rem;
   animation: showDropdown 3s ease forwards;
   z-index: 1001;
 }
@@ -309,9 +309,10 @@
 }
 
 /* ...existing code... */
-.newheader-submenu-list{
+.newheader-submenu-list {
   padding-top: 1.5rem;
 }
+
 .newheader-submenu-list:hover .newheader-submenu-title {
   opacity: 0.5;
   transition: all 0.3s ease;
@@ -340,7 +341,8 @@
 .newheader-submenu-list:hover .newheader-submenu-title:hover {
   opacity: 1;
 }
-.newheader-submenu-title{
+
+.newheader-submenu-title {
   margin: 0;
 }
 
@@ -382,16 +384,45 @@
 }
 
 /* Using same timing as main dropdown items */
-.newheader-tech-list-item:nth-child(1) { animation-delay: 0.1s; }
-.newheader-tech-list-item:nth-child(2) { animation-delay: 0.2s; }
-.newheader-tech-list-item:nth-child(3) { animation-delay: 0.3s; }
-.newheader-tech-list-item:nth-child(4) { animation-delay: 0.4s; }
-.newheader-tech-list-item:nth-child(5) { animation-delay: 0.5s; }
-.newheader-tech-list-item:nth-child(6) { animation-delay: 0.6s; }
-.newheader-tech-list-item:nth-child(7) { animation-delay: 0.7s; }
-.newheader-tech-list-item:nth-child(8) { animation-delay: 0.8s; }
-.newheader-tech-list-item:nth-child(9) { animation-delay: 0.9s; }
-.newheader-tech-list-item:nth-child(10) { animation-delay: 1s; }
+.newheader-tech-list-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.newheader-tech-list-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.newheader-tech-list-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.newheader-tech-list-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.newheader-tech-list-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.newheader-tech-list-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.newheader-tech-list-item:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.newheader-tech-list-item:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.newheader-tech-list-item:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.newheader-tech-list-item:nth-child(10) {
+  animation-delay: 1s;
+}
 
 .newheader-tech-col-title {
   font-weight: 600;
@@ -427,16 +458,45 @@
 }
 
 /* First submenu items should appear immediately when dropdown opens */
-.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(1) { animation-delay: 0.1s; }
-.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(2) { animation-delay: 0.2s; }
-.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(3) { animation-delay: 0.3s; }
-.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(4) { animation-delay: 0.4s; }
-.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(5) { animation-delay: 0.5s; }
-.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(6) { animation-delay: 0.6s; }
-.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(7) { animation-delay: 0.7s; }
-.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(8) { animation-delay: 0.8s; }
-.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(9) { animation-delay: 0.9s; }
-.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(10) { animation-delay: 1s; }
+.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.has-dropdown:hover .dropdown-menu .newheader-tech-list-item:nth-child(10) {
+  animation-delay: 1s;
+}
 
 .has-dropdown:not(:hover) .newheader-tech-multicol {
   animation: hideDropdown 0.5s ease forwards;
@@ -446,11 +506,25 @@
   animation: hideItem 0.3s ease both;
 }
 
-.has-dropdown:not(:hover) .newheader-tech-list-item:nth-child(5) { animation-delay: 0.1s; }
-.has-dropdown:not(:hover) .newheader-tech-list-item:nth-child(4) { animation-delay: 0.2s; }
-.has-dropdown:not(:hover) .newheader-tech-list-item:nth-child(3) { animation-delay: 0.3s; }
-.has-dropdown:not(:hover) .newheader-tech-list-item:nth-child(2) { animation-delay: 0.4s; }
-.has-dropdown:not(:hover) .newheader-tech-list-item:nth-child(1) { animation-delay: 0.5s; }
+.has-dropdown:not(:hover) .newheader-tech-list-item:nth-child(5) {
+  animation-delay: 0.1s;
+}
+
+.has-dropdown:not(:hover) .newheader-tech-list-item:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.has-dropdown:not(:hover) .newheader-tech-list-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.has-dropdown:not(:hover) .newheader-tech-list-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.has-dropdown:not(:hover) .newheader-tech-list-item:nth-child(1) {
+  animation-delay: 0.5s;
+}
 
 .has-dropdown:not(:hover) .newheader-tech-col-title {
   animation: hideDropdown 0.5s ease forwards;
@@ -522,8 +596,9 @@
     width: auto;
     margin-left: 0;
   }
-  .mobile-tech-submenu{
-    color:#011E30;
+
+  .mobile-tech-submenu {
+    color: #011E30;
 
   }
 
@@ -689,7 +764,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   z-index: 1000;
   overflow-y: auto;
 }
@@ -760,12 +835,12 @@
 .mobile-tech-main {
   display: flex;
   align-items: center;
-    padding: 1rem;
-    color: #011E30;
-    background-color: #011E300d;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color .2s;
+  padding: 1rem;
+  color: #011E30;
+  background-color: #011E300d;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color .2s;
 
 }
 
@@ -783,10 +858,11 @@
   padding: 8px 12px;
   cursor: pointer;
   margin-left: 12px;
+  font-size: 1.5rem;
 }
 
 .mobile-tech-arrow:hover {
- color: #A7F46A;
+  color: #A7F46A;
 }
 
 .mobile-tech-icon {
