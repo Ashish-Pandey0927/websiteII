@@ -50,7 +50,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename="/new">
+    <Router>
       <Layout>
         <ScrollToTop />
         <ScrollToAnchor />
