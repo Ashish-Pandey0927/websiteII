@@ -34,7 +34,9 @@ const AboutUs = () => {
         <div className="card card-blog">
           <p className="card-text">We have share our journey and some story</p>
           <div className="card-button">
+            <Link to="/blogs#blog-hero" style={{color: 'inherit' }}>
             Read our blog <ArrowUpRight size={24} />
+            </Link>
           </div>
         </div>
 
@@ -43,7 +45,9 @@ const AboutUs = () => {
             It’s a must to that we would like to share our workflow to believe you
           </p>
           <div className="card-button">
+          <Link to="/portfolio#portfolio-hero" style={{color: 'inherit' }}>
             See our workflow <ArrowUpRight size={24} />
+          </Link>
           </div>
         </div>
 
