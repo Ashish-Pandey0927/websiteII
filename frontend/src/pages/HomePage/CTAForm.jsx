@@ -135,7 +135,7 @@ const CTAForm = () => {
       {/* Dashed Line Divider */}
       <div className="cta-dashed-line">
         <svg width="600" height="50">
-          <line x1={isMobile ? 0 : 250} y1="25" x2="600" y2="25" stroke=" #B3BAC5" strokeWidth="4" strokeDasharray="10,5" />
+          <line x1={isMobile ? 0 : 250} y1="25" x2="600" y2="25" stroke="#B3BAC5" strokeWidth="4" />
         </svg>
       </div>
 
