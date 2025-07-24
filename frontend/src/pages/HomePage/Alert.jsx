@@ -9,15 +9,23 @@ const Alert = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          console.log('Alert Intersection:', entry.isIntersecting, 'Ratio:', entry.intersectionRatio);
           if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(entry.target);
+            console.log('Alert setting visible to true');
+            // Add a small delay to ensure smooth animation
+            setTimeout(() => {
+              setIsVisible(true);
+            }, 50);
+          } else {
+            console.log('Alert setting visible to false');
+            // Reset animation when section goes out of view so it can trigger again
+            setIsVisible(false);
           }
         });
       },
       {
-        threshold: 0.3, // Trigger when 30% of the component is visible
-        rootMargin: '0px 0px -50px 0px' // Trigger slightly before entering viewport
+        threshold: 0.2, // Reduced threshold for earlier trigger
+        rootMargin: '0px 0px -20px 0px' // Reduced margin for more sensitive detection
       }
     );
 
