@@ -1,10 +1,43 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './WhyChooseUs.css';
 
 const WhyChooseUs = () => {
+  const textContentRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            entry.target.classList.remove('animate-out');
+          } else {
+            entry.target.classList.add('animate-out');
+            entry.target.classList.remove('animate-in');
+          }
+        });
+      },
+      {
+        threshold: 0.2, // Trigger when 20% of the element is visible
+        rootMargin: '0px 0px -50px 0px' // Adjust trigger point
+      }
+    );
+
+    const currentElement = textContentRef.current;
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
+
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
+  }, []);
+
   return (
     <section className="why-choose-us">
-      <div className="text-content">
+      <div className="text-content" ref={textContentRef}>
         <h2>Why to Choose Us</h2>
         <p>
           Choosing us means partnering with a team committed to quality, innovation, and customer satisfaction. We deliver reliable
