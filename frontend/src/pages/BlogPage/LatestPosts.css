@@ -35,10 +35,10 @@
   overflow: hidden;
   /* border: 1px solid #ccc; */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateY(0);
+  /* transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); */
+  /* transform: translateY(0); */
   cursor: pointer;
-   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .post-card:hover {
@@ -170,10 +170,10 @@
 }
 
 /* Animation for when posts load */
-@keyframes slideInUp {
+@keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;
@@ -182,13 +182,13 @@
 }
 
 .post-card {
-  animation: slideInUp 0.6s ease-out forwards;
+  animation: slideDown 0.6s ease-out forwards;
   opacity: 0;
 }
 
-.post-card:nth-child(1) { animation-delay: 0.1s; }
-.post-card:nth-child(2) { animation-delay: 0.2s; }
-.post-card:nth-child(3) { animation-delay: 0.3s; }
-.post-card:nth-child(4) { animation-delay: 0.4s; }
-.post-card:nth-child(5) { animation-delay: 0.5s; }
-.post-card:nth-child(6) { animation-delay: 0.6s; }
+.post-card:nth-child(1) { animation-delay: 0.4s; }
+.post-card:nth-child(2) { animation-delay: 0.6s; }
+.post-card:nth-child(3) { animation-delay: 0.8s; }
+.post-card:nth-child(4) { animation-delay: 0.5s; }
+.post-card:nth-child(5) { animation-delay: 0.7s; }
+.post-card:nth-child(6) { animation-delay: 0.9s; }
