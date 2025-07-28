@@ -1,5 +1,5 @@
 import './WhatWeDo.css';
-
+import { useEffect } from 'react';
 import MobileDevelopment from '../../assets/MobileDevelopment.svg';
 import WebDevelopment from '../../assets/WebDevelopment.svg';
 import CloudServices from '../../assets/CloudServices.svg';
@@ -59,6 +59,42 @@ const serviceData = [
 
 
 function WhatWeDo() {
+  useEffect(() => {
+    // let lastScrollY = window.scrollY;
+    // let isScrollingUp = false;
+
+    // const handleScroll = () => {
+    //   isScrollingUp = window.scrollY < lastScrollY;
+    //   lastScrollY = window.scrollY;
+    // };
+
+    // window.addEventListener('scroll', handleScroll);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '-50px'
+    });
+
+    const cards = document.querySelectorAll('.feature-card');
+    cards.forEach(card => {
+      observer.observe(card);
+      card.classList.add('hidden');
+    });
+
+    return () => {
+      // window.removeEventListener('scroll', handleScroll);
+      cards.forEach(card => observer.unobserve(card));
+    };
+  }, []);
+
   return (
     <section className="what-we-do">
       <div className="header">

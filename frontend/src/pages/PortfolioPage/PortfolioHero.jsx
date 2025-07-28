@@ -5,7 +5,7 @@ import DashboardHeader from "../../components/DashboardHeader";
 const PortfolioHero = () => {
   const [activeLink, setActiveLink] = useState('#Portfolio');
   return (
-    <div className="hero-container portfolio-hero-container">
+    <div id="portfolio-hero" className="hero-container portfolio-hero-container">
       <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
       <div className="Group-Service-page-hero">
         <div className="hero-highlight-wrapper">

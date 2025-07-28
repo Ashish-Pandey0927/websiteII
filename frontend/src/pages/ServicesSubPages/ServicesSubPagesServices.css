@@ -8,6 +8,9 @@
 .webservices-header {
   text-align: center;
   margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInUp 1s ease-out 0.3s forwards;
 }
 
 .webservices-header h2 {
@@ -16,6 +19,12 @@
   font-weight: 700;
   color: #000000;
   margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.webservices-header h2:hover {
+  /* color: #2282A1; */
+  transform: scale(1.02);
 }
 
 .webservices-header p {
@@ -40,6 +49,16 @@
   padding: 40px 20px;
   text-align: center;
   position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.6s ease-out forwards;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.webservice-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .webservice-icon-wrapper {
@@ -47,6 +66,11 @@
   width: 94px;
   height: 94px;
   margin: 0 auto 24px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.webservice-card:hover .webservice-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .webservice-icon-bg {
@@ -74,6 +98,12 @@
   font-weight: 700;
   color: #183B56;
   margin-bottom: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.webservice-card:hover h3 {
+  /* color: #2282A1; */
+  transform: translateY(-2px);
 }
 
 .webservice-card p {
@@ -135,3 +165,39 @@
     text-align: left;
   }
 }
+
+/* Animation keyframes for page load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dynamic animation delays for any number of cards */
+.webservice-card:nth-child(1) { animation-delay: calc(0.4s + 0.1s * 0); }
+.webservice-card:nth-child(2) { animation-delay: calc(0.4s + 0.1s * 1); }
+.webservice-card:nth-child(3) { animation-delay: calc(0.4s + 0.1s * 2); }
+.webservice-card:nth-child(4) { animation-delay: calc(0.4s + 0.1s * 3); }
+.webservice-card:nth-child(5) { animation-delay: calc(0.4s + 0.1s * 4); }
+.webservice-card:nth-child(6) { animation-delay: calc(0.4s + 0.1s * 5); }
+.webservice-card:nth-child(7) { animation-delay: calc(0.4s + 0.1s * 6); }
+.webservice-card:nth-child(8) { animation-delay: calc(0.4s + 0.1s * 7); }
+.webservice-card:nth-child(9) { animation-delay: calc(0.4s + 0.1s * 8); }
+.webservice-card:nth-child(10) { animation-delay: calc(0.4s + 0.1s * 9); }
+.webservice-card:nth-child(n+11) { animation-delay: calc(0.4s + 0.1s * 10); }

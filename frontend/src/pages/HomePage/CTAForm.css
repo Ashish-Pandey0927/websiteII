@@ -34,6 +34,14 @@
   padding: 25px;
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.cta-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 40px 40px -25px rgba(22, 28, 45, 0.2);
+  border-color: #A7F46A;
 }
 
 .input-group {
@@ -67,6 +75,20 @@
   color: #161C2D;
   opacity: 0.7;
   box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  opacity: 1;
+  border-color: #A7F46A;
+  box-shadow: 0 0 0 3px rgba(167, 244, 106, 0.1);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.input-group input:hover {
+  opacity: 0.9;
+  border-color: #A7F46A;
 }
 
 .select-wrapper {
@@ -86,6 +108,20 @@
   -moz-appearance: none;
   opacity: 0.7;
   box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.select-wrapper select:focus {
+  opacity: 1;
+  border-color: #A7F46A;
+  box-shadow: 0 0 0 3px rgba(167, 244, 106, 0.1);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.select-wrapper select:hover {
+  opacity: 0.9;
+  border-color: #A7F46A;
 }
 
 .select-wrapper::after {
@@ -116,6 +152,66 @@
   color: #000000;
   cursor: pointer;
   margin-top: 10px;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-card button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  /* background: linear-gradient(45deg, #000000, #333333, #555555, #777777, #000000); */
+  background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(3px);
+  animation: glowMove 8s linear infinite;
+  border-radius: 10px;
+}
+
+.cta-card button::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: #A7F46A;
+  border-radius: 6px;
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+@keyframes glowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+.cta-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(167, 244, 106, 0.3);
+}
+
+.cta-card button:hover::after {
+  background: #95e052;
+}
+
+.cta-card button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(167, 244, 106, 0.2);
+}
+
+.cta-card button:active::before {
+  animation-duration: 2s;
 }
 
 
@@ -131,6 +227,15 @@
   line-height: 60px;
   letter-spacing: 0.2px;
   color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-text-heading:hover {
+  color: #A7F46A;
+  /* transform: translateY(10px); */
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(167, 244, 106, 0.5);
 }
 
 .cta-subtext {
@@ -143,6 +248,14 @@
   font-size: 18px;
   line-height: 31px;
   color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-subtext:hover {
+  color: #F0F0F0;
+  transform: translateY(-5px);
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
 .cta-dashed-line {
@@ -163,6 +276,14 @@
   line-height: 24px;
   letter-spacing: 0.2px;
   color: #FAFAFB;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-secondary-heading:hover {
+  color: #A7F46A;
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(167, 244, 106, 0.4);
 }
 
 .cta-small-text {
@@ -175,6 +296,14 @@
   font-size: 16px;
   line-height: 27px;
   color: #B3BAC5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-small-text:hover {
+  color: #FFFFFF;
+  transform: translateY(-8px) scale(1.02);
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
 }
 
 .cta-dashed-line {
@@ -190,6 +319,21 @@
   width: 100%;
   max-width: 300px;
   height: 24px;
+}
+
+.cta-dashed-line svg line {
+  stroke-dasharray: 10, 5;
+  stroke-dashoffset: 0;
+  animation: dashMove 2s linear infinite;
+}
+
+@keyframes dashMove {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 15;
+  }
 }
 
 .response-message {
@@ -345,6 +489,6 @@
 
 /* Clear errors on focus */
 .input-group input:focus {
-  border-color: #2196f3;
+  border-color: #A7F46A;
   outline: none;
 }

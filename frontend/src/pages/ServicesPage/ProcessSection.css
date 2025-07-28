@@ -51,6 +51,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.process-step:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .step-inner-circle {
@@ -62,6 +69,69 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-inner-circle::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, 
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(248, 249, 250, 0.7) 25%, 
+    rgba(233, 236, 239, 0.5) 50%, 
+    transparent 75%, 
+    rgba(255, 255, 255, 0.9) 100%);
+  animation: rotateGlow 3s linear infinite;
+  opacity: 0.7;
+}
+
+.step-inner-circle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #F0F0FF;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.step-inner-circle > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+    filter: blur(1px);
+  }
+  50% {
+    filter: blur(2px);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: blur(1px);
+  }
+}
+
+.process-step:hover .step-inner-circle {
+  width: 265px;
+  height: 265px;
+  border-color: transparent;
+}
+
+.process-step:hover .step-inner-circle::before {
+  opacity: 1;
+  filter: blur(0px) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
 }
 
 .step-title {
@@ -141,6 +211,17 @@
       transparent 4px,
       transparent 8px
     );
+    background-size: 100% 15px;
+    animation: dashMoveVertical 2s linear infinite;
+  }
+
+  @keyframes dashMoveVertical {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 15px;
+    }
   }
 
   .process-step {
@@ -167,6 +248,17 @@
       transparent 4px,
       transparent 8px
     );
+    background-size: 15px 100%;
+    animation: dashMoveHorizontal 2s linear infinite;
+  }
+
+  @keyframes dashMoveHorizontal {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 15px 0;
+    }
   }
 
   .process-step {

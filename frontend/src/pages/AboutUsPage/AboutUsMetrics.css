@@ -19,6 +19,40 @@
   min-width: 0;
   text-align: center;
   justify-content: space-between;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.6s ease-out;
+  cursor: pointer;
+}
+
+/* Animation when section becomes visible */
+.aboutus-metrics.animate-in .metric-item {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* Add staggered animation delay for each item */
+.aboutus-metrics.animate-in .metric-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.aboutus-metrics.animate-in .metric-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.aboutus-metrics.animate-in .metric-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.aboutus-metrics.animate-in .metric-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Hover effect - pop out */
+.metric-item:hover {
+  transform: scale(1.25) !important;
+  transition: transform 0.3s ease-in-out;
 }
 
 .metric-label {
@@ -66,6 +100,23 @@
     text-align: center;
     padding: 16px 8px;
     word-break: break-word;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.6s ease-out;
+    cursor: pointer;
+  }
+
+  /* Animation when section becomes visible - tablet */
+  .aboutus-metrics.animate-in .metric-item {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  }
+
+  /* Hover effect for tablet */
+  .metric-item:hover {
+    transform: scale(1.15) !important;
+    transition: transform 0.3s ease-in-out;
   }
 
   .metric-label {
@@ -106,6 +157,23 @@
     padding: 0px;
     margin-bottom: 6px;
     /* box-shadow: 0 1px 4px rgba(0,0,0,0.06); */
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.6s ease-out;
+    cursor: pointer;
+  }
+
+  /* Animation when section becomes visible - mobile */
+  .aboutus-metrics.animate-in .metric-item {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  }
+
+  /* Hover effect for mobile */
+  .metric-item:hover {
+    transform: scale(1.1) !important;
+    transition: transform 0.3s ease-in-out;
   }
 
   .metric-label {

@@ -10,6 +10,32 @@
   position: absolute;
   font-family: 'DM Sans', sans-serif;
   color: #FFFFFF;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.6s ease-out;
+  cursor: pointer;
+}
+
+.alert-item.animate {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.alert-item.animate:hover {
+  transform: scale(1.25) !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes growIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .alert-group1{

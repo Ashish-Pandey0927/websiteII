@@ -24,7 +24,21 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  /* Animation properties */
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(50px);
+  opacity: 0;
+}
 
+/* Animation classes for scroll-triggered transitions */
+.why-choose-us .text-content.animate-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.why-choose-us .text-content.animate-out {
+  transform: translateY(50px);
+  opacity: 0;
 }
 
 .why-choose-us .text-content h2 {
@@ -34,6 +48,11 @@
   color: #101010;
   margin: 0 0 5rem 0;
   line-height: 1.1;
+  /* Animation properties */
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: 0.1s;
+  transform: translateY(30px);
+  opacity: 0;
 }
 
 .why-choose-us .text-content p {
@@ -45,6 +64,24 @@
   width: 500px;
   max-width: 300px;
   text-align: left;
+  /* Animation properties */
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: 0.3s;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+/* Animate child elements when parent is visible */
+.why-choose-us .text-content.animate-in h2,
+.why-choose-us .text-content.animate-in p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.why-choose-us .text-content.animate-out h2,
+.why-choose-us .text-content.animate-out p {
+  transform: translateY(30px);
+  opacity: 0;
 }
 
 .why-choose-us .diagram-container {
@@ -91,29 +128,38 @@
 .why-choose-us .qa {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -15px;
   padding-top: 3rem;
+  height: auto;
+  width: min-content;
 }
 
 .why-choose-us .innovation-tech {
   position: absolute;
   top: 0;
   left: 337px;
-  padding: 0;
+  padding: 0 1rem;
+  height: auto;
+  width: min-content;
 }
 
 .why-choose-us .agile {
   position: absolute;
   top: 287px;
-  left: 0;
-  padding-top: 3rem;
+  left: -15px;
+  padding: 0 1rem;
+  margin: 2.5rem 0 0;
+  height: auto;
+  width: min-content;
 }
 
 .why-choose-us .end-to-end {
   position: absolute;
   top: 304px;
   left: 337px;
-  padding: 0;
+  padding: 0 1rem;
+  height: auto;
+  width: min-content;
 }
 
 .why-choose-us .vertical-dashed-line1 {
@@ -122,7 +168,7 @@
 
 .why-choose-us .horizontal-dashed-line1 {
   position: relative;
-  top: -365px;
+  top: -380px;
 }
 
 .why-choose-us .horizontal-dashed-line2 {
@@ -180,28 +226,32 @@
     height: auto;
     padding: 2rem 0;
   }
-  .why-choose-us .text-content{
+
+  .why-choose-us .text-content {
     margin: 0;
     padding: 0;
     width: 100%;
   }
 
   .why-choose-us .text-content h2 {
-    margin: 0  1rem;
+    margin: 0 1rem;
   }
 
-.why-choose-us .text-content p {
-  margin-top: 2rem;
-  padding: 1rem;
-  text-align: left;
-}
-.why-choose-us .card h3 {
-  width: 100%;
-  text-align: left;
-}
-.why-choose-us .card p {
-  text-align: left;
-}
+  .why-choose-us .text-content p {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .why-choose-us .card h3 {
+    width: 100%;
+    text-align: left;
+  }
+
+  .why-choose-us .card p {
+    text-align: left;
+  }
+
   .why-choose-us .diagram-container {
     position: static;
     width: 100%;
