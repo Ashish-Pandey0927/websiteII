@@ -6,7 +6,7 @@
 }
 
 /* Container */
-.our-work-section  .container {
+.our-work-section .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px !important;
@@ -54,7 +54,7 @@
   cursor: pointer;
   transition: color 0.3s ease;
   align-self: flex-start;
-      top: 0;
+  top: 0;
 }
 
 .see-work-btn:hover {
@@ -69,6 +69,7 @@
   width: 1rem;
   height: 1rem;
   transition: transform 0.3s ease;
+  color: #2282A1;
 }
 
 .see-work-btn:hover .see-work-icon {
@@ -95,7 +96,8 @@
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10rem; /* Increased gap to accommodate title and button below cards on mobile */
+  gap: 10rem;
+  /* Increased gap to accommodate title and button below cards on mobile */
 }
 
 /* Project Card */
@@ -247,6 +249,7 @@
 .btn-icon {
   width: 1rem;
   height: 1rem;
+  color: #2282A1;
   transition: transform 0.3s ease;
 }
 
@@ -268,6 +271,25 @@
 
 .view-details-btn:hover .btn-underline {
   transform: scaleX(1);
+}
+
+/* Different Heights for overlay images*/
+.overlayImage-height-1 {
+  height: 5rem;
+  border: 1rem solid #ffffff;
+
+}
+
+/* .overlayImage-height-2{
+          height: 13rem !important;
+
+}  */
+/* .overlayImage-height-3{
+        height: 13rem;
+}  */
+.overlayImage-height-4 {
+  border: 1rem solid #ffffff;
+
 }
 
 /* Different Heights for Projects */
@@ -294,53 +316,54 @@
   .container {
     padding: 0 1.5rem;
   }
-  
+
   .projects-grid {
-    gap: 6rem; /* Reduce gap slightly for small screens */
+    gap: 6rem;
+    /* Reduce gap slightly for small screens */
   }
-  
+
   .main-title {
     font-size: 3rem;
   }
-  
+
   .main-description {
     font-size: 1.125rem;
     width: 686px;
   }
-  
+
   .see-work-text {
     font-size: 1.5rem;
   }
-  
+
   .overlay-image {
-    width: 11rem ;
-    height: 13rem;
+    width: 11rem;
+    /* height: 13rem!important; */
   }
-  
+
   .project-title {
     font-size: 1.25rem;
   }
-  
+
   .project-description {
     font-size: 1rem;
   }
-  
+
   .btn-text {
     font-size: 1.25rem;
   }
-  
+
   .project-height-1 {
     height: 24rem;
   }
-  
+
   .project-height-2 {
     height: 20rem;
   }
-  
+
   .project-height-3 {
     height: 24rem;
   }
-  
+
   .project-height-4 {
     height: 18rem;
   }
@@ -351,24 +374,25 @@
   .our-work-section {
     padding: 5rem 0;
   }
-  
+
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12rem; /* Keep original desktop gap */
+    gap: 12rem;
+    /* Keep original desktop gap */
   }
-  
+
   .project-height-1 {
     height: 28rem;
   }
-  
+
   .project-height-2 {
     height: 24rem;
   }
-  
+
   .project-height-3 {
     height: 24rem;
   }
-  
+
   .project-height-4 {
     height: 18rem;
   }
@@ -379,53 +403,81 @@
   .our-work-section {
     padding: 120px 120px 195px 120px;
   }
-  
+
   .container {
     padding: 0 2rem;
   }
-  
+
   .header-section {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
   }
-  
+
   .main-title {
     font-size: 3.75rem;
   }
+
+  .main-description {
+    margin-bottom: 5rem;
+  }
+
   .see-work-btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #09090b;
-  font-weight: 500;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  align-self: flex-start;
-      top: 16rem;
-}
-  
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #09090b;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    align-self: flex-start;
+    top: 16rem;
+  }
+
   .project-height-1 {
     height: 53rem;
   }
-  
+
   .project-height-2 {
     height: 46rem;
   }
-  
+
   .project-height-3 {
-    height: 37rem;
+    height: 40rem;
   }
-  
+
   .project-height-4 {
-    height: 30rem;
+    height: 35rem;
   }
+
+  /* Different Heights for overlay images */
+  .overlayImage-height-1 {
+    height: 11rem;
+    border: 1rem solid #ffffff;
+
+  }
+
+  .overlayImage-height-2 {
+    height: 20rem;
+
+  }
+
+  .overlayImage-height-3 {
+    height: 22rem;
+  }
+
+  .overlayImage-height-4 {
+    height: 18rem;
+    border: 1rem solid #ffffff;
+
+  }
+
   .project-title-below {
-  margin: 0 0 1rem 0!important;
-}
+    margin: 0 0 1rem 0 !important;
+  }
 }
 
 /* Extra large screens (xl: 1280px and up) */
@@ -444,8 +496,10 @@
 .project-title-below {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 20px; /* Smaller font size for mobile */
-  line-height: 28px; /* Adjusted line height for mobile */
+  font-size: 20px;
+  /* Smaller font size for mobile */
+  line-height: 28px;
+  /* Adjusted line height for mobile */
   letter-spacing: -0.02em;
   color: #101010;
   margin: 0 0 0 0;
@@ -465,8 +519,10 @@
   color: #101010;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 16px; /* Smaller font size for mobile */
-  line-height: 24px; /* Adjusted line height for mobile */
+  font-size: 16px;
+  /* Smaller font size for mobile */
+  line-height: 24px;
+  /* Adjusted line height for mobile */
   letter-spacing: -0.03em;
   vertical-align: middle;
   transition: all 0.3s ease;
@@ -498,6 +554,7 @@
 .btn-icon-below {
   width: 16px;
   height: 16px;
+  color: #2282A1;
   transition: transform 0.3s ease;
 }
 
@@ -511,7 +568,7 @@
     font-size: 28px;
     line-height: 36px;
   }
-  
+
   .view-details-btn-below {
     font-size: 20px;
     line-height: 32px;
@@ -523,7 +580,7 @@
     font-size: 32px;
     line-height: 48px;
   }
-  
+
   .view-details-btn-below {
     font-size: 24px;
     line-height: 42px;
