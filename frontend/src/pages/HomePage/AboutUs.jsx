@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AboutUs.css";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import CalendlyModal from "../../components/CalendlyModal";
 
 const AboutUs = () => {
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
+
   return (
     <div className="about-us">
             {/* Decorative Ellipses */}
@@ -55,11 +58,21 @@ const AboutUs = () => {
           <p className="card-text">
             2,000+ our team members around the world who create incredible and amazing projects
           </p>
-          <div className="card-button">
+          <button 
+            className="card-button"
+            onClick={() => setIsCalendlyOpen(true)}
+            style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+          >
             Meet Our Expert <ArrowUpRight size={24} />
-          </div>
+          </button>
         </div>
       </div>
+
+      {/* Calendly Modal */}
+      <CalendlyModal 
+        isOpen={isCalendlyOpen} 
+        onClose={() => setIsCalendlyOpen(false)} 
+      />
 
     </div>
   );
