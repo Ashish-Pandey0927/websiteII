@@ -1,7 +1,7 @@
 /* Our Work Section */
 .our-work-section {
   position: relative;
-  padding: 4rem 0;
+  padding: 5rem 0;
   background-color: #ffffff;
 }
 
@@ -95,7 +95,7 @@
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 10rem; /* Increased gap to accommodate title and button below cards on mobile */
 }
 
 /* Project Card */
@@ -295,6 +295,10 @@
     padding: 0 1.5rem;
   }
   
+  .projects-grid {
+    gap: 6rem; /* Reduce gap slightly for small screens */
+  }
+  
   .main-title {
     font-size: 3rem;
   }
@@ -350,7 +354,7 @@
   
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12rem;
+    gap: 12rem; /* Keep original desktop gap */
   }
   
   .project-height-1 {
@@ -419,6 +423,9 @@
   .project-height-4 {
     height: 30rem;
   }
+  .project-title-below {
+  margin: 0 0 1rem 0!important;
+}
 }
 
 /* Extra large screens (xl: 1280px and up) */
@@ -437,11 +444,11 @@
 .project-title-below {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 48px;
+  font-size: 20px; /* Smaller font size for mobile */
+  line-height: 28px; /* Adjusted line height for mobile */
   letter-spacing: -0.02em;
   color: #101010;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0 0;
   text-align: left;
 }
 
@@ -458,8 +465,8 @@
   color: #101010;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 42px;
+  font-size: 16px; /* Smaller font size for mobile */
+  line-height: 24px; /* Adjusted line height for mobile */
   letter-spacing: -0.03em;
   vertical-align: middle;
   transition: all 0.3s ease;
@@ -496,4 +503,29 @@
 
 .view-details-btn-below:hover .btn-icon-below {
   transform: translate(2px, -2px);
+}
+
+/* Responsive styles for below-card content */
+@media (min-width: 640px) {
+  .project-title-below {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .view-details-btn-below {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-title-below {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  
+  .view-details-btn-below {
+    font-size: 24px;
+    line-height: 42px;
+  }
 }
