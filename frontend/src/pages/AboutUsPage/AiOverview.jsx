@@ -58,6 +58,15 @@ const AiOverview = () => {
     }
   };
 
+  // Track mobile view
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+
+  React.useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 480);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="ai-overview-container">
       <div className="ai-overview-header">
@@ -65,7 +74,7 @@ const AiOverview = () => {
         <p className="section-subtitle">
           Explore our origin, our guiding principles, and the future we're building in the world of AI.
         </p>
-        </div>
+      </div>
       <div className="text-section">
         <div className="tabs">
           <button
@@ -90,21 +99,39 @@ const AiOverview = () => {
       </div>
 
       <div className="content-section">
-        <div className="features">
-          <ul>
-            <li>Human-like Conversations</li>
-            <li>Seamless Interaction</li>
-            <li>Real-Time Response</li>
-            <li>Multilingual Fluency</li>
-            <li>Robust Security & Privacy</li>
-          </ul>
-          <Link to="/contact#form">
-          <button className="trial-button">Start free trial</button>
-          </Link>
-        </div>
-        <div className="info">
-          {renderContent()}
-        </div>
+        {isMobile ? (
+          <>
+            <div className="info">{renderContent()}</div>
+            <div className="features">
+              <ul>
+                <li>Human-like Conversations</li>
+                <li>Seamless Interaction</li>
+                <li>Real-Time Response</li>
+                <li>Multilingual Fluency</li>
+                <li>Robust Security & Privacy</li>
+              </ul>
+              <Link to="/contact#form">
+                <button className="trial-button">Start free trial</button>
+              </Link>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="features">
+              <ul>
+                <li>Human-like Conversations</li>
+                <li>Seamless Interaction</li>
+                <li>Real-Time Response</li>
+                <li>Multilingual Fluency</li>
+                <li>Robust Security & Privacy</li>
+              </ul>
+              <Link to="/contact#form">
+                <button className="trial-button">Start free trial</button>
+              </Link>
+            </div>
+            <div className="info">{renderContent()}</div>
+          </>
+        )}
       </div>
     </section>
   );
