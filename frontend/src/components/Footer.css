@@ -22,10 +22,10 @@
 
 .footer .cta {
   position: absolute;
-  top: 86px;
-  right: 100px;
+  top: 76px;
+  right: 60px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 4rem;
 }
 
@@ -228,7 +228,6 @@ a {
   .footer .cta {
     position: static;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
