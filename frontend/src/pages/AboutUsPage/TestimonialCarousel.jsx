@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './TestimonialCarousel.css';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import testimonialData from '../../data/testimonialData.json';
+// import testimonialData from '../../data/testimonialData.json';
 
 // Import testimonial images
 import Testimonial1 from '../../assets/auth-01.png';
