@@ -61,7 +61,7 @@ const SocialIcons = ({ direction = 'row', iconColor }) => {
       </a>
 
       <a
-        href="https://wa.me/+919637225752"
+        href="https://wa.me/+919201480055"
         target="_blank"
         rel="noopener noreferrer"
         className="social-link"
@@ -72,7 +72,7 @@ const SocialIcons = ({ direction = 'row', iconColor }) => {
       </a>
 
       <a
-        href="tel:+919637225752"
+        href="tel:0731-4105104"
         className="social-link"
         aria-label="Phone"
         style={{ color: finalColor }}
