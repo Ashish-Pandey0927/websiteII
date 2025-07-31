@@ -1,3 +1,4 @@
+import ReactDOM from "react-dom";
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import './DashboardHeader.css';
@@ -571,7 +572,7 @@ const DashboardHeader = ( {iconColor }) => {
                       )}
                     </div>
                     {/* Technology Tab Dropdown - Desktop */}
-                    {isTechnology && technologyDropdownOpen && !isMobile && (
+                    {isTechnology && technologyDropdownOpen && !isMobile && ReactDOM.createPortal(
                       <div className="dropdown-menu technology-dropdown-menu">
                         <div className="newheader-submenu-list">
                           {technologyMenuData[0].dropdown.map((service, sIdx) => (
@@ -629,7 +630,8 @@ const DashboardHeader = ( {iconColor }) => {
                             </div>
                           </div>
                         )}
-                      </div>
+                      </div>,
+                      document.body
                     )}
                   </div>
                 );
