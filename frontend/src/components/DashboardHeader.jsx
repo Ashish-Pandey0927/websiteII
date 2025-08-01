@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import './DashboardHeader.css';
 import estonsoft from "../assets/estonsoftlogo.svg";
@@ -315,6 +315,7 @@ const technologyMenuData = [
 
 
 const DashboardHeader = ( {iconColor }) => {
+  const dropdownCloseTimeout = useRef(null);
   const fallbackColor = useIconColorByBackground();
   const finalColor = iconColor || fallbackColor;
   const [menuOpen, setMenuOpen] = useState(false);
@@ -529,19 +530,26 @@ const DashboardHeader = ( {iconColor }) => {
                     className={`nav-item${isTechnology ? " has-dropdown" : ""}`}
                     onMouseLeave={() => {
                       if (isTechnology && !isMobile) {
-                        setTechnologyDropdownOpen(false);
-                        setOpenTechSub(null);
+                        dropdownCloseTimeout.current = setTimeout(() => {
+                          setTechnologyDropdownOpen(false);
+                          setOpenTechSub(null);
+                        }, 500);
+                      }
+                    }}
+                    onMouseEnter={() => {
+                      if (isTechnology && !isMobile) {
+                        if (dropdownCloseTimeout.current) {
+                          clearTimeout(dropdownCloseTimeout.current);
+                          dropdownCloseTimeout.current = null;
+                        }
+                        setTechnologyDropdownOpen(true);
+                        setOpenTechSub(0); // Keep first submenu open
                       }
                     }}
                   >
                     <div
                       className="nav-link-wrapper"
-                      onMouseEnter={() => {
-                        if (isTechnology && !isMobile) {
-                          setTechnologyDropdownOpen(true);
-                          setOpenTechSub(0); // Keep first submenu open
-                        }
-                      }}
+                      // ...existing code...
                       onClick={e => {
                         if (isTechnology) {
                           e.preventDefault();
