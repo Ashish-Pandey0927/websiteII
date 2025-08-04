@@ -120,14 +120,17 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   10% {
     opacity: 1;
     transform: translateY(0);
   }
+
   90% {
     opacity: 1;
     transform: translateY(0);
   }
+
   100% {
     opacity: 0;
     transform: translateY(-10px);
@@ -191,6 +194,9 @@ a {
   justify-content: flex-start;
   align-items: center;
 }
+.footer-bottom {
+  top: 440px;
+}
 
 .footer-divider {
   margin: 24px auto;
@@ -214,32 +220,60 @@ a {
   margin: 2rem 0;
 }
 
-/* ✅ Responsive layout below 768px */
-@media (max-width: 768px) {
+
+.footer hr {
+  width: calc(100% - 2rem);
+  margin: 1rem auto;
+}
+
+.footer-bottom {
+  top: 25px;
+}
+.footer-divider {
+  width: calc(100% - 2rem);
+  margin: 16px auto;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  padding: 0 8px 16px;
+}
+.list-section {
+    display: flex;
+    flex-direction: row ;
+    gap: 1rem;
+    position: static;
+    width: 100%;
+  }
+
+/* ✅ Responsive layout below 480px */
+@media (max-width: 480px) {
   .footer {
-    padding: 2rem;
+    padding: 1.5rem 2rem ;
     height: auto;
   }
 
   .footer .cta span {
-    font-size: 1.2rem;
+    font-size: 0.9rem !important;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .footer .cta {
     position: static;
     flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    justify-content: space-between;
+    gap: 0rem;
+    margin-top: 1.5rem;
     text-align: center;
     flex-wrap: wrap;
   }
 
   .footer .cta button {
     width: auto !important;
-    max-width: 180px !important;
-    height: 48px !important;
-    font-size: 1.1rem !important;
+    max-width: 140px !important;
+    height: 42px !important;
+    font-size: 0.9rem !important;
     margin-right: 0 !important;
     padding: 0 1rem !important;
   }
@@ -277,11 +311,13 @@ a {
   }
 
   .footer-section h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0;
   }
 
   .footer-section ul {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    line-height: 2.25rem;
   }
 
   .bottom-row {
@@ -290,86 +326,6 @@ a {
     align-items: center;
     gap: 1.5rem;
     margin-top: 1rem;
-  }
-
-  /* .footer-bottom {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-  } */
-
-  .footer-social {
-    justify-content: flex-start;
-  }
-
-  .footer-social .social-icons {
-    flex-direction: row !important;
-    position: static !important;
-    gap: 0.8rem !important;
-  }
-
-  .footer-social .social-row {
-    flex-direction: row !important;
-  }
-
-  .footer-social .social-link {
-    color: white !important;
-  }
-
-  .footer-social .social-link svg {
-    color: white !important;
-  }
-}
- .footer hr {
-    width: calc(100% - 4rem);
-    margin: 1.5rem auto;
-  }
-
-
-  .footer-divider {
-    width: calc(100% - 4rem);
-    margin: 24px auto;
-  }
-
-  .footer-copyright {
-    font-size: 13px;
-    padding: 0 16px 16px;
-  }
-
-/* Mobile phones: max-width 480px */
-@media (max-width: 480px) {
-  .footer .cta {
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-    justify-content: center;
-  }
-
-  .footer .cta span {
-    font-size: 0.9rem !important;
-    text-align: center;
-    white-space: nowrap;
-  }
-
-  .footer .cta button {
-    width: auto !important;
-    max-width: 140px !important;
-    height: 42px !important;
-    font-size: 0.9rem !important;
-    margin-right: 0 !important;
-    padding: 0 1rem !important;
-  }
-
-  .footer-section h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0;
-  }
-
-  .footer-section ul {
-    font-size: 1rem;
-    line-height: 2.25rem;
   }
 
   .footer-social {
@@ -395,25 +351,15 @@ a {
     color: white !important;
     font-size: 1.2rem;
   }
-  .footer {
-    height: auto;
-    padding-bottom: 2rem;
-  }
-
-  .footer hr {
-    width: calc(100% - 2rem);
-    margin: 1rem auto;
-  }
-
   .footer-divider {
-    width: calc(100% - 2rem);
-    margin: 16px auto;
-    top: 25px;
-  }
+  top: 0px;
+}
 
-  .footer-copyright {
-    font-size: 12px;
-    padding: 0 8px 16px;
-    top: 25px;
-  }
+.footer-copyright {
+  top: 0px;
+  padding: 0 8px;
+}
+.footer-bottom {
+  top: 0px;
+}
 }

@@ -2,7 +2,7 @@ import './Footer.css';
 import estonsoft from "../assets/estonsoftlogo.svg";
 import { ChevronRight } from "lucide-react";
 import SocialIcons from './SocialIcons';
-import { Link  } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -15,7 +15,7 @@ export default function Footer() {
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const result = await emailjs.send(
         'service_ur805bv',
@@ -39,7 +39,7 @@ export default function Footer() {
       setResponseMessage('Failed to subscribe. Please try again.');
     } finally {
       setIsSubmitting(false);
-      
+
       // Hide the response message after 5 seconds
       setTimeout(() => {
         setResponseMessage('');
@@ -51,7 +51,7 @@ export default function Footer() {
       <div className='footer-header'>
         <div className="footer__logo">
           <Link to="/#home">
-          <img src={estonsoft} alt="Logo" className="logo" />
+            <img src={estonsoft} alt="Logo" className="logo" />
           </Link>
         </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
         <div className="cta">
           <span>Ready to get started? </span>
           <Link to="/contact#form">
-          <button>Get started</button>
+            <button>Get started</button>
           </Link>
         </div>
       </div>
@@ -138,13 +138,14 @@ export default function Footer() {
         </div> */}
 
         <div className="footer-social">
-          <SocialIcons/>
+          <SocialIcons />
         </div>
       </div>
-
-      <hr className="footer-divider" />
-      <div className="footer-copyright">
-        &copy; EstonSoft 2013-2025 | All rights reserved.
+      <div className='footer-bottom'>
+        <hr className="footer-divider" />
+        <div className="footer-copyright">
+          &copy; EstonSoft 2013-2025 | All rights reserved.
+        </div>
       </div>
     </footer>
   );
