@@ -218,7 +218,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     .about-us {
         position: relative !important;
         width: 100% !important;
