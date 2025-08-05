@@ -60,16 +60,6 @@ const serviceData = [
 
 function WhatWeDo() {
   useEffect(() => {
-    // let lastScrollY = window.scrollY;
-    // let isScrollingUp = false;
-
-    // const handleScroll = () => {
-    //   isScrollingUp = window.scrollY < lastScrollY;
-    //   lastScrollY = window.scrollY;
-    // };
-
-    // window.addEventListener('scroll', handleScroll);
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
