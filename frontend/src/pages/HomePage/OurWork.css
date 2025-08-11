@@ -487,6 +487,39 @@
   }
 }
 
+/* Specific breakpoints for project heights */
+@media (min-width: 1280px) and (max-width: 1400px) {
+  .project-height-1 {
+    height: 39rem;
+  }
+
+  .project-height-2 {
+    height: 33rem;
+  }
+
+  .project-height-3 {
+    height: 29rem;
+  }
+
+  .project-height-4 {
+    height: 25rem;
+  }
+
+  .card-back.card-front {
+    overflow: hidden;
+  }
+
+  .project-title-below {
+    margin: 0 !important;
+  }
+  .our-work-section{
+    padding-bottom: 210px !important;
+  }
+  .main-title{
+    margin-top: 0;
+  }
+}
+
 /* Title below card styles */
 .card-title-below {
   margin-top: 1rem;
