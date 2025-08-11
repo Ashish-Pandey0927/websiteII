@@ -2,7 +2,7 @@ import './Footer.css';
 import estonsoft from "../assets/estonsoftlogo.svg";
 import { ChevronRight } from "lucide-react";
 import SocialIcons from './SocialIcons';
-import { Link  } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -15,7 +15,7 @@ export default function Footer() {
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const result = await emailjs.send(
         'service_ur805bv',
@@ -39,7 +39,7 @@ export default function Footer() {
       setResponseMessage('Failed to subscribe. Please try again.');
     } finally {
       setIsSubmitting(false);
-      
+
       // Hide the response message after 5 seconds
       setTimeout(() => {
         setResponseMessage('');
@@ -51,7 +51,7 @@ export default function Footer() {
       <div className='footer-header'>
         <div className="footer__logo">
           <Link to="/#home">
-          <img src={estonsoft} alt="Logo" className="logo" />
+            <img src={estonsoft} alt="Logo" className="logo" />
           </Link>
         </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
         <div className="cta">
           <span>Ready to get started? </span>
           <Link to="/contact#form">
-          <button>Get started</button>
+            <button>Get started</button>
           </Link>
         </div>
       </div>
@@ -67,10 +67,10 @@ export default function Footer() {
       {/* Divider */}
       <div className="divider" />
 
-      {/* Content Section */}
-      <div className="responsive-stack">
+      {/* Content Section - Responsive Grid */}
+      <div className="responsive-stack grid-footer">
         {/* Newsletter */}
-        <div className="newsletter">
+        <div className="newsletter grid-item">
           <h3>Subscribe to our newsletter</h3>
           <form onSubmit={handleNewsletterSubmit} style={{ position: 'relative' }}>
             <input
@@ -90,11 +90,9 @@ export default function Footer() {
             )}
           </form>
         </div>
-
-        {/* Lists */}
-        <div className="list-section">
+        <div className="list-section grid-item">
           {/* Services */}
-          <div className="footer-section" style={{ left: '629px' }}>
+          <div className="footer-section sub-grid-item">
             <h4>Services</h4>
             <ul>
               <li><Link to="/services/webdevelopment#web-dev-hero">Web Development</Link></li>
@@ -106,8 +104,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* About */}
-          <div className="footer-section" style={{ left: '934px' }}>
+          {/* Others */}
+          <div className="footer-section sub-grid-item">
             <h4>Others</h4>
             <ul>
               <li><Link to="/contact#contact-hero">Contact Us</Link></li>
@@ -117,8 +115,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Help */}
-          <div className="footer-section" style={{ left: '1194px' }}>
+          {/* Contact Us */}
+          <div className="footer-section sub-grid-item">
             <h4>Contact Us</h4>
             <ul>
               <li>Tel: 0731-4105104</li>
@@ -126,25 +124,27 @@ export default function Footer() {
               <li>Email:  hr@estonsoft.com</li>
               <li>Address: Super Corridor, Indore</li>
             </ul>
+            <div className='social-icons-wrapper'>
+              <SocialIcons />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Row */}
-      <div className="bottom-row">
-        {/* <div className="footer-bottom">
-          <span>Terms & Conditions</span>
-          <span>Privacy Policy</span>
+      {/* Bottom Section */}
+      <div className="footer-bottom-section">
+        {/* Social Media */}
+        {/* <div className="footer-social-wrapper">
+          <SocialIcons />
         </div> */}
-
-        <div className="footer-social">
-          <SocialIcons/>
+        
+        {/* Divider */}
+        <hr className="footer-divider" />
+        
+        {/* Copyright */}
+        <div className="footer-copyright">
+          &copy; EstonSoft 2013-2025 | All rights reserved.
         </div>
-      </div>
-
-      <hr className="footer-divider" />
-      <div className="footer-copyright">
-        &copy; EstonSoft 2013-2025 | All rights reserved.
       </div>
     </footer>
   );
