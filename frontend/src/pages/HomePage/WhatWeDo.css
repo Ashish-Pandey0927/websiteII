@@ -181,7 +181,7 @@
   }
 }
 
-/* Medium Laptops - 1025px to 1400px (your target range) */
+/* Medium Laptops - 1025px to 1400px  */
 @media screen and (min-width: 1025px) and (max-width: 1400px) {
   .what-we-do {
     margin: 0 3rem;

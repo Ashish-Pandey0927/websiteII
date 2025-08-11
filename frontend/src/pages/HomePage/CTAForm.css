@@ -6,13 +6,19 @@
   background: #161C2D url('../../assets/ctaBackground.png') no-repeat center center / cover;
   font-family: 'DM Sans', sans-serif;
   z-index: 10;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
 }
 
 .cta-bg-overlay {
   position: absolute;
-  width: 1600px;
-  height: 745px;
+  width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
   background: no-repeat center/cover;
@@ -21,12 +27,26 @@
   opacity: 0.14;
 }
 
+/* Left Side Content Container */
+.cta-content-left {
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+  max-width: 487px !important;
+  padding-right: 1rem;
+  z-index: 2;
+}
+
+/* Right Side Form Container */
+.cta-content-right {
+  flex-shrink: 0;
+  z-index: 2;
+}
+
 .cta-card {
-  position: relative;
   width: 350px;
-  height: 499px;
-  top: -315px;  /* adjust this value to move it down */
-  left: 975px;
+  height: auto;
+  min-height: 499px;
   background: #ffffff;
   border: 1px solid #e7e9ed;
   box-shadow: 0px 34px 33px -23px rgba(22, 28, 45, 0.13);
@@ -35,7 +55,6 @@
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
   transition: all 0.3s ease-in-out;
-  transform: translateY(0);
 }
 
 .cta-card:hover {
@@ -59,6 +78,7 @@
   color: #161C2D;
   display: block;
   margin-bottom: 7px;
+  text-align: left;
 }
 
 .input-group input {
@@ -216,11 +236,8 @@
 
 
 .cta-text-heading {
-  position: relative;
-  width: 348px;
-  height: 120px;
-  left: 245px;
-  top: 132px;
+  width: 100%;
+  max-width: 348px!important;
   font-family: 'Urbanist', sans-serif;
   font-weight: 700;
   font-size: 48px;
@@ -229,6 +246,7 @@
   color: #FFFFFF;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 
 .cta-text-heading:hover {
@@ -239,17 +257,15 @@
 }
 
 .cta-subtext {
-  position: relative;
-  width: 487px;
-  height: 126px;
-  left: 245px;
-  top: 160px;
+  width: 100%;
+  max-width: 487px !important;
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   line-height: 31px;
   color: #FFFFFF;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-bottom: 2rem;
 }
 
 .cta-subtext:hover {
@@ -260,16 +276,17 @@
 
 .cta-dashed-line {
   position: relative;
-  left: 0;
-  top: 125px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0;
 }
 
 .cta-secondary-heading {
   position: relative;
   width: 333px;
   height: 48px;
-  left: 245px;
-  top: 125px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -277,6 +294,7 @@
   letter-spacing: 0.2px;
   color: #FAFAFB;
   cursor: pointer;
+  margin-bottom: 2rem;
   transition: all 0.3s ease;
 }
 
@@ -290,8 +308,6 @@
   position: relative;
   width: 150px;
   height: 55px;
-  left: 245px;
-  top: 150px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 27px;
@@ -310,14 +326,14 @@
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 32px 0;
 }
 
 .cta-dashed-line svg {
   width: 100%;
-  max-width: 300px;
+  max-width: 550px;
   height: 24px;
 }
 
@@ -345,34 +361,363 @@
   color: white;
   font-size: 0.875rem;
 }
+/* Form validation styles */
+.input-group input.error {
+  border: 1px solid #ff4444;
+}
 
-@media (max-width: 768px) {
-  .response-message {
-    font-size: 0.8rem;
-    margin-top: 0.75rem;
-    padding: 0.5rem;
+.error-message {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+/* Clear errors on focus */
+.input-group input:focus {
+  border-color: #A7F46A;
+  outline: none;
+}
+
+/* Large Desktop (1400px+) */
+@media screen and (min-width: 1400px) {
+  .cta-form-wrapper {
+    padding: 0 4rem;
+  }
+  
+  .cta-content-left {
+    max-width: 650px;
+    padding-right: 1.5rem;
+  }
+  
+  .cta-card {
+    width: 370px;
+  }
+  
+  .input-group {
+    width: 320px;
+  }
+  
+  .cta-card button {
+    width: 320px;
+  }
+  
+  .cta-dashed-line {
+    margin: 40px 0;
+  }
+  
+  .cta-dashed-line svg {
+    max-width: 600px;
+    height: 26px;
   }
 }
 
-@media screen and (max-width: 768px) {
+/* Medium-Large Desktop (1200px - 1399px) - Perfect for 13-13.5" laptops */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .cta-form-wrapper {
+    padding: 0 2.5rem;
+    height: auto;
+    min-height: 650px;
+  }
+  
+  .cta-content-left {
+    max-width: 500px;
+  }
+  
+  .cta-text-heading {
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .cta-subtext {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-secondary-heading {
+    font-size: 18px;
+    width: auto;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cta-small-text {
+    font-size: 15px;
+    width: auto;
+    height: auto;
+  }
+  
+  .cta-card {
+    width: 330px;
+  }
+  
+  .input-group {
+    width: 280px;
+  }
+  
+  .cta-card button {
+    width: 280px;
+    height: 55px;
+  }
+  
+  .cta-dashed-line {
+    margin: 35px 0;
+  }
+  
+  .cta-dashed-line svg {
+    max-width: 520px;
+    height: 25px;
+  }
+}
+
+/* Standard Desktop (1024px - 1199px) - 13" laptops */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .cta-form-wrapper {
+    padding: 0 2rem;
+    height: auto;
+    min-height: 600px;
+  }
+  
+  .cta-content-left {
+    max-width: 450px;
+    padding-right: 1.5rem;
+  }
+  
+  .cta-text-heading {
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-subtext {
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .cta-secondary-heading {
+    font-size: 17px;
+    width: auto;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cta-small-text {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+  }
+  
+  .cta-card {
+    width: 310px;
+    min-height: 460px;
+  }
+  
+  .input-group {
+    width: 260px;
+    margin-bottom: 15px;
+  }
+  
+  .cta-card button {
+    width: 260px;
+    height: 50px;
+    font-size: 15px;
+  }
+  
+  .cta-dashed-line {
+    margin: 30px 0;
+  }
+  
+  .cta-dashed-line svg {
+    max-width: 450px;
+    height: 24px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .cta-form-wrapper {
+    height: auto;
+    min-height: 600px;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .cta-content-left {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    align-self: center;
+  }
+  
+  .cta-content-right {
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+  }
+  
+  .cta-text-heading {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .cta-subtext {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .cta-secondary-heading {
+    font-size: 18px;
+    width: auto;
+    height: auto;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  .cta-small-text {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .cta-card {
+    width: 100%;
+    max-width: 400px !important;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .input-group {
+    width: 100%;
+  }
+  
+  .cta-card button {
+    width: 100%;
+  }
+  
+  .cta-dashed-line {
+    margin: 20px 0;
+    justify-content: flex-start;
+  }
+  
+  .cta-dashed-line svg {
+    max-width: 400px;
+    height: 22px;
+  }
+}
+
+/* Large Mobile (481px - 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .cta-form-wrapper {
+    height: auto !important;
+    min-height: 500px !important;
+    padding: 1.5rem !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .cta-content-left {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-content-right {
+    width: 100%;
+  }
+  
+  .cta-text-heading {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 1rem;
+    width: auto;
+    height: auto;
+  }
+  
+  .cta-subtext {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 1.5rem;
+    width: auto;
+    height: auto;
+  }
+  
+  .cta-secondary-heading {
+    font-size: 16px;
+    width: auto;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cta-small-text {
+    font-size: 13px;
+    width: auto;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-card {
+    width: 100% !important;
+    height: auto;
+    padding: 20px !important;
+  }
+  
+  .input-group {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+  
+  .cta-card button {
+    width: 100% !important;
+  }
+  
+  .cta-dashed-line {
+    margin: 15px 0;
+    justify-content: flex-start;
+  }
+  
+  .cta-dashed-line svg {
+    max-width: 350px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
   .cta-form-wrapper {
     position: relative;
-    width: 100%;
-    height: auto;
-    padding: 2.25rem 0;
+    width: 100% !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    min-height: 500px !important;
+    padding: 2rem 1rem !important;
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     top: 0;
-    /* top: -50px; */
     left: 0;
   }
 
   .cta-bg-overlay {
+    width: 100% !important;
+    max-width: 100vw !important;
+    height: 100% !important;
     display: none;
-    /* or adjust opacity if needed */
   }
 
   .cta-text-heading,
@@ -386,7 +731,9 @@
     top: 0;
     text-align: center;
   }
-
+ .cta-content-left {
+    padding-right: 0 !important;
+ }
   .cta-text-heading {
     font-size: 32px;
     line-height: 40px;
@@ -406,53 +753,30 @@
   }
 
   .cta-card {
-    position: relative;
-    width: 100%;
-    max-width: 350px;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
     height: auto;
-    left: 0;
-    top: 0;
-    margin-top: 20px;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 2rem auto 0 auto !important;
+    padding: 15px !important;
   }
 
   .input-group {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     height: auto;
   }
 
   .cta-card button {
-    width: 100%;
-  }
-}
-
-/* Mobile Responsive Overrides */
-@media (max-width: 768px) {
-  .cta-form-wrapper {
     width: 100% !important;
-    max-width: 100vw !important;
-    height: auto !important;
-    min-height: 500px !important;
-    padding: 1rem !important;
   }
-
-  .cta-bg-overlay {
-    width: 100% !important;
-    max-width: 100vw !important;
-    height: 100% !important;
-  }
-
-  .cta-card {
-    position: relative !important;
-    width: 100% !important;
-    max-width: 350px !important;
-    left: 0 !important;
-    top: 0 !important;
-    margin: 0 auto !important;
-  }
-
-  .input-group {
-    width: 100% !important;
-    max-width: 300px !important;
+    
+  .response-message {
+    font-size: 0.8rem;
+    margin-top: 0.75rem;
+    padding: 0.5rem;
   }
 
   .cta-dashed-line svg {
@@ -460,35 +784,6 @@
     max-width: 100vw !important;
     height: 24px !important;
     display: block;
-    margin: 0 auto!important;
+    margin: 0 !important;
   }
-}
-
-@media (max-width: 480px) {
-  .cta-card {
-    max-width: 100% !important;
-    padding: 15px !important;
-  }
-
-  .input-group {
-    max-width: 100% !important;
-  }
-}
-
-/* Form validation styles */
-.input-group input.error {
-  border: 1px solid #ff4444;
-}
-
-.error-message {
-  color: #ff4444;
-  font-size: 12px;
-  margin-top: 4px;
-  font-weight: 400;
-}
-
-/* Clear errors on focus */
-.input-group input:focus {
-  border-color: #A7F46A;
-  outline: none;
 }
