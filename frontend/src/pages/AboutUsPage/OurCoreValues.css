@@ -3,10 +3,11 @@
   background-color: #ffffff;
   padding: 40px;
   box-sizing: border-box;
-  margin: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .core-values-container {
@@ -27,7 +28,8 @@
 .core-values-cards {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .value-card {
@@ -80,6 +82,90 @@
   line-height: 28px;
   color: #5A7184;
   width: 371px;
+}
+
+/* Medium-Large Desktop (1200px - 1399px) - Perfect for 13-13.5" laptops */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .core-values-section {
+    padding: 35px 2rem;
+    justify-content: center;
+  }
+  
+  .core-values-container {
+    max-width: 1200px;
+    text-align: center;
+  }
+  
+  .core-values-title {
+    font-size: 52px;
+    margin-bottom: 45px;
+    text-align: center;
+  }
+  
+  .core-values-cards {
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .value-card {
+    max-width: 380px;
+    min-height: 340px;
+    padding: 35px;
+  }
+  
+  .value-title {
+    font-size: 30px;
+    margin-bottom: 18px;
+    top: -25px;
+  }
+  
+  .value-description {
+    font-size: 15px;
+    line-height: 26px;
+    width: 310px;
+  }
+}
+
+/* Standard Desktop (1024px - 1199px) - 13" laptops */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .core-values-section {
+    padding: 30px 1.5rem;
+    justify-content: center;
+  }
+  
+  .core-values-container {
+    max-width: 1000px;
+    text-align: center;
+  }
+  
+  .core-values-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .core-values-cards {
+    gap: 14px;
+    justify-content: center;
+  }
+  
+  .value-card {
+    max-width: 320px;
+    min-height: 310px;
+    padding: 30px;
+  }
+  
+  .value-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+    top: -20px;
+  }
+  
+  .value-description {
+    font-size: 14px;
+    line-height: 24px;
+    width: 260px;
+  }
 }
 
 
