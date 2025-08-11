@@ -44,10 +44,10 @@ const projects = [
   {
     id: 1,
     title: "App for Training for real people with real goal",
-    description: "Fitness and training platform designed to help users achieve their personal wellness objectives through guided workouts. Fit Theorem is a transformative fitness experience designed to empower individuals by defeating mediocrity and unlocking their fullest potential—mind, body, and spirit. Offering a dynamic mix of strength training, conditioning, flow, and kickboxing, Fit Theorem delivers high-energy group workouts that are inclusive for all fitness levels. The program is enhanced by personalized support through mindset coaching, nutritional guidance, and 24/7 accountability via a dedicated app. With a nationwide presence, each location fosters a welcoming community through engaging events and a results-driven culture. Whether training in-studio or at-home, members benefit from a holistic approach that inspires long-term change. Fit Theorem is more than a workout—it's a movement. For those seeking not only personal transformation but also a business opportunity, the franchise model offers a proven path with scalable systems and global growth potential.",
+    description: "Fit Theorem offers high-energy group workouts, mindset coaching, and nutrition guidance for all fitness levels — in-studio or at-home.",
     image: fitness1,
-    overlayImage: FitnessMinImg ,
-     overlayHeight:"overlayImage-height-1",
+    overlayImage: FitnessMinImg,
+    overlayHeight: "overlayImage-height-1",
     category: "Health & Fitness",
     height: "project-height-1",
     url: "https://fittheorem.com/"
@@ -55,10 +55,10 @@ const projects = [
   {
     id: 2,
     title: "Official app of Prothom Alo English to provide readers with news on the go",
-    description: "A comprehensive news application delivering real-time updates and engaging content for readers worldwide.English News – Prothom Alo\n\nStay updated with the latest news from Bangladesh and around the world with the official English-language app of Prothom Alo. Get breaking news, in-depth analysis, and trending stories across politics, business, sports, lifestyle, entertainment, technology, and more — all in one place.\n\nKey Features:\n- Real-time updates with breaking news and top headlines\n- Latest, most-read, and trending news in a clean and easy-to-read format\n- Multimedia content: photo galleries and in-app video player\n- Push notifications for important news alerts\n- Comment and engage with other readers\n- Easy sharing via social media and messaging apps\n\nDownload now to experience trusted journalism from Bangladesh’s most respected media outlet — anytime, anywhere.",
-    image:image4,
+    description: "Stay updated with breaking news, trending stories, and multimedia content from Bangladesh and around the world — anytime, anywhere.",
+    image: image4,
     overlayImage: newsMinImg,
-     overlayHeight:"overlayImage-height-2",
+    overlayHeight: "overlayImage-height-2",
     category: "News & Media",
     height: "project-height-2",
     url: "https://en.prothomalo.com/"
@@ -66,10 +66,10 @@ const projects = [
   {
     id: 3,
     title: "The official Srilankan Matrimony app Mangal Yojna",
-    description: "Srilankan Matrimony is a trusted matrimonial platform designed to help Sri Lankan brides and grooms find their ideal life partners. Catering to users in Sri Lanka and abroad, it offers a secure and culturally respectful environment focused on serious, marriage-oriented matchmaking. With advanced search filters, verified profiles, daily match suggestions, and privacy-first features, Srilankan Matrimony makes the partner search simple, efficient, and personalized. Whether you're looking for a partner based on religion, community, profession, or location, this platform connects you with genuine prospects for a meaningful relationship.",
+    description: "A trusted platform for Sri Lankan brides and grooms to find compatible, verified partners for meaningful, marriage-focused relationships.",
     image: matremony,
     overlayImage: matremonyMinImg,
-     overlayHeight:"overlayImage-height-3",
+    overlayHeight: "overlayImage-height-3",
     category: "Social & Lifestyle",
     height: "project-height-3",
     url: "https://www.srilankanmatrimony.com/"
@@ -77,15 +77,16 @@ const projects = [
   {
     id: 4,
     title: "CityMaps2Go Offline Maps",
-    description: "Comprehensive offline mapping solution providing detailed navigation and location services without internet connectivity.Explore Munich with ease using the Munich Travel Guide — your offline companion with detailed maps and insider tips. Discover attractions, restaurants, and more without internet or roaming charges. Features include GPS-enabled offline maps, points of interest, personalized trip planning, and local reviews. Trusted by over 15 million travelers worldwide.",
+    description: "GPS-enabled offline maps with attractions, restaurants, and tips — perfect for exploring Munich without internet or roaming charges.",
     image: munchi,
     overlayImage: munichMinImg,
-    overlayHeight:"overlayImage-height-4",
+    overlayHeight: "overlayImage-height-4",
     category: "Travel & Navigation",
     height: "project-height-4",
     url: "https://play.google.com/store/apps/details?id=com.ulmon.android.playmunich&hl=en_IN&pli=1"
   }
 ];
+
 
 const ProjectCard = ({ project }) => {
   return (
