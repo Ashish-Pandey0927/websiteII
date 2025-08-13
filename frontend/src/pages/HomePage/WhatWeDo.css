@@ -3,7 +3,8 @@
   padding: 20px;
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto; /* Center the section with even left/right space */
+  margin: 0 auto;
+  /* Center the section with even left/right space */
 }
 
 .header {
@@ -12,7 +13,7 @@
   flex-direction: column;
   gap: 1rem;
   /* margin: 0 8rem 2rem; */
-  padding: 0 10px ;
+  padding: 0 10px;
 
 }
 
@@ -34,7 +35,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  margin: 0 auto; /* Center grid, remove side margin */
+  margin: 0 auto;
+  /* Center grid, remove side margin */
   width: 100%;
   max-width: 100%;
 }
@@ -77,7 +79,9 @@
   width: 53px;
   height: 50px;
   flex-shrink: 0;
-  top: -1rem; /* Adjusted to align with text */;
+  top: -1rem;
+  /* Adjusted to align with text */
+  ;
 }
 
 .icon-bg {
@@ -126,7 +130,8 @@
   line-height: 28px;
   text-align: left;
   margin: 0;
-  margin-left: -70px; /* Negative margin to align with icon position */
+  margin-left: -70px;
+  /* Negative margin to align with icon position */
   padding: 0;
   text-justify: none;
 }
@@ -243,6 +248,7 @@
     margin-right: 120px;
     max-width: unset;
     width: auto;
+    padding: 20px 0;
   }
 
   .header {

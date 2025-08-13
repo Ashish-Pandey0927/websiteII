@@ -1,7 +1,7 @@
 /* Our Work Section */
 .our-work-section {
   position: relative;
-  padding: 5rem 0;
+  padding: 5rem 0.5rem;
   background-color: #ffffff;
 }
 
@@ -9,7 +9,7 @@
 .our-work-section .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px !important;
+  padding: 0  !important;
 }
 
 /* Header Section */
@@ -24,6 +24,7 @@
 
 .header-content {
   max-width: 32rem;
+  padding: 0 1rem;
 }
 
 .main-title {

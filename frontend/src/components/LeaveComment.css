@@ -1,6 +1,6 @@
 .leave-comment-section {
   background: #fff;
-  padding: 2.5rem;
+  padding: 3rem;
   max-width: 800px;
   margin: 0;
   font-family: 'DM Sans', sans-serif;
@@ -11,6 +11,7 @@
   font-weight: 700;
   color: #101010;
   margin-bottom: 2rem;
+  /* padding: 0 0.5rem; */
 }
 
 .comment-form .button {
