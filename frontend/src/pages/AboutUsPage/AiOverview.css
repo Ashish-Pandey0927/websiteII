@@ -2,7 +2,7 @@
   max-width: 1600px;
   width: 100%;
   margin: 0rem auto;
-  padding: 4rem 2rem;
+  padding: 4rem 2.5rem;
   font-family: 'Inter', sans-serif;
   color: #000;
 }
@@ -19,6 +19,7 @@
   font-size: 60px;
   line-height: 48px;
   margin: 0;
+  padding: 0.5rem;
 }
 
 .section-subtitle {

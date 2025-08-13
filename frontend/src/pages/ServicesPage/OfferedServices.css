@@ -263,6 +263,7 @@
     top: 607px;
     background: #ffffff;
     margin: 0 auto;
+    padding: 0 3rem;
   }
   .offered-services-section{
     width: 100%;
@@ -277,10 +278,6 @@
     align-items: end;
     gap: 10%;
     margin-bottom: 48px;
-  }
-  .services-rectangle {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
 }
 

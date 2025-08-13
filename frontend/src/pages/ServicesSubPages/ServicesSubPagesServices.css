@@ -39,7 +39,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   max-width: 1400px;
- padding: 0 2.5rem;
+ padding: 0 3rem;
 }
 
 .webservice-card {
