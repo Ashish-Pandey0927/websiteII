@@ -9,7 +9,7 @@ function OurPortfolios() {
   useEffect(() => {
     const fetchPortfolioData = async () => {
       try {
-        const response = await fetch("https://estonsoft.com/new.php/portfolios", {
+        const response = await fetch("https://estonsoft.com/portfolios", {
           method: "GET",
           headers: {
             Authorization:

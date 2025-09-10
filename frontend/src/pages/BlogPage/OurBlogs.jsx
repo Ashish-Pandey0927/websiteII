@@ -10,7 +10,7 @@ const OurBlogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch("https://estonsoft.com/new.php/blogs", {
+        const response = await fetch("https://estonsoft.com/blogs", {
           headers: {
             Accept: "application/json",
             Authorization:

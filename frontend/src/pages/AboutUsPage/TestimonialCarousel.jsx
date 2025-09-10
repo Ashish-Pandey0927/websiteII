@@ -12,7 +12,7 @@ export default function TestimonialCarousel() {
  useEffect(() => {
   const fetchTestimonials = async () => {
     try {
-      const response = await fetch("https://estonsoft.com/new.php/testimonials", {
+      const response = await fetch("https://estonsoft.com/testimonials", {
         headers: {
           Authorization:
             "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiJhZTdhMzBlMzJjODMyOTQ4IiwiZW1haWwiOiJhZG1pbkBlc3RvbnNvZnQuY29tIiwiaWF0IjoxNzU2ODk3NzgyLCJleHAiOjE3NTc1MDI1ODJ9.tcO1pVIwwTx6C75ekyQx2DylH7VMOMpe6Tw3BV1lwLw",
