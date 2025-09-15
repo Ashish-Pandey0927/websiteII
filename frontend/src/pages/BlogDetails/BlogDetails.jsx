@@ -14,10 +14,10 @@ const BlogDetails = () => {
         const fetchBlog = async () => {
             try {
                 setLoading(true);
-                const response = await fetch(`https://estonsoft.com/blogs/${id}`, {
+                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blogs/${id}`, {
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiJhZTdhMzBlMzJjODMyOTQ4IiwiZW1haWwiOiJhZG1pbkBlc3RvbnNvZnQuY29tIn0.dmMmkK91SEcaFN8G3xHbDeCzJ0DJKF4xn92b3NLAWvE',
+                        'Authorization': import.meta.env.VITE_API_TOKEN,
                     },
                 });
 

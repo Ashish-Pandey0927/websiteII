@@ -12,10 +12,9 @@ export default function TestimonialCarousel() {
  useEffect(() => {
   const fetchTestimonials = async () => {
     try {
-      const response = await fetch("https://estonsoft.com/testimonials", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/testimonials`, {
         headers: {
-          Authorization:
-            "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiJhZTdhMzBlMzJjODMyOTQ4IiwiZW1haWwiOiJhZG1pbkBlc3RvbnNvZnQuY29tIn0.dmMmkK91SEcaFN8G3xHbDeCzJ0DJKF4xn92b3NLAWvE",
+          Authorization: import.meta.env.VITE_API_TOKEN,
         },
       });
 
