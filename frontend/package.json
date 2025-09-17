@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run copy:htaccess && npm run copy:admin-index",
-    "build:admin": "echo 'Admin portal build skipped - path not found'",
-    "copy:htaccess": "cp .htaccess dist/",
-    "copy:admin-index": "if not exist dist\\admin mkdir dist\\admin && copy admin-index.php dist\\admin\\index.php",
+    "build": "vite build && npm run build:admin && npm run copy:htaccess && npm run copy:admin-index",
+  "build:admin": "cd \"C:/Users/lenovo/Desktop/EstonSoft/AdminPortal/adminportal\" && npm run build && xcopy build \"C:/Users/lenovo/Desktop/EstonSoft/websiteII/frontend/dist/admin\" /E /I /Y",
+  "copy:htaccess": "copy .htaccess dist\\admin\\",
+    "copy:admin-index": "copy admin-index.php dist\\admin\\index.php",
     "lint": "eslint .",
     "preview": "vite preview"
   },
