@@ -14,4 +14,17 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    open: true,
+  },
+  preview: {
+    open: true,
+    port: 4173
+  },
+  build: {
+    rollupOptions: {
+      // Ensure admin folder is included in build output
+      external: [],
+    }
+  }
 });

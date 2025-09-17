@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run copy:htaccess && npm run copy:admin-index",
+    "build:admin": "echo 'Admin portal build skipped - path not found'",
+    "copy:htaccess": "cp .htaccess dist/",
+    "copy:admin-index": "if not exist dist\\admin mkdir dist\\admin && copy admin-index.php dist\\admin\\index.php",
     "lint": "eslint .",
     "preview": "vite preview"
   },
