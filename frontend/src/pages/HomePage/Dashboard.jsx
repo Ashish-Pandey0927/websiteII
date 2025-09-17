@@ -13,16 +13,7 @@ const Dashboard = () => {
   const backgrounds = [BG, BG2, BG3, BG4];
   const [activeLink, setActiveLink] = useState('#home');
   const [bgImage, setBgImage] = useState(BG);
-  const [isVisible, setIsVisible] = useState(false);
   const iconColor = useBackgroundImageBrightness(bgImage);
-
-  // Entry animation
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 200);
-    return () => clearTimeout(timer);
-  }, []);
 
   // Automatically change background every 10 seconds
   useEffect(() => {
@@ -44,15 +35,10 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div
-      className={`home-dashboard-container attractive-bg ${isVisible ? 'visible' : ''}`}
-      id="home"
+    <div className="home-dashboard-container attractive-bg" id="home"
       style={{
         backgroundImage: `url(${bgImage}), linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%)`,
-        backgroundBlendMode: 'multiply',
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'scale(1) translateY(0)' : 'scale(0.98) translateY(30px)',
-        transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)'
+        backgroundBlendMode: 'multiply'
       }}
     >
       <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} iconColor={iconColor} />
