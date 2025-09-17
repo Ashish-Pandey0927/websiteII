@@ -1,13 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Hero.css';
 import DashboardHeader from '../../../components/DashboardHeader';
 
 function WebDevHero() {
-      const [activeLink, setActiveLink] = useState('#webdevelopment');
+  const [activeLink, setActiveLink] = useState('#webdevelopment');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 150);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-      <div
-        id="web-dev-hero"
-        className="services-sub-pages-container web-dev-hero">
+    <div
+      id="web-dev-hero"
+      className={`services-sub-pages-container web-dev-hero ${isVisible ? 'visible' : ''}`}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(40px) scale(0.98)',
+        transition: 'all 0.9s cubic-bezier(0.4, 0, 0.2, 1)'
+      }}
+    >
         <DashboardHeader  activeLink={activeLink} setActiveLink={setActiveLink} />
            <div
             className="service-sub-page-highlight-wrapper"

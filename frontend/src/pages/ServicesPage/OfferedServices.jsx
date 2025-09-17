@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./OfferedServices.css";
 import MobileIcon from "../../assets/app-development.svg";
 import WebIcon from "../../assets/web-development.svg";
@@ -47,9 +47,29 @@ const services = [
 ];
 
 const OfferedServices = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [cardsVisible, setCardsVisible] = useState([]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      services.forEach((_, index) => {
+        setTimeout(() => {
+          setCardsVisible(prev => [...prev, index]);
+        }, 300 + (index * 150));
+      });
+    }
+  }, [isVisible]);
+
   return (
     <div className="services-rectangle">
-    <section className="offered-services-section">
+    <section className={`offered-services-section ${isVisible ? 'visible' : ''}`}>
       <div className="offered-services-header">
       <h2 className="services-title">Services We Offer</h2>
       <p className="services-description">
@@ -57,17 +77,36 @@ const OfferedServices = () => {
       </p>
       </div>
       <div className="services-grid">
-        {services.map((service, index) => (
-          <div className="service-card" key={index}>
-            <div className="icon-rectangle">
-            <div className="services-icon">
-              <img src={service.serviceIcon} alt={service.title}    style={{ width: '100px', height: '100px' }} />
+        {services.map((service, index) => {
+          const isCardVisible = cardsVisible.includes(index);
+          return (
+            <div
+              className={`service-card ${isCardVisible ? 'visible' : ''}`}
+              key={index}
+              style={{
+                opacity: isCardVisible ? 1 : 0,
+                transform: isCardVisible ? 'translateY(0) scale(1)' : 'translateY(40px) scale(0.9)',
+                transition: `all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.1}s`
+              }}
+            >
+              <div className="icon-rectangle">
+                <div className="services-icon">
+                  <img
+                    src={service.serviceIcon}
+                    alt={service.title}
+                    style={{
+                      width: '100px',
+                      height: '100px',
+                      transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+                    }}
+                  />
+                </div>
+              </div>
+              <h3 className="service-title">{service.title}</h3>
+              <p className="service-description">{service.description}</p>
             </div>
-            </div>
-            <h3 className="service-title">{service.title}</h3>
-            <p className="service-description">{service.description}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
     </div>
