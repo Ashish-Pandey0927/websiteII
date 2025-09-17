@@ -10,60 +10,11 @@
   padding: 2rem;
   overflow: hidden;
   box-sizing: border-box;
-  animation: serviceHeroFadeIn 1.2s ease-out;
-
-  background:
+  
+  background: 
     linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%),
     url('../../assets/ServicePageBG.png') no-repeat center center / cover;
-}
 
-/* Service Page Animation Keyframes */
-@keyframes serviceHeroFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleInBounce {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 /* Highlight Section */
@@ -76,17 +27,11 @@
   align-items: center;
   z-index: 2;
   flex-wrap: nowrap;
-  animation: slideInFromLeft 1s ease-out 0.4s both;
 }
 
 .service-page-vector-highlight svg{
   width: 23px;
   height: 29px;
-  transition: transform 0.4s ease;
-}
-
-.service-page-vector-highlight svg:hover {
-  transform: rotate(180deg) scale(1.2);
 }
 
 .service-page-highlight-text {
@@ -95,12 +40,6 @@
   line-height: 160%;
   color: #fff;
   white-space: nowrap;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.service-page-highlight-text:hover {
-  color: #A7F46A;
-  transform: translateX(8px);
 }
 
 /* Hero Section */
@@ -120,7 +59,6 @@
   position: absolute;
   left: 3%;
   margin-top: 4%;
-  animation: slideInFromRight 1s ease-out 0.6s both;
 }
 
 .service-page-hero-heading {
@@ -133,13 +71,7 @@
   transform: rotate(0.1deg);
   margin: 0;
   text-align: left;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
 
-.service-page-hero-heading:hover {
-  color: #A7F46A;
-  transform: rotate(0.1deg) translateY(-3px);
-  text-shadow: 0 2px 8px rgba(167, 244, 106, 0.3);
 }
 
 .service-page-hero-paragraph {
@@ -150,12 +82,7 @@
   line-height: 150%;
   color: #fff;
   text-align: left;
-  animation: scaleInBounce 1s ease-out 0.8s both;
-  transition: color 0.3s ease;
-}
 
-.service-page-hero-paragraph:hover {
-  color: #f0f0f0;
 }
 
 /* Mobile-Specific Styles */
