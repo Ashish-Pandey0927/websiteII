@@ -8,6 +8,52 @@
   padding: 2rem;
   overflow: hidden;
   box-sizing: border-box;
+  animation: heroFadeIn 1.2s ease-out;
+}
+
+/* Service Hero Animation Keyframes */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .web-dev-hero {
@@ -56,11 +102,17 @@
   align-items: center;
   z-index: 2;
   flex-wrap: nowrap;
+  animation: slideInFromLeft 1s ease-out 0.3s both;
 }
 
 .service-sub-page-vector-highlight svg {
   width: 23px;
   height: 29px;
+  transition: transform 0.3s ease;
+}
+
+.service-sub-page-vector-highlight svg:hover {
+  transform: rotate(90deg) scale(1.1);
 }
 
 .service-sub-page-highlight-text {
@@ -69,6 +121,12 @@
   line-height: 160%;
   color: #fff;
   white-space: nowrap;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-sub-page-highlight-text:hover {
+  color: #A7F46A;
+  transform: translateX(5px);
 }
 
 /* Hero Section */
@@ -86,6 +144,7 @@
   justify-content: flex-start;
   gap: 16px;
   color: #fff;
+  animation: slideInFromRight 1s ease-out 0.5s both;
 }
 
 .services-sub-pages-hero-heading {
@@ -98,7 +157,12 @@
   transform: rotate(0.1deg);
   margin: 0;
   text-align: left;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
 
+.services-sub-pages-hero-heading:hover {
+  color: #A7F46A;
+  transform: rotate(0.1deg) translateY(-2px);
 }
 
 .services-sub-pages-hero-paragraph {
@@ -110,7 +174,12 @@
   color: #fff;
   text-align: left;
   width: 50vw;
+  animation: scaleIn 1s ease-out 0.7s both;
+  transition: color 0.3s ease;
+}
 
+.services-sub-pages-hero-paragraph:hover {
+  color: #f0f0f0;
 }
 
 /* Mobile-Specific Styles */

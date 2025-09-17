@@ -1,11 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../../styles/commonHero.css';
 import DashboardHeader from "../../components/DashboardHeader";
 
 const AboutUsHero = () => {
   const [activeLink, setActiveLink] = useState('#Services');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div id="aboutus-hero" className="hero-container about-hero-container">
+    <div
+      id="aboutus-hero"
+      className={`hero-container about-hero-container ${isVisible ? 'visible' : ''}`}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+        transition: 'all 0.8s ease-out'
+      }}
+    >
       <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
       <div className="Group-Service-page-hero">
         <div className="hero-highlight-wrapper">

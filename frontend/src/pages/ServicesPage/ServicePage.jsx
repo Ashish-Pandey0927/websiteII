@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './ServicePage.css';
 import DashboardHeader from "../../components/DashboardHeader";
 
@@ -6,9 +6,24 @@ import DashboardHeader from "../../components/DashboardHeader";
 
 const ServicePage = () => {
   const [activeLink, setActiveLink] = useState('#Services');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-      <div
-        className="service-page-container">
+    <div
+      className={`service-page-container ${isVisible ? 'visible' : ''}`}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.98)',
+        transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)'
+      }}
+    >
         <DashboardHeader activeLink={activeLink} setActiveLink={setActiveLink} />
         <div className="Group-Service-page-hero">
           <div
