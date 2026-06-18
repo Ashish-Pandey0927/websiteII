@@ -1,0 +1,622 @@
+/* Our Work Section */
+.our-work-section {
+  position: relative;
+  padding: 5rem 0.5rem;
+  background-color: #ffffff;
+}
+
+/* Container */
+.our-work-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0  !important;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  margin-bottom: 0rem;
+  /* gap: 2rem;
+  margin-bottom: 4rem; */
+}
+
+.header-content {
+  max-width: 32rem;
+  padding: 0 1rem;
+}
+
+.main-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #09090b;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.main-description {
+  font-size: 1rem;
+  color: #71717a;
+  line-height: 1.6;
+  max-width: 36rem;
+}
+
+/* See Work Button */
+.see-work-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #09090b;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+  top: 0;
+}
+
+.see-work-btn:hover {
+  color: rgba(9, 9, 11, 0.8);
+}
+
+.see-work-text {
+  font-size: 1.25rem;
+}
+
+.see-work-icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease;
+  color: #2282A1;
+}
+
+.see-work-btn:hover .see-work-icon {
+  transform: translate(0.25rem, -0.25rem);
+}
+
+.see-work-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #18181b;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.see-work-btn:hover .see-work-underline {
+  transform: scaleX(1);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10rem;
+  /* Increased gap to accommodate title and button below cards on mobile */
+}
+
+/* Project Card */
+.project-card {
+  position: relative;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Card Front and Back */
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card-front {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.card-back {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotateY(180deg);
+}
+
+/* Images */
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 5rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.overlay-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 50%, transparent 100%);
+}
+
+/* Category Badge */
+.category-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+}
+
+.category-text {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #18181b;
+  color: #fafafa;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+}
+
+.category-badge-back {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #f4f4f5;
+  color: #18181b;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+/* Card Content */
+.card-content {
+  flex: 1;
+}
+
+.project-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #09090b;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.project-description {
+  color: #71717a;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* View Details Button */
+.view-details-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #18181b;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  color: rgba(24, 24, 27, 0.8);
+}
+
+.btn-text {
+  font-size: 1.125rem;
+}
+
+.btn-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #2282A1;
+  transition: transform 0.3s ease;
+}
+
+.view-details-btn:hover .btn-icon {
+  transform: translate(0.25rem, -0.25rem);
+}
+
+.btn-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #18181b;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.view-details-btn:hover .btn-underline {
+  transform: scaleX(1);
+}
+
+/* Different Heights for overlay images*/
+.overlayImage-height-1 {
+  height: 5rem;
+  border: 1rem solid #ffffff;
+
+}
+
+/* .overlayImage-height-2{
+          height: 13rem !important;
+
+}  */
+/* .overlayImage-height-3{
+        height: 13rem;
+}  */
+.overlayImage-height-4 {
+  border: 1rem solid #ffffff;
+
+}
+
+/* Different Heights for Projects */
+.project-height-1 {
+  height: 20rem;
+}
+
+.project-height-2 {
+  height: 18rem;
+}
+
+.project-height-3 {
+  height: 24rem;
+}
+
+.project-height-4 {
+  height: 16rem;
+}
+
+/* Responsive Design */
+
+/* Small screens (sm: 640px and up) */
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .projects-grid {
+    gap: 6rem;
+    /* Reduce gap slightly for small screens */
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .main-description {
+    font-size: 1.125rem;
+    width: 686px;
+  }
+
+  .see-work-text {
+    font-size: 1.5rem;
+  }
+
+  .overlay-image {
+    width: 11rem;
+    /* height: 13rem!important; */
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .btn-text {
+    font-size: 1.25rem;
+  }
+
+  .project-height-1 {
+    height: 24rem;
+  }
+
+  .project-height-2 {
+    height: 20rem;
+  }
+
+  .project-height-3 {
+    height: 24rem;
+  }
+
+  .project-height-4 {
+    height: 18rem;
+  }
+}
+
+/* Medium screens (md: 768px and up) */
+@media (min-width: 768px) {
+  .our-work-section {
+    padding: 5rem 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12rem;
+    /* Keep original desktop gap */
+  }
+
+  .project-height-1 {
+    height: 28rem;
+  }
+
+  .project-height-2 {
+    height: 24rem;
+  }
+
+  .project-height-3 {
+    height: 24rem;
+  }
+
+  .project-height-4 {
+    height: 18rem;
+  }
+}
+
+/* Large screens (lg: 1024px and up) */
+@media (min-width: 1024px) {
+  .our-work-section {
+    padding: 120px 120px 195px 120px;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .header-section {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .main-title {
+    font-size: 3.75rem;
+  }
+
+  .main-description {
+    margin-bottom: 5rem;
+  }
+
+  .see-work-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #09090b;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    align-self: flex-start;
+    top: 16rem;
+  }
+
+  .project-height-1 {
+    height: 51rem;
+  }
+
+  .project-height-2 {
+    height: 44rem;
+  }
+
+  .project-height-3 {
+    height: 38rem;
+  }
+
+  .project-height-4 {
+    height: 33rem;
+  }
+
+  /* Different Heights for overlay images */
+  .overlayImage-height-1 {
+    height: 11rem;
+    border: 1rem solid #ffffff;
+
+  }
+
+  .overlayImage-height-2 {
+    height: 20rem;
+
+  }
+
+  .overlayImage-height-3 {
+    height: 22rem;
+  }
+
+  .overlayImage-height-4 {
+    height: 18rem;
+    border: 1rem solid #ffffff;
+
+  }
+
+  .project-title-below {
+    margin: 0 0 1rem 0 !important;
+  }
+}
+
+/* Extra large screens (xl: 1280px and up) */
+@media (min-width: 1280px) {
+  .main-title {
+    font-size: 4rem;
+  }
+}
+
+/* Specific breakpoints for project heights */
+@media (min-width: 1280px) and (max-width: 1400px) {
+  .project-height-1 {
+    height: 39rem;
+  }
+
+  .project-height-2 {
+    height: 33rem;
+  }
+
+  .project-height-3 {
+    height: 29rem;
+  }
+
+  .project-height-4 {
+    height: 25rem;
+  }
+
+  .card-back.card-front {
+    overflow: hidden;
+  }
+
+  .project-title-below {
+    margin: 0 !important;
+  }
+  .our-work-section{
+    padding-bottom: 210px !important;
+  }
+  .main-title{
+    margin-top: 0;
+  }
+}
+
+/* Title below card styles */
+.card-title-below {
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+}
+
+.project-title-below {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  /* Smaller font size for mobile */
+  line-height: 28px;
+  /* Adjusted line height for mobile */
+  letter-spacing: -0.02em;
+  color: #101010;
+  margin: 0 0 0 0;
+  text-align: left;
+}
+
+/* View Details Button Below */
+.view-details-btn-below {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #101010;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  /* Smaller font size for mobile */
+  line-height: 24px;
+  /* Adjusted line height for mobile */
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.view-details-btn-below:hover {
+  color: #666;
+}
+
+.btn-text-below {
+  position: relative;
+}
+
+.btn-text-below::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.view-details-btn-below:hover .btn-text-below::after {
+  width: 100%;
+}
+
+.btn-icon-below {
+  width: 16px;
+  height: 16px;
+  color: #2282A1;
+  transition: transform 0.3s ease;
+}
+
+.view-details-btn-below:hover .btn-icon-below {
+  transform: translate(2px, -2px);
+}
+
+/* Responsive styles for below-card content */
+@media (min-width: 640px) {
+  .project-title-below {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .view-details-btn-below {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-title-below {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .view-details-btn-below {
+    font-size: 24px;
+    line-height: 42px;
+  }
+}

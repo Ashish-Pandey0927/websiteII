@@ -1,0 +1,425 @@
+.latest-posts-section {
+  background-color: #fafafa;
+  padding: 5rem 2rem;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+}
+
+.latest-posts-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.latest-section-header {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.section-subtitle {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #36B37E;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.glow-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #A7F46A;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #A7F46A, 0 0 20px #A7F46A;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(167, 244, 106, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(167, 244, 106, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(167, 244, 106, 0);
+  }
+}
+
+.section-title {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: #161C2D;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+/* Featured Blog Layout - Split Grid */
+.featured-blog-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 0;
+  align-items: stretch;
+  background: #ffffff;
+  padding: 0;
+  border-radius: 24px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.featured-blog-layout:hover {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  border-color: rgba(167, 244, 106, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Left side: Image container with full-bleed stretching */
+.featured-image-container {
+  position: relative;
+  width: 100%;
+  height: 100% !important;
+  min-height: 480px;
+  border-radius: 24px 0 0 24px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.featured-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(22, 28, 45, 0) 50%, rgba(22, 28, 45, 0.3) 100%);
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+
+.featured-image-container:hover .featured-image {
+  transform: scale(1.06);
+}
+
+.featured-image-container:hover .featured-image-overlay {
+  opacity: 0.5;
+}
+
+/* Floating Glassmorphic Tag Badge */
+.featured-tag-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: rgba(22, 28, 45, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.featured-image-container:hover .featured-tag-badge {
+  background: #A7F46A;
+  color: #161C2D;
+  border-color: #A7F46A;
+  box-shadow: 0 4px 20px rgba(167, 244, 106, 0.4);
+}
+
+/* Right side: Content styling with internal padding */
+.featured-content-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 3.5rem 3.5rem 3.5rem 4.5rem;
+}
+
+.featured-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.featured-meta-item {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #718096;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-icon {
+  font-size: 0.8rem;
+  color: #36B37E;
+}
+
+.featured-meta-divider {
+  color: #cbd5e0;
+}
+
+.featured-title {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #161C2D;
+  margin: 0 0 1.25rem 0;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.featured-title:hover {
+  color: #36B37E;
+}
+
+.featured-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #5A7184;
+  margin: 0 0 2rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Footer Section of Split layout: Author + Button */
+.featured-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.featured-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #36B37E, #161C2D);
+  color: #fff;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(54, 179, 126, 0.2);
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #161C2D;
+  margin: 0;
+}
+
+.author-designation {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.775rem;
+  color: #718096;
+  margin: 2px 0 0 0;
+}
+
+/* Awwwards Interactive CTA Button */
+.featured-read-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #161C2D;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.arrow-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #161C2D;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.featured-read-btn:hover {
+  color: #36B37E;
+}
+
+.featured-read-btn:hover .arrow-circle {
+  background-color: #36B37E;
+  transform: translateX(6px) rotate(-45deg);
+  box-shadow: 0 4px 15px rgba(54, 179, 126, 0.3);
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .featured-blog-layout {
+    gap: 0;
+  }
+
+  .featured-content-container {
+    padding: 2.5rem 2.5rem 2.5rem 3rem;
+  }
+
+  .featured-image-container {
+    min-height: 420px;
+  }
+
+  .featured-title {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .latest-posts-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .featured-blog-layout {
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+  }
+
+  .featured-image-container {
+    height: 320px;
+    min-height: auto;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .featured-content-container {
+    padding: 2.5rem 2rem 2rem 2rem;
+  }
+
+  .featured-title {
+    font-size: 1.6rem;
+  }
+
+  .featured-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .featured-footer {
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .latest-posts-section {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .latest-section-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .featured-blog-layout {
+    border-radius: 16px;
+  }
+
+  .featured-image-container {
+    height: 220px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .featured-content-container {
+    padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  }
+
+  .featured-tag-badge {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .featured-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .featured-description {
+    font-size: 0.875rem;
+  }
+}

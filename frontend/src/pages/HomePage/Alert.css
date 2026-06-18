@@ -1,0 +1,132 @@
+.alert-container {
+  position: relative;
+  width: 1601px;
+  height: 140px;
+  left: 0px;
+  background: #473BF0;
+}
+
+.alert-item {
+  position: absolute;
+  font-family: 'DM Sans', sans-serif;
+  color: #FFFFFF;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.6s ease-out;
+  cursor: pointer;
+}
+
+.alert-item.animate {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.alert-item.animate:hover {
+  transform: scale(1.25) !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes growIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.alert-group1{
+  left: 17.05%;
+  right: 64.52%;
+  top: 27.14%;
+  bottom: 31.43%;
+}
+
+.alert-percentage-container {
+  left: 41.41%;
+  right: 40.47%;
+  top: 27.14%;
+  bottom: 31.43%;
+}
+
+.alert-title {
+  position: absolute;
+  height: 58px;
+  left: 0%;
+  right: 66.55%;
+  top: calc(50% - 58px / 2);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -1.8px;
+}
+
+.alert-description {
+  position: absolute;
+  left: 40%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  font-size: 17px;
+  line-height: 29px;
+  letter-spacing: -0.2px;
+  opacity: 0.7;
+}
+
+.alert-rating-container {
+  left: 65.15%;
+  right: 18.36%;
+  top: 27.14%;
+  bottom: 31.43%;
+}
+
+/* Mobile-Specific Styles */
+  @media screen and (max-width: 768px) {
+    .alert-container {
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding: 1.25rem 0;
+      top: 0;
+      left: 0;
+      background: #473BF0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .alert-item {
+      position: static;
+      text-align: center;
+    }
+
+    .alert-title {
+      position: static;
+      font-size: 30px;
+      line-height: 40px;
+      padding: 0.05rem;
+      margin: 0;
+    }
+
+    .alert-percentage-container,
+    .alert-rating-container,
+    .alert-group1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 2%;
+    }
+
+    .alert-description {
+      position: static;
+      font-size: 12px;
+      line-height: 20px;
+      opacity: 0.7;
+      margin: 0;
+    }
+
+  }

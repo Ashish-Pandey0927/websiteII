@@ -1,0 +1,244 @@
+.service-page-container {
+  display: flex;
+  flex-direction: column;
+  width: 1601px;
+  height: 465px;
+  max-width: 1601px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: serviceHeroFadeIn 1.2s ease-out;
+
+  background:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.0001) 0%, #161C2D 99.54%),
+    url('../../assets/ServicePageBG.png') no-repeat center center / cover;
+}
+
+/* Service Page Animation Keyframes */
+@keyframes serviceHeroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleInBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Highlight Section */
+.service-page-highlight-wrapper {
+  position: absolute;
+  top: 100px;
+  left: 244.85px !important;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 2;
+  flex-wrap: nowrap;
+  animation: slideInFromLeft 1s ease-out 0.4s both;
+}
+
+.service-page-vector-highlight svg{
+  width: 23px;
+  height: 29px;
+  transition: transform 0.4s ease;
+}
+
+.service-page-vector-highlight svg:hover {
+  transform: rotate(180deg) scale(1.2);
+}
+
+.service-page-highlight-text {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #fff;
+  white-space: nowrap;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-page-highlight-text:hover {
+  color: #A7F46A;
+  transform: translateX(8px);
+}
+
+/* Hero Section */
+.service-page-hero-content {
+  position: absolute;
+  width: 425px;
+  height: 348px;
+  top: 95px;
+  left: 244.85px !important;
+  transform: rotate(-0.1deg);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  color: #fff;
+  position: absolute;
+  left: 3%;
+  margin-top: 4%;
+  animation: slideInFromRight 1s ease-out 0.6s both;
+}
+
+.service-page-hero-heading {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 3.02rem;
+  line-height: 1.2;
+  letter-spacing: -1%;
+  color: #FFFFFF;
+  transform: rotate(0.1deg);
+  margin: 0;
+  text-align: left;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-page-hero-heading:hover {
+  color: #A7F46A;
+  transform: rotate(0.1deg) translateY(-3px);
+  text-shadow: 0 2px 8px rgba(167, 244, 106, 0.3);
+}
+
+.service-page-hero-paragraph {
+  margin-top: 30px;
+  padding: 0  2% 2% 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  color: #fff;
+  text-align: left;
+  animation: scaleInBounce 1s ease-out 0.8s both;
+  transition: color 0.3s ease;
+}
+
+.service-page-hero-paragraph:hover {
+  color: #f0f0f0;
+}
+
+/* Mobile-Specific Styles */
+@media screen and (max-width: 820px) {
+  /* Dashboard Container */
+  .service-page-container {
+    width: 100vw; /* Use viewport width for better fit on mobile */
+    max-width: 100vw;
+    min-width: 0;
+    height: 70vh; /* Set to full viewport height on mobile */
+    padding: 0.5rem;
+    left: 0;
+    transform: none;
+  }
+  .Group-Service-page-hero{
+    position: absolute;
+    top: 6rem;
+    left: 1.5rem !important;
+    margin: 0;
+    justify-content: flex-start;
+    z-index: 2;
+  }
+
+  .service-page-vector-highlight svg {
+    width: 15px;
+    height: 35px;
+  }
+
+  .service-page-highlight-text {
+    font-size: 0.9rem;
+    line-height: 160%;
+  }
+
+  /* Highlight Section */
+  .service-page-highlight-wrapper {
+    width: 90vw; /* Reduce width for highlight wrapper on mobile */
+    max-width: 95vw;
+    min-width: 0;
+    position: relative;
+    top: auto;
+    left: 0rem !important;
+    margin: 1rem 0;
+    justify-content: flex-start;
+  }
+
+  /* Hero Section */
+  .service-page-hero-content {
+    position: relative;
+    width: 90vw; /* Reduce width for hero content on mobile */
+    max-width: 95vw;
+    height: auto;
+    top: auto;
+    left: auto !important;
+    padding: 0;
+    text-align: center;
+    gap: 0px;
+    margin: 0 auto;
+  }
+
+  .service-page-hero-heading {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    text-align: flex-start;
+    transform: none;
+  }
+
+  .service-page-hero-paragraph {
+    margin-top: 30px;
+    padding:0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 150%;
+    color: #fff;
+    text-align: left;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service-page-hero-paragraph {
+    padding: 0;
+  }
+  .service-page-highlight-text {
+    text-wrap: auto;
+  }
+}

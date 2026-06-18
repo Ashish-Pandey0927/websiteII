@@ -1,0 +1,190 @@
+/* Mobile Responsive Fix - Global Override */
+
+/* Prevent horizontal scrolling and zoom issues */
+html {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Override all fixed widths that could cause mobile zoom */
+* {
+  max-width: 100vw !important;
+  box-sizing: border-box;
+}
+
+/* Specifically target elements with fixed widths */
+[style*="width: 1600px"],
+[style*="width: 1601px"],
+[style*="width: 1603px"],
+[style*="max-width: 1600px"],
+[style*="max-width: 1601px"],
+[style*="max-width: 1603px"] {
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+/* Override CSS classes with fixed widths */
+.container,
+.wrapper,
+.section {
+  width: 100% !important;
+  max-width: 100vw !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Target specific elements that commonly cause issues */
+.services-section,
+.hero-section,
+.about-section,
+.contact-section,
+.portfolio-section,
+.blog-section {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* Fix for any CSS rules with absolute positioning and fixed widths */
+[style*="position: absolute"][style*="width: 1600"],
+[style*="position: absolute"][style*="width: 1601"],
+[style*="position: absolute"][style*="width: 1603"] {
+  width: 100% !important;
+  max-width: 100vw !important;
+  position: relative !important;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Ensure all containers are mobile-friendly */
+  * {
+    max-width: 100vw !important;
+  }
+
+  /* Add padding for mobile */
+  .hero-section,
+  .section,
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Override any grid layouts that might be too wide */
+  .grid,
+  .services-grid,
+  .portfolio-grid,
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Prevent text from being too small */
+  body {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Ensure buttons are touchable */
+  button {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  /* Fix for cards that might be too wide */
+  .card,
+  .service-card,
+  .portfolio-card,
+  .blog-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Prevent zoom on input focus in iOS */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  font-size: 16px !important;
+}
+
+/* Fix for any grid or flex layouts that might overflow */
+.grid,
+.flex,
+[style*="display: grid"],
+[style*="display: flex"] {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+/* Force any element with absolute positioning to be responsive */
+@media (max-width: 768px) {
+  [style*="position: absolute"] {
+    position: relative !important;
+  }
+
+  /* Override any left/right positioning that might cause overflow */
+  [style*="left:"],
+  [style*="right:"] {
+    left: 0 !important;
+    right: 0 !important;
+  }
+  
+  /* Footer specific responsive fixes */
+  .footer {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .footer .cta {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+  }
+  
+  .footer .divider {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+  }
+  
+  .grid-footer {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  
+  .footer .newsletter {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .footer .newsletter input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}

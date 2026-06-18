@@ -1,0 +1,188 @@
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+    position: absolute;
+    top: 17.3px;
+    left: 1225px;
+    align-items:center;
+    width: 151.99999084451744px;
+    height: 19.99999879533124px;
+    transform: rotate(-0.1deg);
+    margin-right: 60px;
+  }
+
+  /* Row (default) */
+  .social-row {
+    flex-direction: row ! important;
+    position: absolute;
+    top: -1px ! important;
+    left: -250px ! important;
+    margin-right: 60px;
+  }
+
+  .social-link {
+    color: #101010;
+    font-size: 1.24rem;
+    width: 40PX;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .social-link:hover {
+    color: #ddd;
+  }
+
+  /* Tablet styles */
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    .social-icons {
+      position: absolute;
+      top: 48px;
+      left: auto;
+      right: 30px;
+      width: auto;
+      height: auto;
+      gap: 6px;
+      transform: none;
+      margin-right: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-row {
+      position: static;
+      top: auto;
+      left: auto;
+      right: auto;
+      flex-direction: column;
+      margin-right: 0;
+      display: flex;
+      gap: 6px;
+    }
+
+    .social-link {
+      width: 32px;
+      height: 32px;
+      font-size: 1.0rem;
+    }
+  }
+
+  /* Small laptops */
+  @media screen and (max-width: 1024px) and (min-width: 769px) {
+    .social-icons {
+      position: absolute;
+      top: 8px;
+      left: auto;
+      right: 0;
+      width: auto;
+      height: auto;
+      gap: 6px;
+      transform: none;
+      margin-right: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-row {
+      position: static;
+      top: auto;
+      left: auto;
+      right: auto;
+      flex-direction: column;
+      margin-right: 0;
+      display: flex;
+      gap: 6px;
+    }
+
+    .social-link {
+      width: 32px;
+      height: 32px;
+      font-size: 1.0rem;
+    }
+  }
+
+  /* Standard laptops */
+  @media screen and (max-width: 1440px) and (min-width: 1025px) {
+    .social-icons {
+      left: auto;
+      right: 60px;
+      gap: 11px;
+      margin-right: 0;
+    }
+
+    .social-row {
+      left: auto;
+      right: 0;
+      margin-right: 0;
+    }
+
+    .social-link {
+      width: 39px;
+      height: 39px;
+      font-size: 1.2rem;
+    }
+  }
+
+  /* Mobile-Specific Styles */
+  @media screen and (max-width: 480px) {
+    .social-icons {
+      position: static !important;
+      display: flex !important;
+      flex-direction: column !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      width: auto !important;
+      height: auto !important;
+      gap: 6px !important;
+      transform: none !important;
+      margin: 0 !important;
+      background: none !important;
+    }
+
+    .social-row {
+      position: static !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      flex-direction: column !important;
+      display: flex !important;
+    }
+
+    .social-column {
+      flex-direction: column !important;
+      display: flex !important;
+    }
+
+    .social-link {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 32px !important;
+      height: 32px !important;
+      font-size: 1.2rem !important;
+      color: #000 !important;
+      background: none !important;
+      border: none !important;
+      margin: 0 !important;
+      padding: 4px !important;
+    }
+
+    .social-link svg {
+      font-size: 1.2rem !important;
+      color: #fff;
+    }
+
+    .social-link:hover {
+      color: #A7F46A !important;
+    }
+
+    .social-link:hover svg {
+      color: #A7F46A !important;
+    }
+  }

@@ -1,0 +1,126 @@
+.aboutus-page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 465px;
+  max-width: 100vw;
+  position: relative;
+  background:
+    url('../../assets/AboutUsHero.png') no-repeat center center / cover;
+  padding: 2rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+.aboutus-page-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 16, 16, 0.49);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.aboutus-page-hero-content {
+  position: absolute;
+  width: 425px;
+  height: 348px;
+  top: 95px;
+  left: 244.85px !important;
+  transform: rotate(-0.1deg);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  color: #fff;
+  left: 3%;
+  z-index: 2;
+}
+
+.aboutus-page-hero-heading {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 100%;
+  letter-spacing: -1%;
+  color: #FFFFFF;
+  transform: rotate(0.1deg);
+  margin: 0;
+  text-align: left;
+}
+
+.aboutus-page-hero-paragraph {
+  width: 537px;
+  margin-top: 30px;
+  padding: 2% 2% 2% 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: #ffffff;
+  text-align: left;
+  max-width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutus-page-container {
+    width: 100%;
+    height: 70vh;
+    min-height: 70vh;
+    padding: 0.5rem;
+    left: 0;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .aboutus-page-hero-content {
+    position: absolute;
+    width: 75%;
+    height: auto;
+    top: 6rem;
+    left: 1.5rem !important;
+    padding: 0;
+    text-align: left;
+    gap: 20px;
+    transform: none;
+    margin-top: 0;
+  }
+
+  .aboutus-page-hero-heading {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-align: left;
+    transform: none;
+    margin-bottom: 1rem;
+  }
+
+  .aboutus-page-hero-paragraph {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 0;
+    padding-right: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #fff;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .aboutus-page-hero-heading {
+    font-size: 2rem;
+  }
+
+  .aboutus-page-hero-paragraph {
+    font-size: 1rem;
+  }
+}
+

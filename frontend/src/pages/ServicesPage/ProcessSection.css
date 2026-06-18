@@ -1,0 +1,321 @@
+.process-section {
+  padding: 0px 40px 80px 40px;
+  background-color: white;
+  text-align: center;
+  animation: processSectionFadeIn 1.5s ease-out;
+  opacity: 0;
+}
+
+.process-section.visible {
+  opacity: 1;
+}
+
+@keyframes processSectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.process-section-header {
+  display: flex;
+  flex-direction: column; 
+  align-items: baseline;
+  gap: 10%;
+  margin-bottom: 48px;
+}
+
+.process-heading {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 110%;
+  letter-spacing: 1px;
+  color: #101010;
+  margin-bottom: 16px;
+  text-align: left;
+  padding: 0.5rem;
+  animation: slideInFromLeft 1s ease-out 0.5s both;
+  transition: color 0.3s ease;
+}
+
+.process-heading:hover {
+  color: #A7F46A;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.process-subheading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 160%;
+  color: #757B8A;
+  margin-bottom: 40px;
+  max-width: 600px;
+  text-align: justify;
+  animation: slideInFromRight 1s ease-out 0.7s both;
+  transition: color 0.3s ease;
+}
+
+.process-subheading:hover {
+  color: #5A7184;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.process-steps {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.process-step {
+  position: relative;
+  width: 311px;
+  height: 311px;
+  background: #F0F0FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.process-step:hover {
+  transform: scale(1.08) translateY(-10px);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2),
+              0px 8px 20px rgba(167, 244, 106, 0.15);
+}
+
+.step-inner-circle {
+  width: 253px;
+  height: 253px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-inner-circle::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, 
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(248, 249, 250, 0.7) 25%, 
+    rgba(233, 236, 239, 0.5) 50%, 
+    transparent 75%, 
+    rgba(255, 255, 255, 0.9) 100%);
+  animation: rotateGlow 3s linear infinite;
+  opacity: 0.7;
+}
+
+.step-inner-circle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #F0F0FF;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.step-inner-circle > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+    filter: blur(1px);
+  }
+  50% {
+    filter: blur(2px);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: blur(1px);
+  }
+}
+
+.process-step:hover .step-inner-circle {
+  width: 265px;
+  height: 265px;
+  border-color: transparent;
+}
+
+.process-step:hover .step-inner-circle::before {
+  opacity: 1;
+  filter: blur(0px) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+.step-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.9rem;
+  color: #101010;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+}
+@media (min-width: 768px) {
+  .process-section-header  {
+  display: flex;
+  flex-direction: row; 
+  align-items: baseline;
+  gap: 10%;
+  margin-bottom: 48px;
+}
+/* .process-subheading {
+  font-size: 1rem;
+} */
+.process-steps {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
+.process-step {
+  position: relative;
+  width: 311px;
+  height: 311px;
+}
+.step-inner-circle {
+  width: 253px;
+  height: 253px;
+}
+}
+/* Desktop only (≥1024px) */
+/* @media (min-width: 1024px) {
+  .process-section-header {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10%;
+  }
+} */
+/* Shared dashed line - appears behind circles */
+.process-steps::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  background-repeat: repeat;
+}
+
+/* Mobile: vertical dashed line */
+@media (max-width: 767px) {
+  .process-steps {
+    position: relative;
+  }
+
+  .process-steps::before {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #757B8A,
+      #757B8A 4px,
+      transparent 4px,
+      transparent 8px
+    );
+    background-size: 100% 15px;
+    animation: dashMoveVertical 2s linear infinite;
+  }
+
+  @keyframes dashMoveVertical {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 15px;
+    }
+  }
+
+  .process-step {
+    z-index: 1; /* keep circles above line */
+  }
+}
+
+/* Desktop: horizontal dashed line */
+@media (min-width: 768px) {
+  .process-steps {
+    position: relative;
+  }
+
+  .process-steps::before {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background-image: repeating-linear-gradient(
+      to right,
+      #757B8A,
+      #757B8A 4px,
+      transparent 4px,
+      transparent 8px
+    );
+    background-size: 15px 100%;
+    animation: dashMoveHorizontal 2s linear infinite;
+  }
+
+  @keyframes dashMoveHorizontal {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 15px 0;
+    }
+  }
+
+  .process-step {
+    z-index: 1; /* keep circles above line */
+    background-color: #F0F0FF; /* reassert background */
+  }
+}

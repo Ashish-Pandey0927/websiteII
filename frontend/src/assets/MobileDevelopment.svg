@@ -1,0 +1,14 @@
+<svg width="53" height="50" viewBox="0 0 53 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_1_1441" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="54" height="50">
+<rect x="0.000656128" width="53" height="49.64" fill="url(#pattern0_1_1441)"/>
+</mask>
+<g mask="url(#mask0_1_1441)">
+<rect x="0.000656128" width="53" height="49.64" fill="#163153"/>
+</g>
+<defs>
+<pattern id="pattern0_1_1441" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_1441" transform="matrix(0.00936604 0 0 0.01 0.0316981 0)"/>
+</pattern>
+<image id="image0_1_1441" width="100" height="100" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADzUlEQVR4nO2dP0hVURzHP2Y9kUCCIsg/UOBQg0OLSwm6tCRCTU1NuVgmZNDYc2tJCGxqa2pq0oaWljINyqAhoaEhEJIgKrHo3y+uXOVxO+/1sCv3/H7394Ez+J7g93t+97x7zvne4wPHcRzHcRxHN23AOLAArAESeVtLtV4CKhijC3gZQSfLNttS6sHMyNBcDEnbCysj5XIEnSk5tYsYYDGCjpSc2lMM8CWCjpScWuJFPWKsqafoDhQviBckaoq+osVHiBckaoq+osVHSOOCaEOU6zdnSJTrN2dIlOs3Z0iU6zdnSJTrN2dIlOs3Z0iU6zdnSJTrN2dIlOv/i1oz6+hj3WpBfgIjgfd7iIeewGsjqXZzBUkep8kyBHwFqhTPBPANOBV4b9RaQa4HXu8DPtYYvQXsKkBfC3CjRsdn4Hjg96pWCnIn8NphYCXz2fwbGChA30D6t2u1rKQam/Gijt2Znw8Ay4HZyyTFMRnQs5xqbeRFPe3Ak4D520ULA24GdD0D9mKUVuB+wPS9gu4doXvJ3YC+WYsjI2EmYPZR+qhpLOwBHgZ0mrh31DIVMPkK2Ed8dKTP8Wb1xjA1z4XaOfxmexfZgjDLIeBtQHdoLaWKYeBHxtQH4Cjx0wu8z2hPVuxnUUp/4GBOsi90Av0eTqKM5OpaDVxdZ9DH6Tqj/BhK6Kzz+av5bMUFhffBrRnKUkB8aC9LG1VFM8UNKiWYw88oWEuVapXbGvluwxbTAZGLRveB2oHHke7HbXA1IO4NcBC77AdeR7ZjvcE54FeTWYI1utOZVjbTOV+UoKE08pQm0jar9GVSz6R9rxMD7ziDXhCiKki9j6zVdKVunSN1YujCPrIaxZ9lvalfIRLKFH+2RxxDb+ELQ+JaGJYl/pzRsnVShvhzStvmouX4c1Tr9rvF+HNYcQxtLv7sNxBDm4k/ew3F0Orjz06DMbTa+LPDcAytbg5fKcFaSk382VKSGFpN/DldlhjaD+xEhh9pi4x6e1kxHfqsNhFDb+5lqafRXtZgeiz6GsUzUaZj0ZurXP/HARGQ3QfSxnrGg3qyU0ltiHL95gyJcv3mDIly/eYMiXL95gyJcv3mDIly/eYMiXL9/zSkvamn6A4UL4gXJGqKvqLFR4gXJGqKvqLFR8jOFGR2m18QnBzOnMtRh3ry6oju/9CQPJTnBfGCxEleV+bcNkdJMjoe+Aix+eXEnzDAQgQdKTm1eQwwHkFHSk5tDAO01XmaXFt7nj6MbYKuOodBNRWjE2NU0gMv80pu9F9SrWOWRobjOI7jOA6l5A/qpZSJmqtiRgAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>

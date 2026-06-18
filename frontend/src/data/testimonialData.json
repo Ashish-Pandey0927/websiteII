@@ -1,0 +1,66 @@
+[
+  {
+    "star": 5,
+    "name": "Ahmad A",
+    "image": "example.png",
+    "content": "Great Job, solve the problem well.Very helpfull to solve the problem and does not give up.",
+    "designation": "HOD Mobile",
+    "id": "684acfded141691af3541c3d"
+  },
+  {
+    "star": 5,
+    "name": "Ahmad A",
+    "image": "example.png",
+    "content": "Very in good in what Eston offers.Great quality on given timing, Will definetly rehire Eston.Did great job.",
+    "designation": "HOD Mobile",
+    "id": "684acffd30989323369f64af"
+  },
+  {
+    "star": 5,
+    "name": "Sanjay G.",
+    "image": "example.png",
+    "content": "Excellent knowlegde will recomend and rehire them.",
+    "designation": "Director Engineering",
+    "id": "684ad04230989323369f64b0"
+  },
+  {
+    "star": 5,
+    "name": "Nir S",
+    "image": "example.png",
+    "content": "Great work, great response time with most resonalable price anywhere.",
+    "designation": "Director ",
+    "id": "684ad07030989323369f64b1"
+  },
+  {
+    "star": 5,
+    "name": "Nir S",
+    "image": "example.png",
+    "content": "“Great work,great cooperation.Went beyond and above expectation",
+    "designation": "Director ",
+    "id": "684ad09430989323369f64b2"
+  },
+  {
+    "star": 5,
+    "name": "Abbas A.",
+    "image": "example.png",
+    "content": "“Fair price, excellent results, and quick turnaround.... what more can you ask for? I am so thrilled with this project!!! Thank you so much. Would hire again in a heartbeat!",
+    "designation": "Engineering Manager",
+    "id": "684ad0c730989323369f64b3"
+  },
+  {
+    "star": 5,
+    "name": "Emily Carter",
+    "image": "example.png",
+    "content": "Adopting this AI chatbot has been one of the best decisions we’ve made. I was blow away by how customizable this chatbot is. We’ve tailored it to align perfectly with our brand voice and goals.",
+    "designation": "Marketing Specialist",
+    "id": "684ad19830989323369f64b4"
+  },
+  {
+    "star": 5,
+    "name": "James Rodriguez",
+    "image": "example.png",
+    "content": "This chatbot has revolutionized the way we interact with our customers. It’s like having a team member that’s always available, providing quick, accurate, and personalized responses.",
+    "designation": "Costumer support manager",
+    "id": "684ad1c430989323369f64b5"
+  }
+]

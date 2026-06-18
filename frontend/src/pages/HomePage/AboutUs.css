@@ -1,0 +1,620 @@
+.about-us {
+    position: relative;
+    width: 1597px;
+    height: 978px;
+    left: 0;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+/* Header Section */
+.about-us-header {
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    width: 1200px;
+    height: 132px;
+    display: flex;
+    gap: 260px;
+    align-items: center;
+}
+
+.about-us-title {
+    width: 492px;
+    height: 132px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 110%;
+    color: #101010;
+    text-align: left;
+    margin-top: 0;
+}
+
+.about-us-subtext {
+    width: 448px;
+    height: 52px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: #757B8A;
+    text-align: left;
+}
+
+/* Image Block */
+.main-image-block {
+    position: absolute;
+    width: 586px;
+    height: 500px;
+    left: 120px;
+    top: 358px;
+    background: url('../../assets/AboutUsRectangle.png');
+    background-size: cover;
+    border-radius: 16px;
+}
+
+.image-overlay {
+    position: absolute;
+    width: 586px;
+    height: 271px;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.6;
+    border-radius: 16px;
+    top: 0;
+    left: 0;
+}
+
+.badge {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: #A7F46A;
+}
+
+.overlay-title {
+    position: absolute;
+    top: 80px;
+    left: 48px;
+    width: 376px;
+    height: 132px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.cta-button-about-us {
+    position: relative;
+    top: 400px;
+    left: 30px;
+    width: 252px;
+    height: 56px;
+    background: #A7F46A;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #101010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Cards */
+.about-us-cards {
+    position: absolute;
+    top: 358px;
+    left: 814px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 285px;
+    height: 236px;
+    border-radius: 16px;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: absolute;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #101010;
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+.card-button {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #101010;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 32px;
+    text-align: left;
+}
+
+/* Specific card backgrounds and positions */
+.card-blog {
+    background: #E0FECD;
+}
+
+.card-workflow {
+    background: #FFF1ED;
+    top: 264px;
+}
+
+.card-expert {
+    background: #F0F0FF;
+    width: 285px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 353px;
+}
+
+/* Ellipses */
+.ellipse {
+    position: absolute;
+    border: 1px solid #D6D6D6;
+    transform: rotate(90deg);
+    border-radius: 50%;
+}
+
+.ellipse-21 {
+    width: 50%;
+    height: 90%;
+    top: 5%;
+    left: 65%;
+    border: 1px solid #D6D6D6;
+    border-radius: 50%;
+    transform: rotate(-89.88deg);
+}
+
+.ellipse-19 {
+    width: 50%;
+    height: 90%;
+    top: 5%;
+    left: 60%;
+    border: 1px solid #D6D6D6;
+    border-radius: 50%;
+    transform: rotate(-89.88deg);
+}
+
+.ArrowUpRight {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+/* Medium Laptop/Nest Hub Max Styles - 13 inch laptops, Nest Hub Max */
+@media screen and (max-width: 1400px) and (min-width: 1025px) {
+
+    .about-us {
+        height: 880px;
+    }
+
+    .about-us-header {
+        left: 80px;
+        gap: 10rem;
+    }
+
+    .image-overlay {
+        width: 480px;
+    }
+
+    .main-image-block {
+        width: 480px;
+        height: 394px;
+        left: 80px;
+        /* top: 305px; */
+    }
+
+    .about-us-cards {
+        left: 595px;
+        /* top: 305px; */
+    }
+
+    .card-blog {
+        width: 275px;
+        height: 185px;
+    }
+
+    .card-workflow {
+        width: 275px;
+        height: 185px;
+        top: 210px;
+    }
+
+    .card-expert {
+        width: 275px;
+        height: 395px;
+        left: 295px;
+    }
+
+    .cta-button-about-us {
+        top: 310px;
+    }
+}
+
+/* Small Laptop Styles */
+@media screen and (max-width: 1024px) {
+    .about-us {
+        height: 780px;
+    }
+
+    .about-us-header {
+        left: 60px;
+        gap: 0;
+        ;
+        top: 80px
+    }
+
+    .main-image-block {
+        width: 500px;
+        height: 414px;
+        left: 60px;
+        ;
+        top: 305px;
+    }
+
+    .image-overlay {
+        width: 500px;
+        ;
+    }
+
+    .cta-button-about-us {
+        top: 335px;
+    }
+
+    .about-us-cards {
+        left: 580px;
+        top: 305px;
+    }
+
+    .card-blog {
+        width: 190px;
+        height: 190px;
+    }
+
+    .card-workflow {
+        width: 190px;
+        height: 190px;
+        top: 220px;
+    }
+
+    .card-expert {
+        width: 190px;
+        height: 410px;
+        left: 210px;
+    }
+
+    .card-button {
+        font-size: 26px;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 2rem 1rem;
+        overflow: visible;
+    }
+
+    .about-us-header {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        top: auto;
+        left: auto;
+    }
+
+    .about-us-title {
+        width: 100%;
+        font-size: 2.5rem;
+        height: auto;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .about-us-subtext {
+        width: 100%;
+        font-size: 1rem;
+        height: auto;
+        margin: 0;
+    }
+
+    .main-image-block {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        top: auto;
+        left: auto;
+        margin-bottom: 2rem;
+    }
+
+    .image-overlay {
+        width: 100%;
+        height: 271px;
+    }
+
+    .badge {
+        top: 32px;
+        left: 32px;
+        font-size: 13px;
+    }
+
+    .overlay-title {
+        top: 64px;
+        left: 32px;
+        font-size: 28px;
+        width: calc(100% - 64px);
+        height: auto;
+    }
+
+    .cta-button-about-us {
+        position: absolute;
+        bottom: 32px;
+        left: 32px;
+        top: auto;
+        width: auto;
+        height: 52px;
+        font-size: 15px;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .about-us-cards {
+        position: static;
+        top: auto;
+        left: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        top: 0;
+        left: 0;
+        padding: 1.5rem;
+        margin: 0;
+    }
+
+    .card-text {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .card-button {
+        font-size: 18px;
+        position: absolute;
+        bottom: 1rem;
+        left: 1.5rem;
+    }
+
+    .card-expert {
+        height: 200px;
+        width: 100%;
+        grid-column: 1 / -1;
+    }
+
+    .ellipse,
+    .ellipse-21,
+    .ellipse-19 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-us {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 1rem !important;
+        margin: 0 !important;
+        top: 0 !important;
+        left: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        box-sizing: border-box;
+        overflow: visible !important;
+    }
+
+    .about-us-header {
+        position: static !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+        height: auto !important;
+        gap: 1rem !important;
+        padding: 0 !important;
+        top: auto !important;
+        left: auto !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .about-us-title {
+        position: static !important;
+        width: 100% !important;
+        font-size: 2.2rem !important;
+        height: auto !important;
+        margin-top: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+        padding: 0 !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    .about-us-subtext {
+        position: static !important;
+        width: 100% !important;
+        font-size: 1.1rem !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        line-height: 1.6 !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    .main-image-block {
+        position: relative !important;
+        width: 100% !important;
+        height: 300px !important;
+        margin: 0 !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    .image-overlay {
+        position: absolute !important;
+        width: 100% !important;
+        height: 271px !important;
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        opacity: 0.6;
+        border-radius: 16px;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    .badge {
+        position: absolute !important;
+        top: 24px !important;
+        left: 24px !important;
+        font-size: 12px !important;
+        z-index: 10 !important;
+    }
+
+    .image-overlay {
+        position: relative;
+        width: 100%;
+        height: 271px;
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        opacity: 0.6;
+        border-radius: 16px;
+        top: 0;
+        left: 0;
+    }
+
+    .badge {
+        top: 24px;
+        left: 24px;
+        font-size: 12px;
+    }
+
+    .overlay-title {
+        top: 60px;
+        left: 24px;
+        font-size: 24px;
+        width: calc(100% - 48px);
+    }
+
+    .cta-button-about-us {
+        position: absolute !important;
+        bottom: 24px !important;
+        left: 24px !important;
+        top: auto !important;
+        width: auto !important;
+        height: 48px !important;
+        font-size: 14px !important;
+        padding: 0.75rem 1.5rem !important;
+        z-index: 10 !important;
+    }
+
+    .about-us-cards {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        margin-top: 2rem !important;
+        width: 100% !important;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+        margin: 0 0 1rem 0;
+        box-sizing: border-box;
+    }
+
+    .card-text {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .card-button {
+        font-size: 16px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin-top: 16px;
+    }
+
+    .card-expert {
+        height: auto;
+        width: 100%;
+        left: 0;
+    }
+
+    .ellipse,
+    .ellipse-1,
+    .ellipse-2 {
+        display: none;
+    }
+
+    .ArrowUpRight {
+        position: static;
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,239 @@
+.ourportfolios-container {
+    width: 100%;
+    padding: 2.5rem;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.ourportfolio {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 6px;
+    color: #000000;
+    text-align: center;
+}
+
+.arrrow-icon {
+    margin-left: 8px;
+    font-size: 16px;
+    color: #2282A1;
+}
+
+.ourportfolios-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    color: #000000;
+    font-size: 2.25rem;
+    font-family: 'HK Grotesk', sans-serif;
+    font-size: 2.25rem;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+.ourportfolios-heading{
+    margin: 0;
+    font-size: 3rem;;
+    transition: all 0.4s ease-in-out;
+}
+
+.ourportfolios-subtext {
+    Width: 579px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #5A7184;
+    margin-bottom: 3rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.ourportfolios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 0 2rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.ourportfolios-card {
+    background-color: #fff;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44), box-shadow 0.3s;
+    border: 1px solid #f0f0f0;
+    opacity: 0;
+    animation: slideDown 0.6s ease-out forwards;
+}
+
+.ourportfolios-card:hover {
+    transform: translateY(-10px) scale(1.03) !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3)!important;
+}
+
+.ourportfolios-image {
+    width: 100%;
+    height: 320px;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    border-radius: 1.25rem 1.25rem 0 0;
+    display: block;
+    background: #f5f5f5;
+}
+
+.ourportfolios-content {
+    padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+}
+
+.ourportfolios-card-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #183B56;
+}
+
+.ourportfolios-button {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2282A1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+}
+
+.ourportfolios-button:hover {
+    color: #183B56;
+    text-decoration: underline;
+}
+
+@media (max-width: 820px) {
+    .ourportfolios-container {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .ourportfolios-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .ourportfolios-subtext {
+        font-size: 1.25rem;
+        /* margin-left: 5rem; */
+    }
+
+    .ourportfolios-image {
+        height: auto;
+    }
+
+    .ourportfolios-card-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ourportfolios-container {
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .ourportfolios-title {
+        margin-bottom: 2rem;
+    }
+
+    .ourportfolio {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .ourportfolios-heading {
+        font-size: 1.2rem;
+    }
+
+    .ourportfolios-subtext {
+        font-size: 1rem;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .ourportfolios-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .ourportfolios-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .ourportfolios-image {
+        height: 160px;
+        border-radius: 0.75rem;
+    }
+
+    .ourportfolios-content {
+        padding: 0.75rem;
+    }
+
+    .ourportfolios-card-title {
+        font-size: 1rem !important;
+    }
+
+    .ourportfolios-button {
+        font-size: 1rem;
+    }
+}
+
+/* Animation keyframes for page load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dynamic animation delays for any number of cards */
+.ourportfolios-card:nth-child(1) { animation-delay: calc(0.4s + 0.1s * 0); }
+.ourportfolios-card:nth-child(2) { animation-delay: calc(0.4s + 0.1s * 1); }
+.ourportfolios-card:nth-child(3) { animation-delay: calc(0.4s + 0.1s * 2); }
+.ourportfolios-card:nth-child(4) { animation-delay: calc(0.4s + 0.1s * 3); }
+.ourportfolios-card:nth-child(5) { animation-delay: calc(0.4s + 0.1s * 4); }
+.ourportfolios-card:nth-child(6) { animation-delay: calc(0.4s + 0.1s * 5); }
+.ourportfolios-card:nth-child(7) { animation-delay: calc(0.4s + 0.1s * 6); }
+.ourportfolios-card:nth-child(8) { animation-delay: calc(0.4s + 0.1s * 7); }
+.ourportfolios-card:nth-child(9) { animation-delay: calc(0.4s + 0.1s * 8); }
+.ourportfolios-card:nth-child(10) { animation-delay: calc(0.4s + 0.1s * 9); }
+.ourportfolios-card:nth-child(n+11) { animation-delay: calc(0.4s + 0.1s * 10); }
