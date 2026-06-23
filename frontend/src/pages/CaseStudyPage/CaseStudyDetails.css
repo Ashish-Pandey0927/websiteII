@@ -1,0 +1,368 @@
+/* Case Study Details Layout Wrapper */
+.cs-details-page-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Background wrapper */
+.cs-details-header-bg {
+  width: 100%;
+  height: 90px;
+  background-color: #161C2D;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Main Content Container */
+.cs-details-main-content {
+  width: 100%;
+  max-width: 1100px;
+  padding: 4rem 2rem 6rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Back Button styling */
+.cs-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #36B37E;
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.cs-back-btn:hover {
+  color: #161C2D;
+}
+
+.cs-back-arrow-icon {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cs-back-btn:hover .cs-back-arrow-icon {
+  transform: translateX(-4px);
+}
+
+/* Article Wrapper */
+.cs-details-article {
+  width: 100%;
+}
+
+/* Header and title alignments */
+.cs-details-header {
+  margin-bottom: 2.5rem;
+}
+
+.cs-details-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.cs-tag-badge {
+  background-color: rgba(54, 179, 126, 0.1);
+  color: #36B37E;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cs-meta-item {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #718096;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cs-meta-sub-icon {
+  color: #36B37E;
+  font-size: 0.85rem;
+}
+
+.cs-meta-bullet {
+  color: #cbd5e0;
+}
+
+.cs-details-title {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 850;
+  color: #161C2D;
+  margin: 0;
+  letter-spacing: -1.5px;
+}
+
+/* Image styling */
+.cs-details-image-container {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  margin-bottom: 3.5rem;
+}
+
+.cs-details-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Layout Grid - Two Column */
+.cs-details-layout {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Narrative content styles */
+.cs-details-content {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.075rem;
+  line-height: 1.9;
+  color: #333F48;
+}
+
+.cs-section-block {
+  margin-bottom: 3rem;
+}
+
+.cs-details-content h2 {
+  font-family: 'Urbanist', sans-serif;
+  color: #161C2D;
+  font-weight: 800;
+  font-size: 2rem;
+  border-left: 4px solid #36B37E;
+  padding-left: 14px;
+  margin-left: -18px;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.cs-details-content p {
+  margin-bottom: 1.5rem;
+  color: #4a5568;
+}
+
+/* Sidebar dashboard card styles */
+.cs-details-sidebar {
+  position: sticky;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cs-sidebar-card {
+  background-color: #f8fafc;
+  border-radius: 20px;
+  border: 1px solid #edf2f7;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.cs-sidebar-card h3 {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #161C2D;
+  margin: 0 0 0.5rem 0;
+}
+
+.cs-sidebar-intro {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #718096;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.4;
+}
+
+/* Sidebar Metrics list */
+.cs-sidebar-metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cs-sidebar-metric-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.cs-sidebar-metric-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cs-sidebar-metric-value {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #36B37E;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.cs-sidebar-metric-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar Contact call-to-action card */
+.cs-sidebar-cta-card {
+  background: linear-gradient(135deg, #161C2D 0%, #0f1422 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 15px 35px rgba(22, 28, 45, 0.15);
+}
+
+.cs-sidebar-cta-card h4 {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.cs-sidebar-cta-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #a0aec0;
+  margin: 0;
+}
+
+.cs-sidebar-contact-btn {
+  display: inline-block;
+  text-align: center;
+  background-color: #36B37E;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(54, 179, 126, 0.3);
+}
+
+.cs-sidebar-contact-btn:hover {
+  background-color: #2b8f65;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(54, 179, 126, 0.45);
+}
+
+/* Loading & Empty States */
+.cs-details-loading {
+  text-align: center;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.5rem;
+  color: #718096;
+  padding: 8rem 0;
+}
+
+.cs-not-found {
+  text-align: center;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.cs-not-found h2 {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #161C2D;
+  margin: 0;
+}
+
+.cs-not-found p {
+  font-family: 'Open Sans', sans-serif;
+  color: #718096;
+  max-width: 420px;
+  margin-bottom: 1rem;
+}
+
+/* Tablet & Mobile Media Queries */
+@media screen and (max-width: 900px) {
+  .cs-details-main-content {
+    padding: 3rem 1.5rem 5rem;
+  }
+  .cs-details-title {
+    font-size: 2.35rem;
+  }
+  .cs-details-image-container {
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+    margin-bottom: 2.5rem;
+  }
+  .cs-details-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .cs-details-sidebar {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cs-details-header-bg {
+    height: 75px;
+  }
+  .cs-details-title {
+    font-size: 1.85rem;
+    letter-spacing: -0.75px;
+  }
+  .cs-details-content h2 {
+    font-size: 1.45rem;
+    margin-left: 0;
+    padding-left: 12px;
+  }
+  .cs-details-content {
+    font-size: 0.975rem;
+  }
+  .cs-sidebar-card,
+  .cs-sidebar-cta-card {
+    padding: 1.5rem;
+  }
+  .cs-sidebar-metric-value {
+    font-size: 1.85rem;
+  }
+}

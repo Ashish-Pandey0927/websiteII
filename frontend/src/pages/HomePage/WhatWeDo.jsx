@@ -9,7 +9,7 @@ import DevOpsIcon from "../../assets/Devops.svg";
 const serviceData = [
   {
     title: "Mobile Development",
-    description: "Mobile apps offer a wide range of benefits to customers, enhancing their overall experience and providing convenience, accessibility, and value. Here are some key benefits that mobile apps bring to customers",
+    description: "Custom iOS and Android applications tailored to enhance user engagement, providing seamless performance, intuitive user interfaces, and robust offline capabilities.",
     icon: MobileDevelopment,
     isSvg: false,
     top: "184px",
@@ -17,7 +17,7 @@ const serviceData = [
   },
   {
     title: "Web Development",
-    description: "Web apps offer customers a flexible, accessible, and user-friendly platform for accessing services, information, and functionality over the internet. By leveraging the capabilities of web technologies.",
+    description: "Responsive, high-performance web applications built with modern frontend frameworks and scalable backends to deliver optimal speed, security, and user experience.",
     icon: WebDevelopment,
     isSvg: false,
     top: "184px",
@@ -25,7 +25,7 @@ const serviceData = [
   },
   {
     title: "Cloud Services",
-    description: "Mobile apps offer a wide range of benefits to customers, enhancing their overall experience and providing convenience, accessibility, and value. Here are some key benefits that mobile apps bring to customers",
+    description: "Scalable cloud infrastructure hosting, serverless computing, and managed cloud storage solutions designed to optimize operational costs and ensure maximum uptime.",
     icon: CloudServices,
     isSvg: false,
     top: "408px",
@@ -33,7 +33,7 @@ const serviceData = [
   },
   {
     title: "Quality Assurance",
-    description: "Web apps offer customers a flexible, accessible, and user-friendly platform for accessing services, information, and functionality over the internet. By leveraging the capabilities of web technologies.",
+    description: "Rigorous software testing, including automated regression, security auditing, and load testing to guarantee bug-free deployments and stable user experiences.",
     icon: qualityAssurance,
     isSvg: false,
     // top: "408px",
@@ -41,7 +41,7 @@ const serviceData = [
   },
   {
     title: "SalesForce Solution",
-    description: "Mobile apps offer a wide range of benefits to customers, enhancing their overall experience and providing convenience, accessibility, and value. Here are some key benefits that mobile apps bring to customers",
+    description: "Custom Salesforce integration, CRM optimization, and workflow automation tailored to streamline sales processes, customer support, and business analytics.",
     icon: salesforce,
     isSvg: false,
     top: "632px",
@@ -49,7 +49,7 @@ const serviceData = [
   },
   {
     title: "CI/CD Devops",
-    description: "Web apps offer customers a flexible, accessible, and user-friendly platform for accessing services, information, and functionality over the internet. By leveraging the capabilities of web technologies.",
+    description: "Automated integration and delivery pipelines, container orchestration, and server monitoring configurations to ensure smooth, rapid, and secure software releases.",
     icon: DevOpsIcon,
     isSvg: false,
     top: "632px",

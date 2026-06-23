@@ -84,6 +84,12 @@
     url('../assets/portfolioBG.png') no-repeat center center / cover;
 }
 
+.casestudy-hero-container {
+  background: 
+    linear-gradient(270deg, rgba(22, 28, 45, 0.2) 0%, #161C2D 100%),
+    linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
 /* Group Hero */
 .Group-Service-page-hero {
   position: relative;
