@@ -44,7 +44,7 @@ import objectiveClogo from '../assets/logo/objectiveClogo.png';
 import firebaselogo from '../assets/logo/firebaselogo.png';
 
 // Cloud Services  Service Icons
-import cloudServices from '../assets/CloudServices.svg';
+import cloudServices from '../assets/cloudServices.svg';
 import awsServices from '../assets/awsServices.svg';
 import GCPServices from '../assets/GCPServices.svg';
 import AzureServices from '../assets/AzureServices.svg';

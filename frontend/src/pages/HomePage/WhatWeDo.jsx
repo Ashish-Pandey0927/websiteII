@@ -2,7 +2,7 @@ import './WhatWeDo.css';
 import { useEffect } from 'react';
 import MobileDevelopment from '../../assets/MobileDevelopment.svg';
 import WebDevelopment from '../../assets/WebDevelopment.svg';
-import CloudServices from '../../assets/CloudServices.svg';
+import CloudServices from '../../assets/cloudServices.svg';
 import qualityAssurance from '../../assets/quality-assurance.svg';
 import salesforce from '../../assets/sales-force_17645757.svg';
 import DevOpsIcon from "../../assets/Devops.svg";
