@@ -31,7 +31,7 @@ const localImageMap = {
 
 const getBlogImage = (image) => {
   if (!image) return "https://via.placeholder.com/600x400";
-  if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("data:")) {
+  if (image.startsWith("/") || image.startsWith("http://") || image.startsWith("https://") || image.startsWith("data:")) {
     return image;
   }
   const filename = image.split('/').pop();

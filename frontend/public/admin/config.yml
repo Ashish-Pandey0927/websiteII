@@ -1,0 +1,68 @@
+# Decap CMS Configuration
+backend:
+  # Using Netlify Identity / Git Gateway by default (highly recommended for Netlify hosting)
+  name: git-gateway
+  # To deploy on Vercel, Hostinger, etc. without Netlify Identity, comment out "git-gateway" and use github OAuth:
+  # name: github
+  # repo: Ashish-Pandey0927/websiteII
+  # branch: main
+
+# Path to the public media files in the repository
+media_folder: "frontend/public/images/uploads"
+public_folder: "/images/uploads"
+
+# Local test backend (for running Decap CMS locally without committing to Git)
+local_backend: true
+
+collections:
+  - name: "database"
+    label: "Website Databases"
+    delete: false # Prevent deleting the entire database files
+    files:
+      - name: "blogs"
+        label: "Blog Posts Database"
+        file: "frontend/src/data/blogPosts.json"
+        format: "json"
+        fields:
+          - name: "blogs"
+            label: "Blogs List"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Unique SEO URL ID", name: "id", widget: "string", hint: "A unique URL slug (e.g. 'unlock-cloud-power-estonsoft'). Avoid spaces." }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Cover Image", name: "image", widget: "image" }
+              - { label: "Card Description (Excerpt)", name: "paragraph", widget: "text", hint: "Short description for the card list." }
+              - { label: "Full Content (HTML)", name: "content", widget: "markdown", hint: "The main body content of the blog post." }
+              - { label: "Publish Date", name: "publishDate", widget: "date", format: "YYYY-MM-DD" }
+              - { label: "Author Name", name: "authorName", widget: "string", default: "EstonSoft Team" }
+              - { label: "Author Image", name: "authorImage", widget: "image", default: "/example.png" }
+              - { label: "Author Designation", name: "authorDesignation", widget: "string", default: "Technical Writer" }
+              - { label: "Tags", name: "tags", widget: "list", default: ["Tech"] }
+
+      - name: "casestudies"
+        label: "Case Studies Database"
+        file: "frontend/src/data/caseStudies.json"
+        format: "json"
+        fields:
+          - name: "casestudies"
+            label: "Case Studies List"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Unique SEO URL ID", name: "id", widget: "string", hint: "A unique URL slug (e.g. 'cs-cloud-migration-paysafe'). Avoid spaces." }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "select", options: ["Cloud Services", "Quality Assurance", "CI/CD Devops", "SalesForce Solution"] }
+              - { label: "Client Name", name: "client", widget: "string" }
+              - { label: "Card Summary (Excerpt)", name: "paragraph", widget: "text" }
+              - { label: "The Challenge Description", name: "challenge", widget: "text" }
+              - { label: "Our Solution Description", name: "solution", widget: "text" }
+              - label: "Key Performance Metrics"
+                name: "metrics"
+                widget: "list"
+                fields:
+                  - { label: "Metric Label", name: "label", widget: "string", hint: "e.g. System Uptime" }
+                  - { label: "Metric Value", name: "value", widget: "string", hint: "e.g. 99.99%" }
+              - { label: "Publish Date", name: "publishDate", widget: "date", format: "YYYY-MM-DD" }
+              - { label: "Author Name", name: "authorName", widget: "string", default: "EstonSoft" }
+              - { label: "Cover Image", name: "image", widget: "image" }

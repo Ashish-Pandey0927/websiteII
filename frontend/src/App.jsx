@@ -16,7 +16,6 @@ import BlogDetails from './pages/BlogDetails/BlogDetails';
 import CaseStudy from './pages/CaseStudyPage/CaseStudy';
 import CaseStudyDetails from './pages/CaseStudyPage/CaseStudyDetails';
 import AboutUS from './pages/AboutUsPage/AboutUs';
-import TechnologyPage from './pages/TechnologyPage/TechnologyPage';
 import ScrollToAnchor from './components/ScrollToAnchor';
 import ScrollToTop from './components/ScrollToTop';
 import PrivacyPolicy from './components/PrivacyPolicy';
@@ -60,7 +59,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/aboutus" element={<AboutUS />} />
-          <Route path="/technology" element={<TechnologyPage />} />
           <Route path="/services" element={<Services />}>
             <Route path="webdevelopment" element={<WebDevelopmentPage />} />
             <Route path="mobiledevelopment" element={<MobileDevelopmentPage />} />
