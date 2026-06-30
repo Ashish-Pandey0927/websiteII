@@ -34,11 +34,15 @@ const localImageMap = {
 
 const getBlogImage = (image) => {
   if (!image) return "https://via.placeholder.com/1200x600";
-  if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("data:")) {
+  // Already an absolute URL (http/https) or a public path starting with /
+  if (image.startsWith("http://") || image.startsWith("https://") || image.startsWith("data:") || image.startsWith("/")) {
     return image;
   }
+  // Check against the local bundled image map (pre-existing blog images)
   const filename = image.split('/').pop();
-  return localImageMap[filename] || `https://estonsoft.com/uploads/${filename}` || "https://via.placeholder.com/1200x600";
+  if (localImageMap[filename]) return localImageMap[filename];
+  // Decap CMS uploads images to /images/uploads/ — serve from public folder
+  return `/images/uploads/${filename}`;
 };
 
 const BlogDetailSkeleton = () => {
@@ -79,11 +83,28 @@ const BlogDetails = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Read directly from the JSON file managed by Decap CMS.
-        // Netlify rebuilds on every CMS save, so this is always up-to-date.
-        const localBlog = localBlogPosts.blogs.find(b => b.id === id);
-        setBlog(localBlog || null);
-        setLoading(false);
+        const fetchBlog = async () => {
+            // CMS JSON as guaranteed fallback
+            const localBlog = localBlogPosts.blogs.find(b => b.id === id) || null;
+            try {
+                setLoading(true);
+                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blogs/${id}`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': import.meta.env.VITE_API_TOKEN,
+                    },
+                });
+                if (!response.ok) throw new Error('Not in API');
+                const data = await response.json();
+                setBlog(data);
+            } catch {
+                // API doesn't have it — use CMS JSON (includes newly added blogs)
+                setBlog(localBlog);
+            } finally {
+                setLoading(false);
+            }
+        };
+        if (id) fetchBlog();
     }, [id]);
 
     const formatDate = (dateStr) => {

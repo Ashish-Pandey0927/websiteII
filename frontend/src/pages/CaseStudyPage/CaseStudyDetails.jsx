@@ -20,11 +20,15 @@ const localImageMap = {
 
 const getCaseImage = (image) => {
   if (!image) return "https://via.placeholder.com/1200x600";
+  // Already an absolute URL or public path
   if (image.startsWith("/") || image.startsWith("http://") || image.startsWith("https://") || image.startsWith("data:")) {
     return image;
   }
   const filename = image.split('/').pop();
-  return localImageMap[filename] || "https://via.placeholder.com/1200x600";
+  // Check bundled local images first
+  if (localImageMap[filename]) return localImageMap[filename];
+  // Decap CMS uploads to /images/uploads/
+  return `/images/uploads/${filename}`;
 };
 
 const CaseStudyDetails = () => {
