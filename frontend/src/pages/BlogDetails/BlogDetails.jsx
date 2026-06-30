@@ -79,35 +79,11 @@ const BlogDetails = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fetchBlog = async () => {
-            try {
-                setLoading(true);
-                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blogs/${id}`, {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': import.meta.env.VITE_API_TOKEN,
-                    },
-                });
-
-                if (!response.ok) throw new Error('Blog not found from API');
-                const data = await response.json();
-                setBlog(data);
-            } catch (error) {
-                console.error('Error fetching blog from API, trying local fallback:', error);
-                const localBlog = localBlogPosts.blogs.find(b => b.id === id);
-                if (localBlog) {
-                    setBlog(localBlog);
-                } else {
-                    setBlog(null);
-                }
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        if (id) {
-            fetchBlog();
-        }
+        // Read directly from the JSON file managed by Decap CMS.
+        // Netlify rebuilds on every CMS save, so this is always up-to-date.
+        const localBlog = localBlogPosts.blogs.find(b => b.id === id);
+        setBlog(localBlog || null);
+        setLoading(false);
     }, [id]);
 
     const formatDate = (dateStr) => {

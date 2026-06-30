@@ -12,38 +12,13 @@ const Blogs = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blogs`, {
-          headers: {
-            Accept: "application/json",
-            Authorization: import.meta.env.VITE_API_TOKEN,
-          },
-        });
-        if (!response.ok) {
-          throw new Error("Failed to fetch blogs from API");
-        }
-        const data = await response.json();
-        if (data && data.length > 0) {
-          // Sort descending by publishDate or date if available
-          const sorted = [...data].sort((a, b) => new Date(b.publishDate || 0) - new Date(a.publishDate || 0));
-          setBlogs(sorted);
-        } else {
-          // Fallback to local
-          const sortedLocal = [...localBlogPosts.blogs].sort((a, b) => new Date(b.publishDate || 0) - new Date(a.publishDate || 0));
-          setBlogs(sortedLocal);
-        }
-      } catch (error) {
-        console.error("Failed to fetch blogs, using fallback data:", error);
-        const sortedLocal = [...localBlogPosts.blogs].sort((a, b) => new Date(b.publishDate || 0) - new Date(a.publishDate || 0));
-        setBlogs(sortedLocal);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchBlogs();
+    // Read directly from the JSON file which Decap CMS keeps updated.
+    // Netlify rebuilds the site on every CMS save, so this JSON is always current.
+    const sorted = [...localBlogPosts.blogs].sort(
+      (a, b) => new Date(b.publishDate || 0) - new Date(a.publishDate || 0)
+    );
+    setBlogs(sorted);
+    setLoading(false);
   }, []);
 
   // Split blogs
