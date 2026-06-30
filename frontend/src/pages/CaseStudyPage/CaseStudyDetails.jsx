@@ -34,7 +34,7 @@ const CaseStudyDetails = () => {
 
   useEffect(() => {
     // Find matching case study
-    const cs = caseStudiesData.find(item => item.id === id);
+    const cs = caseStudiesData.casestudies.find(item => item.id === id);
     setCaseStudy(cs || null);
     setLoading(false);
   }, [id]);

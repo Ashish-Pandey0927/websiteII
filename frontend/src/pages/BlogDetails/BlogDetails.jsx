@@ -94,7 +94,7 @@ const BlogDetails = () => {
                 setBlog(data);
             } catch (error) {
                 console.error('Error fetching blog from API, trying local fallback:', error);
-                const localBlog = localBlogPosts.find(b => b.id === id);
+                const localBlog = localBlogPosts.blogs.find(b => b.id === id);
                 if (localBlog) {
                     setBlog(localBlog);
                 } else {

@@ -31,12 +31,12 @@ const Blogs = () => {
           setBlogs(sorted);
         } else {
           // Fallback to local
-          const sortedLocal = [...localBlogPosts].sort((a, b) => new Date(b.publishDate || 0) - new Date(a.publishDate || 0));
+          const sortedLocal = [...localBlogPosts.blogs].sort((a, b) => new Date(b.publishDate || 0) - new Date(a.publishDate || 0));
           setBlogs(sortedLocal);
         }
       } catch (error) {
         console.error("Failed to fetch blogs, using fallback data:", error);
-        const sortedLocal = [...localBlogPosts].sort((a, b) => new Date(b.publishDate || 0) - new Date(a.publishDate || 0));
+        const sortedLocal = [...localBlogPosts.blogs].sort((a, b) => new Date(b.publishDate || 0) - new Date(a.publishDate || 0));
         setBlogs(sortedLocal);
       } finally {
         setLoading(false);

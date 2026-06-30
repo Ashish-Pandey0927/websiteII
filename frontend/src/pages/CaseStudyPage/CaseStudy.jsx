@@ -15,8 +15,8 @@ const CaseStudy = () => {
   const categories = ['All', 'Cloud Services', 'Quality Assurance', 'CI/CD Devops', 'SalesForce Solution'];
 
   const filteredCaseStudies = selectedCategory === 'All'
-    ? caseStudiesData
-    : caseStudiesData.filter(cs => cs.category === selectedCategory);
+    ? caseStudiesData.casestudies
+    : caseStudiesData.casestudies.filter(cs => cs.category === selectedCategory);
 
   return (
     <div className="casestudy-page-wrapper">

@@ -2,6 +2,7 @@
 backend:
   # Using Netlify Identity / Git Gateway by default (highly recommended for Netlify hosting)
   name: git-gateway
+  branch: main  # Must match your GitHub default branch (main, not master)
   # To deploy on Vercel, Hostinger, etc. without Netlify Identity, comment out "git-gateway" and use github OAuth:
   # name: github
   # repo: Ashish-Pandey0927/websiteII
@@ -23,6 +24,8 @@ collections:
         label: "Blog Posts Database"
         file: "frontend/src/data/blogPosts.json"
         format: "json"
+        # NOTE: blogPosts.json is a root-level array, so we wrap it with a
+        # single list field named "blogs" using json_template to match the structure.
         fields:
           - name: "blogs"
             label: "Blogs List"

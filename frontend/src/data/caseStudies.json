@@ -1,70 +1,108 @@
-[
-  {
-    "id": "cs-cloud-migration-paysafe",
-    "title": "Scalable Cloud Architecture & Migration for Fintech Leader",
-    "category": "Cloud Services",
-    "client": "PaySafe Solutions",
-    "paragraph": "Migrating a secure payment provider from legacy physical hardware to a high-availability multi-region cloud infrastructure, boosting scalability by 300%.",
-    "challenge": "PaySafe Solutions operated on-premise systems that suffered from high latency and database bottlenecks during peak trading hours. The lack of auto-scaling capabilities made them vulnerable to traffic surges, and their infrastructure lacked the geo-redundancy required for international regulatory compliance. Maintenance overhead was growing, and disaster recovery processes were manual and slow.",
-    "solution": "EstonSoft engineered a migration roadmap utilizing AWS. We designed a multi-region VPC environment with active-passive database clustering using Amazon Aurora. Key application workloads were containerized using Docker and orchestrated using AWS ECS (Elastic Container Service). To ensure protection against network attacks, Cloudflare Enterprise DDoS mitigation and Web Application Firewall (WAF) were integrated. Lastly, we automated the infrastructure setup using Terraform, establishing an Infrastructure as Code (IaC) model.",
-    "metrics": [
-      { "label": "Peak Throughput Increase", "value": "300%" },
-      { "label": "System Uptime Achieved", "value": "99.99%" },
-      { "label": "Database Latency Reduction", "value": "40%" }
-    ],
-    "authorName": "Vijay",
-    "publishDate": "2025-03-14",
-    "image": "Blog1.png"
-  },
-  {
-    "id": "cs-qa-automation-shopvibe",
-    "title": "Automated Regression Framework & Performance Scaling for E-Commerce",
-    "category": "Quality Assurance",
-    "client": "ShopVibe Retail",
-    "paragraph": "Scaling infrastructure capacity by 5x and introducing a continuous automation pipeline to reduce manual QA time by 75% ahead of major seasonal sales.",
-    "challenge": "ShopVibe Retail faced frequent website performance degradation and crashes during major flash sales due to database locking and inefficient API calls. Additionally, their QA cycle before each deployment was entirely manual, taking a team of five testers over four days to complete regression tests. This slow feedback loop delayed updates and resulted in critical checkout bugs slipping into production.",
-    "solution": "We implemented a two-fold QA and performance enhancement strategy. First, we built a comprehensive test automation framework using Selenium and Playwright, integrated directly into their GitLab CI/CD pipeline. Next, we conducted rigorous load testing using Apache JMeter to simulate up to 50,000 concurrent users. We identified database bottlenecks, redesigned index structures, and implemented Redis caching for product catalog requests to ease the load.",
-    "metrics": [
-      { "label": "Traffic Capacity Increase", "value": "5x" },
-      { "label": "Regression Test Time Cut", "value": "75%" },
-      { "label": "Post-Release Bug Reduction", "value": "90%" }
-    ],
-    "authorName": "Vijay",
-    "publishDate": "2025-05-10",
-    "image": "Blog2.png"
-  },
-  {
-    "id": "cs-devops-fastapi-edustream",
-    "title": "FastAPI Application Orchestration and Deployment on Ubuntu VPS",
-    "category": "CI/CD Devops",
-    "client": "EduStream Learning",
-    "paragraph": "Deploying a highly concurrent educational backend on a Virtual Private Server using Gunicorn, systemd daemon management, and a secure Nginx reverse proxy.",
-    "challenge": "EduStream needed to host a highly interactive and concurrent REST API backend on a Hostinger VPS. Their existing setup faced frequent process terminations during peak lecture hours, had memory leaks, and relied on manual, error-prone shell scripts for updates, resulting in sporadic service interruptions for students.",
-    "solution": "We designed and executed a production-grade backend architecture on Ubuntu 24.04 VPS. We containerized the FastAPI application and set up Gunicorn as the process manager using Uvicorn workers. We managed this process under a systemd daemon service, ensuring automatic restarts on failures or reboots. MongoDB was configured with structured replica sets, and Nginx was deployed as a reverse proxy with automated Let's Encrypt SSL configuration to secure traffic.",
-    "metrics": [
-      { "label": "Server Uptime", "value": "100%" },
-      { "label": "Deployment Automation", "value": "100%" },
-      { "label": "API Latency Reduction", "value": "45%" }
-    ],
-    "authorName": "Kanchana Pandagre",
-    "publishDate": "2025-06-19",
-    "image": "Blog6.png"
-  },
-  {
-    "id": "cs-salesforce-crm-apex",
-    "title": "Salesforce CRM Integration & Workflow Automation for Global Logistics",
-    "category": "SalesForce Solution",
-    "client": "Apex Global Logistics",
-    "paragraph": "Unifying disjointed tracking systems into a centralized Salesforce CRM, using Lightning Web Components (LWC) and customized APEX automation.",
-    "challenge": "Apex Global Logistics suffered from disconnected operational workflows. Sales, support, and dispatch teams used separate tracking platforms and sheets. This fragmentation resulted in data duplication, delayed response times, manual entry mistakes, and a 20% drop-off in active customer leads due to slow follow-ups.",
-    "solution": "We unified the operational pipeline by custom-tailoring a Salesforce Sales Cloud environment. We developed customized Lightning Web Components (LWC) for an interactive logistics tracking dashboard. To reduce administrative workload, we built automated Apex triggers and flows to update statuses instantly. Finally, we integrated third-party SMS and email gateways for automated customer notifications.",
-    "metrics": [
-      { "label": "Lead Conversions Increase", "value": "35%" },
-      { "label": "Manual Data Entry Saved", "value": "40%" },
-      { "label": "Pipeline Visibility", "value": "100%" }
-    ],
-    "authorName": "Vijay",
-    "publishDate": "2025-02-08",
-    "image": "Blog3.png"
-  }
-]
+{
+  "casestudies": [
+    {
+      "id": "cs-cloud-migration-paysafe",
+      "title": "Scalable Cloud Architecture & Migration for Fintech Leader",
+      "category": "Cloud Services",
+      "client": "PaySafe Solutions",
+      "paragraph": "Migrating a secure payment provider from legacy physical hardware to a high-availability multi-region cloud infrastructure, boosting scalability by 300%.",
+      "challenge": "PaySafe Solutions operated on-premise systems that suffered from high latency and database bottlenecks during peak trading hours. The lack of auto-scaling capabilities made them vulnerable to traffic surges, and their infrastructure lacked the geo-redundancy required for international regulatory compliance. Maintenance overhead was growing, and disaster recovery processes were manual and slow.",
+      "solution": "EstonSoft engineered a migration roadmap utilizing AWS. We designed a multi-region VPC environment with active-passive database clustering using Amazon Aurora. Key application workloads were containerized using Docker and orchestrated using AWS ECS (Elastic Container Service). To ensure protection against network attacks, Cloudflare Enterprise DDoS mitigation and Web Application Firewall (WAF) were integrated. Lastly, we automated the infrastructure setup using Terraform, establishing an Infrastructure as Code (IaC) model.",
+      "metrics": [
+        {
+          "label": "Peak Throughput Increase",
+          "value": "300%"
+        },
+        {
+          "label": "System Uptime Achieved",
+          "value": "99.99%"
+        },
+        {
+          "label": "Database Latency Reduction",
+          "value": "40%"
+        }
+      ],
+      "authorName": "Vijay",
+      "publishDate": "2025-03-14",
+      "image": "Blog1.png"
+    },
+    {
+      "id": "cs-qa-automation-shopvibe",
+      "title": "Automated Regression Framework & Performance Scaling for E-Commerce",
+      "category": "Quality Assurance",
+      "client": "ShopVibe Retail",
+      "paragraph": "Scaling infrastructure capacity by 5x and introducing a continuous automation pipeline to reduce manual QA time by 75% ahead of major seasonal sales.",
+      "challenge": "ShopVibe Retail faced frequent website performance degradation and crashes during major flash sales due to database locking and inefficient API calls. Additionally, their QA cycle before each deployment was entirely manual, taking a team of five testers over four days to complete regression tests. This slow feedback loop delayed updates and resulted in critical checkout bugs slipping into production.",
+      "solution": "We implemented a two-fold QA and performance enhancement strategy. First, we built a comprehensive test automation framework using Selenium and Playwright, integrated directly into their GitLab CI/CD pipeline. Next, we conducted rigorous load testing using Apache JMeter to simulate up to 50,000 concurrent users. We identified database bottlenecks, redesigned index structures, and implemented Redis caching for product catalog requests to ease the load.",
+      "metrics": [
+        {
+          "label": "Traffic Capacity Increase",
+          "value": "5x"
+        },
+        {
+          "label": "Regression Test Time Cut",
+          "value": "75%"
+        },
+        {
+          "label": "Post-Release Bug Reduction",
+          "value": "90%"
+        }
+      ],
+      "authorName": "Vijay",
+      "publishDate": "2025-05-10",
+      "image": "Blog2.png"
+    },
+    {
+      "id": "cs-devops-fastapi-edustream",
+      "title": "FastAPI Application Orchestration and Deployment on Ubuntu VPS",
+      "category": "CI/CD Devops",
+      "client": "EduStream Learning",
+      "paragraph": "Deploying a highly concurrent educational backend on a Virtual Private Server using Gunicorn, systemd daemon management, and a secure Nginx reverse proxy.",
+      "challenge": "EduStream needed to host a highly interactive and concurrent REST API backend on a Hostinger VPS. Their existing setup faced frequent process terminations during peak lecture hours, had memory leaks, and relied on manual, error-prone shell scripts for updates, resulting in sporadic service interruptions for students.",
+      "solution": "We designed and executed a production-grade backend architecture on Ubuntu 24.04 VPS. We containerized the FastAPI application and set up Gunicorn as the process manager using Uvicorn workers. We managed this process under a systemd daemon service, ensuring automatic restarts on failures or reboots. MongoDB was configured with structured replica sets, and Nginx was deployed as a reverse proxy with automated Let's Encrypt SSL configuration to secure traffic.",
+      "metrics": [
+        {
+          "label": "Server Uptime",
+          "value": "100%"
+        },
+        {
+          "label": "Deployment Automation",
+          "value": "100%"
+        },
+        {
+          "label": "API Latency Reduction",
+          "value": "45%"
+        }
+      ],
+      "authorName": "Kanchana Pandagre",
+      "publishDate": "2025-06-19",
+      "image": "Blog6.png"
+    },
+    {
+      "id": "cs-salesforce-crm-apex",
+      "title": "Salesforce CRM Integration & Workflow Automation for Global Logistics",
+      "category": "SalesForce Solution",
+      "client": "Apex Global Logistics",
+      "paragraph": "Unifying disjointed tracking systems into a centralized Salesforce CRM, using Lightning Web Components (LWC) and customized APEX automation.",
+      "challenge": "Apex Global Logistics suffered from disconnected operational workflows. Sales, support, and dispatch teams used separate tracking platforms and sheets. This fragmentation resulted in data duplication, delayed response times, manual entry mistakes, and a 20% drop-off in active customer leads due to slow follow-ups.",
+      "solution": "We unified the operational pipeline by custom-tailoring a Salesforce Sales Cloud environment. We developed customized Lightning Web Components (LWC) for an interactive logistics tracking dashboard. To reduce administrative workload, we built automated Apex triggers and flows to update statuses instantly. Finally, we integrated third-party SMS and email gateways for automated customer notifications.",
+      "metrics": [
+        {
+          "label": "Lead Conversions Increase",
+          "value": "35%"
+        },
+        {
+          "label": "Manual Data Entry Saved",
+          "value": "40%"
+        },
+        {
+          "label": "Pipeline Visibility",
+          "value": "100%"
+        }
+      ],
+      "authorName": "Vijay",
+      "publishDate": "2025-02-08",
+      "image": "Blog3.png"
+    }
+  ]
+}
